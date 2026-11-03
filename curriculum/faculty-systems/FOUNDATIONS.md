@@ -157,3 +157,7 @@
   5. RELEASE (Optional mid-day production promotion, tag/push on 100% green)
   6. RETREAT (EOD consolidation, ephemeral debris garbage collection, Merkle lock)
   7. EOD SUMMARY (Single-page consolidated status telemetry, transition to standby)
+
+### SYS-128: Isotropic Manifold Geometric Kernel & Embodied Symmetry (node-049 / RFC-043)
+- Codifies geometric whitening, geodesic state completion, and physical coordinate embodiment to counteract unanchored latent space hubness and stochastic hallucination drift.
+
