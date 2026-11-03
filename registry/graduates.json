@@ -548,5 +548,16 @@
       "candidate_share": 0.7,
       "curriculum_root_share": 0.3
     }
+  },
+  {
+    "node_id": "node-049",
+    "faculty": "faculty-systems",
+    "thesis_file": "theses/THESIS_049_ISOTROPIC_MANIFOLD_GEOMETRIC_KERNEL.md",
+    "graduation_sha": "59f27bedd79c7916f19c424aa77554b2ee626974",
+    "status": "ACCREDITED",
+    "attribution": {
+      "candidate_share": 0.7,
+      "curriculum_root_share": 0.3
+    }
   }
 ]
