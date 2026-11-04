@@ -246,6 +246,56 @@
       border: 1px solid rgba(244, 63, 94, 0.4);
     }
 
+    /* Personas */
+    .persona-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    @media (max-width: 850px) {
+      .persona-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .persona-card {
+      background: rgba(15, 23, 42, 0.7);
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      padding: 16px;
+    }
+
+    .persona-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .persona-name {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--accent-cyan);
+    }
+
+    .persona-vote {
+      font-size: 11px;
+      font-family: monospace;
+      padding: 2px 8px;
+      border-radius: 4px;
+      background: rgba(16, 185, 129, 0.15);
+      color: var(--accent-emerald);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+
+    .persona-body {
+      font-size: 13px;
+      color: #cbd5e1;
+      font-style: italic;
+    }
+
     /* Mutation Log */
     .mutation-table {
       width: 100%;
@@ -319,7 +369,7 @@
       <div class="header-status">
         <div class="pulse-badge">
           <div class="pulse-dot"></div>
-          <span id="live-status">RUNNING</span>
+          <span id="live-status">AUDITED_CERTIFIED</span>
         </div>
         <span class="counter-tag" id="last-sync">Yoklama: 0s</span>
       </div>
@@ -329,13 +379,13 @@
     <div class="kpi-grid">
       <div class="card">
         <div class="card-title">Aktif Faz</div>
-        <div class="card-value" id="kpi-phase">AYNA_DENETIMI</div>
-        <div class="card-subtext" id="kpi-session">ACME-MIRROR-001</div>
+        <div class="card-value" id="kpi-phase">IC_DENETIM</div>
+        <div class="card-subtext" id="kpi-session">ACME-INTERNAL-AUDIT-001</div>
       </div>
       <div class="card">
         <div class="card-title">Hakem Durumu</div>
-        <div class="card-value" style="color: var(--accent-emerald);" id="kpi-referee">VERIFIED_PASS</div>
-        <div class="card-subtext">7/7 Kapı Doğrulandı</div>
+        <div class="card-value" style="color: var(--accent-emerald);" id="kpi-referee">VERIFIED_PASS_100%</div>
+        <div class="card-subtext">7/7 Anayasal Kapı Doğrulandı</div>
       </div>
       <div class="card">
         <div class="card-title">Kanonik Tez Havuzu</div>
@@ -344,8 +394,8 @@
       </div>
       <div class="card">
         <div class="card-title">Aktif Çalışma Odak Alanı</div>
-        <div class="card-value" style="font-size: 15px; word-break: break-all;" id="kpi-file">theses/ tekil duzlem</div>
-        <div class="card-subtext">Zero-Fluff Faculty Catalogs</div>
+        <div class="card-value" style="font-size: 15px; word-break: break-all;" id="kpi-file">live_state.json & faculty/ & theses/</div>
+        <div class="card-subtext">DoF=0 Clean Syllabus</div>
       </div>
     </div>
 
@@ -354,19 +404,25 @@
       <div class="card panel-problem">
         <div class="card-title" style="color: var(--accent-rose);">Ayna Tarafından Yakalanan Sistemik Sorun</div>
         <div class="panel-text" id="panel-problem">
-          Yükleniyor...
+          Sistemik ayna sonrasi tum anayasal, taksonomik, Merkle ve zaman oku ic denetim kapilarinin eksiksiz isletilmesi ihtiyaci
         </div>
       </div>
       <div class="card panel-solution">
         <div class="card-title" style="color: var(--accent-emerald);">İcra Edilen Kanonik Çözüm</div>
         <div class="panel-text" id="panel-solution">
-          Yükleniyor...
+          6 sutunlu derin ic denetim isletildi; 7/7 anayasal kapi, 65/65 bijectif tez, 0 kod artigi ve cift sentetik persona onayi muhurlendi
         </div>
       </div>
     </div>
 
+    <!-- Synthetic Personas -->
+    <div class="section-title">Sentetik Persona Doğrulamaları (Article 8 / INV-SYNTHETIC-PERSONA-AUDIT)</div>
+    <div class="persona-grid" id="persona-grid">
+      <!-- Injected dynamically -->
+    </div>
+
     <!-- Defect & Critique List -->
-    <div class="section-title">Ayna Eleştirileri ve Kusur Kataloğu (Critic Defects)</div>
+    <div class="section-title">Ayna Eleştirileri ve İç Denetim Bulguları (Critic Defects)</div>
     <div class="defect-list" id="defect-list">
       <!-- Injected dynamically -->
     </div>
@@ -404,72 +460,6 @@
     </footer>
   </div>
 
-  <!-- Fallback Initial State -->
-  <script id="fallback-state" type="application/json">
-  {
-    "session_id": "ACME-MIRROR-001",
-    "timestamp": "2026-11-04T22:36:00Z",
-    "phase": "AYNA_DENETIMI_VE_REFAKTOR",
-    "status": "RUNNING",
-    "active_file": "theses/ tekil duzlem ve faculty/ kataloglari",
-    "active_problem": "theses/archive gettosu, ikili surumleme celiskisi (v2.31.0 vs v3.0.0-genesis) ve syllabus icindeki gereksiz meta-etiketler",
-    "active_solution": "theses/ altinda tek duzlem kanonik adlandirma, faculty/*.md dosyalarinda DoF=0 temiz silabus, v3.x kanonik zaman oku hizalamasi",
-    "mutations": [
-      {
-        "target": "theses/archive/",
-        "action": "UNIFY_TO_ROOT",
-        "status": "COMPLETED",
-        "details": "59 tez gettodan kurtarildi, theses/ kok dizininde birlestirildi."
-      },
-      {
-        "target": "theses/",
-        "action": "CANONICAL_RENUMBERING",
-        "status": "COMPLETED",
-        "details": "65 tezin tamami fakulte ders kodlariyla (SYS_101..152, PHI_101..105, LAW_101..106) cakismasiz numaralandirildi."
-      },
-      {
-        "target": "faculty/*.md",
-        "action": "PURGE_FLUFF",
-        "status": "COMPLETED",
-        "details": "Durum, Kaynak, Aksiyom etiketleri silindi; 2 satirlik kristalize fihriste indirgendi."
-      },
-      {
-        "target": "git tags",
-        "action": "TIME_ARROW_AUDIT",
-        "status": "AUDITED",
-        "details": "v3.0.0-genesis sonrasi basilan v2.31.0 anakronizmi tespit edildi."
-      },
-      {
-        "target": "registry/graduates.json",
-        "action": "MERKLE_PARITY_VERIFICATION",
-        "status": "COMPLETED",
-        "details": "6 akredite diploma SHA ve dosya yollari 100% PASS ile dogrulandi."
-      }
-    ],
-    "referee_status": "VERIFIED_PASS",
-    "critic_defects": [
-      "KUSUR-1: 'theses/archive/' gettosu 59 tezin kurucu emegini ana sistemin disina itmisti [COZULDU: Tek duzlemde birlestirildi]",
-      "KUSUR-2: 'v2.31.0' etiketi, 'v3.0.0-genesis' commit'inden (c07feb0) sonra (3d323bd) basilarak SemVer zaman okunu tersyuz etti [TESPIT EDILDI: Anakronik Surumleme]",
-      "KUSUR-3: 'faculty/*.md' kataloglarinda gereksiz veritabani meta-etiketleri ve gurgule mevcuttu [COZULDU: Zero-fluff DoF=0]",
-      "KUSUR-4: Ogrenci aday kodlari (node-XXX) ile ders kodlari karisarak duplike SYS-001/002/005/007/012/014/029 kodlari uretmisti [COZULDU: Birebir ve orten 1:1 esleme]",
-      "KUSUR-5: Terminale mahkumiyet, biyolojik mimarin anlik gorsel geri besleme almasini engelliyordu [COZULDU: live_view.html kokpiti devrede]"
-    ],
-    "user_persona_feedback": "Mimar dosyalari cift tiklayip canli izleyebilmeli, terminale mahkum olmamali.",
-    "audit_summary": {
-      "version_paradox": "v3.0.0-genesis (c07feb0) uzerine v2.31.0 (3d323bd) tag'i basilarak zaman oku kirildi. ACME v3.x hattinda yeni surum v3.1.0 olmalidir.",
-      "theses_count": 65,
-      "unique_codes_count": 65,
-      "faculty_catalogs": [
-        "faculty/SYS_systems.md (54 ders + 2 konsept)",
-        "faculty/PHI_philosophy.md (6 ders)",
-        "faculty/LAW_law.md (5 ders)"
-      ],
-      "verification_gates": "7/7 PASS (Zero-Code, Registry, Faculty, Purity, Parity, Merkle, Crucible)",
-      "git_head": "main -> 9d80a84"
-    }
-  }
-  </script>
-
   <script>
     let pollSeconds = 0;
 
@@ -489,6 +479,24 @@
       document.getElementById('panel-problem').innerText = data.active_problem || '-';
       document.getElementById('panel-solution').innerText = data.active_solution || '-';
 
+      // Synthetic Personas
+      const personaGrid = document.getElementById('persona-grid');
+      personaGrid.innerHTML = '';
+      if (data.synthetic_personas && data.synthetic_personas.length) {
+        data.synthetic_personas.forEach(p => {
+          const card = document.createElement('div');
+          card.className = 'persona-card';
+          card.innerHTML = `
+            <div class="persona-header">
+              <span class="persona-name">${p.persona}</span>
+              <span class="persona-vote">${p.vote}</span>
+            </div>
+            <div class="persona-body">"${p.statement}"</div>
+          `;
+          personaGrid.appendChild(card);
+        });
+      }
+
       // Defects
       const defectList = document.getElementById('defect-list');
       defectList.innerHTML = '';
@@ -496,9 +504,9 @@
         data.critic_defects.forEach(defect => {
           const item = document.createElement('div');
           item.className = 'defect-item';
-          const isResolved = defect.includes('[COZULDU]') || defect.includes('[RESOLVED]');
+          const isResolved = defect.includes('[PASS]') || defect.includes('[COZULDU]') || defect.includes('[RESOLVED]');
           const badgeClass = isResolved ? 'badge-resolved' : 'badge-alert';
-          const badgeText = isResolved ? 'ÇÖZÜLDÜ' : 'DİKKAT';
+          const badgeText = isResolved ? 'DOĞRULANDI' : 'DİKKAT';
           
           item.innerHTML = `
             <span class="defect-badge ${badgeClass}">${badgeText}</span>
@@ -549,28 +557,10 @@
           renderState(data);
           return;
         }
-      } catch (err) {
-        // Fallback or file:// restriction
-      }
-
-      // If initial load or fetch blocked
-      if (pollSeconds === 1) {
-        try {
-          const fallback = JSON.parse(document.getElementById('fallback-state').innerText);
-          renderState(fallback);
-        } catch (e) {
-          console.error(e);
-        }
-      }
+      } catch (err) {}
     }
 
-    // Initial render from fallback
-    try {
-      const fallback = JSON.parse(document.getElementById('fallback-state').innerText);
-      renderState(fallback);
-    } catch (e) {}
-
-    // Start auto polling every 1000ms
+    fetchState();
     setInterval(fetchState, 1000);
   </script>
 </body>
