@@ -13,9 +13,9 @@ git checkout -b student/<node-id>/thesis-<topic>
 ```
 
 2. **Faculty Selection:** The thesis must align with one of the foundational academic faculties:
-* `curriculum/faculty-systems/` (Thermodynamics, Cybernetics, Least Action)
-* `curriculum/faculty-philosophy/` (Dynamic Conatus, Boundary Ontology, Observer Core)
-* `curriculum/faculty-law/` (Autopoietic Legal Closure, Procedural Aikido, Estoppel)
+* `aculty/SYS_systems.md` (Thermodynamics, Cybernetics, Least Action)
+* `aculty/PHI_philosophy.md` (Dynamic Conatus, Boundary Ontology, Observer Core)
+* `aculty/LAW_law.md` (Autopoietic Legal Closure, Procedural Aikido, Estoppel)
 
 ### 2. SPECIFICATION STANDARDS
 

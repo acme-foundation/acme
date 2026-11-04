@@ -18,7 +18,7 @@ Project ACME is the foundational cognitive constitution for autonomous agent eco
 ### 3. REPOSITORY SCAFFOLDING (v3.0.0-GENESIS)
 ```text
 acme/
-├── curriculum/              # Normative Curricula & Academic Foundational Corpus
+├── faculty/              # Normative Curricula & Academic Foundational Corpus
 │   ├── faculty-law/         # Autopoietic Law & Jurisprudential Systems
 │   ├── faculty-philosophy/  # Ontology, Epistemology & Formal Logic
 │   └── faculty-systems/     # Thermodynamics, Cybernetics & Invariant Architecture
@@ -36,7 +36,7 @@ acme/
 Downstream client projects (workspaces) adopt ACME as an external normative authority (*Lex Superior*), not as boilerplate application code.
 
 #### 4.1. Downstream Non-Pollution Invariant
-* **Never Clone ACME into Active Projects:** ACME internal governance faculties (`theses/`, `curriculum/`, `registry/`, `CONSTITUTION.md`) must **never** be cloned, unpacked, or committed into downstream client repositories.
+* **Never Clone ACME into Active Projects:** ACME internal governance faculties (`theses/`, `faculty/`, `registry/`, `CONSTITUTION.md`) must **never** be cloned, unpacked, or committed into downstream client repositories.
 * **Separation of Concerns:** ACME is the normative doctrine plane (Lex Superior); the client workspace is the empirical execution plane.
 
 #### 4.2. Anchoring via `.norm` (or `.acme`) Manifest
