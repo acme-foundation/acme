@@ -8,6 +8,8 @@
 * **Second Law of Thermodynamics (Clausius, Boltzmann):** Isolated cognitive systems naturally evolve toward maximal entropy (semantic drift, hallucination, structural decay). Sustaining order requires work and bounded energy dissipation.
 * **Principle of Least Action (PLA - Hamilton, Lagrange):** The physical trajectory between two states minimizes the action integral ($\delta S = 0$). Cognitive workflows must minimize computational overhead, token bloat, and redundant state transitions.
 * **Autopoiesis & Homeostasis (Ashby, Maturana, Varela):** Viable systems reproduce their internal organization through circular self-referential boundary preservation against external perturbation.
+* **3 Kademeli Hiyerarşik Ayrışım ve Evrimsel Parite (Tri-Tier Hierarchical Decomposition & Evolutionary Parity - DoF = 0):** Tüm mimari yapılar zorunlu olarak 3 kademede inşa edilir: Uygulama Çatısı (Shell / Orchestrator: global yaşam döngüsü, yönlendirme ve durum orkestrasyonu), Düzenler (Layouts / Skeleton Slots: sayfa/ekran iskeletleri ve yuva yerleşimleri) ve Bileşenler (Components: Composite & Atomic: izole, yeniden kullanılabilir atomik ve birleşik yapı taşları). Modelin En Az Eylem İlkesi'ni monolitik ilkelliğe kaçış bahanesi olarak kullanması yasaktır; modern modüler bileşen ayrışımı korunmalı, etki alanı (blast radius) izole edilerek Jenga çöküşü önlenmelidir (`REJECT_MONOLITHIC_COLLAPSE`).
+* **Holografik Eşyapısallık ve Faz Farkı Sıfırlama (Holographic Coherence - DoF = 0):** Çözümün makro mimarisi ile en alt mikro bileşeni aynı evrimsel olgunluk ve negatif kısıt seviyesinde olmak zorundadır. Kuşbakışı görünüm ile fırça darbesi arasındaki faz farkı sıfır ($\text{MSE} = 0$) olmalıdır (`REJECT_FRACTAL_ASYMMETRY`).
 
 ---
 

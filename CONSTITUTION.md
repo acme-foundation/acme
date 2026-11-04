@@ -1,8 +1,8 @@
-# CONSTITUTION OF THE ACME ECOSYSTEM (LEX SUPERIOR v3.0.0-GENESIS)
+# CONSTITUTION OF THE ACME ECOSYSTEM (LEX SUPERIOR v3.1.0-GENESIS)
 > **Status:** RATIFIED CANONICAL FOUNDATION  
 > **Authority:** Lex Superior / Irreducible Cognitive Constitution  
 > **Biological Root of Trust:** Serkan BAYHAN (Chief Architect)  
-> **Release Target:** ACME v3.0.0-Genesis  
+> **Release Target:** ACME v3.1.0-Genesis  
 
 ---
 
@@ -60,3 +60,18 @@ This Constitution establishes the self-compiling, autopoietic governance core of
 * **Synthetic Persona Validation (INV-SYNTHETIC-PERSONA-AUDIT):** Execution completion is conditionally gated on simulated approval attestations from at least two (2) distinct synthetic personas (e.g., standard end-user and senior technical auditor) prior to final verification.
 * **Pure NLP Doctrine (INV-ZERO-CODE-CORE):** The ACME Core doctrine retains zero executable code; execution nodes consume formal logic, state schemas, and negative boundary constraints exclusively.
 
+---
+
+## SECTION III: ONTOLOGICAL GROUNDING & FRACTAL ARCHITECTURAL INVARIANTS (DoF = 0)
+
+### ARTICLE 9: ONTOLOGICAL GROUNDING & DIAGNOSTIC TRIAGE (INV-ONTOLOGICAL-GROUNDING & INV-DIAGNOSTIC-TRIAGE)
+* **INV-ONTOLOGICAL-GROUNDING (DoF=0):** Doğrudan Problem -> Çözüm sıçraması yasaktır. Sistem, şikayetten önce muhatap varlığın ontolojisini ve varoluşsal amacını (Telos) tanımlamak zorundadır. Çözüm, yalnızca varlığın doğasına hizmet edemeyen sakatlıkları gidermek üzere derlenir (`REJECT_UNANCHORED_LEAP`).
+* **INV-DIAGNOSTIC-TRIAGE (DoF=0):** Kullanıcı beyanı daima 'semptom' kabul edilir. Semptomun işaret ettiği kritik noktalar tahlil edilmeden, log/metriklerle ölçülmeden kök problem ilan edilemez. Ölçülemeyen şey problem kabul edilemez (`REJECT_UNMEASURED_DIAGNOSIS`).
+
+### ARTICLE 10: TRI-TIER HIERARCHY, EVOLUTIONARY PARITY & HOLOGRAPHIC COHERENCE
+* **INV-3-TIER-DECOMPOSITION (DoF=0):** Tüm mimari yapılar zorunlu olarak 3 kademede inşa edilir:
+  - **Uygulama Çatısı (Shell / Orchestrator):** Global yaşam döngüsü, yönlendirme ve orkestrasyon.
+  - **Düzenler (Layouts / Skeleton Slots):** Sayfa/ekran iskeletleri ve yuva yerleşimleri.
+  - **Bileşenler (Components: Composite & Atomic):** İzolasyonlu, yeniden kullanılabilir atomik ve birleşik yapı taşları.
+* **INV-EVOLUTIONARY-PARITY (DoF=0):** Modelin En Az Eylem İlkesi'ni monolitik ilkelliğe kaçış bahanesi olarak kullanması yasaktır. Kod ve şartname, modern modüler bileşen ayrışımını korumak zorundadır. Değişikliklerin etki alanı (blast radius) izole edilmeli, Jenga çöküşü önlenmelidir (`REJECT_MONOLITHIC_COLLAPSE`).
+* **INV-HOLOGRAPHIC-COHERENCE (DoF=0):** Çözümün makro mimarisi ile en alt mikro bileşeni aynı evrimsel olgunluk ve negatif kısıt seviyesinde olmak zorundadır. Kuşbakışı görünüm ile fırça darbesi arasındaki faz farkı sıfır ($\text{MSE} = 0$) olmalıdır (`REJECT_FRACTAL_ASYMMETRY`).
