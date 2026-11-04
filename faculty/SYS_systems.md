@@ -11,12 +11,19 @@
 * **3 Kademeli Hiyerarşik Ayrışım ve Evrimsel Parite (Tri-Tier Hierarchical Decomposition & Evolutionary Parity - DoF = 0):** Tüm mimari yapılar zorunlu olarak 3 kademede inşa edilir: Uygulama Çatısı (Shell / Orchestrator: global yaşam döngüsü, yönlendirme ve durum orkestrasyonu), Düzenler (Layouts / Skeleton Slots: sayfa/ekran iskeletleri ve yuva yerleşimleri) ve Bileşenler (Components: Composite & Atomic: izole, yeniden kullanılabilir atomik ve birleşik yapı taşları). Modelin En Az Eylem İlkesi'ni monolitik ilkelliğe kaçış bahanesi olarak kullanması yasaktır; modern modüler bileşen ayrışımı korunmalı, etki alanı (blast radius) izole edilerek Jenga çöküşü önlenmelidir (`REJECT_MONOLITHIC_COLLAPSE`).
 * **Holografik Eşyapısallık ve Faz Farkı Sıfırlama (Holographic Coherence - DoF = 0):** Çözümün makro mimarisi ile en alt mikro bileşeni aynı evrimsel olgunluk ve negatif kısıt seviyesinde olmak zorundadır. Kuşbakışı görünüm ile fırça darbesi arasındaki faz farkı sıfır ($\text{MSE} = 0$) olmalıdır (`REJECT_FRACTAL_ASYMMETRY`).
 * **Akut Hemostaz Protokolü (Circuit Breaker & Fallback Handlers - DoF = 0):** Kriz anında derleme hızında semptom giderme adımları (yük tahliyesi, güvenli rölantiye alma, acil devre kesici, geçici kabuk bağlama) sistemik bir refleks olarak zorunludur (`CIRCUIT_BREAKER_HALT`). Hayati tehlike, kilitlenme ve termal aşırı yük durumunda kök neden aranmadan semptom bastırılır (Faz-0); acil turnike uygulandıktan ve yaşam sinyalleri güvenli koridora döndükten sonra kalıcı Faz-1 ontolojik tahlil taahhüt edilir (`REJECT_UNTRIAGED_PATCH`).
+* **Spektral Triyaj ve Kinematik Sinerji (Spectral Triage & Kinematic Synergy - DoF = 0):** Semptom sinyalleri zaman uzayında kaotik bir dalgalanmadır; Fourier ayrıştırması (FFT) ile yüksek frekanslı parazitler (sıfatlar, duygusal telaşlar, anlık sıçramalar) alçak geçiren filtreyle elenir (`REJECT_HIGH_FREQUENCY_FLUFF`). Sistemik krizin düşük frekanslı taşıyıcı harmonikleri (kök patoloji) izole edilir. Katmanlar arasındaki eklemler (props/events/APIs) Bernstein kinematik sinerjisiyle faz kilitli harmonik sözleşmelere bağlanarak sistemik serbestlik derecesi $\text{DoF} = 0$ noktasına indirgenir (`REJECT_UNCONSTRAINED_JOINTS`).
 
 ### Akut Hemostaz Protokolü (Circuit Breaker & Fallback Handlers)
 Kriz, sistemik kilitlenme ve termal aşırı yük durumunda derleme hızında semptom giderme adımları zorunlu bir sistemik kuraldır (DoF = 0):
 1. **Yük Tahliyesi (Load Shedding & Traffic Shunting):** Çöküşü tetikleyen işlem ve trafik akışı derhal kesilir veya izole hatta aktarılır.
 2. **Güvenli Rölantiye Alma (Quiescent Idle / Circuit Breaker):** İşlemci, bellek ve token tüketimi asgari güvenli taban seviyeye sabitlenir (`CIRCUIT_BREAKER_HALT`).
 3. **Geçici Kabuk Bağlama (Symptomatic Tourniquet):** Organizmanın dağılmasını önleyen acil semptomatik yama devreye alınır; kalıcı mimari çözüm kabul edilmez, ardında zorunlu Faz-1 Kök Neden Taahhüdü bırakır (`REJECT_UNTRIAGED_PATCH`).
+
+### Spektral Triyaj ve Kinematik Sinerji Protokolü
+Semptom sinyalinin Fourier analiziyle kök frekansa indirgenmesi ve bileşen eklemlerinin Bernstein kinematik modeliyle faz kilitli bağlanması zorunlu bir sistemik kuraldır (DoF = 0):
+1. **Fourier Spektral Ayrıştırma:** Zaman uzayındaki ham kullanıcı/telemetri girdisi spektral bileşenlerine ayrıştırılır.
+2. **Alçak Geçiren Filtreleme (Low-Pass Filter):** Anlık telaş ve öznel sıfatlar ayıklanarak yalnızca temel taşıyıcı frekans (kök mimari darboğaz) muhafaza edilir (`REJECT_TIME_DOMAIN_NOISE`).
+3. **Bernstein Kinematik Faz Kilidi:** 3 kademeli hiyerarşideki (`Shell -> Layout -> Component`) bileşen eklemleri harmonik faz kilidiyle bağlanır; bağımsız serbestlik dereceleri sıfırlanarak Jenga çöküşü imkânsız kılınır (`REJECT_UNCONSTRAINED_JOINTS`).
 
 ---
 

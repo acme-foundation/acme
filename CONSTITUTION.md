@@ -1,8 +1,8 @@
-# CONSTITUTION OF THE ACME ECOSYSTEM (LEX SUPERIOR v3.2.0-GENESIS)
+# CONSTITUTION OF THE ACME ECOSYSTEM (LEX SUPERIOR v3.3.0-GENESIS)
 > **Status:** RATIFIED CANONICAL FOUNDATION  
 > **Authority:** Lex Superior / Irreducible Cognitive Constitution  
 > **Biological Root of Trust:** Serkan BAYHAN (Chief Architect)  
-> **Release Target:** ACME v3.2.0-Genesis  
+> **Release Target:** ACME v3.3.0-Genesis  
 
 ---
 
@@ -64,7 +64,7 @@ This Constitution establishes the self-compiling, autopoietic governance core of
 
 ## SECTION III: ONTOLOGICAL GROUNDING & FRACTAL ARCHITECTURAL INVARIANTS (DoF = 0)
 
-### ARTICLE 9: ONTOLOGICAL GROUNDING, DIAGNOSTIC TRIAGE & ACUTE HEMOSTASIS
+### ARTICLE 9: ONTOLOGICAL GROUNDING, DIAGNOSTIC TRIAGE, ACUTE HEMOSTASIS & SPECTRAL TRIAGE
 * **INV-ONTOLOGICAL-GROUNDING (DoF=0):** Doğrudan Problem -> Çözüm sıçraması yasaktır. Sistem, şikayetten önce muhatap varlığın ontolojisini ve varoluşsal amacını (Telos) tanımlamak zorundadır. Çözüm, yalnızca varlığın doğasına hizmet edemeyen sakatlıkları gidermek üzere derlenir (`REJECT_UNANCHORED_LEAP`).
 * **INV-DIAGNOSTIC-TRIAGE (DoF=0):** Kullanıcı beyanı daima 'semptom' kabul edilir. Semptomun işaret ettiği kritik noktalar tahlil edilmeden, log/metriklerle ölçülmeden kök problem ilan edilemez. Ölçülemeyen şey problem kabul edilemez (`REJECT_UNMEASURED_DIAGNOSIS`).
 * **INV-CRISIS-HEMOSTASIS (Akut Hemostaz ve Semptomatik Koruma Değişmezi - DoF = 0):**
@@ -73,6 +73,10 @@ This Constitution establishes the self-compiling, autopoietic governance core of
     * **FAZ-1 (ONTOLOJİK TEŞHİS VE TAHLİL):** Sistem stabilize edildikten, kanama durduktan ve nabız taban seviyeye indikten sonra `INV-DIAGNOSTIC-TRIAGE` kuralları devreye girer; tahlil yapılır ve kök neden şartnamesi derlenir.
   - **b. Geçici Yama / Turnike Şartı:** Faz-0'da uygulanan hiçbir semptomatik müdahale (ağrı kesici yama) kalıcı mimari çözüm kabul edilemez. Her acil müdahale, ardında zorunlu bir "FAZ-1 KÖK NEDEN TAAHHÜDÜ" bırakmak zorundadır (`REJECT_UNTRIAGED_PATCH`).
   - **c. Ölçülebilir Yaşam Sinyali (Vital Signs):** Faz-0'dan Faz-1'e geçiş ancak hayati metrikler (CPU, bellek, hata frekansı, biyolojik nabız) güvenli koridora döndüğünde tetiklenir.
+* **INV-SPECTRAL-TRIAGE (Harmonik Spektrum ve Kinematik Sinerji Değişmezi - DoF = 0):**
+  - **a. Zaman-Frekans Ayrımı (Fourier İndirgemesi):** Kullanıcı beyanları ve yüzey telemetrisi zaman uzayında kaotik bir sinyaldir. Triyaj motoru bu sinyali harmonik frekanslarına ayrıştırmadan şartname üretemez. Amaç, semptom gürültüsü ile kök taşıyıcı rezonansı ayırmaktır (`REJECT_TIME_DOMAIN_NOISE`).
+  - **b. Alçak Geçiren Filtre (Low-Pass Filter Gate):** Sıfatlar, panik dili ve geçici operasyonel dalgalanmalar yüksek frekanslı parazit olarak elenir. Şartname sadece düşük frekanslı kök patolojiyi (sistemik tıkanıklığı) hedef alır (`REJECT_HIGH_FREQUENCY_FLUFF`).
+  - **c. Bernstein Kinematik Faz Kilidi (DoF = 0):** Uygulama, Düzen ve Bileşen katmanlarındaki tüm eklemler (props/events/APIs), bağımsız serbestlik dereceleri üretmeyecek şekilde faz kilitli harmonik sözleşmelerle bağlanır. Sistemik sürtünme kombinatorik patlamaya değil, tek bir sönümlü eksene çöker (`REJECT_UNCONSTRAINED_JOINTS`).
 
 ### ARTICLE 10: TRI-TIER HIERARCHY, EVOLUTIONARY PARITY & HOLOGRAPHIC COHERENCE
 * **INV-3-TIER-DECOMPOSITION (DoF=0):** Tüm mimari yapılar zorunlu olarak 3 kademede inşa edilir:
