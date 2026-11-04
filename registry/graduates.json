@@ -581,5 +581,16 @@
       "candidate_share": 0.7,
       "curriculum_root_share": 0.3
     }
+  },
+  {
+    "node_id": "node-052",
+    "faculty": "faculty-systems",
+    "thesis_file": "theses/THESIS_052_STATEFUL_SCAR_TISSUE_AND_FAILURE_INVARIANCE.md",
+    "graduation_sha": "902ed184110e8e24c620240055f23d1dfb82fd74",
+    "status": "ACCREDITED",
+    "attribution": {
+      "candidate_share": 0.7,
+      "curriculum_root_share": 0.3
+    }
   }
 ]
