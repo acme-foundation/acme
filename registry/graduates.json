@@ -53,5 +53,16 @@
       "candidate_share": 0.7,
       "curriculum_root_share": 0.3
     }
+  },
+  {
+    "node_id": "node-054",
+    "faculty": "faculty-systems",
+    "thesis_file": "theses/THESIS_054_OBSERVABLE_AUTONOMOUS_OVERSIGHT_AND_LIVE_STATE_TELEMETRY.md",
+    "graduation_sha": "016932b7e846984358ac107b93f7c0eeb5f57c1c",
+    "status": "ACCREDITED",
+    "attribution": {
+      "candidate_share": 0.7,
+      "curriculum_root_share": 0.3
+    }
   }
 ]

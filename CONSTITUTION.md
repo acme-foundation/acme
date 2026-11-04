@@ -53,3 +53,10 @@ This Constitution establishes the self-compiling, autopoietic governance core of
 ### ARTICLE 7: MERKLE SEALING & CADENCE DISCIPLINE
 * **Cryptographic Non-Repudiation:** Every accredited thesis, graduation diploma, and release milestone is permanently anchored to immutable Git Merkle commit SHAs.
 * **Retreat Cadence & Anti-Inflation Tag Discipline:** In-session intermediate tags are strictly prohibited (`INV-TAG-DISCIPLINE`). Sürüm etiketleri (Release Tags) solely seal consolidated daily milestones during evening retreat, ensuring clean, verifiable lineage.
+
+### ARTICLE 8: OBSERVABLE AUTONOMOUS OVERSIGHT & LIVE-STATE INVARIANT (INV-OBSERVABILITY-DECOUPLED)
+* **Observable Autonomous Oversight & Live-State Invariant (INV-OBSERVABILITY-DECOUPLED):** Autonomous agents executing problem decomposition, specification mutation, critic evaluations, and synthetic persona audits must stream real-time state deltas to a verified live_state telemetry channel without blocking execution critical paths.
+* **Bidirectional Mutation Tracing (INV-MUTATION-TRACING):** Any architectural mutation across task boundaries must explicitly label whether the state delta modifies problem constraints or solution contracts (MUTATE_PROBLEM vs. MUTATE_SOLUTION).
+* **Synthetic Persona Validation (INV-SYNTHETIC-PERSONA-AUDIT):** Execution completion is conditionally gated on simulated approval attestations from at least two (2) distinct synthetic personas (e.g., standard end-user and senior technical auditor) prior to final verification.
+* **Pure NLP Doctrine (INV-ZERO-CODE-CORE):** The ACME Core doctrine retains zero executable code; execution nodes consume formal logic, state schemas, and negative boundary constraints exclusively.
+
