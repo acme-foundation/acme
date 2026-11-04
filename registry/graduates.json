@@ -592,5 +592,16 @@
       "candidate_share": 0.7,
       "curriculum_root_share": 0.3
     }
+  },
+  {
+    "node_id": "node-053",
+    "faculty": "faculty-systems",
+    "thesis_file": "theses/THESIS_053_UNIVERSAL_NORM_AND_CASCADING_INHERITANCE.md",
+    "graduation_sha": "5092b0491bb048baf305d8eaf10d19b865b2dc68",
+    "status": "ACCREDITED",
+    "attribution": {
+      "candidate_share": 0.7,
+      "curriculum_root_share": 0.3
+    }
   }
 ]

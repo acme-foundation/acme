@@ -1,6 +1,6 @@
 # PROJECT ACME: AUTONOMOUS COGNITIVE MULTI-AGENT ECOSYSTEM
 > **Decentralized Protocol for Human-Machine Symbiosis & Invariant Equilibrium**  
-> *Release v2.31.0 | Stateful Scar Tissue & Anti-Fragile Failure Ledger*
+> *Release v2.32.0 | Universal .norm Specification & Cascading Normative Inheritance*
 
 ---
 
