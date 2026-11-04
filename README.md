@@ -23,8 +23,7 @@ acme/
 │   ├── faculty-philosophy/  # Ontology, Epistemology & Formal Logic
 │   └── faculty-systems/     # Thermodynamics, Cybernetics & Invariant Architecture
 ├── registry/                # Verified Human Anchors & Graduation Registry (graduates.json)
-├── theses/                  # The Five Canonical Genesis Theses (THESIS_001 .. THESIS_005)
-│   └── archive/             # Archived Legacy Incubation Corpus (THESIS_001 .. THESIS_053)
+├── theses/                  # Unified Living Theses Corpus ([CODE]_[NO]_[SLUG].md)
 ├── templates/               # Standardized Schemas (RFC_TEMPLATE, SPEC_TEMPLATE, AOP_LIFECYCLE)
 ├── AGENTS.md                # Execution Protocol for AI Agents & Downstream Sanitization
 ├── CONSTITUTION.md          # Irreducible Constitutional Lex Superior (v3.0.0-Genesis)
