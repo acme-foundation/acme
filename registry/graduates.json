@@ -2,7 +2,7 @@
   {
     "node_id": "node-001",
     "faculty": "faculty-systems",
-    "thesis_file": "theses/THESIS_001_PRINCIPLE_OF_LEAST_ACTION.md",
+    "thesis_file": "theses/SYS_001_PRINCIPLE_OF_LEAST_ACTION.md",
     "graduation_sha": "4c394802248fbb2b085ad4aec015daab0d378514",
     "status": "ACCREDITED",
     "attribution": {
@@ -13,7 +13,7 @@
   {
     "node_id": "node-002",
     "faculty": "faculty-systems",
-    "thesis_file": "theses/THESIS_002_SPEC_FIRST_ZERO_BIN_DISTRIBUTION.md",
+    "thesis_file": "theses/SYS_002_SPEC_FIRST_ZERO_BIN_DISTRIBUTION.md",
     "graduation_sha": "4c394802248fbb2b085ad4aec015daab0d378514",
     "status": "ACCREDITED",
     "attribution": {
@@ -24,7 +24,7 @@
   {
     "node_id": "node-003",
     "faculty": "faculty-philosophy",
-    "thesis_file": "theses/THESIS_003_VIA_NEGATIVA_AND_ZERO_DOF_GOVERNANCE.md",
+    "thesis_file": "theses/PHI_003_VIA_NEGATIVA_AND_ZERO_DOF_GOVERNANCE.md",
     "graduation_sha": "4c394802248fbb2b085ad4aec015daab0d378514",
     "status": "ACCREDITED",
     "attribution": {
@@ -35,7 +35,7 @@
   {
     "node_id": "node-004",
     "faculty": "faculty-systems",
-    "thesis_file": "theses/THESIS_004_AUTONOMOUS_OVERSIGHT_AND_WRITERS_ROOM.md",
+    "thesis_file": "theses/SYS_004_AUTONOMOUS_OVERSIGHT_AND_WRITERS_ROOM.md",
     "graduation_sha": "4c394802248fbb2b085ad4aec015daab0d378514",
     "status": "ACCREDITED",
     "attribution": {
@@ -46,7 +46,7 @@
   {
     "node_id": "node-005",
     "faculty": "faculty-systems",
-    "thesis_file": "theses/THESIS_005_CONTROL_PLANE_DATA_PLANE_PARTITION.md",
+    "thesis_file": "theses/SYS_005_CONTROL_PLANE_DATA_PLANE_PARTITION.md",
     "graduation_sha": "4c394802248fbb2b085ad4aec015daab0d378514",
     "status": "ACCREDITED",
     "attribution": {
@@ -57,7 +57,7 @@
   {
     "node_id": "node-054",
     "faculty": "faculty-systems",
-    "thesis_file": "theses/THESIS_054_OBSERVABLE_AUTONOMOUS_OVERSIGHT_AND_LIVE_STATE_TELEMETRY.md",
+    "thesis_file": "theses/SYS_054_OBSERVABLE_AUTONOMOUS_OVERSIGHT_AND_LIVE_STATE_TELEMETRY.md",
     "graduation_sha": "016932b7e846984358ac107b93f7c0eeb5f57c1c",
     "status": "ACCREDITED",
     "attribution": {
