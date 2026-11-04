@@ -164,3 +164,6 @@
 
 ### SYS-129: Dual-Plane Epistemic X-Ray & Ground Truth Delta Engine (node-050 / RFC-034)
 - Codifies dual-plane 5W1H decoupling (presentation facade vs epistemic mechanism) and ground truth delta quantification to eradicate presentation layer capture and uncalibrated algorithmic foam.
+
+### SYS-130: Portable Specification, Cross-Agent State Continuity & Traceability Matrix (node-051 / RFC-044-046)
+- Codifies provider-independent 14-facet portable specification packages, 7-element cross-agent state contracts with .acme.state.json sibling convention, and 4-tier domain-component-spec-evidence traceability.
