@@ -167,3 +167,6 @@
 
 ### SYS-130: Portable Specification, Cross-Agent State Continuity & Traceability Matrix (node-051 / RFC-044-046)
 - Codifies provider-independent 14-facet portable specification packages, 7-element cross-agent state contracts with .acme.state.json sibling convention, and 4-tier domain-component-spec-evidence traceability.
+
+### SYS-131: Stateful Scar Tissue, Anti-Fragile Ledger & Reverse Telemetry (node-052 / RFC-047)
+- Codifies permanent negative search-space pruning via immutable Scar Tokens, automated crucible regression mutation, zero-PII clean-room reverse telemetry, and deterministic .acme.state.json concurrency locking.
