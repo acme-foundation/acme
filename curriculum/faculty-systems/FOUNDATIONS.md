@@ -173,3 +173,6 @@
 
 ### SYS-132: Universal .norm Specification, Cascading Normative Inheritance, and Reverse RFC Sieve (THESIS-053 / node-053)
 - Codifies the universal .norm manifest contract with frozen fallback precedence ([.norm, .acme]), 4-tier Kelsen normative hierarchy (Lex Superior <- Lex Corporata <- Portfolio <- Lex Specialis), and decontaminated reverse RFC backpropagation sieve.
+
+### SYS-133: Cognitive Bandwidth Protection, Tag Discipline, and Anti-Inflation Quench Gate (INV-ANTI-INFLATION)
+- [SYS-132] Cognitive Bandwidth Protection, Tag Discipline, and Anti-Inflation Quench Gate (INV-ANTI-INFLATION): Enforces human biological assimilation limits ($v_{\text{production}} \le v_{\text{human}}$), halts token dissipation from artificial committee sprawl, and clamps mid-day SemVer tag inflation to a maximum of one consolidated tag per operational cycle.

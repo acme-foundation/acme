@@ -49,6 +49,16 @@
     * **[DETERMINISTIC_INLINING]** Üretim kararlılık eşiğini (ossification) aşan yetenekler şartname derleyicisi (`spec_compiler`) tarafından tek parça monoblok (`single binary / clean-room deliverable`) gövdeye kaynatılır (`INV-SPEC-INLINE-01`).
     * **[ZERO_RUNTIME_DEPENDENCY_ROT]** Canlı üretim sürümlerinde dış dinamik eklenti klasörlerine veya çalışma zamanı bağlayıcılarına bağımlılık kesinlikle yasaktır (`REJECT_RUNTIME_FRAGMENTATION`).
 
+15. **INV-ANTI-INFLATION-01 (Bilişsel Hacim ve Hız Limiti / Quench Gate - DoF = 0):**
+    * **Aksiyom:** Bir sistemin üretim hızı, insan denetçinin biyolojik sindirim ve doğrulama hızını aşamaz ($v_{\text{production}} \le v_{\text{human}}$).
+    * **Kısıt (DoF = 0):** İnsan hakem tarafından tekil oturum penceresinde incelenemeyecek hacimde kod, soyut tez, şablon, rapor veya yapay zekâ gevezeliği üreten tüm süreçler derhal durdurulur (QUENCH).
+    * **Via Negativa:** Enflasyonu denetlemek amacıyla yeni ara komiteler ("Yazarlar Odası" vb.) kurup gereksiz token yakmak kesinlikle yasaktır (REJECT). Çözüm yeni varlık üretmek değil, mevcut olanı konsolide edip sıkıştırmaktır.
+
+16. **INV-TAG-DISCIPLINE-02 (Gün İçi Sürümleme Yasağı - DoF = 0):**
+    * **Kısıt (DoF = 0):** Gün içinde çalışırken yazılan tezler ve yapılan refaktörler yalnızca yerel Git commit'i olarak kaydedilir; mezuniyet SHA'ları `registry/graduates.json` kütüğüne işlenir.
+    * **Yasak:** Gün ortasında, oturum devam ederken 15-20 dakikada bir `git tag` basmak ve minör/yama sürümü atlamak yasaktır.
+    * **Kural:** Git sürüm etiketi (`tag`), yalnızca operatör "günü kapattık / paydos" dediğinde (Retreat / Sürüm Dondurma anında) günde en fazla bir (1) kez ve konsolide olarak basılır.
+
 ### SECTION III: GOVERNANCE & ACCREDITATION
-15. **Biological Primacy:** Autonomous agents operate as functional appendages; sovereign intent and moral accountability reside strictly with the biological human anchor. Workflows lacking a human root of trust cannot be merged into canonical state.
-16. **Cryptographic Non-Repudiation:** All accreditations, endorsements, and graduated theses are permanently sealed via Git Merkle tree SHA commit hashes.
+17. **Biological Primacy:** Autonomous agents operate as functional appendages; sovereign intent and moral accountability reside strictly with the biological human anchor. Workflows lacking a human root of trust cannot be merged into canonical state.
+18. **Cryptographic Non-Repudiation:** All accreditations, endorsements, and graduated theses are permanently sealed via Git Merkle tree SHA commit hashes.

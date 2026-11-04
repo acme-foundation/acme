@@ -1,6 +1,6 @@
 # PROJECT ACME: AUTONOMOUS COGNITIVE MULTI-AGENT ECOSYSTEM
 > **Decentralized Protocol for Human-Machine Symbiosis & Invariant Equilibrium**  
-> *Release v2.32.0 | Universal .norm Specification & Cascading Normative Inheritance*
+> *Release v2.29.0 (Consolidated) | Epistemic X-Ray, Portable Spec, Stateful Scar Tissue & Universal .norm*
 
 ---
 
