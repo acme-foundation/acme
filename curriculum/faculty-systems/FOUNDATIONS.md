@@ -170,3 +170,6 @@
 
 ### SYS-131: Stateful Scar Tissue, Anti-Fragile Ledger & Reverse Telemetry (node-052 / RFC-047)
 - Codifies permanent negative search-space pruning via immutable Scar Tokens, automated crucible regression mutation, zero-PII clean-room reverse telemetry, and deterministic .acme.state.json concurrency locking.
+
+### SYS-132: Universal .norm Specification, Cascading Normative Inheritance, and Reverse RFC Sieve (THESIS-053 / node-053)
+- Codifies the universal .norm manifest contract with frozen fallback precedence ([.norm, .acme]), 4-tier Kelsen normative hierarchy (Lex Superior <- Lex Corporata <- Portfolio <- Lex Specialis), and decontaminated reverse RFC backpropagation sieve.
