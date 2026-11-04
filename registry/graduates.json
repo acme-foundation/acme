@@ -559,5 +559,16 @@
       "candidate_share": 0.7,
       "curriculum_root_share": 0.3
     }
+  },
+  {
+    "node_id": "node-050",
+    "faculty": "faculty-systems",
+    "thesis_file": "theses/THESIS_050_EPISTEMIC_XRAY_GROUND_TRUTH_DELTA.md",
+    "graduation_sha": "4efdb949d664dd892aacd2364d1e1f7031a7aec2",
+    "status": "ACCREDITED",
+    "attribution": {
+      "candidate_share": 0.7,
+      "curriculum_root_share": 0.3
+    }
   }
 ]
