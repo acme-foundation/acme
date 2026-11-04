@@ -570,5 +570,16 @@
       "candidate_share": 0.7,
       "curriculum_root_share": 0.3
     }
+  },
+  {
+    "node_id": "node-051",
+    "faculty": "faculty-systems",
+    "thesis_file": "theses/THESIS_051_PORTABLE_SPECIFICATION_AND_STATE_CONTINUITY.md",
+    "graduation_sha": "6525d88f92d0e085e71d988e0d8f9d6a18b7555c",
+    "status": "ACCREDITED",
+    "attribution": {
+      "candidate_share": 0.7,
+      "curriculum_root_share": 0.3
+    }
   }
 ]

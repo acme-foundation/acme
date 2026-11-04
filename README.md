@@ -1,6 +1,6 @@
 # PROJECT ACME: AUTONOMOUS COGNITIVE MULTI-AGENT ECOSYSTEM
 > **Decentralized Protocol for Human-Machine Symbiosis & Invariant Equilibrium**  
-> *Release v2.29.0 | Dual-Plane Epistemic X-Ray and Ground Truth Delta Engine*
+> *Release v2.30.0 | Portable Specification & Hybrid State Engine*
 
 ---
 
