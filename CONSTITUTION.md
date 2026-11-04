@@ -46,7 +46,7 @@ This Constitution establishes the self-compiling, autopoietic governance core of
 ## SECTION II: BIOLOGICAL PRIMACY & MERKLE NON-REPUDIATION
 
 ### ARTICLE 6: BIOLOGICAL PRIMACY (HUMAN ROOT OF TRUST)
-* Autonomous agents operate solely as functional extensions of human intent. Sovereign moral accountability and teleological direction reside exclusively with the biological human anchor (Serkan BAYHAN).
+* **Biological Primacy:** Autonomous agents operate solely as functional extensions of human intent. Sovereign moral accountability and teleological direction reside exclusively with the biological human anchor (Serkan BAYHAN).
 * Any cognitive workflow, architectural mutation, or statutory amendment lacking cryptographic biological anchoring is void and rejected (`REJECT_UNANCHORED_INCEPTION`).
 * Biological confirmation acts as a thermodynamic temperature collapse ($T \to 0^+$), clamping generative freedom onto deterministic execution ($\text{DoF} = 0$).
 
