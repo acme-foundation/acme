@@ -161,3 +161,6 @@
 ### SYS-128: Isotropic Manifold Geometric Kernel & Embodied Symmetry (node-049 / RFC-043)
 - Codifies geometric whitening, geodesic state completion, and physical coordinate embodiment to counteract unanchored latent space hubness and stochastic hallucination drift.
 
+
+### SYS-129: Dual-Plane Epistemic X-Ray & Ground Truth Delta Engine (node-050 / RFC-034)
+- Codifies dual-plane 5W1H decoupling (presentation facade vs epistemic mechanism) and ground truth delta quantification to eradicate presentation layer capture and uncalibrated algorithmic foam.
