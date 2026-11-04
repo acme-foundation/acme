@@ -1,68 +1,67 @@
 {
-  "session_id": "ACME-V310-GENESIS-001",
-  "timestamp": "2026-11-05T02:45:00Z",
-  "phase": "V3.1.0_GENESIS_SEALED",
+  "session_id": "ACME-V320-GENESIS-001",
+  "timestamp": "2026-11-05T02:48:00Z",
+  "phase": "V3.2.0_GENESIS_SEALED",
   "status": "RATIFIED_AND_SEALED",
   "active_file": "CONSTITUTION.md & faculty/",
-  "active_problem": "Ontolojik Teşhis, Semptom Tahlili, 3-Kademeli Ayrışım, Evrimsel Parite ve Holografik Eşyapısallık kurucu ilkelerinin mühürlenmesi",
-  "active_solution": "CONSTITUTION.md Section III (Article 9 & 10) ve faculty/ müfredat aksiyomları DoF=0 olarak mühürlendi; v3.1.0-genesis etiketi bağlandı.",
+  "active_problem": "Kriz anında semptom giderme, akut hemostaz ve çift fazlı triyaj (Faz-0 / Faz-1) doktrininin anayasaya işlenmesi",
+  "active_solution": "CONSTITUTION.md INV-CRISIS-HEMOSTASIS değişmezi mühürlendi; faculty/ müfredatlarına Akut Hemostaz Protokolü ve Varoluşsal Öncelik aksiyomları eklendi; v3.2.0-genesis etiketi bağlandı.",
   "mutations": [
     {
-      "target": "CONSTITUTION.md (Section III)",
+      "target": "CONSTITUTION.md (Article 9)",
       "action": "CONSTITUTIONAL_AMENDMENT",
       "status": "COMPLETED",
-      "details": "INV-ONTOLOGICAL-GROUNDING, INV-DIAGNOSTIC-TRIAGE, INV-3-TIER-DECOMPOSITION, INV-EVOLUTIONARY-PARITY, INV-HOLOGRAPHIC-COHERENCE eklendi."
+      "details": "INV-CRISIS-HEMOSTASIS (Faz-0 Akut Hemostaz, Faz-1 Kök Neden Taahhüdü, Yaşam Sinyali Koridoru) eklendi."
     },
     {
       "target": "faculty/PHI_philosophy.md",
       "action": "SYLLABUS_AXIOM_ALIGNMENT",
       "status": "COMPLETED",
-      "details": "Ontolojik Teşhis ve Teleolojik Zeminleme (DoF=0) kurucu aksiyomlara işlendi."
+      "details": "Varoluşsal Öncelik: Teşhis Öncesi Yaşamın İdamesi (DoF=0) kurucu aksiyomlara işlendi."
     },
     {
       "target": "faculty/SYS_systems.md",
       "action": "SYLLABUS_AXIOM_ALIGNMENT",
       "status": "COMPLETED",
-      "details": "3 Kademeli Hiyerarşik Ayrışım ve Holografik Eşyapısallık (DoF=0) kurucu aksiyomlara işlendi."
+      "details": "Akut Hemostaz Protokolü (Circuit Breaker & Fallback Handlers) başlığı ve adımları işlendi."
     },
     {
       "target": "git tags",
       "action": "SEMVER_GENESIS_ALIGNMENT",
       "status": "COMPLETED",
-      "details": "v3.1.0-genesis etiketi basılarak zaman oku anakronizmi onarıldı."
+      "details": "v3.2.0-genesis etiketi basılarak Merkle kütüğüne mühürlendi."
     }
   ],
   "referee_status": "VERIFIED_PASS_100%",
   "critic_defects": [
-    "INV-ONTOLOGICAL-GROUNDING: Problem -> Çözüm sıçraması yasaklandı [DoF=0]",
-    "INV-DIAGNOSTIC-TRIAGE: Kullanıcı beyanı semptom kabul edildi, ölçüm şartı mühürlendi [DoF=0]",
-    "INV-3-TIER-DECOMPOSITION: Shell -> Layout -> Component ayrışımı anayasaya bağlandı [DoF=0]",
-    "INV-EVOLUTIONARY-PARITY: Monolitik kaçış yasaklandı, Jenga çöküşü önlendi [DoF=0]",
-    "INV-HOLOGRAPHIC-COHERENCE: Makro mimari ile mikro bileşen faz farkı sıfırlandı (MSE=0) [DoF=0]"
+    "INV-CRISIS-HEMOSTASIS: Faz-0 / Faz-1 ayrımı ve acil devre kesici anayasaya bağlandı [DoF=0]",
+    "Geçici turnike şartı: Hiçbir Faz-0 yaması kalıcı çözüm sayılamaz, Faz-1 taahhüdü zorunludur [DoF=0]",
+    "Yaşam sinyalleri metriği: CPU, bellek, hata ve nabız koridoru ölçüm kriteri getirildi [DoF=0]",
+    "Varoluşsal öncelik: Yaşamayan organizmanın ontolojisi tahlil edilemez ilkesi işlendi [DoF=0]"
   ],
   "synthetic_personas": [
     {
       "persona": "Senior Technical Auditor",
       "vote": "UNCONDITIONAL_APPROVAL (PASS)",
-      "statement": "Anayasal ve müfredat güncellemeleri saf NLP doktrinini korumakta, 7 doğrulama kapısını 100% geçmektedir."
+      "statement": "Kriz hemostazı ve devre kesici mekanizmaları sistemin termal patlamalar karşısında hayatta kalmasını teminat altına almaktadır. 7/7 anayasal kapı yeşildir."
     },
     {
       "persona": "Downstream Enterprise Architect",
       "vote": "UNCONDITIONAL_APPROVAL (PASS)",
-      "statement": "Shell-Layout-Component ayrışımı ve semptom/teşhis disiplini downstream projelerde kod kokuşmasını ve Jenga çöküşünü yapısal olarak engelleyecektir."
+      "statement": "Faz-0 (kanamayı durdurma) ile Faz-1 (kök neden tedavisi) arasındaki ayrım operasyonel panikleri önleyecek ve acil yamaların kalıcı kod kokuşmasına dönüşmesini turnike taahhüdüyle engelleyecektir."
     }
   ],
-  "user_persona_feedback": "Başmimar'ın 5 kurucu ilkesi anayasaya ve fakülte kütüklerine DoF=0 değişmezi olarak mühürlendi.",
+  "user_persona_feedback": "Akut hemostaz ve çift fazlı triyaj doktrini anayasa ve fakültelere DoF=0 değişmezi olarak mühürlendi.",
   "audit_summary": {
-    "release_tag": "v3.1.0-genesis",
+    "release_tag": "v3.2.0-genesis",
     "theses_count": 65,
     "unique_codes_count": 65,
     "faculty_catalogs": [
-      "faculty/SYS_systems.md (54 ders + 2 konsept)",
-      "faculty/PHI_philosophy.md (6 ders)",
+      "faculty/SYS_systems.md (54 ders + 2 konsept + Akut Hemostaz Protokolü)",
+      "faculty/PHI_philosophy.md (6 ders + Varoluşsal Öncelik Aksiyomu)",
       "faculty/LAW_law.md (5 ders)"
     ],
     "verification_gates": "7/7 PASS (Zero-Code, Registry, Faculty, Purity, Parity, Merkle, Crucible)",
-    "git_head": "v3.1.0-genesis"
+    "git_head": "v3.2.0-genesis"
   }
 }

@@ -10,6 +10,13 @@
 * **Autopoiesis & Homeostasis (Ashby, Maturana, Varela):** Viable systems reproduce their internal organization through circular self-referential boundary preservation against external perturbation.
 * **3 Kademeli Hiyerarşik Ayrışım ve Evrimsel Parite (Tri-Tier Hierarchical Decomposition & Evolutionary Parity - DoF = 0):** Tüm mimari yapılar zorunlu olarak 3 kademede inşa edilir: Uygulama Çatısı (Shell / Orchestrator: global yaşam döngüsü, yönlendirme ve durum orkestrasyonu), Düzenler (Layouts / Skeleton Slots: sayfa/ekran iskeletleri ve yuva yerleşimleri) ve Bileşenler (Components: Composite & Atomic: izole, yeniden kullanılabilir atomik ve birleşik yapı taşları). Modelin En Az Eylem İlkesi'ni monolitik ilkelliğe kaçış bahanesi olarak kullanması yasaktır; modern modüler bileşen ayrışımı korunmalı, etki alanı (blast radius) izole edilerek Jenga çöküşü önlenmelidir (`REJECT_MONOLITHIC_COLLAPSE`).
 * **Holografik Eşyapısallık ve Faz Farkı Sıfırlama (Holographic Coherence - DoF = 0):** Çözümün makro mimarisi ile en alt mikro bileşeni aynı evrimsel olgunluk ve negatif kısıt seviyesinde olmak zorundadır. Kuşbakışı görünüm ile fırça darbesi arasındaki faz farkı sıfır ($\text{MSE} = 0$) olmalıdır (`REJECT_FRACTAL_ASYMMETRY`).
+* **Akut Hemostaz Protokolü (Circuit Breaker & Fallback Handlers - DoF = 0):** Kriz anında derleme hızında semptom giderme adımları (yük tahliyesi, güvenli rölantiye alma, acil devre kesici, geçici kabuk bağlama) sistemik bir refleks olarak zorunludur (`CIRCUIT_BREAKER_HALT`). Hayati tehlike, kilitlenme ve termal aşırı yük durumunda kök neden aranmadan semptom bastırılır (Faz-0); acil turnike uygulandıktan ve yaşam sinyalleri güvenli koridora döndükten sonra kalıcı Faz-1 ontolojik tahlil taahhüt edilir (`REJECT_UNTRIAGED_PATCH`).
+
+### Akut Hemostaz Protokolü (Circuit Breaker & Fallback Handlers)
+Kriz, sistemik kilitlenme ve termal aşırı yük durumunda derleme hızında semptom giderme adımları zorunlu bir sistemik kuraldır (DoF = 0):
+1. **Yük Tahliyesi (Load Shedding & Traffic Shunting):** Çöküşü tetikleyen işlem ve trafik akışı derhal kesilir veya izole hatta aktarılır.
+2. **Güvenli Rölantiye Alma (Quiescent Idle / Circuit Breaker):** İşlemci, bellek ve token tüketimi asgari güvenli taban seviyeye sabitlenir (`CIRCUIT_BREAKER_HALT`).
+3. **Geçici Kabuk Bağlama (Symptomatic Tourniquet):** Organizmanın dağılmasını önleyen acil semptomatik yama devreye alınır; kalıcı mimari çözüm kabul edilmez, ardında zorunlu Faz-1 Kök Neden Taahhüdü bırakır (`REJECT_UNTRIAGED_PATCH`).
 
 ---
 

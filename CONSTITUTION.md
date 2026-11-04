@@ -1,8 +1,8 @@
-# CONSTITUTION OF THE ACME ECOSYSTEM (LEX SUPERIOR v3.1.0-GENESIS)
+# CONSTITUTION OF THE ACME ECOSYSTEM (LEX SUPERIOR v3.2.0-GENESIS)
 > **Status:** RATIFIED CANONICAL FOUNDATION  
 > **Authority:** Lex Superior / Irreducible Cognitive Constitution  
 > **Biological Root of Trust:** Serkan BAYHAN (Chief Architect)  
-> **Release Target:** ACME v3.1.0-Genesis  
+> **Release Target:** ACME v3.2.0-Genesis  
 
 ---
 
@@ -64,9 +64,15 @@ This Constitution establishes the self-compiling, autopoietic governance core of
 
 ## SECTION III: ONTOLOGICAL GROUNDING & FRACTAL ARCHITECTURAL INVARIANTS (DoF = 0)
 
-### ARTICLE 9: ONTOLOGICAL GROUNDING & DIAGNOSTIC TRIAGE (INV-ONTOLOGICAL-GROUNDING & INV-DIAGNOSTIC-TRIAGE)
+### ARTICLE 9: ONTOLOGICAL GROUNDING, DIAGNOSTIC TRIAGE & ACUTE HEMOSTASIS
 * **INV-ONTOLOGICAL-GROUNDING (DoF=0):** Doğrudan Problem -> Çözüm sıçraması yasaktır. Sistem, şikayetten önce muhatap varlığın ontolojisini ve varoluşsal amacını (Telos) tanımlamak zorundadır. Çözüm, yalnızca varlığın doğasına hizmet edemeyen sakatlıkları gidermek üzere derlenir (`REJECT_UNANCHORED_LEAP`).
 * **INV-DIAGNOSTIC-TRIAGE (DoF=0):** Kullanıcı beyanı daima 'semptom' kabul edilir. Semptomun işaret ettiği kritik noktalar tahlil edilmeden, log/metriklerle ölçülmeden kök problem ilan edilemez. Ölçülemeyen şey problem kabul edilemez (`REJECT_UNMEASURED_DIAGNOSIS`).
+* **INV-CRISIS-HEMOSTASIS (Akut Hemostaz ve Semptomatik Koruma Değişmezi - DoF = 0):**
+  - **a. Çift Fazlı Müdahale Ayrımı:** Sistemik arızalar ve krizler iki fazda ele alınır:
+    * **FAZ-0 (AKUT HEMOSTAZ / ACİL MÜDAHALE):** Hayati tehlike, sistemik kilitlenme veya termal aşırı yük durumunda semptomun bastırılması (ateş düşürme, ağrı kesme, trafik kesme / circuit-breaker, izole etme) esastır. Bu fazda kök neden aranmaz; amaç organizmanın çöküşünü durdurmaktır (`CIRCUIT_BREAKER_HALT`).
+    * **FAZ-1 (ONTOLOJİK TEŞHİS VE TAHLİL):** Sistem stabilize edildikten, kanama durduktan ve nabız taban seviyeye indikten sonra `INV-DIAGNOSTIC-TRIAGE` kuralları devreye girer; tahlil yapılır ve kök neden şartnamesi derlenir.
+  - **b. Geçici Yama / Turnike Şartı:** Faz-0'da uygulanan hiçbir semptomatik müdahale (ağrı kesici yama) kalıcı mimari çözüm kabul edilemez. Her acil müdahale, ardında zorunlu bir "FAZ-1 KÖK NEDEN TAAHHÜDÜ" bırakmak zorundadır (`REJECT_UNTRIAGED_PATCH`).
+  - **c. Ölçülebilir Yaşam Sinyali (Vital Signs):** Faz-0'dan Faz-1'e geçiş ancak hayati metrikler (CPU, bellek, hata frekansı, biyolojik nabız) güvenli koridora döndüğünde tetiklenir.
 
 ### ARTICLE 10: TRI-TIER HIERARCHY, EVOLUTIONARY PARITY & HOLOGRAPHIC COHERENCE
 * **INV-3-TIER-DECOMPOSITION (DoF=0):** Tüm mimari yapılar zorunlu olarak 3 kademede inşa edilir:
