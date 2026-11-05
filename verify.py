@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 ACME CORE INVARIANT GATE & CONSTITUTIONAL VERIFIER (Pure Standard Library)
-Self-Compiling Genesis Verifier (v3.0.2-Genesis)
+Self-Compiling Genesis Verifier (v3.0.3-Genesis)
 Serves as the Mechanical Gatekeeper Turnike at the repository boundary.
 """
 
@@ -13,7 +13,7 @@ import subprocess
 
 def run_invariant_audit(verify_all: bool = False) -> bool:
     print("=" * 68)
-    print("      ACME GENESIS CONSTITUTIONAL INTEGRITY & INVARIANT GATE (v3.0.2)      ")
+    print("      ACME GENESIS CONSTITUTIONAL INTEGRITY & INVARIANT GATE (v3.0.3)      ")
     print("=" * 68)
 
     # 1. Zero-Code Invariant: No code artifacts tracked in core (except verify.py gatekeeper)
@@ -93,7 +93,10 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
             'INV-SINGLE-MANIFEST',
             'INV-OPTIN-STRICT',
             'Dewdrop Boundary Invariant',
-            'Biological Primacy'
+            'Biological Primacy',
+            'INV-FORMAL-IR-GATE',
+            'INV-RUNTIME-INTERCEPT',
+            'INV-CRUCIBLE-CERTIFICATION'
         ]
         for inv in required_invariants:
             if inv not in const_text:
@@ -113,12 +116,32 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
                 print(f"[FAIL] Missing constitutional pillar: {pillar}", file=sys.stderr)
                 return False
 
-        print("[+] Constitutional Parity:   [PASS] All 5 Core Pillars and Lex invariants verified.")
+        print("[+] Constitutional Parity:   [PASS] All 5 Core Pillars and 12 Lex invariants verified.")
     except Exception as e:
         print(f"[FAIL] Constitution check failed: {e}", file=sys.stderr)
         return False
 
-    # 6. Domain Purity Negative Gate
+    # 6. RFC Formal Hardening Integrity Gate (RFC-048, RFC-049, RFC-050)
+    try:
+        required_rfcs = [
+            ('rfcs/RFC_048_FORMAL_INTERMEDIATE_REPRESENTATION.md', 'INV-FORMAL-IR-GATE'),
+            ('rfcs/RFC_049_RUNTIME_INTERCEPT_AND_AST_SHIELD.md', 'INV-RUNTIME-INTERCEPT'),
+            ('rfcs/RFC_050_ADVERSARIAL_CRUCIBLE_CERTIFICATION.md', 'INV-CRUCIBLE-CERTIFICATION')
+        ]
+        for rfc_path, anchored_inv in required_rfcs:
+            if not os.path.exists(rfc_path):
+                print(f"[FAIL] Missing formal RFC document: {rfc_path}", file=sys.stderr)
+                return False
+            rfc_text = open(rfc_path, 'r', encoding='utf-8').read()
+            if anchored_inv not in rfc_text:
+                print(f"[FAIL] RFC {rfc_path} lacks anchored invariant: {anchored_inv}", file=sys.stderr)
+                return False
+        print("[+] RFC Invariant Parity:   [PASS] RFC-048, RFC-049, RFC-050 ratified with constitutional anchors.")
+    except Exception as e:
+        print(f"[FAIL] RFC verification failed: {e}", file=sys.stderr)
+        return False
+
+    # 7. Domain Purity Negative Gate
     prohibited = ['UYAP', 'TCKN', 'UDF']
     if os.path.exists('theses'):
         for root, dirs, files in os.walk('theses'):
@@ -131,7 +154,7 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
                             return False
     print("[+] Domain Purity Gate:      [PASS] No proprietary domain leakage detected.")
 
-    # 7. Semantic Fluff & Adjective Density Gate (<= 0.02)
+    # 8. Semantic Fluff & Adjective Density Gate (<= 0.02)
     try:
         subjective_words = ['hızlı', 'mükemmel', 'harika', 'güçlü', 'kolay', 'kusursuz', 'süper']
         total_words = 0
@@ -153,7 +176,41 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
     except Exception as e:
         print(f"[WARN] Adjective density check bypassed: {e}")
 
-    # 8. SemVer Cadence & Gatekeeper Assertion (Quench Gate)
+    # 9. Formal Schema Gate (FIR & JSON-Schema Validation via stdlib)
+    try:
+        fir_files = []
+        for root, dirs, files in os.walk('.'):
+            if '.git' in dirs:
+                dirs.remove('.git')
+            for f in files:
+                if f.endswith('.fir.json'):
+                    fir_files.append(os.path.join(root, f))
+        if not fir_files:
+            print("[FAIL] No Formal Intermediate Representation (.fir.json) files found.", file=sys.stderr)
+            return False
+        required_keys = ['fir_version', 'initial_state', 'states', 'action_transition_matrix', 'invariant_verification_set']
+        for p in fir_files:
+            with open(p, 'r', encoding='utf-8') as f:
+                schema_data = json.load(f)
+            for k in required_keys:
+                if k not in schema_data:
+                    print(f"[FAIL] Missing FIR key '{k}' in {p}", file=sys.stderr)
+                    return False
+            states = set(schema_data.get('states', []))
+            if schema_data.get('initial_state') not in states:
+                print(f"[FAIL] initial_state not in states set in {p}", file=sys.stderr)
+                return False
+            for t in schema_data.get('action_transition_matrix', []):
+                for tk in ['from', 'to', 'event', 'pre_conditions', 'post_conditions']:
+                    if tk not in t:
+                        print(f"[FAIL] Incomplete transition contract '{tk}' in {p}", file=sys.stderr)
+                        return False
+        print(f"[+] Formal Schema Gate:     [PASS] Intermediate representations strictly typed.")
+    except Exception as e:
+        print(f"[FAIL] Formal schema validation failed: {e}", file=sys.stderr)
+        return False
+
+    # 10. SemVer Cadence & Gatekeeper Assertion (Quench Gate)
     try:
         latest_tag = subprocess.check_output(
             ['git', 'describe', '--tags', '--abbrev=0'],

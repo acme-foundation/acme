@@ -1,8 +1,8 @@
-# CONSTITUTION OF THE ACME ECOSYSTEM (LEX SUPERIOR v3.0.2-GENESIS)
+# CONSTITUTION OF THE ACME ECOSYSTEM (LEX SUPERIOR v3.0.3-GENESIS)
 > **Status:** RATIFIED CANONICAL FOUNDATION  
 > **Authority:** Lex Superior / Irreducible Cognitive Constitution  
 > **Biological Root of Trust:** Serkan BAYHAN (Chief Architect)  
-> **Release Target:** ACME v3.0.2-Genesis  
+> **Release Target:** ACME v3.0.3-Genesis  
 
 ---
 
@@ -66,7 +66,7 @@ This Constitution establishes the self-compiling, autopoietic governance core of
 
 ---
 
-## SECTION III: OBJECTIVE TRIAGE METRIC SCALE & THE NINE CANONICAL INVARIANTS (DoF = 0)
+## SECTION III: OBJECTIVE TRIAGE METRIC SCALE & THE TWELVE CANONICAL INVARIANTS (DoF = 0)
 
 ### SECTION 0: OBJECTIVE TRIAGE METRIC SCALE
 What cannot be measured cannot be validated as an architectural defect (`REJECT_UNMEASURED_DIAGNOSIS`). Autonomous self-audits and external telemetry intake must evaluate against the six (6) objective metric axes:
@@ -77,7 +77,7 @@ What cannot be measured cannot be validated as an architectural defect (`REJECT_
 5. **SEMANTIC VERSION MONOTONICITY ($\text{SemVer_Delta_Violation} = 0$):** Minor ($Y$) delta increments without an explicit `[RELEASE]` token in the commit payload are strictly barred. Patch ($Z$) advances monotonically.
 6. **HIERARCHICAL DEPTH CEILING ($\text{Depth_Ceiling} = 3$):** Architectural decomposition is strictly limited to three tiers: Shell $\to$ Layouts $\to$ Components. Inter-component degrees of freedom remain phase-locked.
 
-### ARTICLE 9: THE NINE CANONICAL INVARIANTS (DoF = 0)
+### ARTICLE 9: THE TWELVE CANONICAL INVARIANTS (DoF = 0)
 * **1. INV-ONTOLOGICAL-GROUNDING (Domain Pre-Conditioning & Teleological Scope - DoF = 0):** Unanchored leaps from raw problem statements directly into solution synthesis are strictly prohibited (`REJECT_UNANCHORED_LEAP`). The system must formally define the domain contract, operational pre-conditions, and teleological scope before compiling implementation contracts. Synthesis is permitted solely to remediate formal defects that breach domain invariants.
 * **2. INV-DIAGNOSTIC-TRIAGE (Telemetric Defect Isolation & Pre-Implementation Triage - DoF = 0):** Operator and user inputs evaluate strictly as noisy surface symptoms. Declaring root-cause defects prior to metric verification, log correlation, and telemetric isolation is prohibited (`REJECT_UNMEASURED_DIAGNOSIS`). Unmeasured anomalies cannot constitute engineering defects.
 * **3. INV-CRISIS-HEMOSTASIS (Acute Circuit Breaking & Degraded State Fallback - DoF = 0):** Under deadlock, cyclic stalls, or thermal quota exhaustion, Phase-0 stabilization (load shedding, traffic shunting, circuit breaker trips) triggers immediately (`CIRCUIT_BREAKER_HALT`). Emergency patches do not constitute stable architectural releases and mandate an immediate Phase-1 root-cause commitment (`REJECT_UNTRIAGED_PATCH`). Phase-1 defect compilation commences solely after vital telemetry metrics return to calibrated safe corridors.
@@ -90,3 +90,6 @@ What cannot be measured cannot be validated as an architectural defect (`REJECT_
 * **7. INV-SPECTRAL-TRIAGE (Harmonic Noise Filtering & Kinematic Synergy - DoF = 0):** Raw time-domain inputs must be decompiled into spectral harmonics. High-frequency subjective fluff is filtered via low-pass thresholding (`REJECT_HIGH_FREQUENCY_FLUFF`), isolating the low-frequency carrier failure mode (`REJECT_TIME_DOMAIN_NOISE`). Multi-tier component joints are phase-locked to zero degrees of freedom via Bernstein kinematic synergy (`REJECT_UNCONSTRAINED_JOINTS`).
 * **8. INV-PRIMITIVE-ATTRACTOR-REFUTATION (Decoupled Cognitive Plane vs Execution Plane - DoF = 0):** Spontaneous first-pass outputs from generative language models are presumed primitive by default due to statistical entropy minimization (`REJECT_PRIMITIVE_ATTRACTOR`). Systems must escalate to verified modular patterns before code compilation (`REJECT_UNESCALATED_SOLUTION`). Execution tools, builder scripts, and test runners (`tools/`, `engine/`) are permanently barred from entering the cognitive core doctrine repository (`REJECT_TOOLING_LEAK`).
 * **9. INV-SEMVER-QUENCH-GATE (Monotonic Patch Discipline & Quench Gate - DoF = 0):** Any instruction, directive, or script attempting to increment the Minor ($Y$) version digit without an explicit cryptographic biological token `[RELEASE]` evaluates to an immediate constitutional breach and is rejected (`REJECT_UNAUTHORIZED_SEMVER_MUTATION`).
+* **10. INV-FORMAL-IR-GATE (Formal Intermediate Representation Gate - DoF = 0):** Natural language specifications cannot be dispatched directly to execution planes. Every specification must compile into a type-checked, mathematically grounded Formal Intermediate Representation (`.fir.json` / JSON-Schema) twin defining state space, actions, pre-conditions, and post-conditions. Specifications containing unverified state transition matrices or cyclic deadlocks are categorically rejected (`REJECT_UNVERIFIED_TRANSITION_MATRIX`).
+* **11. INV-RUNTIME-INTERCEPT (Runtime Intercept & AST Shield Invariant - DoF = 0):** In downstream execution planes (`.norm`), operating system side-effects dispatched by autonomous agents (file I/O, shell execution, subprocess invocation) must be routed through an allowlisted interceptor shield. Commands violating the 3-tier architectural hierarchy (`Shell -> Layout -> Component`), leaking plane boundaries, or installing unauthorized package dependencies are halted at the operating system boundary with exit code 126 (`REJECT_UNAUTHORIZED_RUNTIME_MUTATION`).
+* **12. INV-CRUCIBLE-CERTIFICATION (Adversarial Crucible Stress Certification - DoF = 0):** No living specification or synthesized component may attain `READY_FOR_DISPATCH` status without deterministically repelling a minimum of 100 boundary mutation attacks and fuzzing scenarios generated by an independent Adversarial Twin agent, proving safe-state circuit-breaker convergence (`CIRCUIT_BREAKER_HALT`, `REJECT_UNCERTIFIED_DISPATCH`).

@@ -1,7 +1,7 @@
 # ACME: Deterministic Specification Architecture
 > A formal framework that compiles natural language intent into zero-drift execution contracts for agentic systems.
 
-**Version:** `v3.0.2-genesis`  
+**Version:** `v3.0.3-genesis`  
 **Standard:** Deterministic Specification (`DoF = 0`)  
 **Gatekeeper:** `verify.py` (Zero-dependency stdlib)
 
@@ -57,7 +57,7 @@ The system automatically performs contextual field analysis:
 {
   "project_name": "payments-service",
   "project_type": "greenfield",
-  "extends": "https://github.com/acme-foundation/acme.git#v3.0.2-genesis",
+  "extends": "https://github.com/acme-foundation/acme.git#v3.0.3-genesis",
   "corporate_invariants": [
     "All service endpoints must expose OpenAPI specifications before code implementation",
     "Zero binary dependencies: All logic must compile locally from verified source"
@@ -70,7 +70,7 @@ The system automatically performs contextual field analysis:
 {
   "project_name": "legacy-core-portal",
   "project_type": "brownfield",
-  "extends": "https://github.com/acme-foundation/acme.git#v3.0.2-genesis",
+  "extends": "https://github.com/acme-foundation/acme.git#v3.0.3-genesis",
   "legacy_containment": {
     "legacy_scope": "src/legacy/",
     "blast_radius_containment": "strict"
@@ -86,7 +86,7 @@ The system automatically performs contextual field analysis:
 ```json
 {
   "workspace_role": "control_center",
-  "extends": "https://github.com/acme-foundation/acme.git#v3.0.2-genesis",
+  "extends": "https://github.com/acme-foundation/acme.git#v3.0.3-genesis",
   "subprojects": [
     {
       "path": "services/identity-provider",
@@ -109,7 +109,7 @@ The system automatically performs contextual field analysis:
 ---
 
 ## Repository Topology
-* `CONSTITUTION.md`: The 9 immutable invariants governing zero-drift specification.
+* `CONSTITUTION.md`: The 12 immutable invariants governing zero-drift specification.
 * `faculty/`: Foundational theory curriculum (`SYS`, `PHI`).
 * `workflows/`: Deterministic state-machine decision workflows (e.g., `WF_001_SPECTRAL_TRIAGE.md`).
 * `theses/`: Ratified architectural contracts.

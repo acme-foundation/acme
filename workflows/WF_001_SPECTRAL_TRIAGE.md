@@ -25,6 +25,13 @@
   3. Components (Composite & Atomic Props Contract)
 - [ ] Enforce Anti-Monolithic Escalation: Reject single-file monoliths.
 
-### State 4: Specification & Invariant Lock (DoD)
-- [ ] Generate formal specification with Boolean PASS/FAIL test conditions.
-- [ ] Verify Blast Radius: Ensure changes cannot trigger a Jenga-style collapse.
+### State 4: Formal Intermediate Representation (FIR) Compilation
+- [ ] Compile natural language specification into mathematically typed `.fir.json` state schema.
+- [ ] Verify State Transition Matrix: Ensure all states define deterministic pre/post-conditions with zero deadlocks ($DoF = 0$).
+- [ ] Verify Blast Radius & Invariant Lock: Ensure changes cannot trigger a Jenga-style collapse (`REJECT_UNVERIFIED_TRANSITION_MATRIX`).
+
+### State 5: Adversarial Crucible Stress Gate
+- [ ] Dispatch `.fir.json` and specification contracts to independent Adversarial Twin (Red Team).
+- [ ] Execute Centennial Mutation Suite: Subject artifact to at least 100 fuzzing and boundary mutation attacks.
+  - Failure: If any mutation causes unhandled crashes or latency exceeds 500ms, Trip Circuit Breaker (`HALT_ON_MUTATION_BREACH`) and return to State 4.
+  - Success: 100/100 attacks survived with deterministic fallback -> Mark `READY_FOR_DISPATCH`.
