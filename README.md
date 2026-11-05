@@ -1,6 +1,6 @@
 # PROJECT ACME: AUTONOMOUS COGNITIVE MULTI-AGENT ECOSYSTEM
 > **Decentralized Protocol for Human-Machine Symbiosis & Invariant Equilibrium**  
-> *Release v3.0.0-Genesis | Self-Hosting Core & Recursive Spec Compiler*  
+> *Release v3.0.1-Genesis | Self-Hosting Core & Recursive Spec Compiler*
 > *Legacy Incubation (v1.x - v2.x / 53 Theses) Retired & Frozen at `archive/v2-legacy-incubator`*  
 
 ---
@@ -15,20 +15,20 @@ Project ACME is the foundational cognitive constitution for autonomous agent eco
 4. **Autonomous Oversight & The Writer's Room Closed Loop:** Mandatory pre-execution 4-stage circuit: *Critic (Adversarial Twin) $\to$ Spec Patch $\to$ Execution $\to$ Delivery Referee*, strictly clamped to a 3-iteration Quench Gate ceiling.
 5. **Control Plane / Data Plane Partition:** PMO/governance memory (`.norm`, `.acme`, RFCs, Curricula, Theses) is strictly quarantined from public runtime source trees (`src/`, `tests/`), with clean-room reverse telemetry backpropagating only anonymized cryptographic Scar Signatures.
 
-### 3. REPOSITORY SCAFFOLDING (v3.0.4-GENESIS)
-`	ext
+### 3. REPOSITORY SCAFFOLDING (v3.0.1-GENESIS)
+```text
 acme/
 ├── faculty/              # Unified Living Syllabus Catalogs (SYS_systems.md, PHI_philosophy.md, LAW_law.md)
 ├── registry/             # Verified Human Anchors & Graduation Registry (graduates.json)
 ├── theses/               # Unified Living Theses Corpus ([CODE]_[NO]_[SLUG].md)
 ├── templates/            # Standardized Schemas (RFC_TEMPLATE, SPEC_TEMPLATE, AOP_LIFECYCLE)
 ├── AGENTS.md             # Execution Protocol for AI Agents & Downstream Sanitization
-├── CONSTITUTION.md       # Irreducible Constitutional Lex Superior (v3.0.4-Genesis)
+├── CONSTITUTION.md       # Irreducible Constitutional Lex Superior (v3.0.1-Genesis)
 ├── verify.py             # Pure Stdlib Sidecar Invariant Gate & Crucible Verifier
 ├── live_state.json       # Live Telemetry State Machine
 ├── live_view.html        # Real-Time Zero-Refresh Dashboard Cockpit
 └── README.md             # Genesis Specification & Adoption Guide
-`
+```
 
 ### 4. DOWNSTREAM ADOPTION & THE UNIVERSAL `.norm` STANDARD
 Downstream client projects (workspaces) adopt ACME as an external normative authority (*Lex Superior*), not as boilerplate application code.
@@ -43,9 +43,9 @@ A downstream project establishes constitutional compliance exclusively through a
 {
   "$schema": "https://acme-standard.org/schemas/v3/norm.json",
   "repo": "https://github.com/acme-foundation/acme.git",
-  "version": "v3.0.0-genesis",
+  "version": "v3.0.1-genesis",
   "mode": "normative_reference",
-  "extends": "https://github.com/acme-foundation/acme.git#v3.0.0-genesis",
+  "extends": "https://github.com/acme-foundation/acme.git#v3.0.1-genesis",
   "feed": {
     "persona": false,
     "org": false

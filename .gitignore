@@ -21,9 +21,6 @@ venv/
 # Air-Gapped Merkle Bundles
 *.bundle
 
-# Local Developer & IDE Sidecar Tooling (Preserves Pure NLP Zero-Code Invariant)
+# Local Developer & IDE Sidecar Scaffolding
 .acme/
 extensions/
-tools/
-verify.py
-

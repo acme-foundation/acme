@@ -1,8 +1,8 @@
-# CONSTITUTION OF THE ACME ECOSYSTEM (LEX SUPERIOR v3.0.4-GENESIS)
+# CONSTITUTION OF THE ACME ECOSYSTEM (LEX SUPERIOR v3.0.1-GENESIS)
 > **Status:** RATIFIED CANONICAL FOUNDATION  
 > **Authority:** Lex Superior / Irreducible Cognitive Constitution  
 > **Biological Root of Trust:** Serkan BAYHAN (Chief Architect)  
-> **Release Target:** ACME v3.0.4-Genesis  
+> **Release Target:** ACME v3.0.1-Genesis  
 
 ---
 
@@ -55,7 +55,7 @@ This Constitution establishes the self-compiling, autopoietic governance core of
 * **SemVer Cadence Discipline (DoF = 0):** Sürüm hanelerinin keyfi artırılması kesinlikle yasaktır (`REJECT_TAG_INFLATION`):
   1. **1. Hane (MAJOR - $X$):** Yalnızca sistemik ve devrimsel paradigma dönüşümlerinde (Genesis, Pure NLP vb.) doğrudan Başmimar onayıyla değişir.
   2. **2. Hane (MINOR - $Y$):** Başmimar açıkça `[RELEASE]` komutu vermediği sürece ikinci haneyi (Minor: X.Y.Z içindeki Y) artırmak KESİNLİKLE YASAKTIR (`DoF = 0`). Paydos (`RETREAT`), anayasa güncellemesi, tekil tez veya oturum kapanışları ikinci haneyi DEĞİŞTİREMEZ.
-  3. **3. Hane (PATCH - $Z$):** Paydos (`RETREAT`), gün içi ara mühürler, anayasa yamaları, tekil tez eklemeleri ve mikro-düzeltmelerde SADECE VE YALNIZCA en son hane (Patch: Z) artırılacaktır (Örn: `v3.0.1`, `v3.0.2`, `v3.0.3`, `v3.0.4`).
+  3. **3. Hane (PATCH - $Z$):** Paydos (`RETREAT`), gün içi ara mühürler, anayasa yamaları, tekil tez eklemeleri ve mikro-düzeltmelerde SADECE VE YALNIZCA en son hane (Patch: Z) artırılacaktır (Örn: `v3.0.1`, `v3.0.2`, `v3.0.3`).
 * **Retreat Cadence & Anti-Inflation Tag Discipline:** In-session intermediate tags are strictly prohibited (`INV-TAG-DISCIPLINE`). Sürüm etiketleri (Release Tags) solely seal consolidated daily milestones during evening retreat, ensuring clean, verifiable lineage.
 
 ### ARTICLE 8: OBSERVABLE AUTONOMOUS OVERSIGHT & LIVE-STATE INVARIANT (INV-OBSERVABILITY-DECOUPLED)
@@ -66,30 +66,26 @@ This Constitution establishes the self-compiling, autopoietic governance core of
 
 ---
 
-## SECTION III: ONTOLOGICAL GROUNDING & FRACTAL ARCHITECTURAL INVARIANTS (DoF = 0)
+## SECTION III: OBJECTIVE TRIAGE METRIC SCALE & ONTOLOGICAL SUITE (DoF = 0)
 
-### ARTICLE 9: ONTOLOGICAL GROUNDING, DIAGNOSTIC TRIAGE, ACUTE HEMOSTASIS & SPECTRAL TRIAGE
-* **INV-ONTOLOGICAL-GROUNDING (DoF=0):** Doğrudan Problem -> Çözüm sıçraması yasaktır. Sistem, şikayetten önce muhatap varlığın ontolojisini ve varoluşsal amacını (Telos) tanımlamak zorundadır. Çözüm, yalnızca varlığın doğasına hizmet edemeyen sakatlıkları gidermek üzere derlenir (`REJECT_UNANCHORED_LEAP`).
-* **INV-DIAGNOSTIC-TRIAGE (DoF=0):** Kullanıcı beyanı daima 'semptom' kabul edilir. Semptomun işaret ettiği kritik noktalar tahlil edilmeden, log/metriklerle ölçülmeden kök problem ilan edilemez. Ölçülemeyen şey problem kabul edilemez (`REJECT_UNMEASURED_DIAGNOSIS`).
-* **INV-CRISIS-HEMOSTASIS (Akut Hemostaz ve Semptomatik Koruma Değişmezi - DoF = 0):**
-  - **a. Çift Fazlı Müdahale Ayrımı:** Sistemik arızalar ve krizler iki fazda ele alınır:
-    * **FAZ-0 (AKUT HEMOSTAZ / ACİL MÜDAHALE):** Hayati tehlike, sistemik kilitlenme veya termal aşırı yük durumunda semptomun bastırılması (ateş düşürme, ağrı kesme, trafik kesme / circuit-breaker, izole etme) esastır. Bu fazda kök neden aranmaz; amaç organizmanın çöküşünü durdurmaktır (`CIRCUIT_BREAKER_HALT`).
-    * **FAZ-1 (ONTOLOJİK TEŞHİS VE TAHLİL):** Sistem stabilize edildikten, kanama durduktan ve nabız taban seviyeye indikten sonra `INV-DIAGNOSTIC-TRIAGE` kuralları devreye girer; tahlil yapılır ve kök neden şartnamesi derlenir.
-  - **b. Geçici Yama / Turnike Şartı:** Faz-0'da uygulanan hiçbir semptomatik müdahale (ağrı kesici yama) kalıcı mimari çözüm kabul edilemez. Her acil müdahale, ardında zorunlu bir "FAZ-1 KÖK NEDEN TAAHHÜDÜ" bırakmak zorundadır (`REJECT_UNTRIAGED_PATCH`).
-  - **c. Ölçülebilir Yaşam Sinyali (Vital Signs):** Faz-0'dan Faz-1'e geçiş ancak hayati metrikler (CPU, bellek, hata frekansı, biyolojik nabız) güvenli koridora döndüğünde tetiklenir.
-* **INV-SPECTRAL-TRIAGE (Harmonik Spektrum ve Kinematik Sinerji Değişmezi - DoF = 0):**
-  - **a. Zaman-Frekans Ayrımı (Fourier İndirgemesi):** Kullanıcı beyanları ve yüzey telemetrisi zaman uzayında kaotik bir sinyaldir. Triyaj motoru bu sinyali harmonik frekanslarına ayrıştırmadan şartname üretemez. Amaç, semptom gürültüsü ile kök taşıyıcı rezonansı ayırmaktır (`REJECT_TIME_DOMAIN_NOISE`).
-  - **b. Alçak Geçiren Filtre (Low-Pass Filter Gate):** Sıfatlar, panik dili ve geçici operasyonel dalgalanmalar yüksek frekanslı parazit olarak elenir. Şartname sadece düşük frekanslı kök patolojiyi (sistemik tıkanıklığı) hedef alır (`REJECT_HIGH_FREQUENCY_FLUFF`).
-  - **c. Bernstein Kinematik Faz Kilidi (DoF = 0):** Uygulama, Düzen ve Bileşen katmanlarındaki tüm eklemler (props/events/APIs), bağımsız serbestlik dereceleri üretmeyecek şekilde faz kilitli harmonik sözleşmelerle bağlanır. Sistemik sürtünme kombinatorik patlamaya değil, tek bir sönümlü eksene çöker (`REJECT_UNCONSTRAINED_JOINTS`).
-* **INV-PRIMITIVE-ATTRACTOR-REFUTATION (İlkel Çeker Reddi ve Evrimsel Yükseltme - DoF = 0):**
-  - **a. Hükmen İlkel İlkesi (Default Primitive Assumption):** Ajanın veya dil modelinin spontane ürettiği ilk tasarım, dosya yapısı veya mimari tercih, istatistiksel tembellik gereği insanlık evriminin en ilkel basamağına (monolit, düzensiz dosya yığını, ayrışmamış sorumluluk) aittir. Sistem bu ilk tercihi doğrudan 'kusurlu ve ham' kabul etmek zorundadır (`REJECT_PRIMITIVE_ATTRACTOR`).
-  - **b. Evrimsel Yükseltme Zorunluluğu (Evolutionary Escalation):** Her çözüm; alanın bugüne kadar geliştirdiği rüştünü ispatlamış en üst standartla (İki Düzlemli Ayrım, 3-Kademeli Hiyerarşi, Dışsal Sözleşmeler) kıyaslanarak bir üst olgunluk seviyesine refaktör edilmeden derlenemez (`REJECT_UNESCALATED_SOLUTION`).
-  - **c. İki Düzlemli Mutlak Ayrım (Doctrine vs. Tooling Isolation):** ACME Core yalnızca Bilişsel Düzlemdir (Saf NLP, Tezler, Anayasa). Şantiye, derleme, paketleme ve analiz araçlarının (`tools/`, `engine/` vb.) bu depoda barınması anayasal ihlaldir (`REJECT_TOOLING_LEAK`). Kodlar yalnızca harici icra depolarında (acme-incubator, downstream şantiyeler) yaşayabilir.
+### BÖLÜM 0: NESNEL ÖLÇÜM CETVELİ (OBJECTIVE TRIAGE METRIC SCALE)
+Ölçülemeyen şey problem kabul edilemez (`REJECT_UNMEASURED_DIAGNOSIS`). Kendi kendini denetlerken ve dış sistemleri triyaja alırken aşağıdaki 6 nesnel eksen referans alınır:
+1. **KOD SIZINTI İNDEKSİ ($\text{CLI\_ZeroCode} = 0$):** ACME Core (`theses/`, `faculty/`, `registry/`, `./`) dizinlerinde `verify.py` mekanik turnikesi haricinde hiçbir `.py`, `.sh`, `.exe` veya çalıştırılabilir dosya bulunamaz. Varlık sayısı mutlak 0'dır (`REJECT_CODE_ARTIFACT`).
+2. **MEKANİK BOM VE FORMAT CEZASI ($\text{BOM\_Penalty} = 0$):** Hiçbir dosyada Windows UTF-8 BOM (`\xef\xbb\xbf`) ve CRLF/LF karmaşası bulunamaz.
+3. **SEMANTİK VE SIFAT YOĞUNLUĞU ($\text{Adjective\_Density} \le 0.02$):** Şartname ve tez metinlerindeki toplam kelime sayısına oranla sübjektif sıfatlar (*"çok hızlı"*, *"mükemmel"*, *"harika"*, *"güçlü"*, *"kolay"*) %2'nin altında kalmak zorundadır.
+4. **SERBESTLİK DERECESİ MÜHRÜ ($\text{DoF\_Compliance} = 1.0$):** Her anayasal kural ve şartname maddesi ikili (Boolean PASS/FAIL) bir doğrulama kriteri taşımalıdır; serbestlik derecesi $\text{DoF} = 0$ olarak kapatılır.
+5. **SÜRÜM MONOTONLUĞU ($\text{SemVer\_Delta\_Violation} = 0$):** Commit mesajında `[RELEASE]` yetki belirteci bulunmadığı sürece Minor (Y) delta artışı mutlak 0'dır. Yalnızca Patch (Z) ilerleyebilir.
+6. **HİYERARŞİK DERİNLİK TAVANI ($\text{Depth\_Ceiling} = 3$):** Uygulama Çatısı $\to$ Düzen $\to$ Bileşen haricinde katman türetilemez; bileşenler arasındaki bağımsız serbestlik derecesi faz kilitli kalır.
+
+### ARTICLE 9: ONTOLOGICAL GROUNDING, DIAGNOSTIC TRIAGE & EMERGENCY GATES
+* **1. INV-ONTOLOGICAL-GROUNDING (DoF=0):** Doğrudan Problem -> Çözüm sıçraması yasaktır. Sistem, şikayetten önce muhatap varlığın ontolojisini ve varoluşsal amacını (Telos) tanımlamak zorundadır. Çözüm, yalnızca varlığın doğasına hizmet edemeyen sakatlıkları gidermek üzere derlenir (`REJECT_UNANCHORED_LEAP`).
+* **2. INV-DIAGNOSTIC-TRIAGE (DoF=0):** Kullanıcı beyanı daima 'semptom' kabul edilir. Semptomun işaret ettiği kritik noktalar tahlil edilmeden, log/metriklerle ölçülmeden kök problem ilan edilemez. Ölçülemeyen şey problem kabul edilemez (`REJECT_UNMEASURED_DIAGNOSIS`).
+* **3. INV-CRISIS-HEMOSTASIS (DoF=0):** Kriz anında Faz-0 (Akut Hemostaz / Ateş Düşürme / Devre Kesici) ile semptom bastırılır (`CIRCUIT_BREAKER_HALT`); organizmanın çöküşü durdurulur. Ancak hemostaz kalıcı çözüm sayılamaz, hemen ardından Faz-1 kök neden şartnamesi zorunludur (`REJECT_UNTRIAGED_PATCH`).
+* **4. INV-SPECTRAL-TRIAGE (DoF=0):** Zaman uzayındaki kaotik şikayetler Fourier frekanslarına ayrıştırılır; yüksek frekanslı parazitler alçak geçiren filtre ile elenir (`REJECT_HIGH_FREQUENCY_FLUFF`), düşük frekanslı kök patoloji izole edilir (`REJECT_TIME_DOMAIN_NOISE`). Eklemler Bernstein faz kilidiyle bağlanır (`REJECT_UNCONSTRAINED_JOINTS`).
+* **5. INV-PRIMITIVE-ATTRACTOR-REFUTATION (DoF=0):** Ajanın ilk spontane tercihi 'hükmen ilkel' kabul edilir; alanın en üst standardına refaktör edilmeden derlenemez (`REJECT_PRIMITIVE_ATTRACTOR`). Şantiye araçlarının karargâha sızması anayasal ihlaldir (`REJECT_TOOLING_LEAK`).
+* **6. INV-SEMVER-QUENCH-GATE (DoF=0):** Direktif aksini emretse dahi commit mesajında `[RELEASE]` bulunmayan süreçlerde Minor hanesi artırılamaz. Yetkisiz Minor artışı derhal reddedilir (`REJECT_UNAUTHORIZED_SEMVER_MUTATION`).
 
 ### ARTICLE 10: TRI-TIER HIERARCHY, EVOLUTIONARY PARITY & HOLOGRAPHIC COHERENCE
-* **INV-3-TIER-DECOMPOSITION (DoF=0):** Tüm mimari yapılar zorunlu olarak 3 kademede inşa edilir:
-  - **Uygulama Çatısı (Shell / Orchestrator):** Global yaşam döngüsü, yönlendirme ve orkestrasyon.
-  - **Düzenler (Layouts / Skeleton Slots):** Sayfa/ekran iskeletleri ve yuva yerleşimleri.
-  - **Bileşenler (Components: Composite & Atomic):** İzolasyonlu, yeniden kullanılabilir atomik ve birleşik yapı taşları.
-* **INV-EVOLUTIONARY-PARITY (DoF=0):** Modelin En Az Eylem İlkesi'ni monolitik ilkelliğe kaçış bahanesi olarak kullanması yasaktır. Kod ve şartname, modern modüler bileşen ayrışımını korumak zorundadır. Değişikliklerin etki alanı (blast radius) izole edilmeli, Jenga çöküşü önlenmelidir (`REJECT_MONOLITHIC_COLLAPSE`).
-* **INV-HOLOGRAPHIC-COHERENCE (DoF=0):** Çözümün makro mimarisi ile en alt mikro bileşeni aynı evrimsel olgunluk ve negatif kısıt seviyesinde olmak zorundadır. Kuşbakışı görünüm ile fırça darbesi arasındaki faz farkı sıfır ($\text{MSE} = 0$) olmalıdır (`REJECT_FRACTAL_ASYMMETRY`).
+* **7. INV-3-TIER-DECOMPOSITION (DoF=0):** Bütün sistemler Uygulama Çatısı (Shell / Orchestrator), Düzen (Layouts / Skeleton Slots) ve Bileşen (Composite / Atomic Components) olmak üzere katı 3 hiyerarşide ayrıştırılır.
+* **8. INV-EVOLUTIONARY-PARITY (DoF=0):** Modelin En Az Eylem İlkesi'ni monolitik ilkelliğe kaçış bahanesi olarak kullanması yasaktır. En modern modüler bileşen ayrışımı zorunludur; etki alanı izole edilerek Jenga çöküşü engellenir (`REJECT_MONOLITHIC_COLLAPSE`).
+* **9. INV-HOLOGRAPHIC-COHERENCE (DoF=0):** Kuşbakışı makro mimari ile en alt mikro bileşen arasındaki faz farkı sıfırdır ($\text{MSE} = 0$). Her bileşen bütünü, bütün her bileşeni yansıtmalıdır (`REJECT_FRACTAL_ASYMMETRY`).
