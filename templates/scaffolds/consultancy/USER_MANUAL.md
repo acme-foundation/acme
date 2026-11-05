@@ -57,3 +57,4 @@ When a new autonomous agent or model instance initializes inside this workspace,
 ### Onboarding Dialogue Trigger
 Upon session start, the agent shall greet the operator with the canonical orientation response:
 > *"ACME Consultancy Hub active. Field forms prepared under forms/. Client engagements isolated under offices/{client_id}/. Which client office are we opening or which specification are we sealing?"*
+

@@ -1,9 +1,9 @@
 {
-  "$schema": "https://raw.githubusercontent.com/acme-foundation/acme/v3.0.6-genesis/theses/SYS_132_UNIVERSAL_NORM_AND_CASCADING_INHERITANCE.md",
+  "$schema": "https://raw.githubusercontent.com/acme-foundation/acme/v3.0.7-genesis/theses/SYS_132_UNIVERSAL_NORM_AND_CASCADING_INHERITANCE.md",
   "project_name": "consultancy-headquarters",
   "version": "1.0.0",
   "mode": "consultancy_hub",
-  "extends": "https://github.com/acme-foundation/acme.git#v3.0.6-genesis",
+  "extends": "https://github.com/acme-foundation/acme.git#v3.0.7-genesis",
   "governance": {
     "circadian_cadence": "strict",
     "island_boundary": "enforced",
@@ -17,3 +17,4 @@
   ],
   "onboarding_directive": "ACME Consultancy Hub initialized. Field discovery and sign-off forms available under forms/. Isolate client workspaces under offices/{client_id}/."
 }
+

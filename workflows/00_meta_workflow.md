@@ -197,7 +197,7 @@ To prevent single-agent consensus bias, the dialectic spring between Node 4 and 
 ## 8. EXPLICIT STATE MACHINE (DoF = 0)
 
 ### State 0: Acute Hemostasis & Circadian Reveille
-- [ ] Execute Reveille verification: `python verify.py --verify-all` (All 11 gates must be PASS).
+- [ ] Execute Reveille verification: `python verify.py --verify-all` (All 12 gates must be PASS).
 - [ ] Is there an active crash, infinite loop, OOM fault, or financial budget breach ($> \$1.50$)?
   - YES: Trip Circuit Breaker immediately (`HARD_BUDGET_STOP` / `CIRCUIT_BREAKER_HALT`). Throttle I/O, apply temporary tourniquet.
   - NO: Proceed to State 1.
@@ -240,6 +240,6 @@ To prevent single-agent consensus bias, the dialectic spring between Node 4 and 
 - [ ] `twin_specification_crucible_active == True` (SPEC-A vs. SPEC-B tournament operational).
 - [ ] `scar_to_test_promotion_armed == True` (`INV-AUTO-IMMUNITY` active).
 - [ ] `greenfield_brownfield_threshold_active == True` (Legacy implicit invariant scan active).
-- [ ] `decontamination_shield_active == True` (11/11 gates in `verify.py` PASS).
+- [ ] `decontamination_shield_active == True` (12/12 gates in `verify.py` PASS).
 - [ ] `financial_circuit_breaker_armed == True` (\$1.50 hard cap enforced).
 - [ ] `max_local_cycles_clamped == True` ($N_{\max} = 3 \to \texttt{PAUSED\_FOR\_HUMAN}$).

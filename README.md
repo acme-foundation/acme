@@ -1,7 +1,7 @@
 # ACME: Deterministic Specification Architecture
 > A formal framework that compiles natural language intent into zero-drift execution contracts for agentic systems.
 
-**Version:** `v3.0.6-genesis`  
+**Version:** `v3.0.7-genesis`  
 **Standard:** Deterministic Specification (`DoF = 0`)  
 **Gatekeeper:** `verify.py` (Zero-dependency stdlib)
 
@@ -57,7 +57,7 @@ The system automatically performs contextual field analysis:
 {
   "project_name": "payments-service",
   "project_type": "greenfield",
-  "extends": "https://github.com/acme-foundation/acme.git#v3.0.6-genesis",
+  "extends": "https://github.com/acme-foundation/acme.git#v3.0.7-genesis",
   "corporate_invariants": [
     "All service endpoints must expose OpenAPI specifications before code implementation",
     "Zero binary dependencies: All logic must compile locally from verified source"
@@ -70,7 +70,7 @@ The system automatically performs contextual field analysis:
 {
   "project_name": "legacy-core-portal",
   "project_type": "brownfield",
-  "extends": "https://github.com/acme-foundation/acme.git#v3.0.6-genesis",
+  "extends": "https://github.com/acme-foundation/acme.git#v3.0.7-genesis",
   "legacy_containment": {
     "legacy_scope": "src/legacy/",
     "blast_radius_containment": "strict"
@@ -86,7 +86,7 @@ The system automatically performs contextual field analysis:
 ```json
 {
   "workspace_role": "control_center",
-  "extends": "https://github.com/acme-foundation/acme.git#v3.0.6-genesis",
+  "extends": "https://github.com/acme-foundation/acme.git#v3.0.7-genesis",
   "subprojects": [
     {
       "path": "services/identity-provider",
@@ -113,8 +113,9 @@ The system automatically performs contextual field analysis:
 * `faculty/`: Foundational theory curriculum (`SYS`, `PHI`, `LAW`).
 * `workflows/`: Evolutionary Agent-Based Unified Process (E-AUP) suite (`00_meta_workflow.md` through `07_backpropagation.md`, `WF_001_SPECTRAL_TRIAGE.md`).
 * `theses/`: Ratified architectural contracts.
-* `verify.py`: Mechanical, zero-dependency CI gatekeeper enforcing zero-code purity and SemVer discipline (11 verification gates).
+* `verify.py`: Mechanical, zero-dependency CI gatekeeper enforcing zero-code purity and SemVer discipline (12 verification gates).
 * `scripts/decontaminator.py`: Pre-commit decontamination shield enforcing zero absolute local paths and zero credential leaks.
+* `templates/scaffolds/`: Downstream project scaffolding and formal field forms (`mode: consultancy_hub`, Form 01/02/03).
 
 ---
 

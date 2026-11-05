@@ -38,3 +38,4 @@
 
 ## 6. FORMAL ACCEPTANCE INVARIANT (`INV-FORMAL-ACCEPTANCE`)
 - No engagement invoice or milestone release may be issued without an executed `forms/FORM_03_ACCEPTANCE_DELIVERY.md` certifying 100% binary PASS across all defined Definition of Done (DoD) criteria.
+
