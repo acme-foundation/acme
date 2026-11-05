@@ -23,12 +23,13 @@
 ACME operates as an upstream invariant compiler:
 
 1. **Ingestion & Spectral Triage:** Ingest defect logs or raw intent via `workflows/WF_001_SPECTRAL_TRIAGE.md`. Filter subjective adjectives and isolate root-cause frequency.
-2. **3-Tier Formulation:** Lock architecture strictly across Shell, Layout, and Component contracts ($DoF = 0$).
-3. **Mechanical Verification:** Validate invariant parity, SemVer cadence, and zero-code core purity:
+2. **Pre-Execution Dialectic & Incubation:** Exhaust structural friction in pure NLP via `workflows/WF_002_ADVERSARIAL_INCUBATION_AND_DIALECTIC.md` before any code compilation.
+3. **3-Tier Formulation:** Lock architecture strictly across Shell, Layout, and Component contracts ($DoF = 0$).
+4. **Mechanical Verification:** Validate invariant parity, SemVer cadence, and zero-code core purity:
    ```bash
    python verify.py --verify-all
    ```
-4. **Downstream Dispatch:** Hand off compiled markdown specification contracts to downstream coding agents (Cursor, Claude Code, AntiGravity).
+5. **Downstream Dispatch:** Hand off compiled markdown specification contracts to downstream coding agents (Cursor, Claude Code, AntiGravity).
 
 ---
 
@@ -109,9 +110,9 @@ The system automatically performs contextual field analysis:
 ---
 
 ## Repository Topology
-* `CONSTITUTION.md`: The 12 immutable invariants governing zero-drift specification.
+* `CONSTITUTION.md`: The 15 immutable invariants governing zero-drift specification.
 * `faculty/`: Foundational theory curriculum (`SYS`, `PHI`, `LAW`).
-* `workflows/`: Evolutionary Agent-Based Unified Process (E-AUP) suite (`00_meta_workflow.md` through `07_backpropagation.md`, `WF_001_SPECTRAL_TRIAGE.md`).
+* `workflows/`: Evolutionary Agent-Based Unified Process (E-AUP) suite (`00_meta_workflow.md`, `WF_001_SPECTRAL_TRIAGE.md`, `WF_002_ADVERSARIAL_INCUBATION_AND_DIALECTIC.md`).
 * `theses/`: Ratified architectural contracts.
 * `verify.py`: Mechanical, zero-dependency CI gatekeeper enforcing zero-code purity and SemVer discipline (12 verification gates).
 * `scripts/decontaminator.py`: Pre-commit decontamination shield enforcing zero absolute local paths and zero credential leaks.

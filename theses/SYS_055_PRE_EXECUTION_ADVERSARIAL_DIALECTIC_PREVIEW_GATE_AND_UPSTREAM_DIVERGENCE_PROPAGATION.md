@@ -21,7 +21,7 @@ When autonomous generative agents transition directly from ambiguous human inten
 
 ### 1.2 ARCHITECTURAL DOCTRINE
 To establish absolute thermodynamic efficiency and zero-drift execution, all cognitive friction must be exhausted in the pure NLP specification domain before a single line of implementation code is compiled:
-1. **The Pre-Execution Dialectic Crucible:** Before dispatching implementation tasks, the system convenes a mandatory adversarial review (The Writers' Room). A Constructor (`SPEC-A`) proposes the implementation contract, while an Adversary (`SPEC-B`) systematically stress-tests boundary assumptions, probes for Rice undecidability, and searches for failure modes. Implementation commences solely upon crystalline consensus ($DoF = 0$).
+1. **The Pre-Execution Dialectic Crucible:** Operationalized via `workflows/WF_002_ADVERSARIAL_INCUBATION_AND_DIALECTIC.md`. Before dispatching implementation tasks, the system convenes a mandatory adversarial review (The Writers' Room). A Constructor (`SPEC-A`) proposes the implementation contract, while an Adversary (`SPEC-B`) systematically stress-tests boundary assumptions, probes for Rice undecidability, and searches for failure modes. Implementation commences solely upon crystalline consensus ($DoF = 0$).
 2. **The Dry Scaffolding Preview Gate:** Structural mockups, layout slots, and dry interface declarations must be previewed and mathematically compared against the ratified contract. Compilation is unlocked if and only if semantic divergence evaluates to zero ($\Delta\text{MSE} = 0$).
 3. **Upstream Divergence Propagation (Anti-Patch Doctrine):** Downstream client workspaces are prohibited from burying architectural friction under local code patches. Every encountered constraint violation or specification deficiency must trigger an immutable Request for Comments (RFC) backpropagated upstream into the ACME Core doctrine.
 
@@ -115,3 +115,4 @@ To establish absolute thermodynamic efficiency and zero-drift execution, all cog
 | **DOD-05** | Upstream RFC Invariant Registration | `INV-UPSTREAM-RFC-03` anchored in CONSTITUTION.md | **PASS** |
 | **DOD-06** | Pre-Mortem Anti-Pattern Catalog | Top 3 failure modes explicitly cataloged and prohibited | **PASS** |
 | **DOD-07** | Automated Mechanical Verification | `python verify.py --verify-all` passes all gates | **PASS** |
+
