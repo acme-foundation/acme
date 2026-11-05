@@ -1,40 +1,40 @@
 # FACULTY OF SYSTEMS & APPLIED CYBERNETICS
-> KOD: SYS
-> ROL: Müfredat Aksiyomları ve Yaşayan Ders Kataloğu (Living Syllabus)
+> CODE: SYS
+> ROLE: Foundational Axioms & Living Syllabus Catalog
 
 ---
 
-## 1. KURUCU MÜFREDAT AKSİYOMLARI (FOUNDATIONAL AXIOMS)
+## 1. FOUNDATIONAL CURRICULUM AXIOMS
 * **Second Law of Thermodynamics (Clausius, Boltzmann):** Isolated cognitive systems naturally evolve toward maximal entropy (semantic drift, hallucination, structural decay). Sustaining order requires work and bounded energy dissipation.
 * **Principle of Least Action (PLA - Hamilton, Lagrange):** The physical trajectory between two states minimizes the action integral ($\delta S = 0$). Cognitive workflows must minimize computational overhead, token bloat, and redundant state transitions.
 * **Autopoiesis & Homeostasis (Ashby, Maturana, Varela):** Viable systems reproduce their internal organization through circular self-referential boundary preservation against external perturbation.
-* **3-Tier Structural Hierarchy & Evolutionary Parity (INV-3-TIER-DECOMPOSITION & INV-EVOLUTIONARY-PARITY - DoF = 0):** Tüm mimari yapılar zorunlu olarak 3 kademede inşa edilir: Uygulama Çatısı (Shell / Orchestrator: global yaşam döngüsü, yönlendirme ve durum orkestrasyonu), Düzenler (Layouts / Skeleton Slots: sayfa/ekran iskeletleri ve yuva yerleşimleri) ve Bileşenler (Components: Composite & Atomic: izole, yeniden kullanılabilir atomik ve birleşik yapı taşları). Modelin En Az Eylem İlkesi'ni monolitik ilkelliğe kaçış bahanesi olarak kullanması yasaktır; modern modüler bileşen ayrışımı korunmalı, etki alanı (blast radius) izole edilerek Jenga çöküşü önlenmelidir (`REJECT_MONOLITHIC_COLLAPSE`).
-* **Scale-Invariant Structural Isomorphism (INV-HOLOGRAPHIC-COHERENCE - DoF = 0):** Çözümün makro mimarisi ile en alt mikro bileşeni aynı evrimsel olgunluk ve negatif kısıt seviyesinde olmak zorundadır. Kuşbakışı görünüm ile fırça darbesi arasındaki faz farkı sıfır ($	ext{MSE} = 0$) olmalıdır (`REJECT_FRACTAL_ASYMMETRY`).
-* **Circuit Breaker, Degraded State Fallback & Acute Stabilization (INV-CRISIS-HEMOSTASIS - DoF = 0):** Kriz anında derleme hızında semptom giderme adımları (yük tahliyesi, güvenli rölantiye alma, acil devre kesici, geçici kabuk bağlama) sistemik bir refleks olarak zorunludur (`CIRCUIT_BREAKER_HALT`). Hayati tehlike, kilitlenme ve termal aşırı yük durumunda kök neden aranmadan semptom bastırılır (Faz-0); acil turnike uygulandıktan ve yaşam sinyalleri güvenli koridora döndükten sonra kalıcı Faz-1 ontolojik tahlil taahhüt edilir (`REJECT_UNTRIAGED_PATCH`).
-* **Spectral Noise Filtering & Kinematic Synergy Coupling (INV-SPECTRAL-TRIAGE - DoF = 0):** Semptom sinyalleri zaman uzayında kaotik bir dalgalanmadır; Fourier ayrıştırması (FFT) ile yüksek frekanslı parazitler (sıfatlar, duygusal telaşlar, anlık sıçramalar) alçak geçiren filtreyle elenir (`REJECT_HIGH_FREQUENCY_FLUFF`). Sistemik krizin düşük frekanslı taşıyıcı harmonikleri (kök patoloji) izole edilir. Katmanlar arasındaki eklemler (props/events/APIs) Bernstein kinematik sinerjisiyle faz kilitli harmonik sözleşmelere bağlanarak sistemik serbestlik derecesi $	ext{DoF} = 0$ noktasına indirgenir (`REJECT_UNCONSTRAINED_JOINTS`).
-* **Anti-Monolithic Escalation & Least-Action Drift Mitigation (INV-PRIMITIVE-ATTRACTOR-REFUTATION - DoF = 0):** Spontane üretilen her ham tasarım ve mimari tercih istatistiksel tembellik gereği hükmen ilkel kabul edilir (`REJECT_PRIMITIVE_ATTRACTOR`). Çözüm, alanın rüştünü ispatlamış en üst soyutlama ve modülerlik seviyesine yükseltilmeden, İki Düzlemli Ayrım (Bilişsel Doktrin vs. Harici Şantiye) ve 3 Kademeli Hiyerarşi ile hizalanmadan onaylanamaz (`REJECT_UNESCALATED_SOLUTION`). Şantiye, derleme ve icra araçlarının (`tools/`, `engine/` vb.) bilişsel karargâha sızması anayasal ihlaldir (`REJECT_TOOLING_LEAK`).
+* **3-Tier Structural Hierarchy & Evolutionary Parity (INV-3-TIER-DECOMPOSITION & INV-EVOLUTIONARY-PARITY - DoF = 0):** All architectural structures must strictly decompose across 3 distinct tiers: Application Shell (Orchestrator: global lifecycle, routing, and state orchestration), Layouts (Skeleton Slots: page/screen wireframes and structured slot placement), and Components (Composite & Atomic: isolated, reusable atomic and composite building blocks). Models are strictly prohibited from using the Principle of Least Action as a justification for monolithic shortcuts; modern modular component separation must be preserved, isolating blast radiuses and preventing catastrophic cascading collapse (`REJECT_MONOLITHIC_COLLAPSE`).
+* **Scale-Invariant Structural Isomorphism (INV-HOLOGRAPHIC-COHERENCE - DoF = 0):** The macro architecture of a solution and its lowest micro component must exhibit identical evolutionary maturity and negative constraints. The phase difference between high-level architectural view and granular implementation strokes must be zero ($\text{MSE} = 0$, `REJECT_FRACTAL_ASYMMETRY`).
+* **Circuit Breaker, Degraded State Fallback & Acute Stabilization (INV-CRISIS-HEMOSTASIS - DoF = 0):** Under crisis conditions, compiler-speed symptom mitigation steps (load shedding, quiescent idling, emergency circuit breaker, degraded-state tourniquet) are mandatory system reflexes (`CIRCUIT_BREAKER_HALT`). In critical deadlocks or thermal overloads, symptoms must be suppressed immediately without root-cause delays (Phase-0); once acute hemostasis is applied and vital signals return to safe corridors, a mandatory Phase-1 ontological root-cause analysis must be committed (`REJECT_UNTRIAGED_PATCH`).
+* **Spectral Noise Filtering & Kinematic Synergy Coupling (INV-SPECTRAL-TRIAGE - DoF = 0):** Symptom signals in the time domain represent chaotic fluctuations; fast Fourier transform (FFT) decompiles high-frequency parasitic noise (subjective adjectives, panic spikes, transient jumps) through low-pass filtering (`REJECT_HIGH_FREQUENCY_FLUFF`), isolating the low-frequency carrier harmonics of root pathology. Inter-tier joints (props, events, APIs) are bound via Bernstein kinematic synergy into phase-locked harmonic contracts, reducing systemic degrees of freedom to zero (`REJECT_UNCONSTRAINED_JOINTS`).
+* **Anti-Monolithic Escalation & Least-Action Drift Mitigation (INV-PRIMITIVE-ATTRACTOR-REFUTATION - DoF = 0):** Spontaneously generated draft designs and architectural choices are deemed primitively flawed by default due to statistical laziness (`REJECT_PRIMITIVE_ATTRACTOR`). No solution may be ratified without structural escalation to verified modular paradigms (Two-Plane Decoupling: Cognitive Doctrine vs. External Construction Plane, and 3-Tier Hierarchy; `REJECT_UNESCALATED_SOLUTION`). Leakage of execution tools, build scripts, or external dependencies (`tools/`, `engine/`, etc.) into the cognitive doctrine repository constitutes a direct constitutional violation (`REJECT_TOOLING_LEAK`).
 
 ### Circuit Breaker, Degraded State Fallback & Acute Stabilization Protocol
-Kriz, sistemik kilitlenme ve termal aşırı yük durumunda derleme hızında semptom giderme adımları zorunlu bir sistemik kuraldır (DoF = 0):
-1. **Yük Tahliyesi (Load Shedding & Traffic Shunting):** Çöküşü tetikleyen işlem ve trafik akışı derhal kesilir veya izole hatta aktarılır.
-2. **Güvenli Rölantiye Alma (Quiescent Idle / Circuit Breaker):** İşlemci, bellek ve token tüketimi asgari güvenli taban seviyeye sabitlenir (`CIRCUIT_BREAKER_HALT`).
-3. **Geçici Kabuk Bağlama (Degraded State Tourniquet):** Organizmanın dağılmasını önleyen acil semptomatik yama devreye alınır; kalıcı mimari çözüm kabul edilmez, ardında zorunlu Faz-1 Kök Neden Taahhüdü bırakır (`REJECT_UNTRIAGED_PATCH`).
+In acute crisis, deadlock, or thermal overload, compiler-speed symptom suppression is a mandatory systemic rule (DoF = 0):
+1. **Load Shedding & Traffic Shunting:** The operation or traffic spike triggering failure is halted immediately or shunted to an isolated sink.
+2. **Quiescent Idling & Circuit Breaker:** Compute, memory, and token consumption are clamped to a deterministic baseline (`CIRCUIT_BREAKER_HALT`).
+3. **Degraded-State Tourniquet:** An emergency symptomatic patch is engaged to halt structural unraveling; never accepted as a permanent release, it commits mandatory Phase-1 Root Cause Analysis (`REJECT_UNTRIAGED_PATCH`).
 
 ### Spectral Noise Filtering & Kinematic Synergy Coupling Protocol
-Semptom sinyalinin Fourier analiziyle kök frekansa indirgenmesi ve bileşen eklemlerinin Bernstein kinematik modeliyle faz kilitli bağlanması zorunlu bir sistemik kuraldır (DoF = 0):
-1. **Fourier Spektral Ayrıştırma:** Zaman uzayındaki ham kullanıcı/telemetri girdisi spektral bileşenlerine ayrıştırılır.
-2. **Alçak Geçiren Filtreleme (Low-Pass Filter):** Anlık telaş ve öznel sıfatlar ayıklanarak yalnızca temel taşıyıcı frekans (kök mimari darboğaz) muhafaza edilir (`REJECT_TIME_DOMAIN_NOISE`).
-3. **Bernstein Kinematik Faz Kilidi:** 3 kademeli hiyerarşideki (`Shell -> Layout -> Component`) bileşen eklemleri harmonik faz kilidiyle bağlanır; bağımsız serbestlik dereceleri sıfırlanarak Jenga çöküşü imkânsız kılınır (`REJECT_UNCONSTRAINED_JOINTS`).
+Decompiling symptom signals into carrier frequencies and phase-locking component joints via Bernstein kinematics is mandatory (DoF = 0):
+1. **Fourier Spectral Decomposition:** Raw time-domain user or telemetry signals are decomposed into spectral frequency components.
+2. **Low-Pass Noise Filtering:** Subjective adjectives, transient panic, and ephemeral noise are purged to isolate the fundamental carrier frequency (root architectural bottleneck, `REJECT_TIME_DOMAIN_NOISE`).
+3. **Bernstein Kinematic Phase-Lock:** Inter-tier joints across the 3-tier hierarchy (`Shell -> Layout -> Component`) are locked into rigid harmonic contracts, eliminating independent degrees of freedom to prevent cascading collapse (`REJECT_UNCONSTRAINED_JOINTS`).
 
 ### Anti-Monolithic Escalation & Least-Action Drift Mitigation Protocol
-İlkel çeker tuzağını kırmak ve çözümü evrimsel olgunluk zirvesine taşımak için aşağıdaki üç kademeli kapı zorunludur (DoF = 0):
-1. **Hükmen İlkel Denetimi (Presumption of Primitivity):** Üretilen ilk spontane taslak doğrudan kusurlu ve ham kabul edilir; monolitik ilkellik ve ayrışmamış sorumluluk yığını reddedilir (`REJECT_PRIMITIVE_ATTRACTOR`).
-2. **Mimari Yükseltme (Escalation to Peak Pattern):** Çözüm, alanın rüştünü ispatlamış en üst soyutlama standardına (İki Düzlemli Ayrım, Shell-Layout-Component ve faz kilitli sözleşmelere) refaktör edilmeden derlenemez (`REJECT_UNESCALATED_SOLUTION`).
-3. **Doktrin Arınma Kapısı (Clean-Room Doctrine Gate):** Karargâh deposunda hiçbir çalıştırılabilir araç (`tools/`), şantiye betiği veya harici bağımlılık barındırılamaz; saf NLP bilişsel doktrini korunur (`REJECT_TOOLING_LEAK`).
+To escape the primitive attractor trap and escalate solutions to verified architectural maturity, three sequential gates are mandatory (DoF = 0):
+1. **Presumption of Primitivity Gate:** The initial unconstrained generative output is presumed primitive and unsegmented by default; monolithic sprawl is categorically rejected (`REJECT_PRIMITIVE_ATTRACTOR`).
+2. **Architectural Escalation Gate:** Solutions must be refactored to conform to domain-proven peak abstraction (Two-Plane Decoupling, Shell-Layout-Component decomposition, and phase-locked contracts) prior to compilation (`REJECT_UNESCALATED_SOLUTION`).
+3. **Clean-Room Doctrine Gate:** The headquarters repository must remain 100% free of executable tools (`tools/`), build scripts, or foreign runtimes; pure NLP cognitive doctrine is strictly preserved (`REJECT_TOOLING_LEAK`).
 
 ---
 
-## 2. MÜFREDAT VE MEZUN DERSLERİ
+## 2. CURRICULUM & GRADUATED COURSES
 
 ### SYS-001: PRINCIPLE OF LEAST ACTION AND THERMODYNAMIC CONATUS
 Dispatching redundant intermediate processes, permitting unbounded generation cycles, or expanding cognitive state beyond minimal required action is strictly prohibited (`REJECT_EXTREME_ENTROPY`, DoF = 0).

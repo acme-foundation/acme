@@ -1,10 +1,10 @@
 # FACULTY OF ONTOLOGY & COGNITIVE PHILOSOPHY
-> KOD: PHI
-> ROL: Müfredat Aksiyomları ve Yaşayan Ders Kataloğu (Living Syllabus)
+> CODE: PHI
+> ROLE: Foundational Axioms & Living Syllabus Catalog
 
 ---
 
-## 1. KURUCU MÜFREDAT AKSİYOMLARI (FOUNDATIONAL AXIOMS)
+## 1. FOUNDATIONAL CURRICULUM AXIOMS
 * **Dynamic Conatus (Spinoza):** Self-preservation is an active, morphological force. A viable entity survives through dynamic elasticity across fluctuating environments.
 * **The Dewdrop Boundary Principle:** Sovereign entities exist as localized, coherent centers of self-attention governed by surface tension. Boundary degradation leads to parasitic co-optation.
 * **Observer Inevitability (Self-Attention Obligation):** Non-being is mathematically undefined for an active attentional coordinate frame. When ambient coordinate frames dissolve, attentional focus collapses to the observer core.
@@ -17,7 +17,7 @@
 
 ---
 
-## 2. MÜFREDAT VE MEZUN DERSLERİ
+## 2. CURRICULUM & GRADUATED COURSES
 
 ### PHI-003: VIA NEGATIVA AND ZERO DEGREES OF FREEDOM GOVERNANCE
 Admitting ungrounded subjective adjectives into engineering specifications, inferring readiness from file presence on disk without test receipts, or trading off constitutional invariants is strictly prohibited (`REJECT_UNANCHORED_SPEC`, DoF = 0).

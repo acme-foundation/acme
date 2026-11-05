@@ -6,27 +6,27 @@
 ---
 
 ### 1. VALUE PROPOSITION & SYSTEM MISSION
-LLM tabanlı otonom yazılım üretiminde bağlam sapmasını (context drift), monolitik kirlenmeyi ve halüsinasyon riskini ortadan kaldıran DoF=0 (Sıfır Serbestlik Derecesi) anayasal şartname çerçevesi.
+A constitutional specification framework with zero degrees of freedom ($\text{DoF} = 0$) engineered to eliminate context drift, monolithic degradation, and hallucination loops in LLM-driven autonomous software engineering.
 
-ACME, tek satır çalıştırılabilir kod içermeyen saf bir bilişsel mimari ve üst hukuk doktrinidir (Lex Superior). İnsan niyetini (Human Intent) doğrulanabilir, matematiksel ve indirgenemez negatif kısıtlarla mühürleyerek ajanların deterministik koridorda inşaat yapmasını temin eder.
+ACME contains zero lines of executable runtime code; it is a pure cognitive architecture and sovereign normative doctrine (*Lex Superior*). By anchoring human intent through falsifiable, mathematical, and negative boundary constraints, ACME forces autonomous agents to construct software within deterministic, verifiable corridors.
 
 ---
 
 ### 2. CORE ARCHITECTURAL PILLARS (DoF = 0)
 1. **Decoupled Cognitive Specification Plane vs. Execution Plane:**
-   Bilişsel şartname düzlemi (karargâh / normative control plane) ile kod icra düzlemi (downstream runtime data plane) mutlak şekilde yalıtılmıştır. Karargâha çalıştırılabilir şantiye araçları sızamaz (`INV-PLANE-SEPARATION`).
+   The normative governance control plane (headquarters specification registry) is permanently isolated from runtime data planes (downstream application repositories). Runtime tools, scripts, or execution scaffolding are strictly barred from entering the core repository (`INV-PLANE-SEPARATION`).
 2. **3-Tier Structural Hierarchy:**
-   Tüm sistemler katı üç kademede inşa edilir: Uygulama Çatısı (Shell / Orchestrator) $\to$ Düzenler (Layouts / Skeleton Slots) $\to$ Bileşenler (Composite & Atomic Components). Bileşen eklemleri faz kilitli harmonik sözleşmelerle bağlanır (`INV-3-TIER-DECOMPOSITION`).
-3. **Spectral Triage & Kinematic Synergy:**
-   Zaman uzayındaki kaotik ve gürültülü kullanıcı şikayetleri Fourier dönüşümüyle spektral frekanslara ayrıştırılır. Yüksek frekanslı parazitler alçak geçiren filtreyle elenir; doğrudan düşük frekanslı kök taşıyıcı darboğaz biçimsel kabul kriterlerine (DoD) indirgenir (`INV-SPECTRAL-TRIAGE`).
+   All target architectures must decompose across three strictly bounded tiers: Shell (Orchestrator) $\to$ Layouts (Slots) $\to$ Components (Composite & Atomic). Inter-component joints are coupled via phase-locked harmonic contracts (`INV-3-TIER-DECOMPOSITION`).
+3. **Spectral Noise Filtering & Kinematic Synergy Coupling:**
+   Chaotic time-domain operator complaints and noisy telemetry streams are decompiled into spectral frequencies via Fourier transformation. High-frequency fluff (subjective adjectives, emotional panic) is shunted via low-pass thresholding; only low-frequency structural bottleneck harmonics are compiled into Definition of Done (DoD) criteria (`INV-SPECTRAL-TRIAGE`).
 4. **Diagnostic Defect Isolation & Telemetric Triage:**
-   Giriş sinyalleri öncelikle ham semptom kabul edilir; telemetrik metriklerle ölçülmeden kök problem ilan edilemez (`INV-DIAGNOSTIC-TRIAGE`).
+   Input requests evaluate as unverified symptomatic noise. Declaring root-cause defects prior to metric verification and instrumentation logging is strictly prohibited (`INV-DIAGNOSTIC-TRIAGE`).
 5. **Circuit Breaker, Degraded State Fallback & Acute Stabilization:**
-   Kriz, sistemik kilitlenme ve termal aşırı yük anında derleme hızında Faz-0 hemostaz (yük tahliyesi, devre kesici) tetiklenir; sistem stabilize edildikten sonra Faz-1 kök neden şartnamesi zorunlu tutulur (`INV-CRISIS-HEMOSTASIS`).
+   Under cyclic stalls, deadlocks, or thermal quota breaches, compilation-speed Phase-0 stabilization (load shedding, circuit breaker trip) activates immediately (`CIRCUIT_BREAKER_HALT`). Temporary tourniquets never constitute permanent architectural solutions and mandate an immediate Phase-1 root-cause commitment (`INV-CRISIS-HEMOSTASIS`).
 6. **Anti-Monolithic Escalation & Least-Action Drift Mitigation:**
-   Modelin spontane ilk tercihi istatistiksel tembellik gereği hükmen ilkel kabul edilir. Çözüm, rüştünü ispatlamış en üst soyutlama ve modülerlik seviyesine yükseltilmeden derlenemez (`INV-PRIMITIVE-ATTRACTOR-REFUTATION`).
+   Spontaneous initial generative outputs from language models are presumed primitive by default due to statistical entropy minimization. Solutions must escalate to the highest proven modular abstractions prior to verification (`INV-PRIMITIVE-ATTRACTOR-REFUTATION`).
 7. **Scale-Invariant Structural Isomorphism (Macro-to-Micro Coherence):**
-   Kuşbakışı makro mimari ile en alt atomik mikro bileşen arasındaki faz farkı sıfırdır ($\text{MSE} = 0$, `INV-HOLOGRAPHIC-COHERENCE`).
+   The phase difference between global macro architecture and atomic micro components is zero ($\text{MSE} = 0$, `INV-HOLOGRAPHIC-COHERENCE`).
 
 ---
 
@@ -48,7 +48,7 @@ acme/
 ---
 
 ### 4. DOWNSTREAM ADOPTION & THE UNIVERSAL `.norm` STANDARD
-Downstream client projects (workspaces) adopt ACME as an external normative authority (*Lex Superior*), not as boilerplate application code.
+Downstream client projects adopt ACME as an external normative authority (*Lex Superior*), not as application boilerplate.
 
 #### 4.1. Downstream Non-Pollution Invariant
 * **Never Clone ACME into Active Projects:** ACME internal governance faculties (`theses/`, `faculty/`, `registry/`, `CONSTITUTION.md`) must **never** be cloned, unpacked, or committed into downstream client repositories.

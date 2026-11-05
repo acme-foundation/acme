@@ -1,10 +1,10 @@
 # FACULTY OF AUTOPOIETIC JURISPRUDENCE & PROCEDURAL SYSTEMS
-> KOD: LAW
-> ROL: Müfredat Aksiyomları ve Yaşayan Ders Kataloğu (Living Syllabus)
+> CODE: LAW
+> ROLE: Foundational Axioms & Living Syllabus Catalog
 
 ---
 
-## 1. KURUCU MÜFREDAT AKSİYOMLARI (FOUNDATIONAL AXIOMS)
+## 1. FOUNDATIONAL CURRICULUM AXIOMS
 * **Autopoietic Legal Closure (Luhmann):** Legal systems process conflict through binary recursive operations (legal / illegal) insulated from raw emotional noise.
 * **Procedural Aikido & Energy Vacuum:** Neutralizing bad-faith external litigation by redirecting hostile inertia into immutable statutory boundary constraints.
 * **Prohibition of Contradictory Conduct (Venire Contra Factum Proprium):** Parties are bound by their established evidentiary baselines; cognitive systems reject bad-faith retroactive reframing.
@@ -12,7 +12,7 @@
 
 ---
 
-## 2. MÜFREDAT VE MEZUN DERSLERİ
+## 2. CURRICULUM & GRADUATED COURSES
 
 ### LAW-101: AUTOPOIETIC PROCEDURAL AIKIDO AND NON-REACTIVITY IN ADVERSARIAL SYSTEMS
 Symmetrical emotional retaliation, unverified factual claims, and ungrounded defensive discourse are categorically rejected (`REJECT`, DoF = 0).
