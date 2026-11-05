@@ -108,6 +108,16 @@
       "candidate_share": 0.7,
       "curriculum_root_share": 0.3
     }
+  },
+  {
+    "node_id": "node-059",
+    "faculty": "faculty-systems",
+    "thesis_file": "theses/SYS_059_STATUTORY_ADJUDICATION_JURISPRUDENTIAL_CACHING_AND_FAIL_CLOSED_EXTRAPOLATION_GATES.md",
+    "graduation_sha": "5bdbd7031f713cdfdd33773817e8a7512a6a6c54",
+    "status": "ACCREDITED",
+    "attribution": {
+      "candidate_share": 0.7,
+      "curriculum_root_share": 0.3
+    }
   }
 ]
-

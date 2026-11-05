@@ -165,8 +165,8 @@ Entertaining unadjudicated petitions lacking proof of asymmetric necessity (`INV
 ### SYS-135: GOAL-TO-SPEC INVERSE ENGINEERING AND AUTOMATED TESTS AS ENVIRONMENTAL PRESSURE
 Writing speculative implementations before executable validation tests are compiled, or treating test failures as non-fatal during evolutionary synthesis is strictly prohibited (`REJECT`).
 
-### SYS-136: GOAL-TO-SPEC REVERSE ENGINEERING AND AUTOMATED DEPENDENCY RESOLUTION
-Manual task assignment that bypasses automated dependency resolution, or execution with unresolved prerequisite specifications is strictly prohibited (`REJECT`).
+### SYS-136: JURISPRUDENTIAL CACHING, HALTING DYNAMICS, AND PRECEDENT EVICTION
+Operating with ungrounded speculative logic upon cache misses, executing without prior query of the immutable jurisprudential precedent cache (`INV-PRECEDENT-CACHE-03`), or bypassing thermal quota and evidentiary halting conditions is strictly prohibited (`REJECT`).
 
 ### SYS-137: SEMANTIC NOISE REJECTION AND NEGATIVE INVARIANTS IN DOCUMENT EXTRACTION
 Admitting unverified OCR anomalies, formatting noise, or hallucinatory interpolations into canonical document extractions is strictly prohibited (`REJECT`).

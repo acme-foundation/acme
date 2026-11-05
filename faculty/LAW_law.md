@@ -26,5 +26,8 @@ An execution task that alters files or interfaces outside its sealed specificati
 ### LAW-105: DETERMINISTIC COMPETENCY PROJECTION & PRIVACY SHIELDING
 Injecting unverified capability claims absent from the sealed root profile, evaluating requirement match via non-deterministic sentiment, or transmitting unmasked national identifiers is strictly prohibited (`REJECT_UNANCHORED_PROJECTION`).
 
-### LAW-106: KELSEN NORMATIVE HIERARCHY, LEX EXTERNA & DUAL-LOCALITY LEGAL SHIELD
+### LAW-106: STATUTORY ANCHORING, PROCEDURAL REMAND, AND FAIL-CLOSED SOVEREIGN GATING
+Executing cognitive tasks without statutory citations (`INV-STATUTORY-ANCHOR-01`), evading procedural remand (`INV-REMAND-PROPAGATION-03`), or fabricating ungrounded inferences in emergent boundary states without halting into `FAIL_CLOSED` mode under biological human authority (`INV-FAIL-CLOSED-EXTRAPOLATION-04`) is strictly prohibited (`REJECT`, DoF = 0).
+
+### LAW-106-B: KELSEN NORMATIVE HIERARCHY, LEX EXTERNA & DUAL-LOCALITY LEGAL SHIELD
 Commencing downstream execution or deploying deliverables whose external regulatory anchors (Lex Externa) or local project invariants (Lex Specialis) remain unresolved is strictly prohibited (`REJECT_UNRESOLVED_HIERARCHY`, DoF = 0).

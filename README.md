@@ -1,10 +1,10 @@
 # ACME: Lex Proceduralis Agentium
-### The Code of Civil Procedure & Statutory Adjudication Engine for Autonomous Systems
+### The Code of Civil Procedure, Jurisprudential Caching & Adjudication Engine for Autonomous Systems
 > *"Nulla Actio Sine Spec, Nullum Iudicium Sine Lege"*  
 > *(No execution without specification, no judgment without statutory law.)*
 
 **Version:** `v3.0.7-genesis`  
-**Standard:** Deterministic Specification & Procedural Adjudication (`DoF = 0`)  
+**Standard:** Deterministic Specification, Jurisprudential Precedent Caching & Procedural Adjudication (`DoF = 0`)  
 **Gatekeeper:** `verify.py` (Zero-dependency stdlib)
 
 ---
@@ -16,11 +16,12 @@ The existential crisis of modern software ecosystems is not that generative mode
 
 ---
 
-## The Four Procedural Pillars
+## Core Adjudication Doctrines & Jurisprudential Pillars
 1. **Statutory Anchoring (Lex Superior & Grounding):** Every deduction, architectural mutation, or code execution must cite explicit statutory authority in the Constitution (`CONSTITUTION.md`), a ratified thesis (`theses/`), or an executed living specification (`artifacts/problem_spec.md`). Unanchored execution evaluates to non-existence ($DoF = 0$, `INV-STATUTORY-ANCHOR-01`).
-2. **Pre-Execution Adversarial Dialectic (The Writers' Room):** All architectural friction, Rice undecidability, and boundary ambiguity must be exhausted in pure natural language dialectic between adversarial twins (`SPEC-A` vs. `SPEC-B`) prior to code compilation. Zero preview divergence ($\Delta\text{MSE} = 0$) is mathematically required (`INV-PRE-EXEC-DIALECTIC-02`).
-3. **Adjudicated Petition & Procedural Remand (Writ vs. Remand):** No agent writes code to disk without an approved Execution Petition (`EXECUTION_PETITION.md`). Petitions undergo substantive and procedural inquest: approved scopes convert to an immutable `Writ of Execution` ($DoF = 0$), while flawed scopes are procedurally remanded to the problem space with written `REJECTION_GROUNDS.md` (`INV-ADJUDICATED-WRIT-03`).
-4. **Anti-Workaround Suppression & Compulsory RFC (The Anti-Patch Doctrine):** Concealing an architectural defect or missing constraint via local defensive hacks, catch-all exceptions, or mock overrides is struck down as procedural fraud (`REJECT_PROCEDURAL_FRAUD`). Normative voids mandate compulsory upstream Request for Comments (RFC) backpropagation (`INV-ANTI-WORKAROUND-05`).
+2. **Arbiter Ground State & PLA (Procedural Economy):** The default operational state of the judicial arbiter or decision-maker is thermodynamic inertia ($\delta S = 0$). Absent demonstrated evidentiary asymmetry or absolute constitutional lock-in, the arbiter actively scans procedural bars to dismiss petitions *in limine* and issue procedural remands, shedding cognitive load and conserving system energy (`INV-ARBITER-PLA-02`).
+3. **Jurisprudential Precedent Cache ($O(1)$ Hit vs. Cache Miss):** Ratified specifications, accredited theses, and judicial writs serve as an immutable L2/L3 jurisprudential cache ($O(1)$ lookup). Normative gaps lacking precedent trigger an immediate Cache Miss, strictly prohibiting ad-hoc improvisation and mandating adversarial deliberation from first principles and compulsory upstream RFC escalation (`INV-PRECEDENT-CACHE-03`).
+4. **Anti-Extrapolation & Fail-Closed Sovereign Human Gate:** In emergent boundary states unanchored to external reality, models are strictly prohibited from arbitrary extrapolation or inventing axioms ("could not find, so I inferred"). The system transitions immediately into `FAIL_CLOSED` mode; deductions are quarantined as advisory `HYPOTHESIS_REPORT.md` artifacts, and final ratification authority resides exclusively with the sovereign biological human architect (Human-in-the-Loop, `INV-FAIL-CLOSED-EXTRAPOLATION-04`).
+5. **Anti-Workaround Suppression & Compulsory RFC (The Anti-Patch Doctrine):** Concealing an architectural defect or missing constraint via local defensive hacks, catch-all exceptions, or mock overrides is struck down as procedural fraud (`REJECT_PROCEDURAL_FRAUD`). Normative voids mandate compulsory upstream Request for Comments (RFC) backpropagation (`INV-ANTI-WORKAROUND-05`).
 
 ---
 
