@@ -9,6 +9,6 @@
   - Seçilen yol ve elenen alternatif gerekçesi.
 - **Tasarım Çıkarımı (Doctrine / Scar Tissue):**
   - Bu karardan sisteme kalan ders veya invariant güncellemesi.
+- **Bağımlılık Durumu:** [Zero-Asset / CDN-Leverage: Tailwind / Native API]
 - **Artefakt & Çapa:**
   - Dosya: [...] | Commit: [...] | Durum: [PASS / REWORK / REJECT]
-

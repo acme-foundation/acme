@@ -45,4 +45,6 @@ To prevent autonomous agents from polluting repository history with discursive c
    - Every worklog must state the resulting institutional learning or invariant update (`scar_tissue`).
 4. **Cryptographic Anchoring:**
    - Every entry must bind to the affected file path, Git commit hash, and verification status (`PASS` / `REWORK` / `REJECT`).
+5. **Dependency Classification (`INV-MIN-DEPENDENCY`):**
+   - Every entry must declare its asset status: `Zero-Asset` vs. `CDN-Leverage: Tailwind / Native API` vs. `Stdlib`. Parasitic uncontrolled packages remain banned.
 
