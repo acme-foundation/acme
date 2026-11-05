@@ -39,3 +39,4 @@
 - [ ] Confirm 100% binary PASS across all verification turnstiles ($DoF = 0$).
 - [ ] Purge ephemeral test ballast (`.tmp/`) and verify No-BOM UTF-8 standard.
 - [ ] Transition execution plane to quiescent `STANDBY`.
+

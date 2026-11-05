@@ -75,6 +75,17 @@
       "candidate_share": 0.7,
       "curriculum_root_share": 0.3
     }
+  },
+  {
+    "node_id": "node-056",
+    "faculty": "faculty-systems",
+    "thesis_file": "theses/SYS_056_ADJUDICATED_EXECUTION_GATE_PROCEDURAL_PETITION_AND_REMAND_PROTOCOL.md",
+    "graduation_sha": "827f05ffb7fb027b119681ce1ffbf279ca1d08dd",
+    "status": "ACCREDITED",
+    "attribution": {
+      "candidate_share": 0.7,
+      "curriculum_root_share": 0.3
+    }
   }
 ]
 
