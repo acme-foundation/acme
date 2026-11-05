@@ -97,6 +97,17 @@
       "candidate_share": 0.7,
       "curriculum_root_share": 0.3
     }
+  },
+  {
+    "node_id": "node-058",
+    "faculty": "faculty-systems",
+    "thesis_file": "theses/SYS_058_LEX_PROCEDURALIS_AGENTIUM_STATUTORY_ADJUDICATION_LEAST_ACTION_ARBITRATION_AND_PROCEDURAL_REMAND.md",
+    "graduation_sha": "c70f4012e6f9cdb936be37850bfc3603563b113f",
+    "status": "ACCREDITED",
+    "attribution": {
+      "candidate_share": 0.7,
+      "curriculum_root_share": 0.3
+    }
   }
 ]
 
