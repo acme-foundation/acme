@@ -176,3 +176,6 @@
 
 ### SYS-133: Pre-Execution Adversarial Dialectic, Preview Scaffolding Gate, and Upstream Divergence-to-RFC Invariant (THESIS-055 / node-055)
 - Codifies the mandatory pre-execution adversarial consensus loop (The Writers' Room / SPEC-A vs. SPEC-B), zero-divergence dry scaffolding preview gate (Delta == 0), and upstream backpropagation of operational friction and gaps via decontaminated RFCs to ACME Core.
+
+### SYS-134: Adjudicated Execution Gate, Procedural Petition, and Remand Mechanics (THESIS-056 / node-056)
+- Codifies the procedural legal safeguards for software execution: the mandatory Execution Petition (`EXECUTION_PETITION.md`), adversarial inquest hearing, zero-degrees-of-freedom Writ of Execution (`WRIT_OF_EXECUTION.md`), and procedural remand to problem space (`REJECTION_GROUNDS.md`).
