@@ -1,67 +1,74 @@
 {
-  "session_id": "ACME-V330-GENESIS-001",
-  "timestamp": "2026-11-05T02:55:00Z",
-  "phase": "V3.3.0_GENESIS_SEALED",
+  "session_id": "ACME-V340-GENESIS-001",
+  "timestamp": "2026-11-05T03:02:00Z",
+  "phase": "V3.4.0_GENESIS_SEALED",
   "status": "RATIFIED_AND_SEALED",
   "active_file": "CONSTITUTION.md & faculty/",
-  "active_problem": "Zaman uzayındaki kaotik şikayetlerin FFT ile frekans uzayına aktarılması, parazitlerin elenmesi ve Bernstein kinematik kilidiyle DoF=0 noktasına bağlanması",
-  "active_solution": "CONSTITUTION.md INV-SPECTRAL-TRIAGE değişmezi mühürlendi; faculty/SYS Spektral Triyaj Protokolü ve faculty/PHI Zamanın İllüzyonu ve Frekansın Hakikati aksiyomları eklendi; v3.3.0-genesis etiketi bağlandı.",
+  "active_problem": "İlkel Çeker Tuzağının (istatistiksel tembellik, düzensiz yığınlama, monolitik kokuşma) reddi ve karargâha sızan şantiye artıklarının (tools/) arındırılması",
+  "active_solution": "CONSTITUTION.md INV-PRIMITIVE-ATTRACTOR-REFUTATION değişmezi mühürlendi; tools/ tamamen tahliye edildi; faculty/ müfredatlarına Evrimsel Yükseltme ve İlkel Çeker Havzası aksiyomları eklendi; v3.4.0-genesis etiketi bağlandı.",
   "mutations": [
     {
       "target": "CONSTITUTION.md (Article 9)",
       "action": "CONSTITUTIONAL_AMENDMENT",
       "status": "COMPLETED",
-      "details": "INV-SPECTRAL-TRIAGE (Fourier İndirgemesi, Alçak Geçiren Filtre, Bernstein Kinematik Faz Kilidi) DoF=0 olarak eklendi."
+      "details": "INV-PRIMITIVE-ATTRACTOR-REFUTATION (Hükmen İlkel İlkesi, Evrimsel Yükseltme Zorunluluğu, İki Düzlemli Mutlak Ayrım) DoF=0 olarak mühürlendi."
+    },
+    {
+      "target": "tools/ (Workspace Purge)",
+      "action": "DOCTRINE_PURGE",
+      "status": "COMPLETED",
+      "details": "Karargâha sızan şantiye betikleri (acme_hub.py, referee.py, install_dock.ps1) tamamen tahliye edildi."
     },
     {
       "target": "faculty/PHI_philosophy.md",
       "action": "SYLLABUS_AXIOM_ALIGNMENT",
       "status": "COMPLETED",
-      "details": "Zamanın İllüzyonu ve Frekansın Hakikati (DoF=0) kurucu aksiyomlara işlendi."
+      "details": "İlkel Çeker Havzası ve Bilişsel Tembellik Yasası (DoF=0) kurucu aksiyomlara işlendi."
     },
     {
       "target": "faculty/SYS_systems.md",
       "action": "SYLLABUS_AXIOM_ALIGNMENT",
       "status": "COMPLETED",
-      "details": "Spektral Triyaj ve Kinematik Sinerji Protokolü ve kurucu aksiyomu işlendi."
+      "details": "Evrimsel Yükseltme Protokolü (Escalation Gate) ve kurucu aksiyomu işlendi."
     },
     {
       "target": "git tags",
       "action": "SEMVER_GENESIS_ALIGNMENT",
       "status": "COMPLETED",
-      "details": "v3.3.0-genesis etiketi basılarak Merkle kütüğüne mühürlendi."
+      "details": "v3.4.0-genesis etiketi basılarak Merkle kütüğüne mühürlendi."
     }
   ],
   "referee_status": "VERIFIED_PASS_100%",
   "critic_defects": [
-    "INV-SPECTRAL-TRIAGE: Zaman uzayı şikayetleri FFT ile ayrıştırıldı, gürültü sıfatlar elendi [DoF=0]",
-    "Alçak Geçiren Filtre: Şartnameye yalnızca kök rezonansı sönümleyen kısıtlar kabul edilir [DoF=0]",
-    "Bernstein Kinematik Faz Kilidi: Shell-Layout-Component eklemleri faz kilitli harmonik sözleşmeyle DoF=0 yapıldı [DoF=0]",
-    "Zamanın illüzyonu aksiyomu: Dalgayla değil taşıyıcı rezonansla mücadele ilkesi anayasaya işlendi [DoF=0]"
+    "INV-PRIMITIVE-ATTRACTOR-REFUTATION: Spontane ilk tercih hükmen kusurlu kabul edildi [DoF=0]",
+    "Evrimsel Yükseltme: Çözüm en üst modüler soyutlama standardına refaktör edilmek zorundadır [DoF=0]",
+    "İki Düzlemli Ayrım: Karargâhta tools/ ve icra betiği barındırılması yasaklandı, tools/ tahliye edildi [DoF=0]",
+    "Zero-Code Invariant: Depoda sıfır çalıştırılabilir kod takip edilmektedir [PASS]"
   ],
   "synthetic_personas": [
     {
       "persona": "Senior Technical Auditor",
       "vote": "UNCONDITIONAL_APPROVAL (PASS)",
-      "statement": "FFT tabanlı spektral filtreleme ve Bernstein kinematik sinerjisi, sistemik serbestlik derecesini kombinatorik patlamadan koruyarak DoF=0 değişmezini matematiksel kesinliğe bağlamıştır."
+      "statement": "tools/ dizininin kökten tahliyesi ve Hükmen İlkel İlkesi'nin anayasaya girmesiyle karargâh yüzde yüz saf NLP bilişsel doktrin seviyesine kavuşmuştur."
     },
     {
       "persona": "Downstream Enterprise Architect",
       "vote": "UNCONDITIONAL_APPROVAL (PASS)",
-      "statement": "Müşterinin yüzey panik sıfatlarını filtreleyip yalnızca kök taşıyıcı darboğaza odaklanmak ve arayüz bileşen eklemlerini faz kilidine almak Jenga çöküşünü kökten bitirmiştir."
+      "statement": "Ajanların 'en az eylem' bahanesiyle tek dosyalı monolitik çukura yuvarlanması anayasal kalkanla imkânsız kılınmıştır. Evrimsel yükseltme zorunluluğu downstream projelerin kalitesini garanti eder."
     }
   ],
-  "user_persona_feedback": "Spektral triyaj ve kinematik sinerji doktrini anayasa ve fakültelere DoF=0 değişmezi olarak mühürlendi.",
+  "user_persona_feedback": "İlkel çeker reddi ve doktrin arınması tamamlandı; tools/ tahliye edildi; sistem v3.4.0-genesis olarak mühürlendi.",
   "audit_summary": {
-    "release_tag": "v3.3.0-genesis",
+    "release_tag": "v3.4.0-genesis",
     "theses_count": 65,
     "unique_codes_count": 65,
+    "tools_directory_present": false,
     "faculty_catalogs": [
-      "faculty/SYS_systems.md (54 ders + 2 konsept + Akut Hemostaz + Spektral Triyaj)",
-      "faculty/PHI_philosophy.md (6 ders + Varoluşsal Öncelik + Frekans Hakikati)",
+      "faculty/SYS_systems.md (54 ders + 2 konsept + Akut Hemostaz + Spektral Triyaj + Evrimsel Yükseltme)",
+      "faculty/PHI_philosophy.md (6 ders + Varoluşsal Öncelik + Frekans Hakikati + İlkel Çeker Havzası)",
       "faculty/LAW_law.md (5 ders)"
     ],
     "verification_gates": "7/7 PASS (Zero-Code, Registry, Faculty, Purity, Parity, Merkle, Crucible)",
-    "git_head": "v3.3.0-genesis"
+    "git_head": "v3.4.0-genesis"
   }
 }

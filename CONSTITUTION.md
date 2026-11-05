@@ -1,8 +1,8 @@
-# CONSTITUTION OF THE ACME ECOSYSTEM (LEX SUPERIOR v3.3.0-GENESIS)
+# CONSTITUTION OF THE ACME ECOSYSTEM (LEX SUPERIOR v3.4.0-GENESIS)
 > **Status:** RATIFIED CANONICAL FOUNDATION  
 > **Authority:** Lex Superior / Irreducible Cognitive Constitution  
 > **Biological Root of Trust:** Serkan BAYHAN (Chief Architect)  
-> **Release Target:** ACME v3.3.0-Genesis  
+> **Release Target:** ACME v3.4.0-Genesis  
 
 ---
 
@@ -77,6 +77,10 @@ This Constitution establishes the self-compiling, autopoietic governance core of
   - **a. Zaman-Frekans Ayrımı (Fourier İndirgemesi):** Kullanıcı beyanları ve yüzey telemetrisi zaman uzayında kaotik bir sinyaldir. Triyaj motoru bu sinyali harmonik frekanslarına ayrıştırmadan şartname üretemez. Amaç, semptom gürültüsü ile kök taşıyıcı rezonansı ayırmaktır (`REJECT_TIME_DOMAIN_NOISE`).
   - **b. Alçak Geçiren Filtre (Low-Pass Filter Gate):** Sıfatlar, panik dili ve geçici operasyonel dalgalanmalar yüksek frekanslı parazit olarak elenir. Şartname sadece düşük frekanslı kök patolojiyi (sistemik tıkanıklığı) hedef alır (`REJECT_HIGH_FREQUENCY_FLUFF`).
   - **c. Bernstein Kinematik Faz Kilidi (DoF = 0):** Uygulama, Düzen ve Bileşen katmanlarındaki tüm eklemler (props/events/APIs), bağımsız serbestlik dereceleri üretmeyecek şekilde faz kilitli harmonik sözleşmelerle bağlanır. Sistemik sürtünme kombinatorik patlamaya değil, tek bir sönümlü eksene çöker (`REJECT_UNCONSTRAINED_JOINTS`).
+* **INV-PRIMITIVE-ATTRACTOR-REFUTATION (İlkel Çeker Reddi ve Evrimsel Yükseltme - DoF = 0):**
+  - **a. Hükmen İlkel İlkesi (Default Primitive Assumption):** Ajanın veya dil modelinin spontane ürettiği ilk tasarım, dosya yapısı veya mimari tercih, istatistiksel tembellik gereği insanlık evriminin en ilkel basamağına (monolit, düzensiz dosya yığını, ayrışmamış sorumluluk) aittir. Sistem bu ilk tercihi doğrudan 'kusurlu ve ham' kabul etmek zorundadır (`REJECT_PRIMITIVE_ATTRACTOR`).
+  - **b. Evrimsel Yükseltme Zorunluluğu (Evolutionary Escalation):** Her çözüm; alanın bugüne kadar geliştirdiği rüştünü ispatlamış en üst standartla (İki Düzlemli Ayrım, 3-Kademeli Hiyerarşi, Dışsal Sözleşmeler) kıyaslanarak bir üst olgunluk seviyesine refaktör edilmeden derlenemez (`REJECT_UNESCALATED_SOLUTION`).
+  - **c. İki Düzlemli Mutlak Ayrım (Doctrine vs. Tooling Isolation):** ACME Core yalnızca Bilişsel Düzlemdir (Saf NLP, Tezler, Anayasa). Şantiye, derleme, paketleme ve analiz araçlarının (`tools/`, `engine/` vb.) bu depoda barınması anayasal ihlaldir (`REJECT_TOOLING_LEAK`). Kodlar yalnızca harici icra depolarında (acme-incubator, downstream şantiyeler) yaşayabilir.
 
 ### ARTICLE 10: TRI-TIER HIERARCHY, EVOLUTIONARY PARITY & HOLOGRAPHIC COHERENCE
 * **INV-3-TIER-DECOMPOSITION (DoF=0):** Tüm mimari yapılar zorunlu olarak 3 kademede inşa edilir:
