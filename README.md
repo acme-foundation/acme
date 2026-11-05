@@ -47,31 +47,83 @@ python verify.py --verify-all
 ## Downstream Adoption & The Universal `.norm` Manifest
 Downstream client projects adopt ACME as an external normative authority (*Lex Superior*), never as application boilerplate.
 
-### 1. Downstream Non-Pollution Invariant
-* **Never Clone ACME into Active Projects:** ACME internal governance faculties (`theses/`, `faculty/`, `workflows/`, `CONSTITUTION.md`) must **never** be cloned, unpacked, or committed into downstream client repositories.
-* **Separation of Concerns:** ACME is the normative doctrine plane (Lex Superior); the client workspace is the empirical execution plane (`INV-PLANE-SEPARATION`).
+### 1. Architectural Philosophy & System Mechanics
+ACME functions as a decoupled **Cognitive Control Plane** that governs how autonomous engineering agents (e.g., Antigravity, Claude Code, Cursor) interact with codebase reality:
 
-### 2. Anchoring via Root `.norm` Manifest
-A downstream repository establishes constitutional compliance exclusively through a single root manifest (`.norm`, with backward compatibility for `.acme`):
+1. **Manifest Anchoring:** Drop a `.norm` file at the root of the target project and initialize.
+2. **Contextual Field Analysis (Greenfield vs. Brownfield):**
+   - **Greenfield (New Projects):** In the absence of existing code, the system immediately locks generation onto strict 3-tier modular contracts (`Shell -> Layouts -> Components`) and formal living specifications (`SPEC.md`).
+   - **Brownfield (Existing Repositories):** The system performs an epistemic audit to isolate legacy dependencies, bounding the blast radius to prevent cascading failure before subjecting new modifications to telemetric triage.
+3. **Workspace Topologies (Control Center vs. Decoupled Repositories):**
+   - **Control Center Model (Recommended):** Maintain the root repository as the central governance cockpit while integrating active projects as independent repositories or sub-directories.
+   - **Sidecar Model:** Maintain projects externally and link them to ACME as an immutable remote normative standard.
+4. **Corporate Norms & Policy Injection:**
+   Custom organizational policies, architectural rules, or compliance standards can be declared directly within the manifest (`corporate_norms`). AI agents treat these as constitutional negative constraints (`DoF = 0`) that cannot be bypassed.
 
+---
+
+### 2. Implementation Manifest Examples
+
+#### A. Greenfield Project Manifest (`.norm`)
 ```json
 {
   "$schema": "https://acme-standard.org/schemas/v3/norm.json",
-  "repo": "https://github.com/acme-foundation/acme.git",
-  "version": "v3.0.2-genesis",
-  "mode": "normative_reference",
+  "project_name": "payments-service",
+  "project_type": "greenfield",
   "extends": "https://github.com/acme-foundation/acme.git#v3.0.2-genesis",
-  "feed": {
-    "persona": false,
-    "org": false
-  }
+  "control_mode": "strict_gatekeeper",
+  "architecture": {
+    "tier_enforcement": "shell-layout-component",
+    "zero_degrees_of_freedom": true
+  },
+  "corporate_norms": [
+    "All service endpoints must expose OpenAPI specifications before code implementation",
+    "Zero binary dependencies: All logic must compile locally from verified source"
+  ]
 }
 ```
 
-### 3. How to Use ACME Downstream
-1. **Drop the Manifest:** Place a `.norm` file in the root of your downstream project.
-2. **Sidecar Context:** Configure your autonomous AI agent (e.g., Antigravity, Claude Code, Cursor) to reference ACME as an external read-only sidecar specification.
-3. **Deterministic Execution:** Direct the agent to follow ACME's canonical state machines before writing code:
-   - **Triage & Stabilization:** Ingest input signals and isolate noise (`workflows/WF_001_SPECTRAL_TRIAGE.md`).
-   - **3-Tier Decomposition:** Structure code strictly across Shell $\to$ Layouts $\to$ Components.
-   - **Specification Lock:** Compile a formal specification (`SPEC.md`) containing hard negative constraints (`[PROHIBITED]`, `DoF = 0`) prior to synthesis.
+#### B. Brownfield Legacy Project Manifest (`.norm`)
+```json
+{
+  "$schema": "https://acme-standard.org/schemas/v3/norm.json",
+  "project_name": "legacy-core-portal",
+  "project_type": "brownfield",
+  "extends": "https://github.com/acme-foundation/acme.git#v3.0.2-genesis",
+  "control_mode": "quarantine_and_isolate",
+  "brownfield_policy": {
+    "legacy_scope": "src/legacy/",
+    "blast_radius_containment": "strict",
+    "isolation_adapter": "facade_boundary"
+  },
+  "corporate_norms": [
+    "Never mutate legacy data schemas directly; implement defensive wrappers",
+    "Zero PII logging: All customer identifiers must be masked across log telemetry"
+  ]
+}
+```
+
+#### C. Central Control Cockpit Manifest (`.norm`)
+```json
+{
+  "$schema": "https://acme-standard.org/schemas/v3/norm.json",
+  "workspace_role": "control_center",
+  "extends": "https://github.com/acme-foundation/acme.git#v3.0.2-genesis",
+  "subprojects": [
+    {
+      "path": "services/identity-provider",
+      "repo": "https://github.com/org/identity-provider.git",
+      "type": "brownfield"
+    },
+    {
+      "path": "apps/web-client",
+      "repo": "https://github.com/org/web-client.git",
+      "type": "greenfield"
+    }
+  ],
+  "corporate_norms": [
+    "Subproject Isolation: Mutations cannot span multiple service boundaries within a single pull request",
+    "Unified Diagnostics: All service anomalies must emit standardized telemetric signatures"
+  ]
+}
+```
