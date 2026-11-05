@@ -111,7 +111,7 @@ The system automatically performs contextual field analysis:
 ## Repository Topology
 * `CONSTITUTION.md`: The 12 immutable invariants governing zero-drift specification.
 * `faculty/`: Foundational theory curriculum (`SYS`, `PHI`, `LAW`).
-* `workflows/`: Evolutionary Agent-Based Unified Process (E-AUP) suite (`00_meta_engine.md` through `07_backpropagation.md`, `WF_001_SPECTRAL_TRIAGE.md`).
+* `workflows/`: Evolutionary Agent-Based Unified Process (E-AUP) suite (`00_meta_engine.md`, `01_sense_making.md`, `02_design_and_dialectic.md`, `03_materialization_and_reality.md`, `WF_001_SPECTRAL_TRIAGE.md`).
 * `theses/`: Ratified architectural contracts.
 * `verify.py`: Mechanical, zero-dependency CI gatekeeper enforcing zero-code purity and SemVer discipline.
 

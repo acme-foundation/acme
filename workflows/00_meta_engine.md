@@ -12,21 +12,21 @@
 ---
 
 ## 2. THE CONICAL VORTEX TOPOLOGY (3D HELICAL DYNAMICS)
-Traditional unified processes suffer from the **Planar Fallacy**: modeling software synthesis as a flat 2D conveyor belt. In E-AUP, the operational space is a **Conical Vortex** in cylindrical coordinates $(r, \theta, Z)$:
+Traditional unified processes suffer from the **Planar Fallacy**: modeling software synthesis as a flat 2D conveyor belt. In E-AUP, the operational space is structured as a **Conical Vortex** in cylindrical coordinates $(r, \theta, Z)$ structured into 3 Macro Phases:
 
 ```text
                   ▲ Z (Altitude: Abstract Intent -> Concrete Artifact)
                   │
-        (Apex)    •  PHASE 01: TRIAGE & INTENT (r=1, Minimal Budget / Pure Core)
-                 / \
-                / S \  PHASE 02: INCEPTION & CONTRACT (r=2, Specification Bounds)
-               /  P  \
-              /   I   \  PHASE 03: ARCHITECTURE & KEYSTONE (r=3, Pre-Mortem Skeleton)
+        (Apex)    •  MACRO PHASE I: SENSE-MAKING (r=1..2)
+                 / \   [Input] < 1 > [Triage] < 2 > [Diagnostics] -> problem_spec.md
+                / S \
+               /  P  \  MACRO PHASE II: DESIGN & DIALECTIC GATE (r=3)
+              /   I   \   [Diagnostics] < 3 > [Solution] < 4 > [Evaluation] -> solution_contract.yaml
              /    R    \
-            /     A     \  PHASE 04: CONSTRUCTION (r=4, Atomic Code / Module Synthesis)
-           /      L      \
-          /_______________ \  PHASE 05-06: VERIFICATION & RELEASE (r=5, verify.py / Seal)
-                 r ──► (Radius: Scope, Token Budget, Complexity & Attack Surface)
+            /     A     \  MACRO PHASE III: MATERIALIZATION & REALITY (r=4..5)
+           /      L      \   [Execution] < 6 > [Test] < 7 > [Simulation] < 8 > [Output]
+          /_______________ \
+                  r ──► (Radius: Scope, Token Budget, Complexity & Attack Surface)
 ```
 
 ### Coordinate System:
@@ -82,20 +82,20 @@ No artifact may pass to the next altitude without surviving the dual-adversarial
 Progress is non-linear; the system acts as a 3D plotter head with two orthogonal oscillation vectors:
 
 ```text
-                      [UPSTREAM PRECEDING PHASE]
-                                ▲
-                                │  VERTICAL CASCADING COLLAPSE (ΔZ)
-                                │  (Root Invariant Breach / False Keystone)
-                                │
-    ┌───────────────────────────┴───────────────────────────┐
-    │  ACTIVE ALTITUDE (Z_k) - INTRA-PHASE HELICAL LOOP     │
-    │                                                       │
-    │   [Triage] ──► [Diagnose] ──► [Solve] ──► [Evaluate]  │
-    │         ▲            ▲            ▲           │       │
-    │         └────────────┴────────────┴───────────┘       │
-    │             HORIZONTAL OSCILLATION (Δθ Plotter)       │
-    │             (Syntax Error, Weak Patch, Missing DoD)   │
-    └───────────────────────────────────────────────────────┘
+                      [UPSTREAM PRECEDING MACRO PHASE]
+                                     ▲
+                                     │  VERTICAL CASCADING COLLAPSE (ΔZ)
+                                     │  (Root Invariant Breach / False Keystone)
+                                     │
+     ┌───────────────────────────────┴───────────────────────────────┐
+     │  ACTIVE ALTITUDE (Z_k) - INTRA-PHASE HELICAL LOOP             │
+     │                                                               │
+     │   [Triage] ──► [Diagnose] ──► [Solve] ──► [Evaluate]          │
+     │         ▲            ▲            ▲           │               │
+     │         └────────────┴────────────┴───────────┘               │
+     │             HORIZONTAL OSCILLATION (Δθ Plotter)               │
+     │             (Syntax Error, Weak Patch, Missing DoD)           │
+     └───────────────────────────────────────────────────────────────┘
 ```
 
 ### A. Horizontal Oscillation (Angular Correction - $\Delta \theta$)
@@ -105,30 +105,26 @@ Progress is non-linear; the system acts as a 3D plotter head with two orthogonal
 
 ### B. Vertical Cascading Collapse (Altitude Regress - $\Delta Z$)
 - **Condition:** When an evaluation gate reveals that an underlying architectural assumption, core invariant (`INV-*`), or keystone foundation is defective.
-- **Action:** Patching local code is prohibited as entropy dissipation. The system loses altitude and collapses vertically to:
-  - $\Delta Z \to \text{Phase 03 (Architecture / Keystone)}$: If inter-tier joints or keystone models fail.
-  - $\Delta Z \to \text{Phase 02 (Inception / Contract)}$: If domain invariants or scope boundaries were miscalculated.
-  - $\Delta Z \to \text{Phase 01 (Triage & Digest)}$: If the problem itself was fundamentally misdiagnosed.
+- **Action:** Patching local code is prohibited as entropy dissipation. The system loses altitude and collapses vertically:
+  - $\Delta Z = -1$ from Phase III $\to$ `workflows/02_design_and_dialectic.md`: When tests reveal structural, keystone, or concurrency model defects.
+  - $\Delta Z = -1$ from Phase II $\to$ `workflows/01_sense_making.md`: When domain invariants or scope boundaries were miscalculated.
+  - $\Delta Z = -2$ from Phase III $\to$ `workflows/01_sense_making.md`: When ground-truth metrics or teleological assumptions were fundamentally false.
 - **Thermodynamic Pruning & Ballast Ejection:** Upon vertical collapse, all downstream atomic code and speculative text artifacts generated under the false keystone are discarded immediately to preserve minimal action ($\delta S = 0$).
 
 ---
 
-## 6. COMPARATIVE MATRIX OF HELICAL LAYERS
+## 6. COMPARATIVE MATRIX OF THE 3 MACRO PHASES
 
-| Phase / Altitude ($Z$) | Radius ($r$) & Budget | Micro-Loop Focus ($\theta$) | Vertical Fallback Target ($\Delta Z$) |
-| :--- | :--- | :--- | :--- |
-| **01. Ingestion / Triage** | $r_1$: Minimal (Single intent / ticket) | Symptom vs. Root Cause demarcation | Terminate & reject input (`ABORT`). |
-| **02. Inception / Contract** | $r_2$: Narrow (Pure $DoF=0$ invariants) | `problem.md` & `solution.md` bounds | Fall back to Phase 01 (Re-triage operator intent). |
-| **03. Elaboration / Keystone** | $r_3$: Medium (Architect & Scar Desk) | Keystone isolation & Pre-mortem gate | Fall back to Phase 02 (Contractually narrow scope). |
-| **04. Construction / Worker** | $r_4$: Wide ($\le 500$ token atomic units) | Surgical implementation, zero fluff | Local $\to \Delta \theta$; Structural $\to$ Fall back to Phase 03. |
-| **05. Verification / Adversarial** | $r_5$: Maximum (Full attack surface) | `verify.py`, 100 mutation crucible | Fatal fracture $\to$ Vertical collapse to Phase 02/03. |
-| **06. Transition / Release** | $r_0$: Singularity (Release hash) | Decontamination, PII purge, Git tag | Validation breach $\to$ Fall back to Phase 05. |
-| **07. Backpropagation** | Global Memory Loop | Scar tissue logging, MSE minimization | Upstream `verify.py` & constitutional patches. |
+| Macro Phase | Vector Topology | Radius ($r$) & Budget | Primary Deliverable | Vertical Fallback Target ($\Delta Z$) |
+| :--- | :--- | :--- | :--- | :--- |
+| **I. Sense-Making** (`01_sense_making.md`) | `[Input] <1> [Triage] <2> [Diagnostics]` | $r_1..r_2$: Narrow (Minimal tokens / Intent) | `artifacts/problem_spec.md` | Reject input / Escalate to Human (`ABORT`). |
+| **II. Design & Dialectic** (`02_design_and_dialectic.md`) | `[Diagnostics] <3> [Solution] <4> [Evaluation]` | $r_3$: Medium (Architecture & Pre-Mortem) | `artifacts/solution_contract.yaml` | $\Delta Z = -1 \to$ Phase I (`01_sense_making.md`). |
+| **III. Materialization & Reality** (`03_materialization_and_reality.md`) | `[Execution] <6> [Test] <7> [Simulation] <8> [Output]` | $r_4..r_5$: Maximum (Execution & Chaos Harness) | Ratified Commit, Merkle Seal, Scar Tissue | $\Delta Z = -1 \to$ Phase II; $\Delta Z = -2 \to$ Phase I. |
 
 ---
 
 ## 7. DEFINITION OF DONE (DoD) & MERKLE SEAL
-- [ ] `micro_loop_completed == True` across all 4 stations ($\Delta \theta$).
+- [ ] `macro_phase_contracts_ratified == True` (`01_sense_making.md`, `02_design_and_dialectic.md`, `03_materialization_and_reality.md`).
 - [ ] `inter_layer_escalation_protocol_active == True` ($\Delta Z$ boundaries mapped).
 - [ ] `braintrust_unanimous_pass == True` (Architect, Proceduralist, Stateful Senior sign-off).
 - [ ] `murphy_fatal_gaps_sealed == True` (Zero unmodeled fatal escape vectors).
