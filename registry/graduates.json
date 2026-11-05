@@ -86,6 +86,17 @@
       "candidate_share": 0.7,
       "curriculum_root_share": 0.3
     }
+  },
+  {
+    "node_id": "node-057",
+    "faculty": "faculty-systems",
+    "thesis_file": "theses/SYS_057_STATUTORY_ANCHORING_PROCEDURAL_ADJUDICATION_AND_ANTI_WORKAROUND_INVARIANT.md",
+    "graduation_sha": "c0917579bf16a35bcb2abcf365dfd1bbd1cd5c84",
+    "status": "ACCREDITED",
+    "attribution": {
+      "candidate_share": 0.7,
+      "curriculum_root_share": 0.3
+    }
   }
 ]
 
