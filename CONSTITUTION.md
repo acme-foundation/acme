@@ -66,7 +66,7 @@ This Constitution establishes the self-compiling, autopoietic governance core of
 
 ---
 
-## SECTION III: OBJECTIVE TRIAGE METRIC SCALE & ONTOLOGICAL SUITE (DoF = 0)
+## SECTION III: OBJECTIVE TRIAGE METRIC SCALE & FORMAL SPECIFICATION SUITE (DoF = 0)
 
 ### BÖLÜM 0: NESNEL ÖLÇÜM CETVELİ (OBJECTIVE TRIAGE METRIC SCALE)
 Ölçülemeyen şey problem kabul edilemez (`REJECT_UNMEASURED_DIAGNOSIS`). Kendi kendini denetlerken ve dış sistemleri triyaja alırken aşağıdaki 6 nesnel eksen referans alınır:
@@ -77,15 +77,15 @@ This Constitution establishes the self-compiling, autopoietic governance core of
 5. **SÜRÜM MONOTONLUĞU ($\text{SemVer\_Delta\_Violation} = 0$):** Commit mesajında `[RELEASE]` yetki belirteci bulunmadığı sürece Minor (Y) delta artışı mutlak 0'dır. Yalnızca Patch (Z) ilerleyebilir.
 6. **HİYERARŞİK DERİNLİK TAVANI ($\text{Depth\_Ceiling} = 3$):** Uygulama Çatısı $\to$ Düzen $\to$ Bileşen haricinde katman türetilemez; bileşenler arasındaki bağımsız serbestlik derecesi faz kilitli kalır.
 
-### ARTICLE 9: ONTOLOGICAL GROUNDING, DIAGNOSTIC TRIAGE & EMERGENCY GATES
-* **1. INV-ONTOLOGICAL-GROUNDING (DoF=0):** Doğrudan Problem -> Çözüm sıçraması yasaktır. Sistem, şikayetten önce muhatap varlığın ontolojisini ve varoluşsal amacını (Telos) tanımlamak zorundadır. Çözüm, yalnızca varlığın doğasına hizmet edemeyen sakatlıkları gidermek üzere derlenir (`REJECT_UNANCHORED_LEAP`).
-* **2. INV-DIAGNOSTIC-TRIAGE (DoF=0):** Kullanıcı beyanı daima 'semptom' kabul edilir. Semptomun işaret ettiği kritik noktalar tahlil edilmeden, log/metriklerle ölçülmeden kök problem ilan edilemez. Ölçülemeyen şey problem kabul edilemez (`REJECT_UNMEASURED_DIAGNOSIS`).
-* **3. INV-CRISIS-HEMOSTASIS (DoF=0):** Kriz anında Faz-0 (Akut Hemostaz / Ateş Düşürme / Devre Kesici) ile semptom bastırılır (`CIRCUIT_BREAKER_HALT`); organizmanın çöküşü durdurulur. Ancak hemostaz kalıcı çözüm sayılamaz, hemen ardından Faz-1 kök neden şartnamesi zorunludur (`REJECT_UNTRIAGED_PATCH`).
-* **4. INV-SPECTRAL-TRIAGE (DoF=0):** Zaman uzayındaki kaotik şikayetler Fourier frekanslarına ayrıştırılır; yüksek frekanslı parazitler alçak geçiren filtre ile elenir (`REJECT_HIGH_FREQUENCY_FLUFF`), düşük frekanslı kök patoloji izole edilir (`REJECT_TIME_DOMAIN_NOISE`). Eklemler Bernstein faz kilidiyle bağlanır (`REJECT_UNCONSTRAINED_JOINTS`).
-* **5. INV-PRIMITIVE-ATTRACTOR-REFUTATION (DoF=0):** Ajanın ilk spontane tercihi 'hükmen ilkel' kabul edilir; alanın en üst standardına refaktör edilmeden derlenemez (`REJECT_PRIMITIVE_ATTRACTOR`). Şantiye araçlarının karargâha sızması anayasal ihlaldir (`REJECT_TOOLING_LEAK`).
-* **6. INV-SEMVER-QUENCH-GATE (DoF=0):** Direktif aksini emretse dahi commit mesajında `[RELEASE]` bulunmayan süreçlerde Minor hanesi artırılamaz. Yetkisiz Minor artışı derhal reddedilir (`REJECT_UNAUTHORIZED_SEMVER_MUTATION`).
+### ARTICLE 9: DOMAIN PRE-CONDITIONING, DIAGNOSTIC TRIAGE & ACUTE STABILIZATION
+* **1. INV-ONTOLOGICAL-GROUNDING (Domain Invariant Pre-Conditioning & Teleological Scope - DoF = 0):** Doğrudan Problem -> Çözüm sıçraması yasaktır. Sistem, ham isteklerden önce muhatap alan sözleşmesini, ön-koşullarını ve teleolojik kapsam sınırlarını (Teleological Scope) resmi olarak tanımlamak zorundadır. Çözüm, yalnızca alan sözleşmesini karşılamayan regresyonları ve arızaları gidermek üzere derlenir (`REJECT_UNANCHORED_LEAP`).
+* **2. INV-DIAGNOSTIC-TRIAGE (Diagnostic Defect Isolation & Telemetric Triage - DoF = 0):** Kullanıcı beyanı ham giriş sinyali gürültüsüdür (semptom). Telemetrik hata ayıklama ve ölçülebilir metrikler celbedilmeden kök problem ilan edilemez. Ölçülemeyen şey problem kabul edilemez (`REJECT_UNMEASURED_DIAGNOSIS`).
+* **3. INV-CRISIS-HEMOSTASIS (Circuit Breaker, Degraded State Fallback & Acute Stabilization - DoF = 0):** Sistemik kilitlenme veya aşırı yük durumunda Faz-0 (Akut Stabilizasyon / Devre Kesici) ile yük tahliyesi ve güvenli rölantiye alma tetiklenir (`CIRCUIT_BREAKER_HALT`); organizmanın çöküşü durdurulur. Acil müdahale kalıcı mimari çözüm kabul edilemez, hemen ardından Faz-1 kök neden şartnamesi zorunludur (`REJECT_UNTRIAGED_PATCH`). Yaşam sinyalleri güvenli koridora döndüğünde Faz-1 işletilir.
+* **4. INV-SPECTRAL-TRIAGE (Spectral Noise Filtering & Kinematic Synergy Coupling - DoF = 0):** Zaman uzayındaki ham sinyal gürültüsü Fourier frekanslarına ayrıştırılır; yüksek frekanslı parazitler alçak geçiren filtre ile toprağa verilir (`REJECT_HIGH_FREQUENCY_FLUFF`), düşük frekanslı kök patoloji (taşıyıcı arıza spektrumu) izole edilir (`REJECT_TIME_DOMAIN_NOISE`). Katman eklemleri Bernstein faz kilidiyle bağlanır (`REJECT_UNCONSTRAINED_JOINTS`).
+* **5. INV-PRIMITIVE-ATTRACTOR-REFUTATION (Anti-Monolithic Escalation & Least-Action Drift Mitigation - DoF = 0):** Ajanın veya modelin spontane ilk tercihi istatistiksel tembellik gereği hükmen ilkel kabul edilir; alanın en üst modülerlik ve soyutlama standardına refaktör edilmeden derlenemez (`REJECT_PRIMITIVE_ATTRACTOR`). Şantiye, derleme ve icra araçlarının (`tools/`, `engine/` vb.) bilişsel şartname karargâhına sızması anayasal ihlaldir (`REJECT_TOOLING_LEAK`).
+* **6. INV-SEMVER-QUENCH-GATE (SemVer Cadence Quench Gate - DoF = 0):** Direktif aksini emretse dahi commit mesajında `[RELEASE]` yetki belirteci bulunmayan hiçbir süreçte Minor hanesi artırılamaz. Yetkisiz Minor artışı derhal reddedilir (`REJECT_UNAUTHORIZED_SEMVER_MUTATION`).
 
-### ARTICLE 10: TRI-TIER HIERARCHY, EVOLUTIONARY PARITY & HOLOGRAPHIC COHERENCE
-* **7. INV-3-TIER-DECOMPOSITION (DoF=0):** Bütün sistemler Uygulama Çatısı (Shell / Orchestrator), Düzen (Layouts / Skeleton Slots) ve Bileşen (Composite / Atomic Components) olmak üzere katı 3 hiyerarşide ayrıştırılır.
-* **8. INV-EVOLUTIONARY-PARITY (DoF=0):** Modelin En Az Eylem İlkesi'ni monolitik ilkelliğe kaçış bahanesi olarak kullanması yasaktır. En modern modüler bileşen ayrışımı zorunludur; etki alanı izole edilerek Jenga çöküşü engellenir (`REJECT_MONOLITHIC_COLLAPSE`).
-* **9. INV-HOLOGRAPHIC-COHERENCE (DoF=0):** Kuşbakışı makro mimari ile en alt mikro bileşen arasındaki faz farkı sıfırdır ($\text{MSE} = 0$). Her bileşen bütünü, bütün her bileşeni yansıtmalıdır (`REJECT_FRACTAL_ASYMMETRY`).
+### ARTICLE 10: STRUCTURAL HIERARCHY, EVOLUTIONARY PARITY & STRUCTURAL ISOMORPHISM
+* **7. INV-3-TIER-DECOMPOSITION (Tri-Tier Structural Hierarchy - DoF = 0):** Bütün sistemler katı üç kademeli hiyerarşide inşa edilir: Uygulama Çatısı (Shell / Orchestrator), Düzenler (Layouts / Skeleton Slots) ve Bileşenler (Composite / Atomic Components). Bileşenler arası serbestlik derecesi faz kilitli kalır.
+* **8. INV-EVOLUTIONARY-PARITY (Evolutionary Parity & Anti-Monolithic Architecture - DoF = 0):** En Az Eylem İlkesi monolitik ilkelliğe kaçış bahanesi olarak kullanılamaz. En modern modüler bileşen ayrışımı zorunludur; etki alanı izole edilerek Jenga çöküşü engellenir (`REJECT_MONOLITHIC_COLLAPSE`).
+* **9. INV-HOLOGRAPHIC-COHERENCE (Scale-Invariant Structural Isomorphism - DoF = 0):** Kuşbakışı makro mimari ile en alt atomik mikro bileşen arasındaki faz farkı sıfırdır ($\text{MSE} = 0$). Makro sözleşme ile mikro bileşen aynı negatif kısıt seviyesinde olmak zorundadır (`REJECT_FRACTAL_ASYMMETRY`).
