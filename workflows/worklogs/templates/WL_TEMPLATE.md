@@ -11,3 +11,4 @@
   - Bu karardan sisteme kalan ders veya invariant güncellemesi.
 - **Artefakt & Çapa:**
   - Dosya: [...] | Commit: [...] | Durum: [PASS / REWORK / REJECT]
+

@@ -44,3 +44,4 @@ To prevent autonomous agents from polluting repository history with discursive c
    - Every worklog must state the resulting institutional learning or invariant update (`scar_tissue`).
 4. **Cryptographic Anchoring:**
    - Every entry must bind to the affected file path, Git commit hash, and verification status (`PASS` / `REWORK` / `REJECT`).
+
