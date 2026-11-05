@@ -150,6 +150,9 @@ Altering the fallback precedence order ([.norm, .acme]), violating Kelsen normat
 ### SYS-133: COGNITIVE BANDWIDTH PROTECTION, TAG DISCIPLINE, AND ANTI-INFLATION QUENCH GATE
 Exceeding human biological cognitive assimilation limits ($v_{	ext{production}} > v_{	ext{human}}$), generating excessive tagging cycles, or failing to quench mid-day artifact inflation is strictly prohibited (`REJECT`).
 
+### SYS-134: PRE-EXECUTION ADVERSARIAL DIALECTIC, PREVIEW SCAFFOLDING GATE, AND UPSTREAM DIVERGENCE PROPAGATION
+Initiating code construction without adversarial consensus (`INV-PRE-EXEC-DIALECTIC-01`), triggering compilation with non-zero scaffolding preview delta (`INV-PREVIEW-DELTA-02`), or applying local code workarounds instead of backpropagating upstream RFCs (`INV-UPSTREAM-RFC-03`) is strictly prohibited (`REJECT`).
+
 ### SYS-135: GOAL-TO-SPEC INVERSE ENGINEERING AND AUTOMATED TESTS AS ENVIRONMENTAL PRESSURE
 Writing speculative implementations before executable validation tests are compiled, or treating test failures as non-fatal during evolutionary synthesis is strictly prohibited (`REJECT`).
 
