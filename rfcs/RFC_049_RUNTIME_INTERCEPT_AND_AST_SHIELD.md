@@ -26,3 +26,4 @@
 - **B. Proposed Norms (Adaptive Guidance, DoF >= 1):**
   - AST analyzers should return precise line and column coordinates of tier violations to enable self-healing agent workflows.
   - The process interceptor should stream blocked syscall telemetry to the local developer console for immediate observability.
+

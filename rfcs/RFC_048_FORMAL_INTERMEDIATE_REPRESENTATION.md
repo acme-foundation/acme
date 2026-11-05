@@ -30,3 +30,4 @@
 - **B. Proposed Norms (Adaptive Guidance, DoF >= 1):**
   - Standard FIR payloads should be co-located with specification artifacts as `<name>.fir.json`.
   - FIR schemas should provide machine-readable error tracebacks for downstream automated repair.
+

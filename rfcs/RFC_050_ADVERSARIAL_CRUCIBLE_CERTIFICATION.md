@@ -26,3 +26,4 @@
 - **B. Proposed Norms (Adaptive Guidance, DoF >= 1):**
   - Adversarial attack logs should be persisted as cryptographic test receipts in the workspace telemetry store.
   - Mutations that reveal unmodeled failure modes must backpropagate as scar invariants into living specifications.
+
