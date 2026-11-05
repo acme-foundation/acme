@@ -1,9 +1,9 @@
 # ACME: Lex Proceduralis Agentium
-### The Code of Civil Procedure, Jurisprudential Caching & Adjudication Engine for Autonomous Systems
+### Release v3.1.0 | Statutory Adjudication, Jurisprudential Caching & Pure Procedural Engine
 > *"Nulla Actio Sine Spec, Nullum Iudicium Sine Lege"*  
 > *(No execution without specification, no judgment without statutory law.)*
 
-**Version:** `v3.0.7-genesis`  
+**Version:** `v3.1.0`  
 **Standard:** Deterministic Specification, Jurisprudential Precedent Caching & Procedural Adjudication (`DoF = 0`)  
 **Gatekeeper:** `verify.py` (Zero-dependency stdlib)
 
@@ -87,7 +87,7 @@ The system automatically performs contextual field analysis:
 {
   "project_name": "payments-service",
   "project_type": "greenfield",
-  "extends": "https://github.com/acme-foundation/acme.git#v3.0.7-genesis",
+  "extends": "https://github.com/acme-foundation/acme.git#v3.1.0",
   "corporate_invariants": [
     "All service endpoints must expose OpenAPI specifications before code implementation",
     "Zero binary dependencies: All logic must compile locally from verified source"
@@ -100,7 +100,7 @@ The system automatically performs contextual field analysis:
 {
   "project_name": "legacy-core-portal",
   "project_type": "brownfield",
-  "extends": "https://github.com/acme-foundation/acme.git#v3.0.7-genesis",
+  "extends": "https://github.com/acme-foundation/acme.git#v3.1.0",
   "legacy_containment": {
     "legacy_scope": "src/legacy/",
     "blast_radius_containment": "strict"
@@ -116,7 +116,7 @@ The system automatically performs contextual field analysis:
 ```json
 {
   "workspace_role": "control_center",
-  "extends": "https://github.com/acme-foundation/acme.git#v3.0.7-genesis",
+  "extends": "https://github.com/acme-foundation/acme.git#v3.1.0",
   "subprojects": [
     {
       "path": "services/identity-provider",
@@ -141,7 +141,7 @@ The system automatically performs contextual field analysis:
 ## Repository Topology
 * `CONSTITUTION.md`: The 21 immutable invariants governing zero-drift specification.
 * `faculty/`: Foundational theory curriculum (`SYS`, `PHI`, `LAW`).
-* `workflows/`: Evolutionary Agent-Based Unified Process (E-AUP) suite (`00_meta_workflow.md`, `WF_001_SPECTRAL_TRIAGE.md`, `WF_002_ADVERSARIAL_INCUBATION_AND_DIALECTIC.md`, `WF_003_ADJUDICATION_AND_EXECUTION_GATE.md`, `WF_004_STATUTORY_ADJUDICATION_AND_REASONING.md`).
+* `workflows/`: Evolutionary Agent-Based Unified Process (E-AUP) suite (`00_meta_workflow.md`, `WF_001_INCEPTION_TO_SPEC.md` / `WF_001_SPECTRAL_TRIAGE.md`, `WF_002_ADVERSARIAL_INCUBATION_AND_DIALECTIC.md`, `WF_003_ADJUDICATION_AND_EXECUTION_GATE.md`, `WF_004_STATUTORY_ADJUDICATION_AND_REASONING.md`).
 * `theses/`: Ratified architectural contracts.
 * `verify.py`: Mechanical, zero-dependency CI gatekeeper enforcing zero-code purity and SemVer discipline (12 verification gates).
 * `scripts/decontaminator.py`: Pre-commit decontamination shield enforcing zero absolute local paths and zero credential leaks.

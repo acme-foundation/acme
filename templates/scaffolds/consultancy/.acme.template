@@ -1,9 +1,9 @@
 {
-  "$schema": "https://raw.githubusercontent.com/acme-foundation/acme/v3.0.7-genesis/theses/SYS_132_UNIVERSAL_NORM_AND_CASCADING_INHERITANCE.md",
+  "$schema": "https://raw.githubusercontent.com/acme-foundation/acme/v3.1.0/theses/archive/SYS_132_UNIVERSAL_NORM_AND_CASCADING_INHERITANCE.md",
   "project_name": "consultancy-headquarters",
   "version": "1.0.0",
   "mode": "consultancy_hub",
-  "extends": "https://github.com/acme-foundation/acme.git#v3.0.7-genesis",
+  "extends": "https://github.com/acme-foundation/acme.git#v3.1.0",
   "governance": {
     "circadian_cadence": "strict",
     "island_boundary": "enforced",

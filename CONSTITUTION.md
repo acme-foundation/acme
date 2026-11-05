@@ -1,8 +1,8 @@
-# CONSTITUTION OF THE ACME ECOSYSTEM (LEX SUPERIOR v3.0.4-GENESIS)
+# CONSTITUTION OF THE ACME ECOSYSTEM (LEX SUPERIOR v3.1.0)
 > **Status:** RATIFIED CANONICAL FOUNDATION  
 > **Authority:** Lex Superior / Irreducible Cognitive Constitution  
 > **Biological Root of Trust:** Serkan BAYHAN (Chief Architect)  
-> **Release Target:** ACME v3.0.4-Genesis  
+> **Release Target:** ACME v3.1.0  
 
 ---
 

@@ -19,7 +19,7 @@
 
 ## 2. CIRCADIAN CADENCE & PIPELINE VECTOR INTEGRATION (`INV-CIRCADIAN-CADENCE`)
 
-The 7-Stage Circadian Lifecycle (`theses/SYS_123_CIRCADIAN_CADENCE_REVEILLE_RETREAT.md`) governs the temporal operation of the 9-Node Canonical Pipeline Vector:
+The 7-Stage Circadian Lifecycle (`theses/archive/SYS_123_CIRCADIAN_CADENCE_REVEILLE_RETREAT.md`) governs the temporal operation of the 9-Node Canonical Pipeline Vector:
 
 ```text
   [REVEILLE] ──► [DIRECTIVE & TRIAGE] ──► [MARCH] ──► [EXECUTE & TELEMETRY] ──► [RELEASE & RETREAT] ──► [STANDBY]
@@ -38,7 +38,7 @@ The 7-Stage Circadian Lifecycle (`theses/SYS_123_CIRCADIAN_CADENCE_REVEILLE_RETR
    - Ingests incoming directive; separates noise from signal.
    - Evaluates **Greenfield vs. Brownfield Entry Threshold**:
      - *Greenfield:* Direct engagement of Inception; `problem_spec.md` synthesized cleanly.
-     - *Brownfield:* Direct coding is barred; static AST scan extracts implicit invariants and reports the weakest architectural link (`theses/SYS_112_HOLOGRAPHIC_COHERENCE_FRACTAL_WEAKEST_LINK.md`) before proceeding.
+     - *Brownfield:* Direct coding is barred; static AST scan extracts implicit invariants and reports the weakest architectural link (`theses/archive/SYS_112_HOLOGRAPHIC_COHERENCE_FRACTAL_WEAKEST_LINK.md`) before proceeding.
 3. **MARCH (Constitutional Assembly):**
    - Pre-execution check: Locks architectural invariants ($DoF = 0$), initializes island containment sandbox, and verifies token/cost quotas.
 4. **EXECUTE & TELEMETRY (Nodes 4–8):**
@@ -58,25 +58,25 @@ Each discrete node is an insulated action cell anchored directly to faculty curr
    - *Curriculum Anchors:* `faculty/SYS_systems.md` (Fourier-inspired spectral noise filtration) and `faculty/PHI_philosophy.md` (Teleological framing / Telos extraction).
    - Demarcates surface symptoms from structural pathology (`INV-DIAGNOSTIC-TRIAGE`).
 3. **Node 3: `[Diagnostics]` (Boundary & Invariant Engine):**
-   - *Curriculum Anchors:* `theses/PHI_102_TACIT_TO_METRIC_GROUNDING.md` and `theses/SYS_144_DRIFT_GUARD_CIRCUIT_BREAKER.md`.
+   - *Curriculum Anchors:* `theses/archive/PHI_102_TACIT_TO_METRIC_GROUNDING.md` and `theses/archive/SYS_144_DRIFT_GUARD_CIRCUIT_BREAKER.md`.
    - Formulates 5N1K empirical diagnostic matrix; bounds maximum blast radius. Produces `artifacts/problem_spec.md`.
 4. **Node 4: `[Solution]` (Keystone Architect & Synthesizer):**
-   - *Curriculum Anchors:* `theses/SYS_001_PRINCIPLE_OF_LEAST_ACTION.md` / `SYS_101_LEAST_ACTION.md` ($\delta S = 0$) and `theses/SYS_117_TRI_TIER_CONTEXT_FABRIC.md` (`INV-3-TIER-DECOMPOSITION`: Shell $\to$ Layouts $\to$ Components).
+   - *Curriculum Anchors:* `theses/SYS_001_PRINCIPLE_OF_LEAST_ACTION.md` / `SYS_101_LEAST_ACTION.md` ($\delta S = 0$) and `theses/archive/SYS_117_TRI_TIER_CONTEXT_FABRIC.md` (`INV-3-TIER-DECOMPOSITION`: Shell $\to$ Layouts $\to$ Components).
    - Emits candidate implementation blueprint: `SPEC-A (The Constructor)`.
 5. **Node 5: `[Evaluation]` (Adversarial Crucible & Procedural Gate):**
-   - *Curriculum Anchors:* `faculty/LAW_law.md` and `theses/LAW_106_NORMATIVE_HIERARCHY_LEX_EXTERNA.md` (Kelsen Normative Hierarchy / Lex Superior).
-   - Engages `SPEC-B (The Adversary)` in the Twin Specification Crucible (`theses/SYS_103_ADVERSARIAL_TWIN_CRUCIBLE.md`). Produces `artifacts/solution_contract.yaml`.
+   - *Curriculum Anchors:* `faculty/LAW_law.md` and `theses/archive/LAW_106_NORMATIVE_HIERARCHY_LEX_EXTERNA.md` (Kelsen Normative Hierarchy / Lex Superior).
+   - Engages `SPEC-B (The Adversary)` in the Twin Specification Crucible (`theses/archive/SYS_103_ADVERSARIAL_TWIN_CRUCIBLE.md`). Produces `artifacts/solution_contract.yaml`.
 6. **Node 6: `[Execution]` (Atomic Materializer / Polymath Worker):**
-   - *Curriculum Anchors:* `theses/SYS_146_PURE_NLP_COGNITIVE_CORE.md` and `RFC_049_RUNTIME_INTERCEPT_AND_AST_SHIELD.md`.
+   - *Curriculum Anchors:* `theses/archive/SYS_146_PURE_NLP_COGNITIVE_CORE.md` and `RFC_049_RUNTIME_INTERCEPT_AND_AST_SHIELD.md`.
    - Authors surgical diffs ($\le 500$ tokens per unit) under `INV-MIN-DEPENDENCY` and AST execution whitelist shield.
 7. **Node 7: `[Test]` (Deterministic Empirical Verifier):**
    - *Curriculum Anchors:* `theses/SYS_002_SPEC_FIRST_ZERO_BIN_DISTRIBUTION.md` and `verify.py`.
    - Mechanical gatekeeper verification; strictly prohibits mocks across invariant boundaries.
 8. **Node 8: `[Simulation]` (Adversarial Stress Harness):**
-   - *Curriculum Anchors:* `theses/SYS_139_CRUCIBLE_HARDENING.md` and `RFC_050_ADVERSARIAL_CRUCIBLE_CERTIFICATION.md`.
+   - *Curriculum Anchors:* `theses/archive/SYS_139_CRUCIBLE_HARDENING.md` and `RFC_050_ADVERSARIAL_CRUCIBLE_CERTIFICATION.md`.
    - Multi-threaded concurrency race condition testing, fuzzing, and pre-mortem failure mode refutation ($k \ge 3$ passes).
 9. **Node 9: `[Output]` (Terminal Seal & Scar Tissue Integrator):**
-   - *Curriculum Anchors:* `theses/SYS_130_PORTABLE_SPECIFICATION_AND_STATE_CONTINUITY.md` and `theses/SYS_131_STATEFUL_SCAR_TISSUE_AND_FAILURE_INVARIANCE.md`.
+   - *Curriculum Anchors:* `theses/archive/SYS_130_PORTABLE_SPECIFICATION_AND_STATE_CONTINUITY.md` and `theses/archive/SYS_131_STATEFUL_SCAR_TISSUE_AND_FAILURE_INVARIANCE.md`.
    - Merkle commit seal, SemVer release tag, and worklog scar tissue backpropagation.
 
 ---
