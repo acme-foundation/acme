@@ -16,6 +16,7 @@
 3. **Spectral Triage:** Fourier-inspired noise attenuation separating high-frequency symptom chatter from fundamental structural defects.
 4. **Anti-Monolithic Escalation:** Rejection of default primitive attractors and unmodularized monolithic outputs.
 5. **Scale-Invariant Isomorphism:** Macro-architectural invariants mathematically mirrored across micro-level implementations (MSE = 0).
+6. **Deterministic Reasoning & Adjudicated SDLC:** Every deduction and code execution mandates explicit statutory citation (`INV-STATUTORY-ANCHOR-01`). Local defensive workarounds are struck down as procedural fraud, converting normative voids into compulsory upstream RFCs.
 
 ---
 
@@ -26,11 +27,12 @@ ACME operates as an upstream invariant compiler:
 2. **Pre-Execution Dialectic & Incubation:** Exhaust structural friction in pure NLP via `workflows/WF_002_ADVERSARIAL_INCUBATION_AND_DIALECTIC.md` before any code compilation.
 3. **3-Tier Formulation:** Lock architecture strictly across Shell, Layout, and Component contracts ($DoF = 0$).
 4. **Adjudication & Execution Gate:** Issue formal execution petitions and judicial writs under `workflows/WF_003_ADJUDICATION_AND_EXECUTION_GATE.md` before physical file mutations.
-5. **Mechanical Verification:** Validate invariant parity, SemVer cadence, and zero-code core purity:
+5. **Statutory Adjudication & Reasoning:** Ground every deduction in constitutional statute and route normative voids via `workflows/WF_004_STATUTORY_ADJUDICATION_AND_REASONING.md`.
+6. **Mechanical Verification:** Validate invariant parity, SemVer cadence, and zero-code core purity:
    ```bash
    python verify.py --verify-all
    ```
-6. **Downstream Dispatch:** Hand off compiled markdown specification contracts to downstream coding agents (Cursor, Claude Code, AntiGravity).
+7. **Downstream Dispatch:** Hand off compiled markdown specification contracts to downstream coding agents (Cursor, Claude Code, AntiGravity).
 
 ---
 
@@ -111,9 +113,9 @@ The system automatically performs contextual field analysis:
 ---
 
 ## Repository Topology
-* `CONSTITUTION.md`: The 18 immutable invariants governing zero-drift specification.
+* `CONSTITUTION.md`: The 21 immutable invariants governing zero-drift specification.
 * `faculty/`: Foundational theory curriculum (`SYS`, `PHI`, `LAW`).
-* `workflows/`: Evolutionary Agent-Based Unified Process (E-AUP) suite (`00_meta_workflow.md`, `WF_001_SPECTRAL_TRIAGE.md`, `WF_002_ADVERSARIAL_INCUBATION_AND_DIALECTIC.md`, `WF_003_ADJUDICATION_AND_EXECUTION_GATE.md`).
+* `workflows/`: Evolutionary Agent-Based Unified Process (E-AUP) suite (`00_meta_workflow.md`, `WF_001_SPECTRAL_TRIAGE.md`, `WF_002_ADVERSARIAL_INCUBATION_AND_DIALECTIC.md`, `WF_003_ADJUDICATION_AND_EXECUTION_GATE.md`, `WF_004_STATUTORY_ADJUDICATION_AND_REASONING.md`).
 * `theses/`: Ratified architectural contracts.
 * `verify.py`: Mechanical, zero-dependency CI gatekeeper enforcing zero-code purity and SemVer discipline (12 verification gates).
 * `scripts/decontaminator.py`: Pre-commit decontamination shield enforcing zero absolute local paths and zero credential leaks.

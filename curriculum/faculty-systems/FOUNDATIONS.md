@@ -179,3 +179,6 @@
 
 ### SYS-134: Adjudicated Execution Gate, Procedural Petition, and Remand Mechanics (THESIS-056 / node-056)
 - Codifies the procedural legal safeguards for software execution: the mandatory Execution Petition (`EXECUTION_PETITION.md`), adversarial inquest hearing, zero-degrees-of-freedom Writ of Execution (`WRIT_OF_EXECUTION.md`), and procedural remand to problem space (`REJECTION_GROUNDS.md`).
+
+### SYS-135: Statutory Anchoring, Procedural Adjudication, and Anti-Workaround Governance (THESIS-057 / node-057)
+- Codifies the legal adjudication doctrine of software engineering: mandatory statutory grounding citations (`INV-STATUTORY-ANCHOR-01`), immediate procedural fraud strike-down of defensive workarounds (`INV-ANTI-WORKAROUND-02`), and compulsory upstream RFC escalation for normative voids (`INV-COMPULSORY-RFC-03`).

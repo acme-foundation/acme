@@ -45,3 +45,4 @@
 - [ ] Confirm 100% binary PASS across all verification gates ($DoF = 0$).
 - [ ] Purge ephemeral hearing ballast (`.tmp/`).
 - [ ] Transition execution plane to quiescent `STANDBY`.
+

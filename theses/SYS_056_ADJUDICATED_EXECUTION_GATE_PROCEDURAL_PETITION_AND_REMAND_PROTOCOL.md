@@ -113,3 +113,4 @@ ACME bridges the procedural guarantees of formal jurisprudence into software sys
 | **DOD-05** | Remand Invariant Registration | `INV-REMAND-PROPAGATION-03` anchored in CONSTITUTION.md | **PASS** |
 | **DOD-06** | Pre-Mortem Anti-Pattern Catalog | Top 3 failure modes explicitly cataloged and prohibited | **PASS** |
 | **DOD-07** | Automated Mechanical Verification | `python verify.py --verify-all` passes all gates | **PASS** |
+
