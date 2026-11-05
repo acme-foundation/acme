@@ -1,8 +1,8 @@
-# CONSTITUTION OF THE ACME ECOSYSTEM (LEX SUPERIOR v3.4.0-GENESIS)
+# CONSTITUTION OF THE ACME ECOSYSTEM (LEX SUPERIOR v3.0.4-GENESIS)
 > **Status:** RATIFIED CANONICAL FOUNDATION  
 > **Authority:** Lex Superior / Irreducible Cognitive Constitution  
 > **Biological Root of Trust:** Serkan BAYHAN (Chief Architect)  
-> **Release Target:** ACME v3.4.0-Genesis  
+> **Release Target:** ACME v3.0.4-Genesis  
 
 ---
 
@@ -50,8 +50,12 @@ This Constitution establishes the self-compiling, autopoietic governance core of
 * Any cognitive workflow, architectural mutation, or statutory amendment lacking cryptographic biological anchoring is void and rejected (`REJECT_UNANCHORED_INCEPTION`).
 * Biological confirmation acts as a thermodynamic temperature collapse ($T \to 0^+$), clamping generative freedom onto deterministic execution ($\text{DoF} = 0$).
 
-### ARTICLE 7: MERKLE SEALING & CADENCE DISCIPLINE
+### ARTICLE 7: MERKLE SEALING & CADENCE DISCIPLINE (INV-TAG-DISCIPLINE & SEMVER CADENCE)
 * **Cryptographic Non-Repudiation:** Every accredited thesis, graduation diploma, and release milestone is permanently anchored to immutable Git Merkle commit SHAs.
+* **SemVer Cadence Discipline (DoF = 0):** Sürüm hanelerinin keyfi artırılması kesinlikle yasaktır (`REJECT_TAG_INFLATION`):
+  1. **1. Hane (MAJOR - $X$):** Yalnızca sistemik ve devrimsel paradigma dönüşümlerinde (Genesis, Pure NLP vb.) doğrudan Başmimar onayıyla değişir.
+  2. **2. Hane (MINOR - $Y$):** Başmimar açıkça `[RELEASE]` komutu vermediği sürece ikinci haneyi (Minor: X.Y.Z içindeki Y) artırmak KESİNLİKLE YASAKTIR (`DoF = 0`). Paydos (`RETREAT`), anayasa güncellemesi, tekil tez veya oturum kapanışları ikinci haneyi DEĞİŞTİREMEZ.
+  3. **3. Hane (PATCH - $Z$):** Paydos (`RETREAT`), gün içi ara mühürler, anayasa yamaları, tekil tez eklemeleri ve mikro-düzeltmelerde SADECE VE YALNIZCA en son hane (Patch: Z) artırılacaktır (Örn: `v3.0.1`, `v3.0.2`, `v3.0.3`, `v3.0.4`).
 * **Retreat Cadence & Anti-Inflation Tag Discipline:** In-session intermediate tags are strictly prohibited (`INV-TAG-DISCIPLINE`). Sürüm etiketleri (Release Tags) solely seal consolidated daily milestones during evening retreat, ensuring clean, verifiable lineage.
 
 ### ARTICLE 8: OBSERVABLE AUTONOMOUS OVERSIGHT & LIVE-STATE INVARIANT (INV-OBSERVABILITY-DECOUPLED)

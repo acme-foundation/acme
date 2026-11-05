@@ -15,21 +15,20 @@ Project ACME is the foundational cognitive constitution for autonomous agent eco
 4. **Autonomous Oversight & The Writer's Room Closed Loop:** Mandatory pre-execution 4-stage circuit: *Critic (Adversarial Twin) $\to$ Spec Patch $\to$ Execution $\to$ Delivery Referee*, strictly clamped to a 3-iteration Quench Gate ceiling.
 5. **Control Plane / Data Plane Partition:** PMO/governance memory (`.norm`, `.acme`, RFCs, Curricula, Theses) is strictly quarantined from public runtime source trees (`src/`, `tests/`), with clean-room reverse telemetry backpropagating only anonymized cryptographic Scar Signatures.
 
-### 3. REPOSITORY SCAFFOLDING (v3.0.0-GENESIS)
-```text
+### 3. REPOSITORY SCAFFOLDING (v3.0.4-GENESIS)
+`	ext
 acme/
-├── faculty/              # Normative Curricula & Academic Foundational Corpus
-│   ├── faculty-law/         # Autopoietic Law & Jurisprudential Systems
-│   ├── faculty-philosophy/  # Ontology, Epistemology & Formal Logic
-│   └── faculty-systems/     # Thermodynamics, Cybernetics & Invariant Architecture
-├── registry/                # Verified Human Anchors & Graduation Registry (graduates.json)
-├── theses/                  # Unified Living Theses Corpus ([CODE]_[NO]_[SLUG].md)
-├── templates/               # Standardized Schemas (RFC_TEMPLATE, SPEC_TEMPLATE, AOP_LIFECYCLE)
-├── AGENTS.md                # Execution Protocol for AI Agents & Downstream Sanitization
-├── CONSTITUTION.md          # Irreducible Constitutional Lex Superior (v3.0.0-Genesis)
-├── verify.py                # Pure Stdlib Sidecar Invariant Gate & Crucible Verifier
-└── README.md                # Genesis Specification & Adoption Guide
-```
+├── faculty/              # Unified Living Syllabus Catalogs (SYS_systems.md, PHI_philosophy.md, LAW_law.md)
+├── registry/             # Verified Human Anchors & Graduation Registry (graduates.json)
+├── theses/               # Unified Living Theses Corpus ([CODE]_[NO]_[SLUG].md)
+├── templates/            # Standardized Schemas (RFC_TEMPLATE, SPEC_TEMPLATE, AOP_LIFECYCLE)
+├── AGENTS.md             # Execution Protocol for AI Agents & Downstream Sanitization
+├── CONSTITUTION.md       # Irreducible Constitutional Lex Superior (v3.0.4-Genesis)
+├── verify.py             # Pure Stdlib Sidecar Invariant Gate & Crucible Verifier
+├── live_state.json       # Live Telemetry State Machine
+├── live_view.html        # Real-Time Zero-Refresh Dashboard Cockpit
+└── README.md             # Genesis Specification & Adoption Guide
+`
 
 ### 4. DOWNSTREAM ADOPTION & THE UNIVERSAL `.norm` STANDARD
 Downstream client projects (workspaces) adopt ACME as an external normative authority (*Lex Superior*), not as boilerplate application code.

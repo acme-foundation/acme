@@ -82,7 +82,7 @@ Accepting downstream client artifacts directly into core registries without pass
 Modifying legacy enterprise codebases without prior structural AST inspection, dependency graph extraction, and non-breaking contract validation is strictly prohibited (`REJECT`).
 
 ### SYS-111: AUTOPOIETIC CADENCE & TRI-TIER SPEC-ALIGNED SEMVER PROTOCOL
-Publishing semantic version increments that fail to correspond strictly to specification invariant changes (Major=Lex, Minor=Norm, Patch=Heuristic) is strictly prohibited (`REJECT`).
+Publishing semantic version increments that fail to correspond strictly to specification invariant changes (Major=Lex, Minor=Norm, Patch=Heuristic) is strictly prohibited (`REJECT`). Minor increments require explicit `[RELEASE]` directive from the Chief Architect; in-session updates, constitutional patches, single theses, and retreat cycles advance Patch (Z) only (`DoF = 0`).
 
 ### SYS-112: HOLOGRAPHIC COHERENCE & FRACTAL WEAKEST-LINK ARCHITECTURE
 Allowing local subsystem degradation to exceed global tolerance thresholds, or treating subsystem failures in isolation without evaluating systemic resonance is strictly prohibited (`REJECT`).
