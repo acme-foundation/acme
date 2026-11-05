@@ -1,129 +1,141 @@
 # WF-000: E-AUP Meta-Workflow Architecture & Conical Vortex Specification
-## Scope: Universal 9-Node Pipeline Governance, Minimum Justified Dependency & Financial Circuit Breakers (DoF = 0)
+## Scope: Universal 9-Node Pipeline Governance, Circadian Cadence & Invariant Synthesis (DoF = 0)
 
 ---
 
-## 1. TRIGGER CONTRACT & SCOPE BOUNDARY
+## 1. TRIGGER CONTRACT & CONSTITUTIONAL INVARIANTS
 - **Pre-condition:** Invocation of any Evolutionary Agent-Based Unified Process (E-AUP) phase or downstream project adoption manifest (`.norm`).
 - **Input Types:** Architectural directives, telemetry streams, incident triage records, or formal change proposals.
 - **Degrees of Freedom (DoF):** 0 (Normative Lex Superior; invariants cannot be relaxed or bypassed).
 - **Resource Ceiling:** Global iteration cap $N_{\max} = 3$ per discrete station; latency $\le 500\text{ms}$ per verification evaluation pass.
-- **Strict Invariant 1 (Decontamination & Signal Filtering):** All historical narrative, anecdotal noise, and conversational chatter evaluate as pure entropic noise (`ENTROPIC_NOISE`). The core specification compiles exclusively from empirical systems engineering signals, mathematical invariants, and reproducible telemetry.
+- **Strict Invariant 1 (Decontamination & Signal Filtering — `INV-DECONTAMINATION`):** All historical narrative, anecdotal noise, and conversational chatter evaluate as pure entropic noise (`ENTROPIC_NOISE`). The core specification compiles exclusively from empirical systems engineering signals, mathematical invariants, and reproducible telemetry. Local host paths and credentials are mechanically barred via `scripts/decontaminator.py`.
 - **Strict Invariant 2 (Minimum and Justified Dependency — `INV-MIN-DEPENDENCY`):** The dogma of "absolute zero external dependencies" is formally abandoned as a source of UI crudeness, wheel reinvention, and over-engineering. In its place, the **Zero-Unjustified Dependency** protocol is enforced:
   - **Permitted Leverage (Strict Whitelist):** Zero-setup friction standard CDN tools (e.g., Tailwind CSS CDN, Lucide Icons), native browser APIs (Canvas, Web Audio, localStorage), and Python standard libraries (`sqlite3`, `http.server`, etc.) are directly authorized. Wheels shall not be reinvented.
   - **Prohibited Parasitic Dependencies:** Uncontrolled npm packages introducing local installation overhead, external database servers, and bulky libraries imported for micro-functions are strictly prohibited (`REJECT_PARASITIC_DEPENDENCY`).
+- **Strict Invariant 3 (Island Boundary & Dewdrop Isolation — `INV-ISLAND-BOUNDARY`):** Every autonomous execution worker is sandboxed inside an isolated island workspace (`engine/island/` or `tasks/{task_id}/`). Every execution context carries an immutable `CONTEXT_HEADER` signed with SHA-256. Direct modifications outside the designated island boundary (specifically to `CONSTITUTION.md` and ratified `theses/`) trigger immediate compilation abort (`ISLAND_CONTAINMENT_BREACH`).
+- **Strict Invariant 4 (Self-Evolving Immunity — `INV-AUTO-IMMUNITY`):** Execution and simulation failures recorded in `WL_TEMPLATE.md` do not remain passive text. Every verified incident pattern must be automatically synthesized into a formal Negative Test Case and promoted into the `verify.py` verification suite as an active assertion gate.
 
 ---
 
-## 2. THE 9-NODE CANONICAL PIPELINE VECTOR
+## 2. CIRCADIAN CADENCE & PIPELINE VECTOR INTEGRATION (`INV-CIRCADIAN-CADENCE`)
 
-The universal execution pipeline consists of 9 discrete state-keeping nodes (`[]`) coupled via 8 bidirectional dialectic spring membranes (`<>`):
+The 7-Stage Circadian Lifecycle (`theses/SYS_123_CIRCADIAN_CADENCE_REVEILLE_RETREAT.md`) governs the temporal operation of the 9-Node Canonical Pipeline Vector:
+
+```text
+  [REVEILLE] ──► [DIRECTIVE & TRIAGE] ──► [MARCH] ──► [EXECUTE & TELEMETRY] ──► [RELEASE & RETREAT] ──► [STANDBY]
+  (Ground Truth)   (Nodes 1-3: Spec)   (Roll-Call)  (Nodes 4-8: Construction)   (Node 9: Mühür/Clean)   (Idle / Guard)
+```
 
 ```text
 [Input] ──< 1 >──► [Triage] ──< 2 >──► [Diagnostics] ──< 3 >──► [Solution] ──< 4 >──► [Evaluation] ──< 5 >──► [Execution] ──< 6 >──► [Test] ──< 7 >──► [Simulation] ──< 8 >──► [Output]
 ```
 
-### A. Discrete Nodes `[]` (Local State Keepers)
-Each discrete node is an insulated action cell with strictly bounded local responsibility. Nodes do NOT perform existential or global systemic philosophy; they execute local state transitions:
-1. **Node 1: `[Input]` (Intake Receiver):** Ingests raw telemetry, defect tickets, or operator commands with zero speculative modification.
-2. **Node 2: `[Triage]` (Ontological Decompiler):** Identifies target entity Telos (core purpose) and demarcates surface symptoms from underlying structural pathology (`INV-DIAGNOSTIC-TRIAGE`).
-3. **Node 3: `[Diagnostics]` (Boundary & Invariant Engine):** Quantifies observable defects against empirical baselines ($P_{99}$, error codes, memory offsets) and bounds maximum blast radius.
-4. **Node 4: `[Solution]` (Keystone Architect & Synthesizer):** Generates candidate architectural topology adhering strictly to the 3-Tier Structural Hierarchy (`INV-3-TIER-DECOMPOSITION`: Application Shell $\to$ Layouts $\to$ Components) and atomic unit sizing ($\le 500$ tokens).
-5. **Node 5: `[Evaluation]` (Adversarial Crucible & Rice Gate):** Submits candidate design to the tripartite Writers' Room dialectic and pre-mortem failure mode cataloging (THESIS-036).
-6. **Node 6: `[Execution]` (Atomic Materializer / Construction Worker):** Synthesizes concrete atomic diffs under the AST Runtime Intercept Shield (`INV-RUNTIME-INTERCEPT`) and `INV-MIN-DEPENDENCY`.
-7. **Node 7: `[Test]` (Deterministic Empirical Verifier):** Executes mechanical test suites (`verify.py --verify-all`), type checkers, and unit contracts to reach a binary PASS/FAIL verdict.
-8. **Node 8: `[Simulation]` (Adversarial Stress Harness):** Injects chaos, race conditions, edge fuzzing, and mutation suites (`INV-CRUCIBLE-CERTIFICATION`) to refute Goodhart's law evasion.
-9. **Node 9: `[Output]` (Terminal Seal & Scar Tissue Integrator):** Cleanses workspace, validates No-BOM UTF-8, verifies SemVer monotonic lock, commits cryptographic Merkle digest, and updates institutional scar tissue.
+### A. Lifecycle Stage Mapping
+1. **REVEILLE (Ground Truth Roll-Call):**
+   - At daybreak or session initiation, the workspace executes `git pull` and `python verify.py --verify-all`.
+   - All 11 verification gates must yield binary `PASS`. If baseline verification fails, task ingestion is locked.
+2. **DIRECTIVE & TRIAGE (Nodes 1–3):**
+   - Ingests incoming directive; separates noise from signal.
+   - Evaluates **Greenfield vs. Brownfield Entry Threshold**:
+     - *Greenfield:* Direct engagement of Inception; `problem_spec.md` synthesized cleanly.
+     - *Brownfield:* Direct coding is barred; static AST scan extracts implicit invariants and reports the weakest architectural link (`theses/SYS_112_HOLOGRAPHIC_COHERENCE_FRACTAL_WEAKEST_LINK.md`) before proceeding.
+3. **MARCH (Constitutional Assembly):**
+   - Pre-execution check: Locks architectural invariants ($DoF = 0$), initializes island containment sandbox, and verifies token/cost quotas.
+4. **EXECUTE & TELEMETRY (Nodes 4–8):**
+   - Generates candidate architecture (`SPEC-A`), subjects it to adversarial refutation (`SPEC-B`), executes atomic units ($\le 500$ tokens), runs deterministic tests, and executes stress simulation.
+5. **RELEASE & RETREAT (Node 9):**
+   - Cleanses ephemeral `.tmp/` ballast, verifies No-BOM UTF-8, logs cryptographic Merkle commit digest, validates SemVer monotonic tag, and puts the execution environment into `STANDBY`.
 
 ---
 
-## 3. THE 3 MACRO PHASE PACKAGING
+## 3. DISCRETE NODES & ONTOLOGICAL CURRICULUM BINDING
 
-To eliminate cognitive overload and prevent agentic thrashing, the 9-node pipeline is partitioned into 3 sequential, closed-loop Macro Phases:
+Each discrete node is an insulated action cell anchored directly to faculty curriculum foundations and ratified theses:
+
+1. **Node 1: `[Input]` (Intake Receiver):**
+   - Ingests raw signal with zero speculative mutation.
+2. **Node 2: `[Triage]` (Ontological Decompiler):**
+   - *Curriculum Anchors:* `faculty/SYS_systems.md` (Fourier-inspired spectral noise filtration) and `faculty/PHI_philosophy.md` (Teleological framing / Telos extraction).
+   - Demarcates surface symptoms from structural pathology (`INV-DIAGNOSTIC-TRIAGE`).
+3. **Node 3: `[Diagnostics]` (Boundary & Invariant Engine):**
+   - *Curriculum Anchors:* `theses/PHI_102_TACIT_TO_METRIC_GROUNDING.md` and `theses/SYS_144_DRIFT_GUARD_CIRCUIT_BREAKER.md`.
+   - Formulates 5N1K empirical diagnostic matrix; bounds maximum blast radius. Produces `artifacts/problem_spec.md`.
+4. **Node 4: `[Solution]` (Keystone Architect & Synthesizer):**
+   - *Curriculum Anchors:* `theses/SYS_001_PRINCIPLE_OF_LEAST_ACTION.md` / `SYS_101_LEAST_ACTION.md` ($\delta S = 0$) and `theses/SYS_117_TRI_TIER_CONTEXT_FABRIC.md` (`INV-3-TIER-DECOMPOSITION`: Shell $\to$ Layouts $\to$ Components).
+   - Emits candidate implementation blueprint: `SPEC-A (The Constructor)`.
+5. **Node 5: `[Evaluation]` (Adversarial Crucible & Procedural Gate):**
+   - *Curriculum Anchors:* `faculty/LAW_law.md` and `theses/LAW_106_NORMATIVE_HIERARCHY_LEX_EXTERNA.md` (Kelsen Normative Hierarchy / Lex Superior).
+   - Engages `SPEC-B (The Adversary)` in the Twin Specification Crucible (`theses/SYS_103_ADVERSARIAL_TWIN_CRUCIBLE.md`). Produces `artifacts/solution_contract.yaml`.
+6. **Node 6: `[Execution]` (Atomic Materializer / Polymath Worker):**
+   - *Curriculum Anchors:* `theses/SYS_146_PURE_NLP_COGNITIVE_CORE.md` and `RFC_049_RUNTIME_INTERCEPT_AND_AST_SHIELD.md`.
+   - Authors surgical diffs ($\le 500$ tokens per unit) under `INV-MIN-DEPENDENCY` and AST execution whitelist shield.
+7. **Node 7: `[Test]` (Deterministic Empirical Verifier):**
+   - *Curriculum Anchors:* `theses/SYS_002_SPEC_FIRST_ZERO_BIN_DISTRIBUTION.md` and `verify.py`.
+   - Mechanical gatekeeper verification; strictly prohibits mocks across invariant boundaries.
+8. **Node 8: `[Simulation]` (Adversarial Stress Harness):**
+   - *Curriculum Anchors:* `theses/SYS_139_CRUCIBLE_HARDENING.md` and `RFC_050_ADVERSARIAL_CRUCIBLE_CERTIFICATION.md`.
+   - Multi-threaded concurrency race condition testing, fuzzing, and pre-mortem failure mode refutation ($k \ge 3$ passes).
+9. **Node 9: `[Output]` (Terminal Seal & Scar Tissue Integrator):**
+   - *Curriculum Anchors:* `theses/SYS_130_PORTABLE_SPECIFICATION_AND_STATE_CONTINUITY.md` and `theses/SYS_131_STATEFUL_SCAR_TISSUE_AND_FAILURE_INVARIANCE.md`.
+   - Merkle commit seal, SemVer release tag, and worklog scar tissue backpropagation.
+
+---
+
+## 4. THE TWIN SPECIFICATION CRUCIBLE (`SPEC-A` vs. `SPEC-B`)
+
+To prevent single-agent consensus bias, the dialectic spring between Node 4 and Node 5 is formalized into a competitive artifact tournament:
+
+```text
+    ┌───────────────────────────┐         ┌───────────────────────────┐
+    │  SPEC-A (The Constructor) │         │   SPEC-B (The Adversary)  │
+    │  - Minimal Architecture   │         │  - Rice Undecidability    │
+    │  - PLA (Least Action)     │         │  - Fluff & Adjective Hunt │
+    │  - Atomic Component Graph │         │  - Cheapest Escape Vector │
+    └─────────────┬─────────────┘         └─────────────┬─────────────┘
+                  │                                     │
+                  └──────────────────►◄─────────────────┘
+                                     │
+                              [CRUCIBLE COLLISION]
+                                     │
+                                     ▼
+                    [artifacts/solution_contract.yaml]
+                    (Crystal Consensus - Open Gap Deducted)
+```
+
+1. **`SPEC-A (The Constructor)`:** Authors the deterministic structural blueprint resolving the exact metrics in `problem_spec.md`.
+2. **`SPEC-B (The Adversary / Critic)`:** Formulates a systematic refutation report:
+   - Probes for semantic runtime assumptions that cannot be statically verified (Rice's Theorem).
+   - Hunts for covert subjective fluff, emotional qualifiers, and unanchored complexity.
+   - Calculates the adversary's cheapest bureaucratic escape vector.
+3. **Synthesis & Contracting:** Node 5 reconciles the collision. Fatal flaws identified by SPEC-B become hard negative constraints (`[PROHIBITED]`, $DoF = 0$). Marginal nitpicks are allocated to the Open Gap Budget. The surviving consensus is sealed as `artifacts/solution_contract.yaml` and typed `.fir.json`.
+
+---
+
+## 5. THE 3 MACRO PHASE PACKAGING
 
 ```text
 ┌────────────────────────────────────────────────────────────────────────────────────────┐
 │ MACRO PHASE I: SENSE-MAKING & DIAGNOSTICS (Nodes 1-3)                                  │
-│ Pipeline: [Input] ───< 1 >───► [Triage] ───< 2 >───► [Diagnostics]                    │
+│ Ingestion Gate: Greenfield (Inception) vs. Brownfield (Implicit Invariant Extraction)  │
 │ Target Deliverable: artifacts/problem_spec.md (DoF = 0, Zero Solution Leakage)        │
 └────────────────────────────────────────┬───────────────────────────────────────────────┘
                                          ▼ (problem_spec.md Handoff)
 ┌────────────────────────────────────────────────────────────────────────────────────────┐
 │ MACRO PHASE II: DESIGN & DIALECTIC GATE (Nodes 3-5)                                    │
-│ Pipeline: [Diagnostics] ───< 3 >───► [Solution] ───< 4 >───► [Evaluation]              │
+│ Synthesis Gate: Twin Specification Crucible (SPEC-A Constructor vs. SPEC-B Adversary) │
 │ Target Deliverable: artifacts/solution_contract.yaml + .fir.json (Writers' Room Pass)  │
 └────────────────────────────────────────┬───────────────────────────────────────────────┘
                                          ▼ (solution_contract.yaml Handoff)
 ┌────────────────────────────────────────────────────────────────────────────────────────┐
 │ MACRO PHASE III: MATERIALIZATION & REALITY GATE (Nodes 5-9)                            │
-│ Pipeline: ──< 5 >──► [Execution] ───< 6 >───► [Test] ───< 7 >───► [Simulation] ──< 8 > │
+│ Reality Gate: AST Shield + INV-MIN-DEPENDENCY + Chaos Simulation + Merkle Tag Mühür   │
 │ Target Deliverable: Ratified Code Diff, verify.py PASS, Merkle Seal, Scar Tissue Log   │
 └────────────────────────────────────────────────────────────────────────────────────────┘
-```
-
-### A. Phase I: Sense-Making & Diagnostics (Nodes 1-3)
-- **Scope:** Ingests raw signal, filters entropic noise, extracts invariants, and formulates the ground-truth problem definition.
-- **Contract Boundary:** Separates symptoms from root needs at intake; noise is rejected (`REJECT_UNANCHORED_INTENT`) before token consumption.
-- **Handoff Artifact:** Sealed `artifacts/problem_spec.md`.
-
-### B. Phase II: Design & Dialectic Gate (Nodes 3-5)
-- **Scope:** Produces surgical architecture; engages tripartite Writers' Room dialectic (Architect, Proceduralist, Stateful Senior) against Murphy Stress Filter.
-- **Contract Boundary:** Pre-mortem gates (THESIS-036) must catalog the top 3 domain failure modes and establish hard negative constraints (`[PROHIBITED]`, $DoF = 0$).
-- **Handoff Artifact:** Sealed `artifacts/solution_contract.yaml` (executable specification) and typed `.fir.json`.
-
-### C. Phase III: Materialization & Reality Gate (Nodes 5-9)
-- **Scope:** Polymath worker executes atomic construction ($\le 500$ tokens); rapid MVP/POC scaffolding is stood up under the **Minimum Justified Dependency** (`INV-MIN-DEPENDENCY`) rule; runs local deterministic tests (`verify.py`, linters) and field stress simulations; seals release with cryptographic Merkle digest.
-- **Contract Boundary:** Mock tests across core invariant boundaries are prohibited; zero unhandled regressions permitted.
-- **Handoff Artifact:** Merkle-signed Git commit, SemVer tag, and updated institutional memory (`scar_tissue`).
-
----
-
-## 4. THE CONICAL VORTEX TOPOLOGY (3D HELICAL DYNAMICS)
-
-The software synthesis space is a **Conical Vortex** parameterized in cylindrical coordinates $(r, \theta, Z)$:
-
-```text
-                  ▲ Z (Altitude: Sovereign Abstract Intent -> Concrete Physical Artifact)
-                  │
-        (Apex)    •  MACRO PHASE I: SENSE-MAKING (r=1..2)
-                 / \   [Input] < 1 > [Triage] < 2 > [Diagnostics]
-                / S \
-               /  P  \  MACRO PHASE II: DESIGN & DIALECTIC GATE (r=3)
-              /   I   \   [Diagnostics] < 3 > [Solution] < 4 > [Evaluation]
-             /    R    \
-            /     A     \  MACRO PHASE III: MATERIALIZATION & REALITY (r=4..5)
-           /      L      \   [Execution] < 6 > [Test] < 7 > [Simulation] < 8 > [Output]
-          /_______________ \
-                  r ──► (Radius: Scope, Token Budget, Complexity & Attack Surface)
-```
-
-### Coordinate Governance:
-1. **$\theta$ (Angular Micro-Loop - $0^\circ \to 360^\circ$):** Intra-node and intra-phase circular traversal through the 4 internal stations: **Triage $\to$ Diagnose $\to$ Solve $\to$ Evaluate**.
-2. **$r$ (Radial Coordinate - Scope & Kinetic Energy):** Expands monotonically from the apex ($r_0$, minimal tokens, zero code, pure intent) toward the base ($r_{\max}$, full test surface, integration matrix, adversarial chaos injection).
-3. **$Z$ (Vertical Altitude - Ontological Depth):** Governs descent from abstract natural language requirements at the apex down to concrete, machine-verified, and ratified deliverables at the base.
-
----
-
-## 5. DIALECTIC SPRING PROTOCOL (`< >`) & PLOTTER BACKPROPAGATION
-
-Every dialectic spring membrane operates as an active, three-vector immunological filter:
-1. **Feed-Forward:** Purity and schema compliance verification before downstream ingestion. The output of an upstream node must satisfy the explicit type and format contract of the downstream receiver.
-2. **Feedback / Backpropagation (Plotter):** When a downstream constraint is breached, an atomic micro-correction instruction is dispatched upstream directly to the node that introduced the defect.
-3. **Homeostasis & Telos Verification:** Continuous autonomous self-check: *"Does this transition serve the root constitutional purpose (Telos) with least action ($\delta S = 0$), or does it generate speculative entropy?"*
-
-```text
-  [NODE N] ──────(Feed-Forward: Purity & Schema Pass)──────► [NODE N+1]
-     ▲                                                           │
-     │◄──────(Feedback / Plotter: Pushback & Correction)─────────┤
-     │                                                           │
-     └────────(Homeostasis: Telos & Least Action Audit)──────────┘
 ```
 
 ---
 
 ## 6. MODEL EVAL-ROUTING MATRIX (PROCESSOR SELECTION)
-
-Execution efficiency requires matching task complexity to processor capability, preventing cognitive waste and excessive token burn:
 
 | Nodes / Stations | Operational Domain | Recommended Model Tier | Selection Rationale |
 | :--- | :--- | :--- | :--- |
@@ -163,7 +175,7 @@ Execution efficiency requires matching task complexity to processor capability, 
 - Every autonomous task is constrained by a strict monetary expenditure ceiling:
   $$\text{Cost Ceiling} \le \$1.50\text{ USD per task}$$
 - When cumulative API token expenditure exceeds \$1.50 or the designated token threshold, autonomous processing is forcibly aborted:
-  $$\text{Trigger} \to \texttt{HARD\_BUDGET\_STOP}$$
+  $$\text{Trigger} \to \texttt{HARD\_BUDGET_STOP}$$
 - Prevents runaway recursive loops, background token hemorrhaging, and unbounded context window reprocessing.
 
 ### C. Vertical Cascading Collapse (Altitude Regress - $\Delta Z$)
@@ -184,24 +196,26 @@ Execution efficiency requires matching task complexity to processor capability, 
 
 ## 8. EXPLICIT STATE MACHINE (DoF = 0)
 
-### State 0: Acute Hemostasis & Financial Circuit Breaker
+### State 0: Acute Hemostasis & Circadian Reveille
+- [ ] Execute Reveille verification: `python verify.py --verify-all` (All 11 gates must be PASS).
 - [ ] Is there an active crash, infinite loop, OOM fault, or financial budget breach ($> \$1.50$)?
   - YES: Trip Circuit Breaker immediately (`HARD_BUDGET_STOP` / `CIRCUIT_BREAKER_HALT`). Throttle I/O, apply temporary tourniquet.
   - NO: Proceed to State 1.
 
-### State 1: Ingestion, Teleological Framing & Dependency Audit
+### State 1: Ingestion, Greenfield/Brownfield Detection & Dependency Audit
 - [ ] Ingest operational signal through Spring `< 1 >`.
-- [ ] Filter subjective adjectives, emotional markers, and speculative scope.
-- [ ] Formalize target entity Telos (purpose) and verify structural payload validity.
+- [ ] Execute Greenfield vs. Brownfield Detection:
+  - Clean repo: Initiate Inception.
+  - Legacy codebase: Perform AST scan, extract implicit invariants, and isolate weakest link before code modification.
 - [ ] Audit Dependency Policy: Confirm compliance with `INV-MIN-DEPENDENCY` (Zero parasitic packages; permitted CDN/stdlib whitelist).
 
-### State 2: Planar Micro-Loop Traversal ($\theta = 0^\circ \to 360^\circ$)
+### State 2: Planar Micro-Loop Traversal & Twin Specification Crucible
 - [ ] Execute 4 internal stations (Triage $\to$ Diagnose $\to$ Solve $\to$ Evaluate).
+- [ ] Engage Twin Specification Crucible: Synthesize `SPEC-A`, attack with `SPEC-B`, deduce crystal consensus.
 - [ ] Bound execution within $N_{\max} \le 3$ horizontal iterations.
-- [ ] Validate invariant bounds against 3-Tier Structural Hierarchy.
 
 ### State 3: Dual-Scale Plotter Gate ($\Delta \theta$ vs. $\Delta Z$)
-- [ ] Check convergence: Local patch acceptable ($\Delta \theta$) or root assumption broken ($\Delta Z$)?
+- [ ] Check convergence: Local patch acceptable ($\Delta \theta$) or root keystone assumption broken ($\Delta Z$)?
 - [ ] If root assumption broken: Eject downstream ballast and trigger vertical collapse.
 - [ ] If local patch acceptable: Advance to downstream station.
 
@@ -210,22 +224,22 @@ Execution efficiency requires matching task complexity to processor capability, 
 - [ ] Enforce binary prohibited constraints (`[PROHIBITED]`).
 - [ ] Confirm zero speculative abstractions introduced for marginal open gaps.
 
-### State 5: Merkle Ratification & Terminal Seal
-- [ ] Purge ephemeral test ballast and verify No-BOM UTF-8 compliance across all files.
-- [ ] Verify core zero-code invariant: Zero unapproved executable artifacts.
+### State 5: Release Retreat & Scar-to-Test Auto-Promotion
+- [ ] Execute pre-commit decontamination scan via `scripts/decontaminator.py`.
+- [ ] Purge ephemeral test ballast (`.tmp/`) and verify No-BOM UTF-8 across all tracked files.
+- [ ] If task failed during execution: Synthesize Negative Test Case and promote into `verify.py` (`INV-AUTO-IMMUNITY`).
 - [ ] Enforce SemVer monotonic lock.
-- [ ] Commit cryptographic Merkle digest and update institutional scar tissue.
+- [ ] Commit cryptographic Merkle digest, update worklog scar tissue, and transition environment to `STANDBY`.
 
 ---
 
 ## 9. DEFINITION OF DONE (DoD) & MERKLE SEAL
-- [ ] `pipeline_vector_ratified == True` (9 nodes, 8 dialectic springs mapped).
-- [ ] `inv_min_dependency_enforced == True` (Zero-Unjustified Dependency / Permitted CDN & stdlib whitelist active).
-- [ ] `macro_phase_boundaries_sealed == True` (Phase I, Phase II, Phase III decoupled).
-- [ ] `model_eval_routing_active == True` (Processors assigned per operational node).
+- [ ] `circadian_cadence_integrated == True` (Reveille-to-Retreat lifecycle active).
+- [ ] `island_boundary_isolation_active == True` (`INV-ISLAND-BOUNDARY` enforced).
+- [ ] `ontological_bindings_locked == True` (Nodes anchored to faculty curricula & theses).
+- [ ] `twin_specification_crucible_active == True` (SPEC-A vs. SPEC-B tournament operational).
+- [ ] `scar_to_test_promotion_armed == True` (`INV-AUTO-IMMUNITY` active).
+- [ ] `greenfield_brownfield_threshold_active == True` (Legacy implicit invariant scan active).
+- [ ] `decontamination_shield_active == True` (11/11 gates in `verify.py` PASS).
 - [ ] `financial_circuit_breaker_armed == True` (\$1.50 hard cap enforced).
 - [ ] `max_local_cycles_clamped == True` ($N_{\max} = 3 \to \texttt{PAUSED\_FOR\_HUMAN}$).
-- [ ] `vertical_collapse_protocol_armed == True` ($\Delta Z$ regress and ballast ejection active).
-- [ ] `open_gap_budget_codified == True` (Fatal gaps prohibited, over-engineering banned).
-- [ ] `biological_primacy_escalation_active == True` (`ESCALATE_TO_HUMAN` trigger ready).
-- [ ] `verify_py_invariants_pass == True` (10/10 mechanical verification gates PASS).

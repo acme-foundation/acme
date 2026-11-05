@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 ACME CORE INVARIANT GATE & CONSTITUTIONAL VERIFIER (Pure Standard Library)
-Self-Compiling Genesis Verifier (v3.0.5-Genesis)
+Self-Compiling Genesis Verifier (v3.0.6-Genesis)
 Serves as the Mechanical Gatekeeper Turnike at the repository boundary.
 """
 
@@ -13,20 +13,20 @@ import subprocess
 
 def run_invariant_audit(verify_all: bool = False) -> bool:
     print("=" * 68)
-    print("      ACME GENESIS CONSTITUTIONAL INTEGRITY & INVARIANT GATE (v3.0.5)      ")
+    print("      ACME GENESIS CONSTITUTIONAL INTEGRITY & INVARIANT GATE (v3.0.6)      ")
     print("=" * 68)
 
-    # 1. Zero-Code Invariant: No code artifacts tracked in core (except verify.py gatekeeper)
+    # 1. Zero-Code Invariant: No code artifacts tracked in core (except verify.py and decontaminator.py)
     forbidden_exts = ['.py', '.sh', '.exe', '.dll', '.bin']
     try:
         tracked = subprocess.check_output(['git', 'ls-files'], text=True).splitlines()
         for f in tracked:
-            if f == 'verify.py':
+            if f in ('verify.py', os.path.normpath('scripts/decontaminator.py'), 'scripts/decontaminator.py'):
                 continue
             if os.path.splitext(f)[1].lower() in forbidden_exts:
                 print(f"[FAIL] Code artifact tracked in git: {f}", file=sys.stderr)
                 return False
-        print("[+] Zero-Code Invariant:     [PASS] Zero executable artifacts tracked in git (verify.py exempted).")
+        print("[+] Zero-Code Invariant:     [PASS] Zero executable artifacts tracked in git (gatekeepers exempted).")
     except Exception as e:
         print(f"[WARN] Unable to run git ls-files: {e}")
 
@@ -231,6 +231,21 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
         print(f"[+] SemVer Cadence Gate:     [PASS] Tag ({latest_tag}) verified under monotonic lock.")
     except Exception:
         print(f"[+] SemVer Cadence Gate:     [PASS] Initial bootstrap tag verified.")
+
+    # 11. Path Decontamination & PII Shield Gate (INV-DECONTAMINATION)
+    try:
+        decon_script = os.path.join('scripts', 'decontaminator.py')
+        if not os.path.exists(decon_script):
+            print(f"[FAIL] Missing decontaminator script: {decon_script}", file=sys.stderr)
+            return False
+        res = subprocess.run([sys.executable, decon_script], capture_output=True, text=True)
+        if res.returncode != 0:
+            print(f"[FAIL] Path Decontamination & PII Shield breach:\n{res.stdout}\n{res.stderr}", file=sys.stderr)
+            return False
+        print("[+] Decontamination Shield:  [PASS] Zero absolute local paths, PII, or credentials detected.")
+    except Exception as e:
+        print(f"[FAIL] Decontamination verification failed: {e}", file=sys.stderr)
+        return False
 
     print("--------------------------------------------------------------------")
     print("[PASS] All ACME Genesis pure NLP invariants and CI/CD gates verified.")
