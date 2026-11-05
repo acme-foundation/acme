@@ -1,5 +1,5 @@
 # WF-000: E-AUP Meta-Workflow Architecture & Conical Vortex Specification
-## Scope: Universal 9-Node Pipeline Governance, 3D Helical Vortex & Dual-Scale Plotter Protocol (DoF = 0)
+## Scope: Universal 9-Node Pipeline Governance, Model Eval-Routing & Financial Circuit Breaker (DoF = 0)
 
 ---
 
@@ -43,38 +43,34 @@ To eliminate cognitive overload and prevent agentic thrashing, the 9-node pipeli
 ┌────────────────────────────────────────────────────────────────────────────────────────┐
 │ MACRO PHASE I: SENSE-MAKING & DIAGNOSTICS (Anlama & Teşhis)                            │
 │ Pipeline: [Input] ───< 1 >───► [Triage] ───< 2 >───► [Diagnostics]                    │
-│ Target Workflows: 01_triage_and_digest.md, 02_inception_domain.md                      │
-│ Primary Deliverable: artifacts/problem_spec.md (Zero Solution Leakage)                │
+│ Target Deliverable: artifacts/problem_spec.md (DoF = 0, Zero Solution Leakage)        │
 └────────────────────────────────────────┬───────────────────────────────────────────────┘
                                          ▼ (problem_spec.md Handoff)
 ┌────────────────────────────────────────────────────────────────────────────────────────┐
-│ MACRO PHASE II: SYNTHESIS & ADVERSARIAL FILTER (Sentez & Süzgeç)                       │
+│ MACRO PHASE II: DESIGN & DIALECTIC GATE (Sentez & Süzgeç)                              │
 │ Pipeline: [Diagnostics] ───< 3 >───► [Solution] ───< 4 >───► [Evaluation]              │
-│ Target Workflows: 03_elaboration_arch.md                                               │
-│ Primary Deliverable: artifacts/solution_contract.yaml + .fir.json (Writers' Room Pass) │
+│ Target Deliverable: artifacts/solution_contract.yaml + .fir.json (Writers' Room Pass)  │
 └────────────────────────────────────────┬───────────────────────────────────────────────┘
                                          ▼ (solution_contract.yaml Handoff)
 ┌────────────────────────────────────────────────────────────────────────────────────────┐
 │ MACRO PHASE III: MATERIALIZATION & REALITY GATE (Maddileşme & Gerçeklik)               │
 │ Pipeline: ──< 5 >──► [Execution] ───< 6 >───► [Test] ───< 7 >───► [Simulation] ──< 8 > │
-│ Target Workflows: 04_construction_worker.md, 05_verification_sim.md,                   │
-│                   06_transition_release.md, 07_backpropagation.md                      │
-│ Primary Deliverable: Ratified Code Diff, verify.py PASS, Merkle Seal, Scar Tissue Log  │
+│ Target Deliverable: Ratified Code Diff, verify.py PASS, Merkle Seal, Scar Tissue Log   │
 └────────────────────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### A. Phase I: Sense-Making & Diagnostics (Düğümler 1-3)
 - **Scope:** Ingests raw signal, filters entropic noise, extracts invariants, and formulates the ground-truth problem definition.
-- **Contract Boundary:** Strictly prohibits solution formulation, speculative code, or implementation bias.
+- **Contract Boundary:** Separates symptoms from root needs at intake; noise is rejected (`REJECT_UNANCHORED_INTENT`) before token consumption.
 - **Handoff Artifact:** Sealed `artifacts/problem_spec.md`.
 
-### B. Phase II: Synthesis & Adversarial Filter (Düğümler 3-5)
-- **Scope:** Synthesizes minimal keystone architecture, verifies parsimony, and subjects candidate design to the tripartite Writers' Room (Architect, Proceduralist, Stateful Senior) and Murphy stress vectors.
+### B. Phase II: Design & Dialectic Gate (Düğümler 3-5)
+- **Scope:** Produces surgical architecture; engages tripartite Writers' Room dialectic (Architect, Proceduralist, Stateful Senior) against Murphy Stress Filter.
 - **Contract Boundary:** Pre-mortem gates (THESIS-036) must catalog the top 3 domain failure modes and establish hard negative constraints (`[PROHIBITED]`, $DoF = 0$).
-- **Handoff Artifact:** Sealed `artifacts/solution_contract.yaml` and typed `.fir.json`.
+- **Handoff Artifact:** Sealed `artifacts/solution_contract.yaml` (executable specification) and typed `.fir.json`.
 
 ### C. Phase III: Materialization & Reality Gate (Düğümler 5-9)
-- **Scope:** Arms AST whitelist shield, generates atomic code units ($\le 500$ tokens), executes deterministic verification, subjects outputs to adversarial chaos simulation, and seals the deliverable with cryptographic provenance.
+- **Scope:** Polymath worker executes atomic construction ($\le 500$ tokens); runs local deterministic tests (`verify.py`, linters) and field stress simulations; seals release with cryptographic Merkle digest.
 - **Contract Boundary:** Mock tests across core invariant boundaries are prohibited; zero unhandled regressions permitted.
 - **Handoff Artifact:** Merkle-signed Git commit, SemVer tag, and updated institutional memory (`scar_tissue`).
 
@@ -90,7 +86,7 @@ The software synthesis space is a **Conical Vortex** parameterized in cylindrica
         (Apex)    •  MACRO PHASE I: SENSE-MAKING (r=1..2)
                  / \   [Input] < 1 > [Triage] < 2 > [Diagnostics]
                 / S \
-               /  P  \  MACRO PHASE II: SYNTHESIS & ADVERSARIAL FILTER (r=3)
+               /  P  \  MACRO PHASE II: DESIGN & DIALECTIC GATE (r=3)
               /   I   \   [Diagnostics] < 3 > [Solution] < 4 > [Evaluation]
              /    R    \
             /     A     \  MACRO PHASE III: MATERIALIZATION & REALITY (r=4..5)
@@ -106,57 +102,43 @@ The software synthesis space is a **Conical Vortex** parameterized in cylindrica
 
 ---
 
-## 5. DIALECTIC SPRING PROTOCOL (`< >`)
+## 5. DIALECTIC SPRING PROTOCOL (`< >`) & PLOTTER BACKPROPAGATION
 
 Every dialectic spring membrane operates as an active, three-vector immunological filter:
-1. **Feed-Forward:** Purity and schema compliance verification before downstream ingestion.
-2. **Feedback / Backpropagation (Murphy):** Upstream pushback when invariants, assumptions, or bounds are breached.
+1. **Feed-Forward:** Purity and schema compliance verification before downstream ingestion. The output of an upstream node must satisfy the explicit type and format contract of the downstream receiver.
+2. **Feedback / Backpropagation (Plotter):** When a downstream constraint is breached, an atomic micro-correction instruction is dispatched upstream directly to the node that introduced the defect.
 3. **Homeostasis & Telos Verification:** Continuous autonomous self-check: *"Does this transition serve the root constitutional purpose (Telos) with least action ($\delta S = 0$), or does it generate speculative entropy?"*
 
 ```text
   [NODE N] ──────(Feed-Forward: Purity & Schema Pass)──────► [NODE N+1]
      ▲                                                           │
-     │◄──────(Feedback / Murphy: Pushback & Constraint)──────────┤
+     │◄──────(Feedback / Plotter: Pushback & Correction)─────────┤
      │                                                           │
      └────────(Homeostasis: Telos & Least Action Audit)──────────┘
 ```
 
-### Discrete Spring Invariants:
-* **Spring `< 1 >` (Toxin Shield & High-Pass Noise Attenuator):**
-  - *Location:* Between `[Input]` and `[Triage]`.
-  - *Action:* High-pass filters conversational fluff, panic chatter, and subjective qualifiers (*"urgent"*, *"broken"*, *"slow"*). Emits `REJECT_UNANCHORED_INTENT` on non-compliant payloads.
-* **Spring `< 2 >` (Quantification & Metric Invariant Gate):**
-  - *Location:* Between `[Triage]` and `[Diagnostics]`.
-  - *Action:* Asserts that every diagnosed defect maps to reproducible, ground-truth telemetry ($P_{99}$, latency, error codes, memory offsets). Enforces `INV-DIAGNOSTIC-TRIAGE` ($DoF = 0$).
-* **Spring `< 3 >` (Parsimony & Occam's Razor Gate):**
-  - *Location:* Between `[Diagnostics]` and `[Solution]`.
-  - *Action:* Rejects speculative utility functions, golden-hammer frameworks, and unrequested abstraction layers (`REJECT_SPECULATIVE_STATE`). Enforces minimal action ($\delta S = 0$).
-* **Spring `< 4 >` (Adversarial Crucible & Pre-Mortem Gate):**
-  - *Location:* Between `[Solution]` and `[Evaluation]`.
-  - *Action:* Submits architecture to the tripartite Writers' Room. Validates Rice Theorem decidability and catalogs top 3 scale-invariant failure modes (THESIS-036).
-* **Spring `< 5 >` (Phase Handoff & AST Boundary Shield):**
-  - *Location:* Between `[Evaluation]` and `[Execution]`.
-  - *Action:* Ingests `artifacts/solution_contract.yaml`, compiles typed `.fir.json` schema (`INV-FORMAL-IR-GATE`), and arms AST execution whitelist shield (`INV-RUNTIME-INTERCEPT`).
-* **Spring `< 6 >` (Deterministic Empirical Verification Gate):**
-  - *Location:* Between `[Execution]` and `[Test]`.
-  - *Action:* Runs mechanical verifier (`python verify.py --verify-all`), type checkers, and unit contracts. Compiler or syntax errors bounce back to `[Execution]` ($\Delta \theta$).
-* **Spring `< 7 >` (Adversarial Simulation Crucible Gate):**
-  - *Location:* Between `[Test]` and `[Simulation]`.
-  - *Action:* Executes multi-threaded race simulation, chaos fault injection, and mutation testing (`INV-CRUCIBLE-CERTIFICATION`). Defends against Goodhart's law (tests passing through superficial mocks).
-* **Spring `< 8 >` (Release Mühür & Decontamination Seal):**
-  - *Location:* Between `[Simulation]` and `[Output]`.
-  - *Action:* Purges ephemeral ballast, verifies UTF-8 No-BOM standard, confirms zero-code status in core repository, enforces SemVer monotonic lock, and records institutional scar tissue.
+---
+
+## 6. MODEL EVAL-ROUTING MATRIX (PROCESSOR SELECTION)
+
+Execution efficiency requires matching task complexity to processor capability, preventing cognitive waste and excessive token burn:
+
+| Nodes / Stations | Operational Domain | Recommended Model Tier | Selection Rationale |
+| :--- | :--- | :--- | :--- |
+| **Node 1, 2, 6** | `[Input]`, `[Triage]`, `[Test]` / Linter | Lightweight / Deterministic (Local Python / Flash / Haiku) | Fast, zero/low-cost deterministic signal processing, schema parsing, and mechanical script execution. |
+| **Node 4, 7** | `[Solution]`, Writers' Room, Murphy, `[Simulation]` | Deep Reasoning / Heavy Dialectic (Thinking / Opus / Pro) | High cognitive deliberation, edge-case simulation, game-theoretic stress testing, and architectural tradeoff analysis. |
+| **Node 5** | `[Execution]` (Atomic Materializer) | Instruction-Faithful Worker (Coder / Synthesizer) | Bounded, surgical execution of exact specifications without speculative deviation or creative hallucination. |
 
 ---
 
-## 6. BRAKES, CONSTRAINTS & ESCALATION PROTOCOLS
+## 7. ENERGY, OSCILLATION & FINANCIAL CIRCUIT BREAKERS
 
 ```text
                                 [PHASE I: SENSE-MAKING]
                                            ▲
                                            │  ΔZ = -2 (Foundational Diagnostic Error)
                                            │
-                              [PHASE II: SYNTHESIS & FILTER]
+                              [PHASE II: DESIGN & DIALECTIC]
                                            ▲
                                            │  ΔZ = -1 (Architectural / Structural Failure)
                                            │
@@ -168,36 +150,41 @@ Every dialectic spring membrane operates as an active, three-vector immunologica
 ```
 
 ### A. Intra-Phase Horizontal Oscillation Ceiling (`MAX_LOCAL_CYCLES = 3`)
-- The maximum permissible oscillation count across any planar spring interface is strictly clamped:
+- Maximum permissible oscillation across any planar spring interface:
   $$\text{Cycle Count} \le N_{\max} = 3$$
-- If a spring fails to converge within 3 iterations, horizontal looping terminates unconditionally.
-- Autonomous thrashing or rumination is strictly prohibited (`REJECT_INFINITE_RUMINATION`).
+- If consensus is not achieved within 3 iterations, autonomous rumination is terminated immediately.
+- The system updates operational state in `.acme/workspace_state.json` to:
+  $$\text{System State} = \texttt{PAUSED\_FOR\_HUMAN}$$
+- Triggers immediate escalation to the biological system architect (`ESCALATE_TO_HUMAN`).
 
-### B. Vertical Cascading Collapse (Altitude Regress - $\Delta Z$)
-- **Strict Invariant:** On root invariant breach or false keystone identification, local patching of leaf code is prohibited as entropy dissipation (`PROHIBIT_LOCAL_PATCHING_ON_ROOT_BREACH`).
-- The system must lose altitude and regress vertically:
-  - **$\Delta Z = -1$ (Architectural Collapse):** When Phase III testing or simulation reveals a concurrent race condition, deadlock, or throughput cliff rooted in architectural design $\to$ Collapse to Phase II (`03_elaboration_arch.md`).
-  - **$\Delta Z = -1$ (Teleological Collapse):** When Phase II evaluation reveals that target invariants are mathematically contradictory $\to$ Collapse to Phase I (`01_triage_and_digest.md`).
-  - **$\Delta Z = -2$ (Foundational Collapse):** When empirical execution in Phase III proves that baseline problem telemetry was invalid $\to$ Collapse directly to Phase I (`01_triage_and_digest.md`).
-- **Thermodynamic Ballast Ejection:** Upon vertical collapse, all downstream speculative code diffs, temporary configurations, and synthetic artifacts generated under the false keystone are purged immediately to preserve least action ($\delta S = 0$).
+### B. Financial Budget Ceiling (`HARD_BUDGET_STOP`)
+- Every autonomous task is constrained by a strict monetary expenditure ceiling:
+  $$\text{Cost Ceiling} \le \$1.50\text{ USD per task}$$
+- When cumulative API token expenditure exceeds \$1.50 or the designated token threshold, autonomous processing is forcibly aborted:
+  $$\text{Trigger} \to \texttt{HARD\_BUDGET_STOP}$$
+- Prevents runaway recursive loops, background token hemorrhaging, and unbounded context window reprocessing.
 
-### C. Open Gap Budget & Murphy Economics (Açık Kapı Bütçesi)
+### C. Vertical Cascading Collapse (Altitude Regress - $\Delta Z$)
+- **Strict Invariant:** On root invariant breach or architectural column (`keystone`) failure, local patching of intermediate layers is prohibited as entropy dissipation (`PROHIBIT_LOCAL_PATCHING_ON_ROOT_BREACH`).
+- The system must lose altitude and regress vertically along the spiral slope:
+  - $\Delta Z = -1$ from Phase III $\to$ Phase II: When test/simulation reveals a concurrency race condition, deadlock, or throughput collapse rooted in architecture.
+  - $\Delta Z = -1$ from Phase II $\to$ Phase I: When target invariants prove mathematically contradictory.
+  - $\Delta Z = -2$ from Phase III $\to$ Phase I: When empirical execution demonstrates that foundational problem telemetry was false.
+- **Thermodynamic Ballast Ejection:** All downstream speculative code diffs, temporary configurations, and synthetic artifacts generated under the false keystone are permanently deleted immediately ($\delta S = 0$).
+
+### D. Open Gap Budget & Anti-Overengineering (Açık Kapı Bütçesi)
+- Systems and adversaries invariably possess an identifiable "cheapest bureaucratic escape hatch."
 - **Fatal Gaps:** Vulnerabilities, deadlocks, or schema drifts that compromise constitutional invariants or cause systemic collapse are classified as fatal. They MUST be codified as hard negative constraints (`[PROHIBITED]`, $DoF = 0$).
-- **Marginal / Aesthetic Gaps:** Bureaucratic nitpicks, speculative edge scenarios with zero empirical frequency, or stylistic preferences whose remediation cost exceeds operational utility are allocated to a conscious open-gap budget.
+- **Marginal / Aesthetic Gaps:** Secondary bureaucratic nitpicks or aesthetic concerns that do not alter operational outcomes must NOT be patched with complex abstractions. They are consciously allocated to an open-gap budget.
 - Over-engineering is prohibited (`PROHIBIT_OVER_ENGINEERING`).
-
-### D. Biological Primacy Escalation (`ESCALATE_TO_HUMAN`)
-- If horizontal cycles exceed $N_{\max} = 3$ without convergence, or if vertical collapse recurs $\ge 2$ times across the same operational vector:
-  - Autonomous loops halt immediately (`HALT_AND_FREEZE`).
-  - System compiles verifiable forensic telemetry and escalates state to the Biological Root of Trust.
 
 ---
 
-## 7. EXPLICIT STATE MACHINE (DoF = 0)
+## 8. EXPLICIT STATE MACHINE (DoF = 0)
 
-### State 0: Acute Hemostasis & Circuit Breaker
-- [ ] Is there an active infinite loop, OOM condition, thermal quota breach, or unhandled crash?
-  - YES: Trip Circuit Breaker immediately (`CIRCUIT_BREAKER_HALT`). Throttle I/O, apply temporary tourniquet. Defer root cause analysis.
+### State 0: Acute Hemostasis & Financial Circuit Breaker
+- [ ] Is there an active crash, infinite loop, OOM fault, or financial budget breach ($> \$1.50$)?
+  - YES: Trip Circuit Breaker immediately (`HARD_BUDGET_STOP` / `CIRCUIT_BREAKER_HALT`). Throttle I/O, apply temporary tourniquet.
   - NO: Proceed to State 1.
 
 ### State 1: Ingestion & Teleological Framing
@@ -228,14 +215,13 @@ Every dialectic spring membrane operates as an active, three-vector immunologica
 
 ---
 
-## 8. DEFINITION OF DONE (DoD) & MERKLE SEAL
+## 9. DEFINITION OF DONE (DoD) & MERKLE SEAL
 - [ ] `pipeline_vector_ratified == True` (9 nodes, 8 dialectic springs mapped).
 - [ ] `macro_phase_boundaries_sealed == True` (Phase I, Phase II, Phase III decoupled).
-- [ ] `conical_vortex_governance_active == True` ($(r, \theta, Z)$ coordinate system operational).
-- [ ] `dialectic_spring_matrix_verified == True` (Springs `< 1 >` through `< 8 >` active).
-- [ ] `max_local_cycles_clamped == True` ($N_{\max} = 3$ strictly enforced).
+- [ ] `model_eval_routing_active == True` (Processors assigned per operational node).
+- [ ] `financial_circuit_breaker_armed == True` (\$1.50 hard cap enforced).
+- [ ] `max_local_cycles_clamped == True` ($N_{\max} = 3 \to \texttt{PAUSED\_FOR\_HUMAN}$).
 - [ ] `vertical_collapse_protocol_armed == True` ($\Delta Z$ regress and ballast ejection active).
 - [ ] `open_gap_budget_codified == True` (Fatal gaps prohibited, over-engineering banned).
 - [ ] `biological_primacy_escalation_active == True` (`ESCALATE_TO_HUMAN` trigger ready).
 - [ ] `verify_py_invariants_pass == True` (10/10 mechanical verification gates PASS).
-

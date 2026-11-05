@@ -9,8 +9,9 @@ To prevent autonomous agents from polluting repository history with discursive c
 ```text
 ┌────────────────────────────────────────────────────────────────────────────────────────┐
 │ TIER 1: TRACE / DEBUG (Ephemeral Operational Noise)                                    │
-│ Target: .tmp/ or scratch/ (Transient local memory; strictly excluded from Git)        │
+│ Target: .tmp/execution.log (Transient local memory; strictly excluded from Git)       │
 │ Content: Raw shell outputs, AST dumps, compiler tracebacks, token usage metrics.       │
+│ Lifecycle: Purged automatically at session teardown; never tracked in version control. │
 └────────────────────────────────────────────────────────────────────────────────────────┘
                                          │
                                          ▼ (State Transitions & Dialectic Synthesis)
