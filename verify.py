@@ -96,7 +96,10 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
             'Biological Primacy',
             'INV-FORMAL-IR-GATE',
             'INV-RUNTIME-INTERCEPT',
-            'INV-CRUCIBLE-CERTIFICATION'
+            'INV-CRUCIBLE-CERTIFICATION',
+            'INV-PRE-EXEC-DIALECTIC-01',
+            'INV-PREVIEW-DELTA-02',
+            'INV-UPSTREAM-RFC-03'
         ]
         for inv in required_invariants:
             if inv not in const_text:
@@ -116,7 +119,7 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
                 print(f"[FAIL] Missing constitutional pillar: {pillar}", file=sys.stderr)
                 return False
 
-        print("[+] Constitutional Parity:   [PASS] All 5 Core Pillars and 12 Lex invariants verified.")
+        print("[+] Constitutional Parity:   [PASS] All 5 Core Pillars and 15 Lex invariants verified.")
     except Exception as e:
         print(f"[FAIL] Constitution check failed: {e}", file=sys.stderr)
         return False
