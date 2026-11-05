@@ -20,21 +20,20 @@
 The universal execution pipeline consists of 9 discrete state-keeping nodes (`[]`) coupled via 8 bidirectional dialectic spring membranes (`<>`):
 
 ```text
-[Girdi] < 1 > [Triyaj] < 2 > [Tahlil] < 3 > [Çözüm] < 4 > [Değerleme] < 5 > [İcra] < 6 > [Test] < 7 > [Simülasyon] < 8 > [Çıkış]
- [Input]       [Triage]      [Diagnostics]   [Solution]     [Evaluation]     [Execution]    [Test]       [Simulation]      [Output]
+[Input] ──< 1 >──► [Triage] ──< 2 >──► [Diagnostics] ──< 3 >──► [Solution] ──< 4 >──► [Evaluation] ──< 5 >──► [Execution] ──< 6 >──► [Test] ──< 7 >──► [Simulation] ──< 8 >──► [Output]
 ```
 
 ### A. Discrete Nodes `[]` (Local State Keepers)
 Each discrete node is an insulated action cell with strictly bounded local responsibility. Nodes do NOT perform existential or global systemic philosophy; they execute local state transitions:
-1. **Node 1: `[Girdi / Input]` (Intake Receiver):** Ingests raw telemetry, defect tickets, or operator commands with zero speculative modification.
-2. **Node 2: `[Triyaj / Triage]` (Ontological Decompiler):** Identifies target entity Telos (core purpose) and demarcates surface symptoms from underlying structural pathology (`INV-DIAGNOSTIC-TRIAGE`).
-3. **Node 3: `[Tahlil / Diagnostics]` (Boundary & Invariant Engine):** Quantifies observable defects against empirical baselines ($P_{99}$, error codes, memory offsets) and bounds maximum blast radius.
-4. **Node 4: `[Çözüm / Solution]` (Keystone Architect & Synthesizer):** Generates candidate architectural topology adhering strictly to the 3-Tier Structural Hierarchy (`INV-3-TIER-DECOMPOSITION`: Application Shell $\to$ Layouts $\to$ Components) and atomic unit sizing ($\le 500$ tokens).
-5. **Node 5: `[Değerleme / Evaluation]` (Adversarial Crucible & Rice Gate):** Submits candidate design to the tripartite Writers' Room dialectic and pre-mortem failure mode cataloging (THESIS-036).
-6. **Node 6: `[İcra / Execution]` (Atomic Materializer / Construction Worker):** Synthesizes concrete atomic diffs under the AST Runtime Intercept Shield (`INV-RUNTIME-INTERCEPT`) and `INV-MIN-DEPENDENCY`.
-7. **Node 7: `[Test / Test]` (Deterministic Empirical Verifier):** Executes mechanical test suites (`verify.py --verify-all`), type checkers, and unit contracts to reach a binary PASS/FAIL verdict.
-8. **Node 8: `[Simülasyon / Simulation]` (Adversarial Stress Harness):** Injects chaos, race conditions, edge fuzzing, and mutation suites (`INV-CRUCIBLE-CERTIFICATION`) to refute Goodhart's law evasion.
-9. **Node 9: `[Çıkış / Output]` (Terminal Seal & Scar Tissue Integrator):** Cleanses workspace, validates No-BOM UTF-8, verifies SemVer monotonic lock, commits cryptographic Merkle digest, and updates institutional scar tissue.
+1. **Node 1: `[Input]` (Intake Receiver):** Ingests raw telemetry, defect tickets, or operator commands with zero speculative modification.
+2. **Node 2: `[Triage]` (Ontological Decompiler):** Identifies target entity Telos (core purpose) and demarcates surface symptoms from underlying structural pathology (`INV-DIAGNOSTIC-TRIAGE`).
+3. **Node 3: `[Diagnostics]` (Boundary & Invariant Engine):** Quantifies observable defects against empirical baselines ($P_{99}$, error codes, memory offsets) and bounds maximum blast radius.
+4. **Node 4: `[Solution]` (Keystone Architect & Synthesizer):** Generates candidate architectural topology adhering strictly to the 3-Tier Structural Hierarchy (`INV-3-TIER-DECOMPOSITION`: Application Shell $\to$ Layouts $\to$ Components) and atomic unit sizing ($\le 500$ tokens).
+5. **Node 5: `[Evaluation]` (Adversarial Crucible & Rice Gate):** Submits candidate design to the tripartite Writers' Room dialectic and pre-mortem failure mode cataloging (THESIS-036).
+6. **Node 6: `[Execution]` (Atomic Materializer / Construction Worker):** Synthesizes concrete atomic diffs under the AST Runtime Intercept Shield (`INV-RUNTIME-INTERCEPT`) and `INV-MIN-DEPENDENCY`.
+7. **Node 7: `[Test]` (Deterministic Empirical Verifier):** Executes mechanical test suites (`verify.py --verify-all`), type checkers, and unit contracts to reach a binary PASS/FAIL verdict.
+8. **Node 8: `[Simulation]` (Adversarial Stress Harness):** Injects chaos, race conditions, edge fuzzing, and mutation suites (`INV-CRUCIBLE-CERTIFICATION`) to refute Goodhart's law evasion.
+9. **Node 9: `[Output]` (Terminal Seal & Scar Tissue Integrator):** Cleanses workspace, validates No-BOM UTF-8, verifies SemVer monotonic lock, commits cryptographic Merkle digest, and updates institutional scar tissue.
 
 ---
 
@@ -44,35 +43,35 @@ To eliminate cognitive overload and prevent agentic thrashing, the 9-node pipeli
 
 ```text
 ┌────────────────────────────────────────────────────────────────────────────────────────┐
-│ MACRO PHASE I: SENSE-MAKING & DIAGNOSTICS (Anlama & Teşhis)                            │
+│ MACRO PHASE I: SENSE-MAKING & DIAGNOSTICS (Nodes 1-3)                                  │
 │ Pipeline: [Input] ───< 1 >───► [Triage] ───< 2 >───► [Diagnostics]                    │
 │ Target Deliverable: artifacts/problem_spec.md (DoF = 0, Zero Solution Leakage)        │
 └────────────────────────────────────────┬───────────────────────────────────────────────┘
                                          ▼ (problem_spec.md Handoff)
 ┌────────────────────────────────────────────────────────────────────────────────────────┐
-│ MACRO PHASE II: DESIGN & DIALECTIC GATE (Sentez & Süzgeç)                              │
+│ MACRO PHASE II: DESIGN & DIALECTIC GATE (Nodes 3-5)                                    │
 │ Pipeline: [Diagnostics] ───< 3 >───► [Solution] ───< 4 >───► [Evaluation]              │
 │ Target Deliverable: artifacts/solution_contract.yaml + .fir.json (Writers' Room Pass)  │
 └────────────────────────────────────────┬───────────────────────────────────────────────┘
                                          ▼ (solution_contract.yaml Handoff)
 ┌────────────────────────────────────────────────────────────────────────────────────────┐
-│ MACRO PHASE III: MATERIALIZATION & REALITY GATE (Maddileşme & Gerçeklik)               │
+│ MACRO PHASE III: MATERIALIZATION & REALITY GATE (Nodes 5-9)                            │
 │ Pipeline: ──< 5 >──► [Execution] ───< 6 >───► [Test] ───< 7 >───► [Simulation] ──< 8 > │
 │ Target Deliverable: Ratified Code Diff, verify.py PASS, Merkle Seal, Scar Tissue Log   │
 └────────────────────────────────────────────────────────────────────────────────────────┘
 ```
 
-### A. Phase I: Sense-Making & Diagnostics (Düğümler 1-3)
+### A. Phase I: Sense-Making & Diagnostics (Nodes 1-3)
 - **Scope:** Ingests raw signal, filters entropic noise, extracts invariants, and formulates the ground-truth problem definition.
 - **Contract Boundary:** Separates symptoms from root needs at intake; noise is rejected (`REJECT_UNANCHORED_INTENT`) before token consumption.
 - **Handoff Artifact:** Sealed `artifacts/problem_spec.md`.
 
-### B. Phase II: Design & Dialectic Gate (Düğümler 3-5)
+### B. Phase II: Design & Dialectic Gate (Nodes 3-5)
 - **Scope:** Produces surgical architecture; engages tripartite Writers' Room dialectic (Architect, Proceduralist, Stateful Senior) against Murphy Stress Filter.
 - **Contract Boundary:** Pre-mortem gates (THESIS-036) must catalog the top 3 domain failure modes and establish hard negative constraints (`[PROHIBITED]`, $DoF = 0$).
 - **Handoff Artifact:** Sealed `artifacts/solution_contract.yaml` (executable specification) and typed `.fir.json`.
 
-### C. Phase III: Materialization & Reality Gate (Düğümler 5-9)
+### C. Phase III: Materialization & Reality Gate (Nodes 5-9)
 - **Scope:** Polymath worker executes atomic construction ($\le 500$ tokens); rapid MVP/POC scaffolding is stood up under the **Minimum Justified Dependency** (`INV-MIN-DEPENDENCY`) rule; runs local deterministic tests (`verify.py`, linters) and field stress simulations; seals release with cryptographic Merkle digest.
 - **Contract Boundary:** Mock tests across core invariant boundaries are prohibited; zero unhandled regressions permitted.
 - **Handoff Artifact:** Merkle-signed Git commit, SemVer tag, and updated institutional memory (`scar_tissue`).
@@ -175,7 +174,7 @@ Execution efficiency requires matching task complexity to processor capability, 
   - $\Delta Z = -2$ from Phase III $\to$ Phase I: When empirical execution demonstrates that foundational problem telemetry was false.
 - **Thermodynamic Ballast Ejection:** All downstream speculative code diffs, temporary configurations, and synthetic artifacts generated under the false keystone are permanently deleted immediately ($\delta S = 0$).
 
-### D. Open Gap Budget & Anti-Overengineering (Açık Kapı Bütçesi)
+### D. Open Gap Budget & Anti-Overengineering (Principle of Least Action)
 - Systems and adversaries invariably possess an identifiable "cheapest bureaucratic escape hatch."
 - **Fatal Gaps:** Vulnerabilities, deadlocks, or schema drifts that compromise constitutional invariants or cause systemic collapse are classified as fatal. They MUST be codified as hard negative constraints (`[PROHIBITED]`, $DoF = 0$).
 - **Marginal / Aesthetic Gaps:** Secondary bureaucratic nitpicks or aesthetic concerns that do not alter operational outcomes must NOT be patched with complex abstractions. They are consciously allocated to an open-gap budget.

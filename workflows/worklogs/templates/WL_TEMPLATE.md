@@ -1,14 +1,14 @@
 # WORKLOG: WL_{YYYYMMDD}_{ID}_{SLUG}
 
-- **Tetikleyici (Trigger):** [Görevi başlatan dış/iç olay veya girdi]
-- **Hedef:** [Ulaşılmak istenen tekil sonuç]
-- **Diyalektik Çatışma (Yazarlar Odası & Murphy):**
-  - *Savunulan Tez:* [...]
-  - *Murphy Karşı-Tezi & Kaçış Hattı:* [...]
-- **Karar ve Gerekçe (Resolution):**
-  - Seçilen yol ve elenen alternatif gerekçesi.
-- **Tasarım Çıkarımı (Doctrine / Scar Tissue):**
-  - Bu karardan sisteme kalan ders veya invariant güncellemesi.
-- **Bağımlılık Durumu:** [Zero-Asset / CDN-Leverage: Tailwind / Native API]
-- **Artefakt & Çapa:**
-  - Dosya: [...] | Commit: [...] | Durum: [PASS / REWORK / REJECT]
+- **Trigger:** [External or internal event or input initiating the task]
+- **Target:** [Single concrete outcome to be achieved]
+- **Dialectic Conflict (Writers' Room & Murphy):**
+  - *Defended Thesis:* [...]
+  - *Murphy Antithesis & Escape Vector:* [...]
+- **Resolution & Rationale:**
+  - Selected implementation path and rationale for rejected alternatives.
+- **Doctrine / Scar Tissue Extraction:**
+  - Systemic lesson learned or constitutional invariant updated from this decision.
+- **Dependency Classification:** [Zero-Asset / CDN-Leverage: Tailwind / Native API / Stdlib]
+- **Artifact Anchor:**
+  - File: [...] | Commit: [...] | Status: [PASS / REWORK / REJECT]
