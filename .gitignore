@@ -25,6 +25,7 @@ venv/
 live_state.json
 live_view.html
 *.tmp
+.tmp/
 *.log
 
 # Local Developer & IDE Sidecar Scaffolding
