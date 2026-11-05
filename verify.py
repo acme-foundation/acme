@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 ACME CORE INVARIANT GATE & CONSTITUTIONAL VERIFIER (Pure Standard Library)
-Self-Compiling Genesis Verifier (v3.0.4-Genesis)
+Self-Compiling Genesis Verifier (v3.0.5-Genesis)
 Serves as the Mechanical Gatekeeper Turnike at the repository boundary.
 """
 
@@ -13,7 +13,7 @@ import subprocess
 
 def run_invariant_audit(verify_all: bool = False) -> bool:
     print("=" * 68)
-    print("      ACME GENESIS CONSTITUTIONAL INTEGRITY & INVARIANT GATE (v3.0.4)      ")
+    print("      ACME GENESIS CONSTITUTIONAL INTEGRITY & INVARIANT GATE (v3.0.5)      ")
     print("=" * 68)
 
     # 1. Zero-Code Invariant: No code artifacts tracked in core (except verify.py gatekeeper)
