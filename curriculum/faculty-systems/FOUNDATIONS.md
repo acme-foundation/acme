@@ -185,3 +185,6 @@
 
 ### SYS-136: Lex Proceduralis Agentium: Statutory Adjudication, Least-Action Arbitration & Procedural Remand (THESIS-058 / node-058)
 - Codifies the unified Code of Civil Procedure for Autonomous Systems: statutory anchoring (Nulla Actio Sine Spec), arbiter ground state of least-action inertia (`INV-ARBITER-PLA-04`), evidentiary asymmetry requirements, and compulsory RFC escalation (`INV-ANTI-WORKAROUND-05`).
+
+### SYS-137: Statutory Adjudication, Jurisprudential Precedent Caching & Fail-Closed Extrapolation Gates (THESIS-059 / node-059)
+- Codifies the immutable L2/L3 Jurisprudential Precedent Cache (`INV-PRECEDENT-CACHE-03`), arbiter ground state of least action inertia (`INV-ARBITER-PLA-02`), anti-extrapolation fail-closed sovereign human gate (`INV-FAIL-CLOSED-EXTRAPOLATION-04`), and anti-workaround procedural remand mechanics (`INV-ANTI-WORKAROUND-05`).

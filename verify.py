@@ -109,7 +109,10 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
             'INV-ARBITER-PLA-04',
             'INV-PRE-EXEC-DIALECTIC-02',
             'INV-ADJUDICATED-WRIT-03',
-            'INV-ANTI-WORKAROUND-05'
+            'INV-ANTI-WORKAROUND-05',
+            'INV-ARBITER-PLA-02',
+            'INV-PRECEDENT-CACHE-03',
+            'INV-FAIL-CLOSED-EXTRAPOLATION-04'
         ]
         for inv in required_invariants:
             if inv not in const_text:
