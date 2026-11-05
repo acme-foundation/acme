@@ -21,6 +21,12 @@ venv/
 # Air-Gapped Merkle Bundles
 *.bundle
 
+# Runtime State & Telemetry
+live_state.json
+live_view.html
+*.tmp
+*.log
+
 # Local Developer & IDE Sidecar Scaffolding
 .acme/
 extensions/

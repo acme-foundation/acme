@@ -1,6 +1,6 @@
 # ACME: Zero-Code Deterministic NLP Specification Architecture
 > **Decentralized Specification Framework for Human-Machine Symbiosis & Invariant Equilibrium**  
-> *Release v3.0.1-Genesis | Pure Specification Core & Recursive Normative Compiler*  
+> *Release v3.0.2-Genesis | Pure Specification Core & Recursive Normative Compiler*  
 > *Legacy Incubation Epoch (v1.x - v2.x / 53 Theses) Retired & Frozen at `archive/v2-legacy-incubator`*  
 
 ---
@@ -14,7 +14,7 @@ ACME contains zero lines of executable runtime code; it is a pure cognitive arch
 
 ### 2. CORE ARCHITECTURAL PILLARS (DoF = 0)
 1. **Decoupled Cognitive Specification Plane vs. Execution Plane:**
-   The normative governance control plane (headquarters specification registry) is permanently isolated from runtime data planes (downstream application repositories). Runtime tools, scripts, or execution scaffolding are strictly barred from entering the core repository (`INV-PLANE-SEPARATION`).
+   The normative governance control plane (headquarters specification repository) is permanently isolated from runtime data planes (downstream application repositories). Runtime tools, scripts, or execution scaffolding are strictly barred from entering the core repository (`INV-PLANE-SEPARATION`).
 2. **3-Tier Structural Hierarchy:**
    All target architectures must decompose across three strictly bounded tiers: Shell (Orchestrator) $\to$ Layouts (Slots) $\to$ Components (Composite & Atomic). Inter-component joints are coupled via phase-locked harmonic contracts (`INV-3-TIER-DECOMPOSITION`).
 3. **Spectral Noise Filtering & Kinematic Synergy Coupling:**
@@ -30,18 +30,16 @@ ACME contains zero lines of executable runtime code; it is a pure cognitive arch
 
 ---
 
-### 3. REPOSITORY SCAFFOLDING (v3.0.1-GENESIS)
+### 3. REPOSITORY SCAFFOLDING (v3.0.2-GENESIS)
 ```text
 acme/
 ├── faculty/              # Unified Living Syllabus Catalogs (SYS_systems.md, PHI_philosophy.md, LAW_law.md)
-├── registry/             # Verified Human Anchors & Graduation Registry (graduates.json)
+├── workflows/            # Canonical Decision Pipelines & Triage Workflows (WF_001_SPECTRAL_TRIAGE.md)
 ├── theses/               # Unified Living Theses Corpus ([CODE]_[NO]_[SLUG].md)
 ├── templates/            # Standardized Schemas (RFC_TEMPLATE, SPEC_TEMPLATE, AOP_LIFECYCLE)
 ├── AGENTS.md             # Execution Protocol for AI Agents & Downstream Sanitization
-├── CONSTITUTION.md       # Irreducible Constitutional Lex Superior (v3.0.1-Genesis)
+├── CONSTITUTION.md       # Irreducible Constitutional Lex Superior (v3.0.2-Genesis)
 ├── verify.py             # Pure Stdlib Boundary Gatekeeper Turnstile
-├── live_state.json       # Real-Time Telemetry State Machine
-├── live_view.html        # Real-Time Zero-Refresh Dashboard Cockpit
 └── README.md             # Specification & Architecture Overview
 ```
 
@@ -51,7 +49,7 @@ acme/
 Downstream client projects adopt ACME as an external normative authority (*Lex Superior*), not as application boilerplate.
 
 #### 4.1. Downstream Non-Pollution Invariant
-* **Never Clone ACME into Active Projects:** ACME internal governance faculties (`theses/`, `faculty/`, `registry/`, `CONSTITUTION.md`) must **never** be cloned, unpacked, or committed into downstream client repositories.
+* **Never Clone ACME into Active Projects:** ACME internal governance faculties (`theses/`, `faculty/`, `workflows/`, `CONSTITUTION.md`) must **never** be cloned, unpacked, or committed into downstream client repositories.
 * **Separation of Concerns:** ACME is the normative doctrine plane (Lex Superior); the client workspace is the empirical execution plane.
 
 #### 4.2. Anchoring via `.norm` (or `.acme`) Manifest
@@ -60,9 +58,9 @@ A downstream project establishes constitutional compliance exclusively through a
 {
   "$schema": "https://acme-standard.org/schemas/v3/norm.json",
   "repo": "https://github.com/acme-foundation/acme.git",
-  "version": "v3.0.1-genesis",
+  "version": "v3.0.2-genesis",
   "mode": "normative_reference",
-  "extends": "https://github.com/acme-foundation/acme.git#v3.0.1-genesis",
+  "extends": "https://github.com/acme-foundation/acme.git#v3.0.2-genesis",
   "feed": {
     "persona": false,
     "org": false
@@ -73,8 +71,8 @@ A downstream project establishes constitutional compliance exclusively through a
 ---
 
 ### 5. QUICKSTART / VERIFICATION & MERKLE NON-REPUDIATION
-Every state commit is cryptographically audited against zero-code purity, registry integrity, domain cleanliness, and constitutional invariant parity via the standard-library boundary turnstile:
+Every state commit is cryptographically audited against zero-code purity, workflow integrity, domain cleanliness, and constitutional invariant parity via the standard-library boundary turnstile:
 ```bash
 python verify.py --verify-all
 ```
-All graduation diplomas are permanently anchored to immutable Git Merkle commit SHAs.
+All graduation specifications are permanently anchored to immutable Git Merkle commit SHAs.

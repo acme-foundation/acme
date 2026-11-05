@@ -1,8 +1,8 @@
-# CONSTITUTION OF THE ACME ECOSYSTEM (LEX SUPERIOR v3.0.1-GENESIS)
+# CONSTITUTION OF THE ACME ECOSYSTEM (LEX SUPERIOR v3.0.2-GENESIS)
 > **Status:** RATIFIED CANONICAL FOUNDATION  
 > **Authority:** Lex Superior / Irreducible Cognitive Constitution  
 > **Biological Root of Trust:** Serkan BAYHAN (Chief Architect)  
-> **Release Target:** ACME v3.0.1-Genesis  
+> **Release Target:** ACME v3.0.2-Genesis  
 
 ---
 
@@ -70,7 +70,7 @@ This Constitution establishes the self-compiling, autopoietic governance core of
 
 ### SECTION 0: OBJECTIVE TRIAGE METRIC SCALE
 What cannot be measured cannot be validated as an architectural defect (`REJECT_UNMEASURED_DIAGNOSIS`). Autonomous self-audits and external telemetry intake must evaluate against the six (6) objective metric axes:
-1. **CODE LEAKAGE INDEX ($\text{CLI_ZeroCode} = 0$):** No `.py`, `.sh`, `.exe`, or binary executable artifacts may reside in ACME Core registries (`theses/`, `faculty/`, `registry/`, `./`), with the sole exception of the `verify.py` boundary turnstile. Absolute asset count must equal zero (`REJECT_CODE_ARTIFACT`).
+1. **CODE LEAKAGE INDEX ($\text{CLI_ZeroCode} = 0$):** No `.py`, `.sh`, `.exe`, or binary executable artifacts may reside in ACME Core registries (`theses/`, `faculty/`, `workflows/`, `./`), with the sole exception of the `verify.py` boundary turnstile. Absolute asset count must equal zero (`REJECT_CODE_ARTIFACT`).
 2. **MECHANICAL BOM & FORMAT PENALTY ($\text{BOM_Penalty} = 0$):** Zero files may contain UTF-8 Byte Order Marks (`\xef\xbb\xbf`) or mixed CRLF/LF line endings.
 3. **SEMANTIC & ADJECTIVE DENSITY ($\text{Adjective_Density} \le 0.02$):** Subjective, uncalibrated adjectives (*"fast"*, *"perfect"*, *"wonderful"*, *"powerful"*, *"easy"*) relative to total token count must remain strictly below 2.0%.
 4. **DEGREE OF FREEDOM CLOSURE ($\text{DoF_Compliance} = 1.0$):** Every constitutional rule and specification clause must evaluate to a deterministic binary Boolean state (PASS/FAIL); degrees of freedom clamp strictly to $\text{DoF} = 0$.

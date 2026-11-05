@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 ACME CORE INVARIANT GATE & CONSTITUTIONAL VERIFIER (Pure Standard Library)
-Self-Compiling Genesis Verifier (v3.0.1-Genesis)
+Self-Compiling Genesis Verifier (v3.0.2-Genesis)
 Serves as the Mechanical Gatekeeper Turnike at the repository boundary.
 """
 
@@ -13,7 +13,7 @@ import subprocess
 
 def run_invariant_audit(verify_all: bool = False) -> bool:
     print("=" * 68)
-    print("      ACME GENESIS CONSTITUTIONAL INTEGRITY & INVARIANT GATE (v3.0.1)      ")
+    print("      ACME GENESIS CONSTITUTIONAL INTEGRITY & INVARIANT GATE (v3.0.2)      ")
     print("=" * 68)
 
     # 1. Zero-Code Invariant: No code artifacts tracked in core (except verify.py gatekeeper)
@@ -30,36 +30,21 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
     except Exception as e:
         print(f"[WARN] Unable to run git ls-files: {e}")
 
-    # 2. Registry & Thesis Integrity (File presence, size, UTF-8 No-BOM)
+    # 2. No-BOM UTF-8 & EOL Standard Gate across all tracked documentation
     try:
-        with open('registry/graduates.json', 'r', encoding='utf-8') as fl:
-            grads = json.load(fl)
-        if not grads:
-            print("[FAIL] Graduates registry is empty.", file=sys.stderr)
-            return False
-
-        for g in grads:
-            t_file = g.get('thesis_file')
-            if not t_file or not os.path.exists(t_file):
-                print(f"[FAIL] Missing thesis file: {t_file}", file=sys.stderr)
-                return False
-
-            raw_bytes = open(t_file, 'rb').read()
-            if len(raw_bytes) < 100:
-                print(f"[FAIL] Thesis file too small (<100 bytes): {t_file}", file=sys.stderr)
-                return False
-
-            # Check UTF-8 BOM
-            if raw_bytes.startswith(b'\xef\xbb\xbf'):
-                print(f"[FAIL] UTF-8 BOM detected in thesis file: {t_file}", file=sys.stderr)
-                return False
-
-        print(f"[+] Registry Integrity:      [PASS] All {len(grads)} accredited thesis files verified (No-BOM).")
+        for f in tracked:
+            if f.endswith(('.md', '.json', '.py', '.txt')):
+                if os.path.exists(f):
+                    raw = open(f, 'rb').read()
+                    if raw.startswith(b'\xef\xbb\xbf'):
+                        print(f"[FAIL] UTF-8 BOM detected in: {f}", file=sys.stderr)
+                        return False
+        print("[+] No-BOM UTF-8 Standard:   [PASS] All tracked repository files verified (No-BOM).")
     except Exception as e:
-        print(f"[FAIL] Registry verification failed: {e}", file=sys.stderr)
+        print(f"[FAIL] No-BOM verification failed: {e}", file=sys.stderr)
         return False
 
-    # 2.5. Faculty Catalogs Integrity (SYS_systems.md, LAW_law.md, PHI_philosophy.md)
+    # 3. Faculty Catalogs Integrity (SYS_systems.md, LAW_law.md, PHI_philosophy.md)
     try:
         required_faculties = ['faculty/SYS_systems.md', 'faculty/LAW_law.md', 'faculty/PHI_philosophy.md']
         for fac_path in required_faculties:
@@ -78,19 +63,26 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
         print(f"[FAIL] Faculty verification failed: {e}", file=sys.stderr)
         return False
 
-    # 3. Domain Purity Negative Gate
-    prohibited = ['UYAP', 'TCKN', 'UDF']
-    for root, dirs, files in os.walk('theses'):
-        for f in files:
-            if f.endswith('.md'):
-                c = open(os.path.join(root, f), 'r', encoding='utf-8').read()
-                for p in prohibited:
-                    if p in c:
-                        print(f"[FAIL] Domain purity breach ({p}) in {f}", file=sys.stderr)
-                        return False
-    print("[+] Domain Purity Gate:      [PASS] No proprietary domain leakage detected.")
+    # 4. Workflows Engine Integrity Gate
+    try:
+        if not os.path.exists('workflows'):
+            print("[FAIL] Missing 'workflows/' directory.", file=sys.stderr)
+            return False
+        wf_files = [os.path.join('workflows', f) for f in os.listdir('workflows') if f.endswith('.md')]
+        if not wf_files:
+            print("[FAIL] No workflow specifications found in workflows/.", file=sys.stderr)
+            return False
+        for wf_path in wf_files:
+            content = open(wf_path, 'r', encoding='utf-8').read()
+            if 'State 0' not in content or 'State 1' not in content:
+                print(f"[FAIL] Workflow lacks state machine transitions: {wf_path}", file=sys.stderr)
+                return False
+        print(f"[+] Workflows Engine Gate:   [PASS] All {len(wf_files)} workflow state machines verified.")
+    except Exception as e:
+        print(f"[FAIL] Workflows verification failed: {e}", file=sys.stderr)
+        return False
 
-    # 4. Constitutional Integrity & Lex Superior Parity Gate
+    # 5. Constitutional Integrity & Lex Superior Parity Gate
     try:
         const_text = open('CONSTITUTION.md', 'r', encoding='utf-8').read()
         required_invariants = [
@@ -126,57 +118,33 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
         print(f"[FAIL] Constitution check failed: {e}", file=sys.stderr)
         return False
 
-    # 5. Cross-Merkle SHA Consistency Gate
-    try:
-        for g in grads:
-            sha = g.get('graduation_sha', '').strip()
-            if not re.match(r'^[0-9a-f]{40}$', sha, re.IGNORECASE):
-                print(f"[FAIL] Invalid Merkle commit SHA for {g.get('node_id')}: {sha}", file=sys.stderr)
-                return False
-            # Check git object exists
-            exit_code = subprocess.call(['git', 'cat-file', '-e', f'{sha}^{{commit}}'],
-                                        stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-            if exit_code != 0:
-                print(f"[FAIL] Merkle commit SHA not found in git tree: {sha}", file=sys.stderr)
-                return False
-        print(f"[+] Merkle Consistency:     [PASS] All {len(grads)} graduation commit SHAs validated in git tree.")
-    except Exception as e:
-        print(f"[WARN] Merkle git verification check bypassed: {e}")
-
-    # 6. Full-Sweep Crucible Audit
-    if verify_all:
-        print("\n--- FULL-SWEEP THESIS CRUCIBLE AUDIT ---")
-        for g in grads:
-            t_file = g['thesis_file']
-            c = open(t_file, 'r', encoding='utf-8').read()
-            # Invariant check: must have at least one invariant or Lex
-            if not re.search(r'(?:INVARIANT|THE LEX|DoF\s*=\s*0)', c, re.IGNORECASE):
-                print(f"[FAIL] Thesis lacks formal invariants: {t_file}", file=sys.stderr)
-                return False
-            # Check Pre-Mortem Anti-Pattern Gate (Section 1.4 DoF = 0)
-            if 'SECTION 1.4' not in c or '[PROHIBITED]' not in c:
-                print(f"[FAIL] Thesis lacks Section 1.4 Pre-Mortem Gate ([PROHIBITED]): {t_file}", file=sys.stderr)
-                return False
-            # Check DoD
-            if not re.search(r'(?:DEFINITION OF DONE|DoD)', c, re.IGNORECASE):
-                print(f"[FAIL] Thesis lacks Definition of Done: {t_file}", file=sys.stderr)
-                return False
-
-        print(f"[+] Full-Sweep Audit:        [PASS] All {len(grads)} theses passed crucible verification.")
+    # 6. Domain Purity Negative Gate
+    prohibited = ['UYAP', 'TCKN', 'UDF']
+    if os.path.exists('theses'):
+        for root, dirs, files in os.walk('theses'):
+            for f in files:
+                if f.endswith('.md'):
+                    c = open(os.path.join(root, f), 'r', encoding='utf-8').read()
+                    for p in prohibited:
+                        if p in c:
+                            print(f"[FAIL] Domain purity breach ({p}) in {f}", file=sys.stderr)
+                            return False
+    print("[+] Domain Purity Gate:      [PASS] No proprietary domain leakage detected.")
 
     # 7. Semantic Fluff & Adjective Density Gate (<= 0.02)
     try:
         subjective_words = ['hızlı', 'mükemmel', 'harika', 'güçlü', 'kolay', 'kusursuz', 'süper']
         total_words = 0
         subj_count = 0
-        for root, dirs, files in os.walk('theses'):
-            for f in files:
-                if f.endswith('.md'):
-                    text = open(os.path.join(root, f), 'r', encoding='utf-8').read().lower()
-                    words = re.findall(r'\w+', text)
-                    total_words += len(words)
-                    for w in subjective_words:
-                        subj_count += len(re.findall(r'\b' + w + r'\b', text))
+        if os.path.exists('theses'):
+            for root, dirs, files in os.walk('theses'):
+                for f in files:
+                    if f.endswith('.md'):
+                        text = open(os.path.join(root, f), 'r', encoding='utf-8').read().lower()
+                        words = re.findall(r'\w+', text)
+                        total_words += len(words)
+                        for w in subjective_words:
+                            subj_count += len(re.findall(r'\b' + w + r'\b', text))
         density = subj_count / max(1, total_words)
         if density > 0.02:
             print(f"[FAIL] Adjective Density breached: {density:.4f} > 0.02", file=sys.stderr)
@@ -185,7 +153,7 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
     except Exception as e:
         print(f"[WARN] Adjective density check bypassed: {e}")
 
-    # 8. SemVer Cadence & Gatekeeper Assertion
+    # 8. SemVer Cadence & Gatekeeper Assertion (Quench Gate)
     try:
         latest_tag = subprocess.check_output(
             ['git', 'describe', '--tags', '--abbrev=0'],
