@@ -105,7 +105,11 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
             'INV-REMAND-PROPAGATION-03',
             'INV-STATUTORY-ANCHOR-01',
             'INV-ANTI-WORKAROUND-02',
-            'INV-COMPULSORY-RFC-03'
+            'INV-COMPULSORY-RFC-03',
+            'INV-ARBITER-PLA-04',
+            'INV-PRE-EXEC-DIALECTIC-02',
+            'INV-ADJUDICATED-WRIT-03',
+            'INV-ANTI-WORKAROUND-05'
         ]
         for inv in required_invariants:
             if inv not in const_text:
@@ -125,7 +129,7 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
                 print(f"[FAIL] Missing constitutional pillar: {pillar}", file=sys.stderr)
                 return False
 
-        print("[+] Constitutional Parity:   [PASS] All 5 Core Pillars and 21 Lex invariants verified.")
+        print("[+] Constitutional Parity:   [PASS] All 5 Core Pillars and Lex Proceduralis invariants verified.")
     except Exception as e:
         print(f"[FAIL] Constitution check failed: {e}", file=sys.stderr)
         return False

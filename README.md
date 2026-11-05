@@ -1,9 +1,34 @@
-# ACME: Deterministic Specification Architecture
-> A formal framework that compiles natural language intent into zero-drift execution contracts for agentic systems.
+# ACME: Lex Proceduralis Agentium
+### The Code of Civil Procedure & Statutory Adjudication Engine for Autonomous Systems
+> *"Nulla Actio Sine Spec, Nullum Iudicium Sine Lege"*  
+> *(No execution without specification, no judgment without statutory law.)*
 
 **Version:** `v3.0.7-genesis`  
-**Standard:** Deterministic Specification (`DoF = 0`)  
+**Standard:** Deterministic Specification & Procedural Adjudication (`DoF = 0`)  
 **Gatekeeper:** `verify.py` (Zero-dependency stdlib)
+
+---
+
+## The Genesis Manifesto: From Stochastic Generation to Statutory Due Process
+ACME elevates large language models (LLMs) from unanchored, hallucinating coding interns into disciplined judicial actors governed by the thousand-year-old rigor of procedural civil law (*Lex Proceduralis Agentium*).
+
+The existential crisis of modern software ecosystems is not that generative models cannot write code; rather, it is the total absence of a procedural code that governs **why** code is written, **what** statutory boundaries it must obey, and **how** architectural dependencies must be settled before touching the physical disk. Under ACME, code is not an act of spontaneous statistical generation; it is an irrevocable execution of a reasoned, cross-examined judicial verdict.
+
+---
+
+## The Four Procedural Pillars
+1. **Statutory Anchoring (Lex Superior & Grounding):** Every deduction, architectural mutation, or code execution must cite explicit statutory authority in the Constitution (`CONSTITUTION.md`), a ratified thesis (`theses/`), or an executed living specification (`artifacts/problem_spec.md`). Unanchored execution evaluates to non-existence ($DoF = 0$, `INV-STATUTORY-ANCHOR-01`).
+2. **Pre-Execution Adversarial Dialectic (The Writers' Room):** All architectural friction, Rice undecidability, and boundary ambiguity must be exhausted in pure natural language dialectic between adversarial twins (`SPEC-A` vs. `SPEC-B`) prior to code compilation. Zero preview divergence ($\Delta\text{MSE} = 0$) is mathematically required (`INV-PRE-EXEC-DIALECTIC-02`).
+3. **Adjudicated Petition & Procedural Remand (Writ vs. Remand):** No agent writes code to disk without an approved Execution Petition (`EXECUTION_PETITION.md`). Petitions undergo substantive and procedural inquest: approved scopes convert to an immutable `Writ of Execution` ($DoF = 0$), while flawed scopes are procedurally remanded to the problem space with written `REJECTION_GROUNDS.md` (`INV-ADJUDICATED-WRIT-03`).
+4. **Anti-Workaround Suppression & Compulsory RFC (The Anti-Patch Doctrine):** Concealing an architectural defect or missing constraint via local defensive hacks, catch-all exceptions, or mock overrides is struck down as procedural fraud (`REJECT_PROCEDURAL_FRAUD`). Normative voids mandate compulsory upstream Request for Comments (RFC) backpropagation (`INV-ANTI-WORKAROUND-05`).
+
+---
+
+## The Lex Normative Hierarchy
+1. **Lex Superior (The Cognitive Constitution):** `CONSTITUTION.md` — Irreducible constitutional invariants, thermodynamic limits, and biological primacy ($DoF = 0$).
+2. **Lex Proceduralis (Procedural Protocols):** `workflows/WF_*.md` — Statutory workflows governing spectral triage, adversarial dialectic, execution petitions, and legal reasoning.
+3. **Lex Specialis (Workspace Invariants):** `PROJECT_INVARIANTS.md` / `.acme.template` — Local sub-office containment, blast radius constraints, and commercial token circuit breakers.
+4. **Lex Executiva (Living Specifications & Writs):** `artifacts/problem_spec.md`, `WRIT_OF_EXECUTION.md`, `specs/` — Deterministic implementation contracts with zero degrees of freedom.
 
 ---
 

@@ -159,6 +159,9 @@ Executing code without a formal Execution Petition (`INV-PETITION-EXEC-01`), mut
 ### SYS-134-C: STATUTORY ANCHORING, PROCEDURAL ADJUDICATION, AND ANTI-WORKAROUND GOVERNANCE
 Executing operations without explicit statutory citations (`INV-STATUTORY-ANCHOR-01`), introducing ad-hoc defensive workarounds to bypass architectural defects (`INV-ANTI-WORKAROUND-02`), or improvising solutions for normative voids instead of compiling compulsory RFCs (`INV-COMPULSORY-RFC-03`) is strictly prohibited (`REJECT`).
 
+### SYS-134-D: LEX PROCEDURALIS AGENTIUM AND LEAST-ACTION ARBITRATION
+Entertaining unadjudicated petitions lacking proof of asymmetric necessity (`INV-ARBITER-PLA-04`), generating code outside of ratified zero-DoF writs (`INV-ADJUDICATED-WRIT-03`), or breaching procedural civil code invariants is strictly prohibited (`REJECT`).
+
 ### SYS-135: GOAL-TO-SPEC INVERSE ENGINEERING AND AUTOMATED TESTS AS ENVIRONMENTAL PRESSURE
 Writing speculative implementations before executable validation tests are compiled, or treating test failures as non-fatal during evolutionary synthesis is strictly prohibited (`REJECT`).
 
