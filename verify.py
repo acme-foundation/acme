@@ -247,6 +247,50 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
         print(f"[FAIL] Decontamination verification failed: {e}", file=sys.stderr)
         return False
 
+    # 12. Scaffold Templates Integrity Gate (INV-DOMAIN-PURITY & Scaffold Completeness)
+    try:
+        scaffold_dir = os.path.join('templates', 'scaffolds', 'consultancy')
+        required_scaffold_files = [
+            os.path.join(scaffold_dir, '.acme.template'),
+            os.path.join(scaffold_dir, 'USER_MANUAL.md'),
+            os.path.join(scaffold_dir, 'PROJECT_INVARIANTS.md'),
+            os.path.join(scaffold_dir, 'forms', 'FORM_01_ON_SITE_DISCOVERY.md'),
+            os.path.join(scaffold_dir, 'forms', 'FORM_02_SPEC_SIGN_OFF.md'),
+            os.path.join(scaffold_dir, 'forms', 'FORM_03_ACCEPTANCE_DELIVERY.md')
+        ]
+        for s_path in required_scaffold_files:
+            if not os.path.exists(s_path):
+                print(f"[FAIL] Missing required scaffold template: {s_path}", file=sys.stderr)
+                return False
+            raw_bytes = open(s_path, 'rb').read()
+            if raw_bytes.startswith(b'\xef\xbb\xbf'):
+                print(f"[FAIL] UTF-8 BOM detected in scaffold file: {s_path}", file=sys.stderr)
+                return False
+            if len(raw_bytes) < 50:
+                print(f"[FAIL] Scaffold template too small: {s_path}", file=sys.stderr)
+                return False
+
+        # Validate .acme.template JSON
+        tpl_path = os.path.join(scaffold_dir, '.acme.template')
+        with open(tpl_path, 'r', encoding='utf-8') as f:
+            tpl_json = json.load(f)
+        if tpl_json.get('mode') != 'consultancy_hub':
+            print(f"[FAIL] Invalid mode in .acme.template: {tpl_json.get('mode')}", file=sys.stderr)
+            return False
+
+        # Domain Purity on scaffolds
+        for s_path in required_scaffold_files:
+            text = open(s_path, 'r', encoding='utf-8').read()
+            for p in prohibited:
+                if p in text:
+                    print(f"[FAIL] Domain purity breach ({p}) in scaffold: {s_path}", file=sys.stderr)
+                    return False
+
+        print("[+] Scaffold Templates Gate: [PASS] All 6 consultancy scaffolding files verified.")
+    except Exception as e:
+        print(f"[FAIL] Scaffold templates verification failed: {e}", file=sys.stderr)
+        return False
+
     print("--------------------------------------------------------------------")
     print("[PASS] All ACME Genesis pure NLP invariants and CI/CD gates verified.")
     print("=" * 68)

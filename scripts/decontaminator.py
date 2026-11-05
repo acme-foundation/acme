@@ -99,3 +99,4 @@ if __name__ == "__main__":
     fix_mode = "--fix" in sys.argv
     success = run_decontamination_audit(fix=fix_mode)
     sys.exit(0 if success else 1)
+

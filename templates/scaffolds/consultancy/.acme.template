@@ -1,0 +1,19 @@
+{
+  "$schema": "https://raw.githubusercontent.com/acme-foundation/acme/v3.0.6-genesis/theses/SYS_132_UNIVERSAL_NORM_AND_CASCADING_INHERITANCE.md",
+  "project_name": "consultancy-headquarters",
+  "version": "1.0.0",
+  "mode": "consultancy_hub",
+  "extends": "https://github.com/acme-foundation/acme.git#v3.0.6-genesis",
+  "governance": {
+    "circadian_cadence": "strict",
+    "island_boundary": "enforced",
+    "subproject_directory": "offices/{client_id}"
+  },
+  "corporate_invariants": [
+    "INV-ISLAND-BOUNDARY: Client work must strictly reside within isolated sub-offices under offices/{client_id}/",
+    "INV-SPEC-FIRST: No billable execution or code mutation without signed FORM_02_SPEC_SIGN_OFF",
+    "INV-DOMAIN-PURITY: Zero client PII or proprietary secrets committed to root shared repositories",
+    "INV-MIN-DEPENDENCY: Zero-unjustified external dependencies across client engagements"
+  ],
+  "onboarding_directive": "ACME Consultancy Hub initialized. Field discovery and sign-off forms available under forms/. Isolate client workspaces under offices/{client_id}/."
+}
