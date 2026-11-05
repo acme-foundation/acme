@@ -182,3 +182,6 @@
 
 ### SYS-135: Statutory Anchoring, Procedural Adjudication, and Anti-Workaround Governance (THESIS-057 / node-057)
 - Codifies the legal adjudication doctrine of software engineering: mandatory statutory grounding citations (`INV-STATUTORY-ANCHOR-01`), immediate procedural fraud strike-down of defensive workarounds (`INV-ANTI-WORKAROUND-02`), and compulsory upstream RFC escalation for normative voids (`INV-COMPULSORY-RFC-03`).
+
+### SYS-136: Lex Proceduralis Agentium: Statutory Adjudication, Least-Action Arbitration & Procedural Remand (THESIS-058 / node-058)
+- Codifies the unified Code of Civil Procedure for Autonomous Systems: statutory anchoring (Nulla Actio Sine Spec), arbiter ground state of least-action inertia (`INV-ARBITER-PLA-04`), evidentiary asymmetry requirements, and compulsory RFC escalation (`INV-ANTI-WORKAROUND-05`).

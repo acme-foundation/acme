@@ -6,12 +6,15 @@
 - [ ] Direct execution or speculative coding without an adjudicated, reasoned writ of execution is strictly barred (`REJECT_UNPETITIONED_EXECUTION`).
 - [ ] Procedural Mandate: The executing worker or agent must formally file an `EXECUTION_PETITION.md` declaring:
   1. Target component and physical file path.
-  2. Grounding specification clauses and invariant citations.
+  2. Grounding specification clauses and invariant citations (`Nulla Actio Sine Spec`).
   3. Strict Definition of Done (DoD) binary acceptance thresholds.
   4. Bounded blast radius and dependency declarations (`INV-MIN-DEPENDENCY`).
 - [ ] Invariant Gate: `INV-PETITION-EXEC-01`. Proceed to State 1.
 
-### State 1: Adversarial Inquest & Procedural Hearing
+### State 1: Preliminary Inquest, Formal Conditions & Adversarial Hearing
+- [ ] Preliminary Formal Condition Check (Procedural Code Isomorphism):
+  - Execute `python verify.py --verify-all` as a preliminary turnstile check.
+  - If procedural defects exist (BOM, prohibited extensions, schema errors), dismiss petition *in limine* on procedural grounds without reaching substantive merits (`DISMISSED_ON_PROCEDURAL_DEFECT`).
 - [ ] Lodge `EXECUTION_PETITION.md` into the Judicial Writers' Room.
 - [ ] Convene Adversarial Inquest Panel:
   - **Defender (Blue Team):** Advocates for the structural necessity and metric fidelity of the petition under the Principle of Least Action ($\delta S = 0$).
@@ -34,7 +37,7 @@
     * Remand the petition upstream back to `artifacts/problem_spec.md` and component design for fundamental re-specification.
 
 ### State 3: Deterministic Materialization Under Judicial Writ
-- [ ] Construction Worker ingests the ratified `WRIT_OF_EXECUTION.md` as its sole execution input (`INV-ADJUDICATED-WRIT-02`).
+- [ ] Construction Worker ingests the ratified `WRIT_OF_EXECUTION.md` as its sole execution input (`INV-ADJUDICATED-WRIT-03`).
 - [ ] Worker materializes atomic code diffs strictly bounded by $\le 500$ tokens per surgical mutation.
 - [ ] Any speculative variation, unanchored refactoring, or departure from the explicit writ triggers an immediate circuit breaker halt (`REJECT_UNWRITTEN_MUTATION`).
 - [ ] Proceed to State 4.
@@ -45,4 +48,3 @@
 - [ ] Confirm 100% binary PASS across all verification gates ($DoF = 0$).
 - [ ] Purge ephemeral hearing ballast (`.tmp/`).
 - [ ] Transition execution plane to quiescent `STANDBY`.
-
