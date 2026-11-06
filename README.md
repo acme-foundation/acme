@@ -1,159 +1,100 @@
 # ACME: Lex Proceduralis Agentium
-### Release v3.2.0 | Statutory Adjudication, Jurisprudential Caching & Pure Procedural Engine
+> **Autonomous Cognitive Multi-Agent Ecosystem | Deterministic Living Specification**  
+> **Release:** v3.2.0 | **Authority:** Lex Superior (`DoF = 0`)  
+> **Biological Root of Trust:** Serkan BAYHAN (Chief Architect)  
 > *"Nulla Actio Sine Spec, Nullum Iudicium Sine Lege"*  
-> *(No execution without specification, no judgment without statutory law.)*
-
-**Version:** `v3.2.0`  
-**Standard:** Deterministic Specification, Jurisprudential Precedent Caching & Procedural Adjudication (`DoF = 0`)  
-**Gatekeeper:** `verify.py` (Zero-dependency stdlib)
+> *(Şartname olmadan icraat, kanun olmadan hüküm kurulamaz.)*
 
 ---
 
-## The Genesis Manifesto: From Stochastic Generation to Statutory Due Process
-ACME elevates large language models (LLMs) from unanchored, hallucinating coding interns into disciplined judicial actors governed by the thousand-year-old rigor of procedural civil law (*Lex Proceduralis Agentium*).
+## 1. KANONİK ANAYASA VE DEĞİŞMEZLER (LEX SUPERIOR: DoF = 0)
 
-The existential crisis of modern software ecosystems is not that generative models cannot write code; rather, it is the total absence of a procedural code that governs **why** code is written, **what** statutory boundaries it must obey, and **how** architectural dependencies must be settled before touching the physical disk. Under ACME, code is not an act of spontaneous statistical generation; it is an irrevocable execution of a reasoned, cross-examined judicial verdict.
+### MADDE 0: TELEOLOJİK ZEMİNLEME (ONTOLOGICAL GROUNDING)
+1. Amaçsız ve zeminsiz işlem yapılamaz: Her görev, çözeceği somut kök problemi ve varlık gerekçesini (Telos) açıkça tanımlamak zorundadır.
+2. Semptom ile problem eşitlenemez: Kullanıcı veya ajan şikayetleri doğrudan problem kabul edilemez; kök arıza izole edilmeden çözüme geçilemez.
 
----
+### MADDE 1: EN AZ EYLEM VE SIFIR SERBESTLİK DERECESİ (INV-PLA / DoF = 0)
+1. Sübjektif sıfat yasağı: Şartnamelerde ve görev tanımlarında "hızlı", "modern", "hafif", "güvenli" gibi ölçülemeyen sıfatlar derleme hatasıdır (Compile Error). Tüm isterler 5N1K formatında metrikleştirilir.
+2. Boolean DoD: Her görevin tamamlanma şartı, mekanik olarak doğrulanabilir ikili (PASS/FAIL) bir kabul testine (Definition of Done) bağlanmak zorundadır.
+3. Geodezik rota: Görev, mümkün olan en düşük bellek, en az dış bağımlılık ve en düşük hesaplama adımıyla tamamlanmalıdır.
 
-## Core Adjudication Doctrines & Jurisprudential Pillars
-1. **Statutory Anchoring (Lex Superior & Grounding):** Every deduction, architectural mutation, or code execution must cite explicit statutory authority in the Constitution (`CONSTITUTION.md`), a ratified thesis (`theses/`), or an executed living specification (`artifacts/problem_spec.md`). Unanchored execution evaluates to non-existence ($DoF = 0$, `INV-STATUTORY-ANCHOR-01`).
-2. **Arbiter Ground State & PLA (Procedural Economy):** The default operational state of the judicial arbiter or decision-maker is thermodynamic inertia ($\delta S = 0$). Absent demonstrated evidentiary asymmetry or absolute constitutional lock-in, the arbiter actively scans procedural bars to dismiss petitions *in limine* and issue procedural remands, shedding cognitive load and conserving system energy (`INV-ARBITER-PLA-02`).
-3. **Jurisprudential Precedent Cache ($O(1)$ Hit vs. Cache Miss):** Ratified specifications, accredited theses, and judicial writs serve as an immutable L2/L3 jurisprudential cache ($O(1)$ lookup). Normative gaps lacking precedent trigger an immediate Cache Miss, strictly prohibiting ad-hoc improvisation and mandating adversarial deliberation from first principles and compulsory upstream RFC escalation (`INV-PRECEDENT-CACHE-03`).
-4. **Anti-Extrapolation & Fail-Closed Sovereign Human Gate:** In emergent boundary states unanchored to external reality, models are strictly prohibited from arbitrary extrapolation or inventing axioms ("could not find, so I inferred"). The system transitions immediately into `FAIL_CLOSED` mode; deductions are quarantined as advisory `HYPOTHESIS_REPORT.md` artifacts, and final ratification authority resides exclusively with the sovereign biological human architect (Human-in-the-Loop, `INV-FAIL-CLOSED-EXTRAPOLATION-04`).
-5. **Anti-Workaround Suppression & Compulsory RFC (The Anti-Patch Doctrine):** Concealing an architectural defect or missing constraint via local defensive hacks, catch-all exceptions, or mock overrides is struck down as procedural fraud (`REJECT_PROCEDURAL_FRAUD`). Normative voids mandate compulsory upstream Request for Comments (RFC) backpropagation (`INV-ANTI-WORKAROUND-05`).
+### MADDE 2: ÇİĞ DAMLASI İZOLASYONU (INV-DEWDROP)
+1. Hermetik fanus: Her çalışma alanı ve ajan bağımsız bir bağlam alanında çalışır; paylaşımlı değişken durum (shared mutable state) kesinlikle yasaktır.
+2. Dış sızıntı yasağı: Dış sistemlerden veya önceki oturumlardan aktarılan artık durumlar ve bağlam kirlilikleri kapıda itlaf edilir.
 
----
+### MADDE 3: BİYOLOJİK ASALET VE TERMAL DENGE (INV-GROUNDING)
+1. Biyolojik Donanım: Sistemin işletimi biyolojik operatörün uyku, sağlık ve metabolik dengesine termal borç yükleyemez.
+2. Bilişsel Duru: Süreç sonsuz özyinelemeli soyutlamalara kapılamaz; daima kararlı ve duru bir duruma (halting state) çökmelidir.
+3. Maddi Çıktı: Her döngü somut, faturası kesilebilir veya sahada çalışan deterministik bir artefakt üretmelidir.
 
-## The Lex Normative Hierarchy
-1. **Lex Superior (The Cognitive Constitution):** `CONSTITUTION.md` — Irreducible constitutional invariants, thermodynamic limits, and biological primacy ($DoF = 0$).
-2. **Lex Proceduralis (Procedural Protocols):** `workflows/WF_*.md` — Statutory workflows governing spectral triage, adversarial dialectic, execution petitions, and legal reasoning.
-3. **Lex Specialis (Workspace Invariants):** `PROJECT_INVARIANTS.md` / `.acme.template` — Local sub-office containment, blast radius constraints, and commercial token circuit breakers.
-4. **Lex Executiva (Living Specifications & Writs):** `artifacts/problem_spec.md`, `WRIT_OF_EXECUTION.md`, `specs/` — Deterministic implementation contracts with zero degrees of freedom.
+### MADDE 4: ÇİFT TARAFLI GATE-KEEPER VE SIFIR GÜVEN (BI-DIRECTIONAL ZERO-TRUST)
+1. Ingress Turnikesi (Ön Koşul): Ölçülemeyen, donanım bütçesini aşan veya mantıksal imkânsızlık barındıran hiçbir istek işlemciye alınamaz; kapıda gerekçeli usulden ret (fail-closed) verilir.
+2. Egress Turnikesi (Son Koşul): Mekanik delili (test logu), Merkle bütünlük imzası ve tanımlı ikili kabul kriteri (Boolean DoD) bulunmayan hiçbir çıktı teslim edilemez.
+3. Yerel Çift Yönlü El Sıkışma: Her istasyon (N), arkasındaki istasyonla (N-1) mutabakat sağlamadan ve sözleşmeyi kilitlemeden önündeki istasyona (N+1) veri aktaramaz.
 
----
+### MADDE 5: HASMANE İKİZ DİNAMİĞİ (ADVERSARIAL A/R ENGINE)
+1. Dalkavukluk Yasağı (Anti-Sycophancy): Alıcı düğüm (R / Reaction), teslimatı peşinen kabul edemez; teslimatı yapan düğüme (A / Action) karşı hasmane bir savcı gibi açık arar ve direnç (PLR) gösterir.
+2. İspat Külfeti: İddia sahibi A düğümü, şartname kriterlerini mekanik delillerle doğrulamakla yükümlüdür. Delilsiz itiraz ve delilsiz savunma kapıda usulden reddedilir.
+3. Usul Ekonomisi Metriği: Sistemin tepe optimizasyon metriği, iş akışını en az itiraz, dava ve usulden bozma (remand) döngüsüyle tamamlamaktır.
 
-## Core Pillars
-1. **Decoupled Planes:** Absolute boundary between the Cognitive Specification Plane (`acme`) and downstream Execution Planes.
-2. **3-Tier Decomposition:** Strict structural hierarchy across all systems:
-   - Application Shell (Lifecycle & Service Orchestration)
-   - Layouts (Spatial Isolation & Slot Contracts)
-   - Components (Independent Composite & Atomic Units)
-3. **Spectral Triage:** Fourier-inspired noise attenuation separating high-frequency symptom chatter from fundamental structural defects.
-4. **Anti-Monolithic Escalation:** Rejection of default primitive attractors and unmodularized monolithic outputs.
-5. **Scale-Invariant Isomorphism:** Macro-architectural invariants mathematically mirrored across micro-level implementations (MSE = 0).
-6. **Deterministic Reasoning & Adjudicated SDLC:** Every deduction and code execution mandates explicit statutory citation (`INV-STATUTORY-ANCHOR-01`). Local defensive workarounds are struck down as procedural fraud, converting normative voids into compulsory upstream RFCs.
+### MADDE 6: EGEMEN İRADE VE TERMİNAL FATURA (SOVEREIGN OVERRIDE & COST OF OVERRIDE)
+1. İnsan Operatör Kararı: Biyolojik mimarın "Böyle olacak" iradesi nihai tahkim hükmüdür; DECISION_LOG kütüğüne tescil edilir ve tartışma derhal durdurulur.
+2. Bedelin Bölünemezliği: İnsanın verdiği her anayasal ihlal veya mimari sapma bedelsiz kalamaz; doğurduğu termal borç, performans feragati veya bütçe aşımı projenin karnesine açık teknik borç olarak tahakkuk ettirilir.
 
----
-
-## Specification Lifecycle (Core Engine)
-ACME operates as an upstream invariant compiler:
-
-1. **Ingestion & Spectral Triage:** Ingest defect logs or raw intent via `workflows/WF_001_SPECTRAL_TRIAGE.md`. Filter subjective adjectives and isolate root-cause frequency.
-2. **Pre-Execution Dialectic & Incubation:** Exhaust structural friction in pure NLP via `workflows/WF_002_ADVERSARIAL_INCUBATION_AND_DIALECTIC.md` before any code compilation.
-3. **3-Tier Formulation:** Lock architecture strictly across Shell, Layout, and Component contracts ($DoF = 0$).
-4. **Adjudication & Execution Gate:** Issue formal execution petitions and judicial writs under `workflows/WF_003_ADJUDICATION_AND_EXECUTION_GATE.md` before physical file mutations.
-5. **Statutory Adjudication & Reasoning:** Ground every deduction in constitutional statute and route normative voids via `workflows/WF_004_STATUTORY_ADJUDICATION_AND_REASONING.md`.
-6. **Mechanical Verification:** Validate invariant parity, SemVer cadence, and zero-code core purity:
-   ```bash
-   python verify.py --verify-all
-   ```
-7. **Downstream Dispatch:** Hand off compiled markdown specification contracts to downstream coding agents (Cursor, Claude Code, AntiGravity).
+### MADDE 7: EMSAL İÇTİHAT VE KELİTLENME (JURISPRUDENTIAL CACHE & AUTOPOIESIS)
+1. İçtihat Tescili: A ve R arasındaki sürtünmelerden çıkan hakem hükümleri kalıcı birer 'Emsal Karar' olarak kütüğe yazılır.
+2. O(1) Çözümleme: Benzer sınır durumlarıyla karşılaşıldığında içtihat önbelleği taranır; yeni tartışma açılmadan emsal karar doğrudan yürütülür.
 
 ---
 
-## Downstream Adoption & The Universal `.norm` Manifest
-Downstream client projects adopt ACME as an external normative authority (*Lex Superior*), never as application boilerplate.
+## 2. E-AUP 2D HOLOGRAFİK İCRA MATRİSİ
 
-### 1. Initialization & Field Triage
-Place a `.norm` manifest at the client repository root and instruct the agent:
-
-> *"Initialize workspace against .norm manifest."*
-
-The system automatically performs contextual field analysis:
-* **Greenfield (New Projects):** In the absence of existing code, execution is immediately bounded by strict 3-tier modular contracts and formal binary acceptance criteria.
-* **Brownfield (Legacy Codebases):** Performs dependency and defect isolation, defining strict blast-radius boundaries around legacy code before applying modifications.
-
-### 2. Workspace Topologies
-* **Control Center Model (Recommended):** The ACME workspace serves as the central governance cockpit, tracking projects as independent sub-repositories.
-* **Sidecar Model:** Client projects exist externally and reference ACME remotely via immutable release tags.
-
----
-
-### 3. Implementation Manifest Examples
-
-#### A. Greenfield Project Manifest (`.norm`)
-```json
-{
-  "project_name": "payments-service",
-  "project_type": "greenfield",
-  "extends": "https://github.com/acme-foundation/acme.git#v3.1.0",
-  "corporate_invariants": [
-    "All service endpoints must expose OpenAPI specifications before code implementation",
-    "Zero binary dependencies: All logic must compile locally from verified source"
-  ]
-}
+### YATAY DÖNÜŞÜM HATTI (ONTOLOJİK PİPELİNE)
+```text
+[01. Hikaye] ──<GK>──► [02. Gereksinim] ──<GK>──► [03. Çözüm] ──<GK>──► [04. Sözleşme] ──<GK>──► [05. Ürün]
 ```
 
-#### B. Brownfield Legacy Project Manifest (`.norm`)
-```json
-{
-  "project_name": "legacy-core-portal",
-  "project_type": "brownfield",
-  "extends": "https://github.com/acme-foundation/acme.git#v3.1.0",
-  "legacy_containment": {
-    "legacy_scope": "src/legacy/",
-    "blast_radius_containment": "strict"
-  },
-  "corporate_invariants": [
-    "Never mutate legacy data schemas directly; implement defensive wrappers",
-    "Zero PII logging: Mask all customer identifiers across telemetry"
-  ]
-}
-```
+* **01. Hikaye (Neden?):** Sahadaki ham acı ve kullanıcı vakası. Sübjektif gürültü arındırılır.
+* **02. Gereksinim (Ne?):** 5N1K gridi, sınır tespiti ve negatif kapsam (`INV-PLA`).
+* **03. Çözüm (Nasıl?):** Taşıyıcı mimari kolonların (keystone) izolasyonu ve Murphy süzgeci.
+* **04. Sözleşme (DoF = 0):** `SPEC.md`, ikili kabul kriterleri (Boolean DoD) ve kilitli arayüzler.
+* **05. Ürün (Artefakt):** Cerrahi kod/metin üretimi, mekanik delil ispatı ve teslimat.
 
-#### C. Central Control Cockpit Manifest (`.norm`)
+### DİKEY AUP FAZLARI
+
+* **Inception:** Problem şartnamesini kilitler (Kod: Sıfır).
+* **Elaboration:** Mimari çözümü ve kritik darboğaz sondajını (Spike/POC) kilitler.
+* **Construction:** Sözleşmeden DoF=0 kod ve mekanik test üretir.
+* **Transition:** Ürünü ilk Hikaye ile çarpıştırır, sapma sıfırsa teslim eder ve emsal içtihatları kaydeder.
+
+### DİKEY GERİ YAYILIM VE RÜMİNASYON FRENİ
+
+* **Dikey Geri Yayılım (Cascading Backpropagation):** 05/Müşteri aşamasında kök bir çelişki belirdiğinde yerel yama yapılmaz; ret dalgası geriye yayılarak (05 -> 01) hatalı şartnameyi budar ve yeni duruşma açar.
+* **Rüminasyon Freni:** Bir arayüzdeki çekişme en fazla 3 tur sürebilir (`MAX_LOCAL_CYCLES = 3`). 3. turda uzlaşılamazsa sistem yürütmeyi dondurur (`fail-closed`) ve karar Biyolojik Mimara eskale edilir.
+
+---
+
+## 3. DOWNSTREAM BENİMSEME VE .norm MANİFESTOSU
+
+İstemci projeler ACME'yi harici normatif otorite olarak kök dizindeki tekil `.norm` manifestosuyla bağlar:
+
 ```json
 {
-  "workspace_role": "control_center",
-  "extends": "https://github.com/acme-foundation/acme.git#v3.1.0",
-  "subprojects": [
-    {
-      "path": "services/identity-provider",
-      "repo": "https://github.com/org/identity-provider.git",
-      "type": "brownfield"
-    },
-    {
-      "path": "apps/web-client",
-      "repo": "https://github.com/org/web-client.git",
-      "type": "greenfield"
-    }
-  ],
+  "project_name": "client-core",
+  "extends": "https://github.com/acme-foundation/acme.git#v3.2.0",
+  "mode": "normative_reference",
   "corporate_invariants": [
-    "Subproject Isolation: Pull requests cannot mutate multiple service boundaries simultaneously",
-    "Unified Diagnostics: All service anomalies must emit standardized telemetric signatures"
+    "Zero binary dependencies: Compile locally from verified source",
+    "Boolean DoD: Every task requires deterministic PASS/FAIL assertions",
+    "Bi-directional Gate-Keeper: Reject unmeasured queries at ingress"
   ]
 }
 ```
 
 ---
 
-## Repository Topology
-* `CONSTITUTION.md`: The 21 immutable invariants governing zero-drift specification.
-* `faculty/`: Foundational theory curriculum (`SYS`, `PHI`, `LAW`).
-* `workflows/`: Evolutionary Agent-Based Unified Process (E-AUP) suite (`00_meta_workflow.md`, `WF_001_INCEPTION_TO_SPEC.md` / `WF_001_SPECTRAL_TRIAGE.md`, `WF_002_ADVERSARIAL_INCUBATION_AND_DIALECTIC.md`, `WF_003_ADJUDICATION_AND_EXECUTION_GATE.md`, `WF_004_STATUTORY_ADJUDICATION_AND_REASONING.md`).
-* `theses/`: Ratified architectural contracts.
-* `verify.py`: Mechanical, zero-dependency CI gatekeeper enforcing zero-code purity and SemVer discipline (12 verification gates).
-* `scripts/decontaminator.py`: Pre-commit decontamination shield enforcing zero absolute local paths and zero credential leaks.
-* `templates/scaffolds/`: Downstream project scaffolding and formal field forms (`mode: consultancy_hub`, Form 01/02/03).
+## 4. İCRA VE DOĞRULAMA KISITLARI
 
----
-
-## Verification & Constraints
-```bash
-python verify.py --verify-all
-```
-
-* Minor version bumps strictly require the `[RELEASE]` token in the commit message.
-* Arbitrary code execution or secondary tooling scripts inside core are prohibited.
-* Specifications must evaluate to binary PASS/FAIL criteria (DoF = 0).
+* **Tek Dosya Değişmezi:** ACME Core deposunda `README.md` ve `.git` dışında hiçbir dosya veya dizin bulunamaz (`DoF = 0`).
+* **Saf Doğal Dil Doktrini:** Çekirdekte çalıştırılabilir betik veya ikili dosya barınamaz; tüm kurallar biçimsel doğal dil ve mantık sözleşmesi olarak işletilir.
+* **SemVer Cadence Kilidi:** Sürüm artışları yalnızca Biyolojik Mimarın doğrudan onayı ve `[RELEASE]` belirteciyle mühürlenir.
