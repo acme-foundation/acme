@@ -1,6 +1,6 @@
-# NORM-STREAM-QUARANTINE: BAYT-HASSAS İKİLİ KARANTİNA PROTOKOLÜ
-- **Kapsam:** Veri İşleme ve Giriş Hatları (Domain / Ingestion)
-- **Dayanak:** RFC-001
+# NORM-ING-001: BAYT-HASSAS İKİLİ KARANTİNA PROTOKOLÜ (STREAM QUARANTINE)
+- **Kapsam:** Veri Giriş Hatları (Domain / Ingestion / ING)
+- **Dayanak:** RFC-001 / Precedent-ING-001
 - **DoF:** 0
 - **Kural:**
   1. Akış sırasında bozuk, eksik veya çözümlenemeyen her satır 'quarantine.jsonl' dosyasına tecrit edilir.

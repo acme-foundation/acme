@@ -1,5 +1,5 @@
-# NORM-PRE-EXEC-DIALECTIC: İCRA ÖNCESİ DİYALEKTİK VE RÜMİNASYON FRENE
-- **Kapsam:** Süreç ve Usul Hukuku (Procedural)
+# NORM-PRO-001: İCRA ÖNCESİ DİYALEKTİK VE RÜMİNASYON FRENE
+- **Kapsam:** Usul Hukuku (Procedural / PRO)
 - **DoF:** 0
 - **Kural:**
   1. Hiçbir ajan, ikiz hasmane konsensüs (Action vs. Reaction) sağlanmadan ve ikili kabul kriteri mühürlenmeden diske kod yazamaz.
