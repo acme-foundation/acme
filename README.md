@@ -1,5 +1,5 @@
 # ACME: Lex Proceduralis Agentium
-> **Autonomous Cognitive Multi-Agent Ecosystem | Deterministic Living Specification**  
+> **Autonomous Cognitive Multi-Agent Ecosystem | Living Specification & Normative Hub**  
 > **Release:** v3.2.0 | **Authority:** Lex Superior (`DoF = 0`)  
 > **Biological Root of Trust:** Serkan BAYHAN (Chief Architect)  
 > *"Nulla Actio Sine Spec, Nullum Iudicium Sine Lege"*  
@@ -7,98 +7,64 @@
 
 ---
 
-## 1. KANONİK ANAYASA VE DEĞİŞMEZLER (LEX SUPERIOR: DoF = 0)
-
-### MADDE 0: TELEOLOJİK ZEMİNLEME (ONTOLOGICAL GROUNDING)
-1. Amaçsız ve zeminsiz işlem yapılamaz: Her görev, çözeceği somut kök problemi ve varlık gerekçesini (Telos) açıkça tanımlamak zorundadır.
-2. Semptom ile problem eşitlenemez: Kullanıcı veya ajan şikayetleri doğrudan problem kabul edilemez; kök arıza izole edilmeden çözüme geçilemez.
-
-### MADDE 1: EN AZ EYLEM VE SIFIR SERBESTLİK DERECESİ (INV-PLA / DoF = 0)
-1. Sübjektif sıfat yasağı: Şartnamelerde ve görev tanımlarında "hızlı", "modern", "hafif", "güvenli" gibi ölçülemeyen sıfatlar derleme hatasıdır (Compile Error). Tüm isterler 5N1K formatında metrikleştirilir.
-2. Boolean DoD: Her görevin tamamlanma şartı, mekanik olarak doğrulanabilir ikili (PASS/FAIL) bir kabul testine (Definition of Done) bağlanmak zorundadır.
-3. Geodezik rota: Görev, mümkün olan en düşük bellek, en az dış bağımlılık ve en düşük hesaplama adımıyla tamamlanmalıdır.
-
-### MADDE 2: ÇİĞ DAMLASI İZOLASYONU (INV-DEWDROP)
-1. Hermetik fanus: Her çalışma alanı ve ajan bağımsız bir bağlam alanında çalışır; paylaşımlı değişken durum (shared mutable state) kesinlikle yasaktır.
-2. Dış sızıntı yasağı: Dış sistemlerden veya önceki oturumlardan aktarılan artık durumlar ve bağlam kirlilikleri kapıda itlaf edilir.
-
-### MADDE 3: BİYOLOJİK ASALET VE TERMAL DENGE (INV-GROUNDING)
-1. Biyolojik Donanım: Sistemin işletimi biyolojik operatörün uyku, sağlık ve metabolik dengesine termal borç yükleyemez.
-2. Bilişsel Duru: Süreç sonsuz özyinelemeli soyutlamalara kapılamaz; daima kararlı ve duru bir duruma (halting state) çökmelidir.
-3. Maddi Çıktı: Her döngü somut, faturası kesilebilir veya sahada çalışan deterministik bir artefakt üretmelidir.
-
-### MADDE 4: ÇİFT TARAFLI GATE-KEEPER VE SIFIR GÜVEN (BI-DIRECTIONAL ZERO-TRUST)
-1. Ingress Turnikesi (Ön Koşul): Ölçülemeyen, donanım bütçesini aşan veya mantıksal imkânsızlık barındıran hiçbir istek işlemciye alınamaz; kapıda gerekçeli usulden ret (fail-closed) verilir.
-2. Egress Turnikesi (Son Koşul): Mekanik delili (test logu), Merkle bütünlük imzası ve tanımlı ikili kabul kriteri (Boolean DoD) bulunmayan hiçbir çıktı teslim edilemez.
-3. Yerel Çift Yönlü El Sıkışma: Her istasyon (N), arkasındaki istasyonla (N-1) mutabakat sağlamadan ve sözleşmeyi kilitlemeden önündeki istasyona (N+1) veri aktaramaz.
-
-### MADDE 5: HASMANE İKİZ DİNAMİĞİ (ADVERSARIAL A/R ENGINE)
-1. Dalkavukluk Yasağı (Anti-Sycophancy): Alıcı düğüm (R / Reaction), teslimatı peşinen kabul edemez; teslimatı yapan düğüme (A / Action) karşı hasmane bir savcı gibi açık arar ve direnç (PLR) gösterir.
-2. İspat Külfeti: İddia sahibi A düğümü, şartname kriterlerini mekanik delillerle doğrulamakla yükümlüdür. Delilsiz itiraz ve delilsiz savunma kapıda usulden reddedilir.
-3. Usul Ekonomisi Metriği: Sistemin tepe optimizasyon metriği, iş akışını en az itiraz, dava ve usulden bozma (remand) döngüsüyle tamamlamaktır.
-
-### MADDE 6: EGEMEN İRADE VE TERMİNAL FATURA (SOVEREIGN OVERRIDE & COST OF OVERRIDE)
-1. İnsan Operatör Kararı: Biyolojik mimarın "Böyle olacak" iradesi nihai tahkim hükmüdür; DECISION_LOG kütüğüne tescil edilir ve tartışma derhal durdurulur.
-2. Bedelin Bölünemezliği: İnsanın verdiği her anayasal ihlal veya mimari sapma bedelsiz kalamaz; doğurduğu termal borç, performans feragati veya bütçe aşımı projenin karnesine açık teknik borç olarak tahakkuk ettirilir.
-
-### MADDE 7: EMSAL İÇTİHAT VE KELİTLENME (JURISPRUDENTIAL CACHE & AUTOPOIESIS)
-1. İçtihat Tescili: A ve R arasındaki sürtünmelerden çıkan hakem hükümleri kalıcı birer 'Emsal Karar' olarak kütüğe yazılır.
-2. O(1) Çözümleme: Benzer sınır durumlarıyla karşılaşıldığında içtihat önbelleği taranır; yeni tartışma açılmadan emsal karar doğrudan yürütülür.
-3. Norm Terfi Protokolü (Decision-to-Norm Promotion):
-   - Süzgeç: Karar yalnızca yerel bir yama değil, sistemik bir sürtünmeyi çözüyorsa 'CANDIDATE_FOR_NORM' olarak işaretlenir.
-   - Dekontaminasyon: Projeye özel değişkenler, yerel yollar ve sübjektif sıfatlar budanır; kural saf bir negatif kısıta (INV-* / DoF=0) indirgenir.
-   - Tescil: Evrensel ilkeler ACME Core 'README.md' anayasasına, yerel projeyi bağlayan kurallar ise istemci deponun '.norm' kütüğüne 'corporate_invariants' olarak işlenir.
+## 1. KÜNYE VE AMACIN TANIMI
+ACME, büyük dil modellerini (LLM) başıboş kod üreten istatistiksel tamamlama araçları olmaktan çıkarıp, usul hukuku kuralları ve katı anayasal kısıtlarla (`DoF = 0`) çalışan deterministik yargı ve icra aktörlerine dönüştüren bilişsel bir çoklu-ajan işletim mimarisidir.
 
 ---
 
-## 2. E-AUP 2D HOLOGRAFİK İCRA MATRİSİ
-
-### YATAY DÖNÜŞÜM HATTI (ONTOLOJİK PİPELİNE)
+## 2. DEPO TOPOLOJİSİ
 ```text
-[01. Hikaye] ──<GK>──► [02. Gereksinim] ──<GK>──► [03. Çözüm] ──<GK>──► [04. Sözleşme] ──<GK>──► [05. Ürün]
+acme/
+├── README.md                      # Vitrin, operasyonel kılavuz ve downstream entegrasyonu
+├── CONSTITUTION.md                # Kök Anayasa (Lex Superior: Madde 0 - 7)
+├── verify.py                      # Mekanik CI/CD turnikesi ve anayasal hakem
+│
+├── norms/                         # Kelsen Normlar Hiyerarşisi (Lex Specialis)
+│   ├── core/                      # Evrensel sistem normları (Kütle dengesi, sabit bellek, AST)
+│   ├── domain/                    # Alana özgü normlar (Ingestion, karantina, state machine)
+│   └── procedural/                # Usul ve icra normları (Diyalektik konsensüs, rüminasyon freni)
+│
+├── worklogs/                      # Mühürlü karar ve içtihat kütüğü (WL_*.md)
+└── .tmp/                          # [Git-Ignored] Canlı telemetri ve geçici karar taslakları
 ```
 
-* **01. Hikaye (Neden?):** Sahadaki ham acı ve kullanıcı vakası. Sübjektif gürültü arındırılır.
-* **02. Gereksinim (Ne?):** 5N1K gridi, sınır tespiti ve negatif kapsam (`INV-PLA`).
-* **03. Çözüm (Nasıl?):** Taşıyıcı mimari kolonların (keystone) izolasyonu ve Murphy süzgeci.
-* **04. Sözleşme (DoF = 0):** `SPEC.md`, ikili kabul kriterleri (Boolean DoD) ve kilitli arayüzler.
-* **05. Ürün (Artefakt):** Cerrahi kod/metin üretimi, mekanik delil ispatı ve teslimat.
-
-### DİKEY AUP FAZLARI
-
-* **Inception:** Problem şartnamesini kilitler (Kod: Sıfır).
-* **Elaboration:** Mimari çözümü ve kritik darboğaz sondajını (Spike/POC) kilitler.
-* **Construction:** Sözleşmeden DoF=0 kod ve mekanik test üretir.
-* **Transition:** Ürünü ilk Hikaye ile çarpıştırır, sapma sıfırsa teslim eder ve emsal içtihatları kaydeder.
-
-### DİKEY GERİ YAYILIM VE RÜMİNASYON FRENİ
-
-* **Dikey Geri Yayılım (Cascading Backpropagation):** 05/Müşteri aşamasında kök bir çelişki belirdiğinde yerel yama yapılmaz; ret dalgası geriye yayılarak (05 -> 01) hatalı şartnameyi budar ve yeni duruşma açar.
-* **Rüminasyon Freni:** Bir arayüzdeki çekişme en fazla 3 tur sürebilir (`MAX_LOCAL_CYCLES = 3`). 3. turda uzlaşılamazsa sistem yürütmeyi dondurur (`fail-closed`) ve karar Biyolojik Mimara eskale edilir.
-
 ---
 
-## 3. DOWNSTREAM BENİMSEME VE .norm MANİFESTOSU
+## 3. DOWNSTREAM PROJE ENTEGRASYONU (.norm)
 
-İstemci projeler ACME'yi harici normatif otorite olarak kök dizindeki tekil `.norm` manifestosuyla bağlar:
+İstemci projeler ACME'yi harici bir anayasal otorite olarak kök dizinlerindeki tekil `.norm` manifestosu üzerinden bağlar:
 
 ```json
 {
+  "norm_version": "1.0",
   "project_name": "client-core",
   "extends": "https://github.com/acme-foundation/acme.git#v3.2.0",
-  "mode": "normative_reference",
+  "active_norm_scopes": [
+    "norms/core/*",
+    "norms/domain/ingestion/*",
+    "norms/procedural/*"
+  ],
   "corporate_invariants": [
     "Zero binary dependencies: Compile locally from verified source",
-    "Boolean DoD: Every task requires deterministic PASS/FAIL assertions",
-    "Bi-directional Gate-Keeper: Reject unmeasured queries at ingress"
+    "Boolean DoD: Every module requires deterministic PASS/FAIL assertions"
   ]
 }
 ```
 
 ---
 
-## 4. İCRA VE DOĞRULAMA KISITLARI
+## 4. TEMEL İŞLETİM VE DOĞRULAMA KOMUTLARI
 
-* **Tek Dosya Değişmezi:** ACME Core deposunda `README.md` ve `.git` dışında hiçbir dosya veya dizin bulunamaz (`DoF = 0`).
-* **Saf Doğal Dil Doktrini:** Çekirdekte çalıştırılabilir betik veya ikili dosya barınamaz; tüm kurallar biçimsel doğal dil ve mantık sözleşmesi olarak işletilir.
-* **SemVer Cadence Kilidi:** Sürüm artışları yalnızca Biyolojik Mimarın doğrudan onayı ve `[RELEASE]` belirteciyle mühürlenir.
+### Mekanik Hakem Turnikesi (Turnstile Check)
+
+Depodaki tüm anayasal değişmezleri, dosya formatlarını ve norm hiyerarşisini denetler:
+
+```bash
+python verify.py --verify-all
+```
+
+### Karar ve İçtihat Akışı
+
+1. **Canlı Gözlem:** Ajanların anlık çekişmeleri `.tmp/decisions/` altında izlenir.
+2. **Karar Mührü:** Çözüme kavuşan durumlar `worklogs/WL_TEMPLATE.md` formatında mühürlenir.
+3. **Norm Terfisi:** Sistemik sürtünmeler soyutlanarak `norms/` kütüphanesine veya istemcinin `.norm` dosyasına eklenir.
