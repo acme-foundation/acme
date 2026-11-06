@@ -1,9 +1,9 @@
 # ACME: Lex Proceduralis Agentium
-### Release v3.1.0 | Statutory Adjudication, Jurisprudential Caching & Pure Procedural Engine
+### Release v3.2.0 | Statutory Adjudication, Jurisprudential Caching & Pure Procedural Engine
 > *"Nulla Actio Sine Spec, Nullum Iudicium Sine Lege"*  
 > *(No execution without specification, no judgment without statutory law.)*
 
-**Version:** `v3.1.0`  
+**Version:** `v3.2.0`  
 **Standard:** Deterministic Specification, Jurisprudential Precedent Caching & Procedural Adjudication (`DoF = 0`)  
 **Gatekeeper:** `verify.py` (Zero-dependency stdlib)
 
