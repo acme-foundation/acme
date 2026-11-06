@@ -44,6 +44,10 @@
 ### MADDE 7: EMSAL İÇTİHAT VE KELİTLENME (JURISPRUDENTIAL CACHE & AUTOPOIESIS)
 1. İçtihat Tescili: A ve R arasındaki sürtünmelerden çıkan hakem hükümleri kalıcı birer 'Emsal Karar' olarak kütüğe yazılır.
 2. O(1) Çözümleme: Benzer sınır durumlarıyla karşılaşıldığında içtihat önbelleği taranır; yeni tartışma açılmadan emsal karar doğrudan yürütülür.
+3. Norm Terfi Protokolü (Decision-to-Norm Promotion):
+   - Süzgeç: Karar yalnızca yerel bir yama değil, sistemik bir sürtünmeyi çözüyorsa 'CANDIDATE_FOR_NORM' olarak işaretlenir.
+   - Dekontaminasyon: Projeye özel değişkenler, yerel yollar ve sübjektif sıfatlar budanır; kural saf bir negatif kısıta (INV-* / DoF=0) indirgenir.
+   - Tescil: Evrensel ilkeler ACME Core 'README.md' anayasasına, yerel projeyi bağlayan kurallar ise istemci deponun '.norm' kütüğüne 'corporate_invariants' olarak işlenir.
 
 ---
 

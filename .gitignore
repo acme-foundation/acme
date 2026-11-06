@@ -1,0 +1,4 @@
+# Ephemeral runtime and trace files
+.tmp/
+*.tmp
+*.log
