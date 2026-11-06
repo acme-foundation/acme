@@ -45,3 +45,4 @@
 3. Norm Terfi Süzgeci:
    - Yerel Çözüm: Karar sadece münferit bir projeyi bağlıyorsa istemci deponun '.norm' dosyasına 'local_invariants' olarak işlenir.
    - Evrensel Kural: Karar sistemik bir açığı kapatıyorsa dekontamine edilir (bağımsızlaştırılır) ve ACME Core altındaki 'norms/' külliyatına yeni bir norm olarak tescil edilir.
+

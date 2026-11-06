@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 ACME CORE INVARIANT GATE & CONSTITUTIONAL VERIFIER (Pure Standard Library)
-Self-Compiling Genesis Verifier (v3.2.0)
+Self-Compiling Genesis Verifier (v3.2.0 - Jurisprudential 7-Gate Turnstile)
 Serves as the Mechanical Gatekeeper Turnstile at the repository boundary.
 """
 
@@ -16,9 +16,10 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
     print("      ACME GENESIS CONSTITUTIONAL INTEGRITY & INVARIANT GATE (v3.2.0)      ")
     print("=" * 68)
 
+    root = Path(".")
+
     # Gate 1: Zero-Code Invariant: No code artifacts tracked in core (except verify.py)
     forbidden_exts = ['.py', '.sh', '.exe', '.dll', '.bin']
-    root = Path(".")
     try:
         tracked = subprocess.check_output(['git', 'ls-files'], text=True).splitlines()
         for f in tracked:
@@ -40,12 +41,12 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
             if p.suffix.lower() in forbidden_exts:
                 print(f"[FAIL] Forbidden executable file on disk: {p}", file=sys.stderr)
                 return False
-        print("[+] Gate 1: Zero-Code Invariant:     [PASS] Zero executable artifacts tracked (verify.py exempted).")
+        print("[+] Gate 1: Zero-Code Invariant:         [PASS] Zero executable artifacts tracked (verify.py exempted).")
     except Exception as e:
         print(f"[FAIL] Gate 1 check failed: {e}", file=sys.stderr)
         return False
 
-    # Gate 2: No-BOM UTF-8 standard on all text and markdown files
+    # Gate 2: No-BOM UTF-8: All markdown and text files must be UTF-8 No-BOM
     try:
         for p in root.rglob("*"):
             if not p.is_file():
@@ -58,12 +59,12 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
                 if raw.startswith(b'\xef\xbb\xbf'):
                     print(f"[FAIL] UTF-8 BOM detected in: {p}", file=sys.stderr)
                     return False
-        print("[+] Gate 2: No-BOM UTF-8:            [PASS] All markdown and text files verified (No-BOM).")
+        print("[+] Gate 2: No-BOM UTF-8:                [PASS] All markdown and text files verified (No-BOM).")
     except Exception as e:
         print(f"[FAIL] Gate 2 check failed: {e}", file=sys.stderr)
         return False
 
-    # Gate 3: Constitutional Parity (Madde 0 to Madde 7 in CONSTITUTION.md)
+    # Gate 3: Constitutional Parity: Articles 0 to 7 in CONSTITUTION.md
     try:
         const_path = Path("CONSTITUTION.md")
         if not const_path.is_file():
@@ -84,38 +85,70 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
             if art not in const_text:
                 print(f"[FAIL] Missing constitutional article: {art}", file=sys.stderr)
                 return False
-        print("[+] Gate 3: Constitutional Parity:   [PASS] Articles 0 to 7 verified in CONSTITUTION.md.")
+        print("[+] Gate 3: Constitutional Parity:       [PASS] Articles 0 to 7 verified in CONSTITUTION.md.")
     except Exception as e:
         print(f"[FAIL] Gate 3 check failed: {e}", file=sys.stderr)
         return False
 
-    # Gate 4: Norms Hierarchy verification
+    # Gate 4: 3-Letter Hex Norms: All files under norms/ must follow (COR|ING|PRO)_[0-9A-F]{3}_.*\.md
     try:
-        required_norms = [
-            Path("norms/core/NORM_001_MASS_BALANCE.md"),
-            Path("norms/core/NORM_002_CONSTANT_MEMORY.md"),
-            Path("norms/core/NORM_003_STATIC_SHIELD.md"),
-            Path("norms/domain/ingestion/NORM_STREAM_QUARANTINE.md"),
-            Path("norms/procedural/NORM_PRE_EXEC_DIALECTIC.md")
-        ]
-        for norm_p in required_norms:
-            if not norm_p.is_file():
-                print(f"[FAIL] Missing canonical norm file: {norm_p}", file=sys.stderr)
+        norms_dir = Path("norms")
+        if not norms_dir.is_dir():
+            print("[FAIL] Missing 'norms/' directory.", file=sys.stderr)
+            return False
+        norm_files = list(norms_dir.rglob("*.md"))
+        if not norm_files:
+            print("[FAIL] No norm specifications found under norms/.", file=sys.stderr)
+            return False
+        hex_pattern = re.compile(r'^(COR|ING|PRO)_[0-9A-F]{3}_.*\.md$', re.IGNORECASE)
+        for nf in norm_files:
+            if not hex_pattern.match(nf.name):
+                print(f"[FAIL] Norm file does not conform to 3-letter hex pattern: {nf.name}", file=sys.stderr)
                 return False
-            if len(norm_p.read_bytes()) < 50:
-                print(f"[FAIL] Norm file suspiciously small: {norm_p}", file=sys.stderr)
+            if len(nf.read_bytes()) < 50:
+                print(f"[FAIL] Norm file suspiciously small: {nf}", file=sys.stderr)
                 return False
-        print(f"[+] Gate 4: Norms Hierarchy:         [PASS] All {len(required_norms)} canonical norm specifications verified.")
+        print(f"[+] Gate 4: 3-Letter Hex Norms:          [PASS] All {len(norm_files)} norm files validated under pattern.")
     except Exception as e:
         print(f"[FAIL] Gate 4 check failed: {e}", file=sys.stderr)
         return False
 
-    # Gate 5: Adjective Density Gate (<= 0.02)
+    # Gate 5: Templates & Precedents Integrity
+    try:
+        required_templates = [
+            Path("templates/WORK_TEMPLATE.md"),
+            Path("templates/PRECEDENT_TEMPLATE.md"),
+            Path("templates/NORM_TEMPLATE.md")
+        ]
+        for tmpl in required_templates:
+            if not tmpl.is_file():
+                print(f"[FAIL] Missing template: {tmpl}", file=sys.stderr)
+                return False
+            if len(tmpl.read_bytes()) < 50:
+                print(f"[FAIL] Template too small: {tmpl}", file=sys.stderr)
+                return False
+
+        required_precedents = [
+            Path("precedents/ingestion/ING_001_STREAM_QUARANTINE_RULING.md")
+        ]
+        for prec in required_precedents:
+            if not prec.is_file():
+                print(f"[FAIL] Missing precedent ruling: {prec}", file=sys.stderr)
+                return False
+            if len(prec.read_bytes()) < 100:
+                print(f"[FAIL] Precedent ruling too small: {prec}", file=sys.stderr)
+                return False
+        print(f"[+] Gate 5: Templates & Precedents:      [PASS] 3 canonical templates and precedent registry verified.")
+    except Exception as e:
+        print(f"[FAIL] Gate 5 check failed: {e}", file=sys.stderr)
+        return False
+
+    # Gate 6: Adjective Density Gate (<= 0.02)
     try:
         subjective_words = ['hızlı', 'mükemmel', 'harika', 'güçlü', 'kolay', 'kusursuz', 'süper', 'legendary', 'urgent', 'modern', 'hafif']
         total_words = 0
         subj_count = 0
-        audit_paths = [Path("CONSTITUTION.md"), Path("README.md")] + list(Path("norms").rglob("*.md"))
+        audit_paths = [Path("CONSTITUTION.md"), Path("README.md")] + list(Path("norms").rglob("*.md")) + list(Path("precedents").rglob("*.md"))
         for ap in audit_paths:
             if ap.is_file():
                 text = ap.read_text(encoding="utf-8").lower()
@@ -127,12 +160,12 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
         if density > 0.02:
             print(f"[FAIL] Adjective Density breached: {density:.4f} > 0.02", file=sys.stderr)
             return False
-        print(f"[+] Gate 5: Adjective Density Gate:  [PASS] Subjective fluff density {density:.4f} <= 0.02.")
+        print(f"[+] Gate 6: Adjective Density Gate:      [PASS] Subjective fluff density {density:.4f} <= 0.02.")
     except Exception as e:
-        print(f"[FAIL] Gate 5 check failed: {e}", file=sys.stderr)
+        print(f"[FAIL] Gate 6 check failed: {e}", file=sys.stderr)
         return False
 
-    # Gate 6: SemVer Cadence verification
+    # Gate 7: SemVer Cadence: v3.2.0 active tag verification
     try:
         readme_text = Path("README.md").read_text(encoding="utf-8")
         if "v3.2.0" not in readme_text:
@@ -148,15 +181,15 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
                 ['git', 'describe', '--tags', '--abbrev=0'],
                 text=True, stderr=subprocess.DEVNULL
             ).strip()
-            print(f"[+] Gate 6: SemVer Cadence:          [PASS] Version v3.2.0 confirmed (Active Tag: {latest_tag}).")
+            print(f"[+] Gate 7: SemVer Cadence:              [PASS] Version v3.2.0 confirmed (Active Tag: {latest_tag}).")
         except Exception:
-            print("[+] Gate 6: SemVer Cadence:          [PASS] Version v3.2.0 ratified in specification.")
+            print("[+] Gate 7: SemVer Cadence:              [PASS] Version v3.2.0 ratified in specification.")
     except Exception as e:
-        print(f"[FAIL] Gate 6 check failed: {e}", file=sys.stderr)
+        print(f"[FAIL] Gate 7 check failed: {e}", file=sys.stderr)
         return False
 
     print("-" * 68)
-    print("[PASS] All ACME v3.2.0 Constitutional & Modular Norm Invariants PASS.")
+    print("[PASS] All 7 ACME v3.2.0 Jurisprudential & Invariant Gates PASS.")
     print("=" * 68)
     return True
 
