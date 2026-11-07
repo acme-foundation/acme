@@ -15,21 +15,19 @@ ACME transforms large language models (LLMs) from unanchored probabilistic token
 ```text
 acme/
 ├── README.md                      # Operational storefront, routing protocols, and downstream dispatch
-├── CONSTITUTION.md                # Root Invariants & System Protocols (Articles 0 - 13)
-├── verify.py                      # Mechanical CI/CD gatekeeper turnstile (10 Gates)
+├── CONSTITUTION.md                # Root Invariants & System Protocols (Articles 0 - 14)
+├── verify.py                      # Mechanical CI/CD gatekeeper turnstile (12 Gates)
 │
 ├── cases/                         # Active execution ledgers and arbitration tickets
-│   └── CAS_{hex3}_{slug}.md      # Bounded mutation scope and invariant linkage
+│   └── CAS_{hex3}_{slug}.md      # Bounded mutation scope and invariant linkage (Flat topology)
 │
 ├── templates/                     # Official Document Templates
 │   ├── CAS_TEMPLATE.md           # Anomaly triage and conflict analysis template
-│   ├── PRECEDENT_TEMPLATE.md      # Ground truth precedent record template
+│   ├── PRE_TEMPLATE.md           # Ground truth precedent record template
 │   └── NORM_TEMPLATE.md           # Statutory norm codification template
 │
 ├── precedents/                    # Ratified Precedent Registry (O(1) Precedent Cache)
-│   ├── core/                      # COR_{hex3}_*.md (Systemic constitutional precedents)
-│   ├── ingestion/                 # ING_{hex3}_*.md (Stream and input pipeline rulings)
-│   └── procedural/                # PRO_{hex3}_*.md (Due process and arbitration records)
+│   └── PRE_{hex3}_{slug}.md      # Canonical ecosystem rulings and evidentiary anchors
 │
 ├── norms/                         # Statutory Positive Law Registry (3-Letter Hex Norms)
 │   ├── core/                      # COR_{hex3}_*.md (COR_001, COR_002, COR_003)

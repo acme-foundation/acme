@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 """
 ACME CORE INVARIANT GATE & CONSTITUTIONAL VERIFIER (Pure Standard Library)
-Self-Compiling Genesis Verifier (v3.2.0 - Systems Architecture 10-Gate Turnstile)
+Self-Compiling Genesis Verifier (v3.2.0 - Systems Architecture 12-Gate Turnstile)
 Serves as the Mechanical Gatekeeper Turnstile at the repository boundary.
 Codifies Canonical Interlingua Invariant (INV-CANONICAL-INTERLINGUA / DoF = 0).
 Codifies Mandatory Execution Registry (INV-MANDATORY-CASE-BINDING / DoF = 0).
 Codifies Canonical Identifier Standard (INV-CANONICAL-IDENTIFIER / DoF = 0).
 Codifies Pipeline Topology & Migration Invariant (INV-PIPELINE-MIGRATION / DoF = 0).
+Codifies Flat Case Registry & Precedent Lineage (INV-FLAT-REGISTRY / INV-PRECEDENT-PROMOTION / DoF = 0).
 """
 
 import os
@@ -151,7 +152,7 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
         print(f"[FAIL] Gate 2 check failed: {e}", file=sys.stderr)
         return False
 
-    # Gate 3: Constitutional Parity: Articles 0 to 13 in CONSTITUTION.md
+    # Gate 3: Constitutional Parity: Articles 0 to 14 in CONSTITUTION.md
     try:
         const_path = Path("CONSTITUTION.md")
         if not const_path.is_file():
@@ -172,13 +173,14 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
             "ARTICLE 10: ZERO-RHETORIC & OPERATIONAL SPECIFICATION",
             "ARTICLE 11: MANDATORY EXECUTION REGISTRY",
             "ARTICLE 12: CANONICAL NAMING & LEXICAL TRACEABILITY",
-            "ARTICLE 13: PIPELINE TOPOLOGY & AUTOMATED MIGRATION"
+            "ARTICLE 13: PIPELINE TOPOLOGY & AUTOMATED MIGRATION",
+            "ARTICLE 14: CASE TOPOLOGY, LOCAL SCOPING & PRECEDENT PROMOTION"
         ]
         for art in required_articles:
             if art not in const_text:
                 print(f"[FAIL] Missing constitutional article: {art}", file=sys.stderr)
                 return False
-        print("[+] Gate 3: Constitutional Parity:       [PASS] Articles 0 to 13 ratified in CONSTITUTION.md.")
+        print("[+] Gate 3: Constitutional Parity:       [PASS] Articles 0 to 14 ratified in CONSTITUTION.md.")
     except Exception as e:
         print(f"[FAIL] Gate 3 check failed: {e}", file=sys.stderr)
         return False
@@ -210,7 +212,7 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
     try:
         required_templates = [
             Path("templates/CAS_TEMPLATE.md"),
-            Path("templates/PRECEDENT_TEMPLATE.md"),
+            Path("templates/PRE_TEMPLATE.md"),
             Path("templates/NORM_TEMPLATE.md")
         ]
         for tmpl in required_templates:
@@ -222,7 +224,7 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
                 return False
 
         required_precedents = [
-            Path("precedents/ingestion/ING_001_STREAM_QUARANTINE_RULING.md")
+            Path("precedents/PRE_001_stream_quarantine.md")
         ]
         for prec in required_precedents:
             if not prec.is_file():
@@ -471,8 +473,74 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
         print(f"[FAIL] Gate 10 check failed: {e}", file=sys.stderr)
         return False
 
+    # Gate 11: Flat Case Registry (INV-FLAT-REGISTRY-01)
+    try:
+        cases_dir = Path("cases")
+        if not cases_dir.is_dir():
+            print("[FAIL] Missing 'cases/' directory.", file=sys.stderr)
+            return False
+        subdirs = [p for p in cases_dir.iterdir() if p.is_dir()]
+        if subdirs:
+            print(f"[FAIL] Gate 11 (INV-FLAT-REGISTRY-01): Nested case directory detected: {subdirs[0].as_posix()}", file=sys.stderr)
+            return False
+        case_files = list(cases_dir.glob("*.md"))
+        print(f"[+] Gate 11: Flat Case Registry:         [PASS] Flat topology verified under cases/ ({len(case_files)} case(s), zero subdirectories).")
+    except Exception as e:
+        print(f"[FAIL] Gate 11 check failed: {e}", file=sys.stderr)
+        return False
+
+    # Gate 12: Precedent Format Integrity (INV-PRECEDENT-PROMOTION-03)
+    try:
+        precedents_dir = Path("precedents")
+        if not precedents_dir.is_dir():
+            print("[FAIL] Missing 'precedents/' directory.", file=sys.stderr)
+            return False
+
+        pre_filename_pattern = re.compile(r'^PRE_[0-9A-Fa-f]{3}_[a-z0-9_]+\.md$')
+        pre_files = list(precedents_dir.rglob("*.md"))
+        if not pre_files:
+            print("[FAIL] No precedent files found under 'precedents/'.", file=sys.stderr)
+            return False
+
+        required_schema_markers = [
+            "Ratified Invariant:",
+            "Originating Workspace:",
+            "Source Case Ref:",
+            "Merkle Anchor:",
+            "Status: RATIFIED_CANONICAL",
+            "## 1. ANOMALY & CONTEXT",
+            "## 2. RATIFIED RULE (THE RULING)",
+            "## 3. VERIFICATION ASSERTION"
+        ]
+
+        for pf in pre_files:
+            if not pre_filename_pattern.match(pf.name):
+                print(f"[FAIL] Gate 12: Precedent file violates naming pattern ^PRE_[0-9A-F]{{3}}_[a-z0-9_]+\\.md$: {pf.name}", file=sys.stderr)
+                return False
+
+            content = pf.read_text(encoding="utf-8")
+            lines = [l.strip() for l in content.splitlines() if l.strip()]
+            if not lines:
+                print(f"[FAIL] Gate 12: Empty precedent file: {pf}", file=sys.stderr)
+                return False
+
+            first_line = lines[0]
+            if not re.match(r'^#\s*PRECEDENT:\s*PRE_[0-9A-Fa-f]{3}_', first_line):
+                print(f"[FAIL] Gate 12: Invalid precedent title in {pf}: '{first_line}'", file=sys.stderr)
+                return False
+
+            for marker in required_schema_markers:
+                if marker not in content:
+                    print(f"[FAIL] Gate 12: Precedent file {pf} missing required schema marker: '{marker}'", file=sys.stderr)
+                    return False
+
+        print(f"[+] Gate 12: Precedent Format:           [PASS] All {len(pre_files)} precedent file(s) conform to PRE_TEMPLATE.md schema.")
+    except Exception as e:
+        print(f"[FAIL] Gate 12 check failed: {e}", file=sys.stderr)
+        return False
+
     print("-" * 68)
-    print("[PASS] All 10 ACME v3.2.0 Systems Architecture & Invariant Gates PASS.")
+    print("[PASS] All 12 ACME v3.2.0 Systems Architecture & Invariant Gates PASS.")
     print("=" * 68)
     return True
 

@@ -1,10 +1,12 @@
 # CASE: CAS_{HEX3}_{SLUG}
 - **Case ID:** CAS_{hex3}_{slug}
+- **File Path:** cases/CAS_{hex3}_{slug}.md
+- **Type:** [BUG | FEAT | REFACTOR | INQUEST]
 - **Commit Pattern:** [CAS-{HEX3}] <action>: <description>
 - **Target Scope (Whitelisted Files):**
   - [Mandatory: Explicit list of relative file paths permitted for modification]
 - **Execution State:** [ACTIVE | BLOCKED | RESOLVED]
-- **Bound Invariant:** [INV-* reference, e.g., INV-CANONICAL-IDENTIFIER]
+- **Bound Invariant:** [INV-* reference, e.g., INV-PRECEDENT-PROMOTION]
 - **Timestamp:** YYYY-MM-DDTHH:MM:SS+03:00
 - **Target Module:** [Module path or bounded subsystem]
 - **Station / Node:** [Inception | Elaboration | Construction | Transition]
