@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 """
 ACME CORE INVARIANT GATE & CONSTITUTIONAL VERIFIER (Pure Standard Library)
-Self-Compiling Genesis Verifier (v3.2.0 - Systems Architecture 9-Gate Turnstile)
+Self-Compiling Genesis Verifier (v3.2.0 - Systems Architecture 10-Gate Turnstile)
 Serves as the Mechanical Gatekeeper Turnstile at the repository boundary.
 Codifies Canonical Interlingua Invariant (INV-CANONICAL-INTERLINGUA / DoF = 0).
 Codifies Mandatory Execution Registry (INV-MANDATORY-CASE-BINDING / DoF = 0).
 Codifies Canonical Identifier Standard (INV-CANONICAL-IDENTIFIER / DoF = 0).
+Codifies Pipeline Topology & Migration Invariant (INV-PIPELINE-MIGRATION / DoF = 0).
 """
 
 import os
@@ -89,13 +90,15 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
     # Ensure pre-commit and commit-msg hooks are configured
     ensure_git_hooks()
 
-    # Gate 1: Zero-Code Invariant: No code artifacts tracked in core (except verify.py)
+    # Gate 1: Zero-Code Invariant: No code artifacts tracked in core (except verify.py and migrations/*.py)
     forbidden_exts = ['.py', '.sh', '.exe', '.dll', '.bin']
     try:
         tracked = subprocess.check_output(['git', 'ls-files'], text=True).splitlines()
         for f in tracked:
             norm_f = Path(f).as_posix()
             if norm_f == 'verify.py':
+                continue
+            if norm_f.startswith('migrations/') and norm_f.endswith('.py'):
                 continue
             if Path(f).suffix.lower() in forbidden_exts:
                 print(f"[FAIL] Code artifact tracked in git: {f}", file=sys.stderr)
@@ -108,6 +111,8 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
             if ".git" in posix_path.split("/") or ".tmp" in posix_path.split("/"):
                 continue
             if posix_path == "verify.py":
+                continue
+            if posix_path.startswith("migrations/") and posix_path.endswith(".py"):
                 continue
             if p.suffix.lower() in forbidden_exts:
                 print(f"[FAIL] Forbidden executable file on disk: {p}", file=sys.stderr)
@@ -146,7 +151,7 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
         print(f"[FAIL] Gate 2 check failed: {e}", file=sys.stderr)
         return False
 
-    # Gate 3: Constitutional Parity: Articles 0 to 12 in CONSTITUTION.md
+    # Gate 3: Constitutional Parity: Articles 0 to 13 in CONSTITUTION.md
     try:
         const_path = Path("CONSTITUTION.md")
         if not const_path.is_file():
@@ -166,13 +171,14 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
             "ARTICLE 9: MANDATORY TEMPORAL ALIGNMENT & PROCEDURAL PRECEDENCE",
             "ARTICLE 10: ZERO-RHETORIC & OPERATIONAL SPECIFICATION",
             "ARTICLE 11: MANDATORY EXECUTION REGISTRY",
-            "ARTICLE 12: CANONICAL NAMING & LEXICAL TRACEABILITY"
+            "ARTICLE 12: CANONICAL NAMING & LEXICAL TRACEABILITY",
+            "ARTICLE 13: PIPELINE TOPOLOGY & AUTOMATED MIGRATION"
         ]
         for art in required_articles:
             if art not in const_text:
                 print(f"[FAIL] Missing constitutional article: {art}", file=sys.stderr)
                 return False
-        print("[+] Gate 3: Constitutional Parity:       [PASS] Articles 0 to 12 ratified in CONSTITUTION.md.")
+        print("[+] Gate 3: Constitutional Parity:       [PASS] Articles 0 to 13 ratified in CONSTITUTION.md.")
     except Exception as e:
         print(f"[FAIL] Gate 3 check failed: {e}", file=sys.stderr)
         return False
@@ -235,7 +241,7 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
         subjective_words = ['fast', 'perfect', 'wonderful', 'powerful', 'easy', 'flawless', 'super', 'legendary', 'urgent', 'modern', 'lightweight']
         total_words = 0
         subj_count = 0
-        audit_paths = [Path("CONSTITUTION.md"), Path("README.md")] + list(Path("norms").rglob("*.md")) + list(Path("precedents").rglob("*.md"))
+        audit_paths = [Path("CONSTITUTION.md"), Path("README.md"), Path("migrations/README.md")] + list(Path("norms").rglob("*.md")) + list(Path("precedents").rglob("*.md"))
         for ap in audit_paths:
             if ap.is_file():
                 text = ap.read_text(encoding="utf-8").lower()
@@ -390,7 +396,7 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
 
     # Gate 9: Lexical Parity & Naming Syntax (INV-CANONICAL-IDENTIFIER)
     try:
-        registered_tags = {'CAS', 'INV', 'PRE', 'COR', 'ING', 'PRO'}
+        registered_tags = {'CAS', 'INV', 'PRE', 'COR', 'ING', 'PRO', 'MIG'}
         canonical_pattern = re.compile(r'^[A-Z]{3}_[0-9A-Fa-f]{3}_[a-zA-Z0-9_]+$')
         syntax_prefix_pattern = re.compile(r'^[A-Z]{3}_[0-9A-Fa-f]{3}_')
 
@@ -433,8 +439,40 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
         print(f"[FAIL] Gate 9 check failed: {e}", file=sys.stderr)
         return False
 
+    # Gate 10: Pipeline Topology & Path Whitelist (INV-PIPELINE-TOPOLOGY-01)
+    try:
+        whitelisted_root_dirs = {'.git', '.tmp', 'cases', 'norms', 'precedents', 'templates', 'migrations'}
+        whitelisted_root_files = {'.gitignore', 'README.md', 'CONSTITUTION.md', 'verify.py'}
+        required_topology_dirs = {'cases', 'norms', 'precedents', 'templates', 'migrations'}
+
+        for entry in root.iterdir():
+            if entry.is_dir():
+                if entry.name not in whitelisted_root_dirs:
+                    print(f"[FAIL] Gate 10 (INV-PIPELINE-TOPOLOGY-01): Unauthorized root directory detected: '{entry.name}'.", file=sys.stderr)
+                    return False
+            elif entry.is_file():
+                if entry.name not in whitelisted_root_files:
+                    print(f"[FAIL] Gate 10 (INV-PIPELINE-TOPOLOGY-01): Unauthorized root file detected: '{entry.name}'.", file=sys.stderr)
+                    return False
+
+        for req_dir in required_topology_dirs:
+            p = root / req_dir
+            if not p.is_dir():
+                print(f"[FAIL] Gate 10 (INV-PIPELINE-TOPOLOGY-01): Missing mandatory pipeline topology directory: '{req_dir}'.", file=sys.stderr)
+                return False
+
+        migrations_readme = Path("migrations/README.md")
+        if not migrations_readme.is_file() or len(migrations_readme.read_bytes()) < 50:
+            print("[FAIL] Gate 10 (INV-PIPELINE-TOPOLOGY-01): Missing or corrupted 'migrations/README.md'.", file=sys.stderr)
+            return False
+
+        print("[+] Gate 10: Pipeline Topology:          [PASS] Filesystem topology validated against canonical whitelist.")
+    except Exception as e:
+        print(f"[FAIL] Gate 10 check failed: {e}", file=sys.stderr)
+        return False
+
     print("-" * 68)
-    print("[PASS] All 9 ACME v3.2.0 Systems Architecture & Invariant Gates PASS.")
+    print("[PASS] All 10 ACME v3.2.0 Systems Architecture & Invariant Gates PASS.")
     print("=" * 68)
     return True
 

@@ -67,3 +67,8 @@
 
 ## ARTICLE 12: CANONICAL NAMING & LEXICAL TRACEABILITY (INV-CANONICAL-IDENTIFIER)
 1. **INV-IDENTIFIER-SYNTAX-01 (Strict 3+3 Trigraph Invariant, DoF = 0):** All formal artifacts across ACME and downstream workspaces MUST adhere to the strict trigraph schema: `{TAG3}_{HEX3}_{slug}`. TAG3 MUST be an uppercase 3-letter registered namespace token (`CAS`, `INV`, `PRE`, `COR`, `ING`, `PRO`). HEX3 MUST be a 3-character hexadecimal counter (`001` to `FFF`). Artifacts violating the canonical regex `^[A-Z]{3}_[0-9A-F]{3}_[a-z0-9_]+$` are void and SHALL trigger immediate parser rejection.
+
+## ARTICLE 13: PIPELINE TOPOLOGY & AUTOMATED MIGRATION (INV-PIPELINE-MIGRATION)
+1. **INV-PIPELINE-TOPOLOGY-01 (Topological Binding Invariant, DoF = 0):** Every execution pipeline MUST define its discrete filesystem topology. Arbitrary, untracked, or ad-hoc directory creation outside the declared pipeline schema is prohibited. Path structures serve as explicit spatial state registers for mechanical gate validation.
+2. **INV-CANONICAL-NAMING-02 (Conveyor Slot Syntax):** Artifacts transitioning through pipeline gates MUST strictly match the canonical naming contract (regex: `^[A-Z]{3}_[0-9A-F]{3}_[a-z0-9_]+$`). Non-conforming files SHALL NOT enter the verification gate.
+3. **INV-MIGRATION-PARITY-03 (Automated Pipeline Migration Adapter):** Mutations to pipeline definitions, schemas, or directory topographies MUST provide an automated, non-destructive migration adapter script under `migrations/MIG_{hex3}_{slug}.py`. Downstream workspaces undergoing pipeline bumps MUST execute migration scripts to maintain strict parity before new case executions are permitted.
