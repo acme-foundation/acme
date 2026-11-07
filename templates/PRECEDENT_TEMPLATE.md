@@ -1,15 +1,15 @@
 # PRECEDENT: {DOM}_{HEX3}_{SLUG}_RULING
-- **Daire / Etki Alanı:** [COR | ING | PRO]
-- **Tescil Tarihi:** YYYY-AA-GG
-- **Menşe Dava / Vaka:** [Projeden arındırılmış referans]
-- **Bağlayıcılık:** Ekosistem Geneli Emsal İçtihat (Ratio Decidendi)
+- **Jurisdictional Chamber:** [COR | ING | PRO]
+- **Enactment Date:** YYYY-MM-DD
+- **Originating Case / Dispute:** [Decontaminated source reference]
+- **Binding Scope:** Ecosystem-Wide Authoritative Precedent (Ratio Decidendi)
 
-## 1. UYUŞMAZLIK ÖZETİ (CASE FACTS)
-[Şantiyede yaşanan darboğaz veya uyuşmazlığın soyutlanmış tanımı]
+## 1. STATEMENT OF DISPUTE (CASE FACTS)
+[Decontaminated definition of operational friction or boundary deadlock]
 
-## 2. HUKUKİ VE MİMARİ İLKE (HEADNOTE)
-[Gelecekte benzer durumlarda O(1) maliyetle yürütülecek kesin hüküm]
+## 2. STATUTORY AND ARCHITECTURAL PRINCIPLE (HEADNOTE)
+[Irreducible ruling executed at O(1) complexity in equivalent scenarios]
 
-## 3. MEKANİK DELİL ÇAPASI (EVIDENTIARY ANCHOR)
-- **DoD Test Kriteri:** [Boolean PASS/FAIL assertion]
-- **Kısıt Sınırları:** [Bellek tavanı, kütle dengesi şartı]
+## 3. EVIDENTIARY ANCHOR
+- **Definition of Done (DoD) Assertion:** [Boolean PASS/FAIL assertion]
+- **Boundary Limits:** [Memory budget ceiling, mass conservation constraint]

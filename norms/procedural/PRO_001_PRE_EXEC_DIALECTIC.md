@@ -1,7 +1,7 @@
-# NORM-PRO-001: İCRA ÖNCESİ DİYALEKTİK VE RÜMİNASYON FRENE
-- **Kapsam:** Usul Hukuku (Procedural / PRO)
+# NORM-PRO-001: PRE-EXECUTION ADVERSARIAL DIALECTIC AND RUMINATION BRAKE
+- **Scope:** Procedural Civil Code for Autonomous Systems (Procedural / PRO)
 - **DoF:** 0
-- **Kural:**
-  1. Hiçbir ajan, ikiz hasmane konsensüs (Action vs. Reaction) sağlanmadan ve ikili kabul kriteri mühürlenmeden diske kod yazamaz.
-  2. Çekişme tavanı en fazla 3 turdur (MAX_LOCAL_CYCLES = 3).
-  3. 3. turda uzlaşılamazsa sistem yürütmeyi dondurur (fail-closed) ve karar Biyolojik Mimara havale edilir.
+- **Rule:**
+  1. No autonomous agent shall commit implementation code to persistent disk without verified adversarial consensus (Action vs. Reaction) and a ratified Definition of Done.
+  2. The dialectic contest is strictly bounded to a maximum of 3 rounds (`MAX_LOCAL_CYCLES = 3`).
+  3. Failure to reach bilateral consensus by round 3 halts execution immediately (`fail-closed`), escalating the petition to the Biological Human Architect.

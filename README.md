@@ -3,45 +3,45 @@
 > **Release:** v3.2.0 | **Authority:** Lex Superior (`DoF = 0`)  
 > **Biological Root of Trust:** Serkan BAYHAN (Chief Architect)  
 > *"Nulla Actio Sine Spec, Nullum Iudicium Sine Lege"*  
-> *(Şartname olmadan icraat, kanun olmadan hüküm kurulamaz.)*
+> *(No action without specification, no adjudication without law.)*
 
 ---
 
-## 1. KÜNYE VE DİVAN
-ACME, çoklu ajan sistemlerini kontrolsüz prompt tamamlama kargaşasından çıkarıp; usul hukuku kuralları, emsal içtihat kütükleri ve katı anayasal kısıtlarla (`DoF = 0`) işleten yüksek yargı ve denetim karargâhıdır.
+## 1. SCOPE AND JURISPRUDENTIAL PURPOSE
+ACME transforms large language models (LLMs) from unanchored probabilistic token generators into disciplined judicial and execution officers operating under strict civil procedural codes, precedential caselaw registries, and irreducible constitutional invariants (`DoF = 0`).
 
 ---
 
-## 2. DEPO TOPOLOJİSİ (ADLİYE SARAYI MİMARİSİ)
+## 2. REPOSITORY TOPOLOGY (CANONICAL JUDICIAL ARCHITECTURE)
 ```text
 acme/
-├── README.md                      # Vitrin, operasyon rehberi ve sevkiyat protokolü
-├── CONSTITUTION.md                # Kök Anayasa (Lex Superior: Madde 0 - 7)
-├── verify.py                      # Mekanik CI/CD hakem turnikesi (7 Kapı)
+├── README.md                      # Operational storefront, routing protocols, and downstream dispatch
+├── CONSTITUTION.md                # Canonical Constitution (Lex Superior: Articles 0 - 8)
+├── verify.py                      # Mechanical CI/CD gatekeeper turnstile (7 Gates)
 │
-├── templates/                     # Resmi Matbu Evrak Şablonları
-│   ├── WORK_TEMPLATE.md           # Şantiye iş/muhakeme kütüğü kalıbı
-│   ├── PRECEDENT_TEMPLATE.md      # Emsal karar ilam şablonu
-│   └── NORM_TEMPLATE.md           # Pozitif kanun teklif şablonu
+├── templates/                     # Official Statutory Document Templates
+│   ├── WORK_TEMPLATE.md           # Workstation execution and dialectic ledger template
+│   ├── PRECEDENT_TEMPLATE.md      # Appellate ruling and precedential decree template
+│   └── NORM_TEMPLATE.md           # Statutory norm codification template
 │
-├── precedents/                    # İçtihat Bilgi Bankası (Emsal Kararlar / O(1) Cache)
-│   ├── core/                      # COR_{hex3}_*.md (Sistemik emsaller)
-│   ├── ingestion/                 # ING_{hex3}_*.md (Veri hattı hükümleri)
-│   └── procedural/                # PRO_{hex3}_*.md (Usul hükümleri)
+├── precedents/                    # Jurisprudential Precedent Registry (O(1) Precedent Cache)
+│   ├── core/                      # COR_{hex3}_*.md (Systemic constitutional precedents)
+│   ├── ingestion/                 # ING_{hex3}_*.md (Stream and input pipeline rulings)
+│   └── procedural/                # PRO_{hex3}_*.md (Due process and arbitration rulings)
 │
-├── norms/                         # Pozitif Kanunlar Külliyatı (3 Harfli Hex Normlar)
+├── norms/                         # Statutory Positive Law Registry (3-Letter Hex Norms)
 │   ├── core/                      # COR_{hex3}_*.md (COR_001, COR_002, COR_003)
 │   ├── domain/ingestion/          # ING_{hex3}_*.md (ING_001)
 │   └── procedural/                # PRO_{hex3}_*.md (PRO_001, PRO_002)
 │
-└── .tmp/                          # [Git-Ignored] Canlı telemetri ve geçici lab alanı
+└── .tmp/                          # [Git-Ignored] Live telemetry bus and transient crucible lab
 ```
 
 ---
 
-## 3. DOWNSTREAM SEVKİYAT VE ENTEGRASYON PROTOKOLÜ (.norm)
+## 3. DOWNSTREAM DISPATCH AND INTEGRATION PROTOCOL (.norm)
 
-Şantiye projeleri ACME'yi kök dizindeki `.norm` manifestosu ile bağlar ve RFC adaylarını üst depoya şu protokolle sevk eder:
+Downstream client workspaces bind ACME as their external supreme normative authority via a single root `.norm` manifest, routing statutory change proposals upstream:
 
 ```json
 {
@@ -61,16 +61,16 @@ acme/
 }
 ```
 
-### Şantiyeden Karargâha İcra Döngüsü
+### Downstream to Headquarter Adjudication Lifecycle
 
-1. **Şantiye İcrası:** Proje içinde `works/WORK_{hex3}_{slug}.md` kütüğü tutulur.
-2. **Kural Sevkiyatı:** Sistemik sürtünmeler arındırılarak `rfcs/{project}/RFC_{hex3}_{slug}` dalı ile üst depoya açılır.
-3. **Sınama Potası (The Crucible):** ACME Karargâhı `.tmp/lab_{hex3}/` ortamında kuralı hasımlı yüklerle test eder.
-4. **Tescil:** Sınamayı geçen kurallar `precedents/` altına Emsal İlam veya `norms/` altına Kanun olarak mühürlenir.
+1. **Local Adjudication:** Workspaces record friction and local rulings in `works/WORK_{hex3}_{slug}.md`.
+2. **Upstream Referral:** Systemic invariant gaps are sanitized and dispatched via `rfcs/{project}/RFC_{hex3}_{slug}` branches.
+3. **The Crucible Protocol:** ACME Headquarters subjects candidate rules to adversarial stress testing inside an isolated `.tmp/lab_{hex3}/` sandbox.
+4. **Ratification & Registration:** Certified invariants are permanently registered under `precedents/` as authoritative Rulings or under `norms/` as Statutory Norms.
 
 ---
 
-## 4. İŞLETİM VE DOĞRULAMA KOMUTU
+## 4. MECHANICAL VERIFICATION COMMAND
 
 ```bash
 python verify.py --verify-all

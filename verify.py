@@ -3,6 +3,7 @@
 ACME CORE INVARIANT GATE & CONSTITUTIONAL VERIFIER (Pure Standard Library)
 Self-Compiling Genesis Verifier (v3.2.0 - Jurisprudential 7-Gate Turnstile)
 Serves as the Mechanical Gatekeeper Turnstile at the repository boundary.
+Codifies Canonical Interlingua Invariant (INV-CANONICAL-INTERLINGUA / DoF = 0).
 """
 
 import os
@@ -46,25 +47,37 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
         print(f"[FAIL] Gate 1 check failed: {e}", file=sys.stderr)
         return False
 
-    # Gate 2: No-BOM UTF-8: All markdown and text files must be UTF-8 No-BOM
+    # Gate 2: No-BOM UTF-8 & Canonical Interlingua Gate (INV-CANONICAL-INTERLINGUA)
     try:
+        # Check for localized Turkish characters across all documentation and templates
+        turkish_codepoints = {
+            0x00E7, 0x011F, 0x0131, 0x00F6, 0x015F, 0x00FC,
+            0x00C7, 0x011E, 0x0130, 0x00D6, 0x015E, 0x00DC
+        }
         for p in root.rglob("*"):
             if not p.is_file():
                 continue
             posix_path = p.as_posix()
             if ".git" in posix_path.split("/") or ".tmp" in posix_path.split("/"):
                 continue
+            if posix_path == "verify.py":
+                continue
             if p.suffix.lower() in ['.md', '.py', '.json', '.txt']:
                 raw = p.read_bytes()
                 if raw.startswith(b'\xef\xbb\xbf'):
                     print(f"[FAIL] UTF-8 BOM detected in: {p}", file=sys.stderr)
                     return False
-        print("[+] Gate 2: No-BOM UTF-8:                [PASS] All markdown and text files verified (No-BOM).")
+                text = p.read_text(encoding="utf-8")
+                for ch in text:
+                    if ord(ch) in turkish_codepoints:
+                        print(f"[FAIL] Canonical Interlingua Breach: Localized character '{ch}' (U+{ord(ch):04X}) detected in: {p}", file=sys.stderr)
+                        return False
+        print("[+] Gate 2: No-BOM UTF-8 & Interlingua:  [PASS] All tracked artifacts verified (No-BOM / Interlingua).")
     except Exception as e:
         print(f"[FAIL] Gate 2 check failed: {e}", file=sys.stderr)
         return False
 
-    # Gate 3: Constitutional Parity: Articles 0 to 7 in CONSTITUTION.md
+    # Gate 3: Constitutional Parity: Articles 0 to 8 in CONSTITUTION.md
     try:
         const_path = Path("CONSTITUTION.md")
         if not const_path.is_file():
@@ -72,20 +85,21 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
             return False
         const_text = const_path.read_text(encoding="utf-8")
         required_articles = [
-            "MADDE 0: TELEOLOJİK ZEMİNLEME",
-            "MADDE 1: EN AZ EYLEM VE SIFIR SERBESTLİK DERECESİ",
-            "MADDE 2: ÇİĞ DAMLASI İZOLASYONU",
-            "MADDE 3: BİYOLOJİK ASALET VE TERMAL DENGE",
-            "MADDE 4: ÇİFT TARAFLI GATE-KEEPER VE SIFIR GÜVEN",
-            "MADDE 5: HASMANE İKİZ DİNAMİĞİ",
-            "MADDE 6: EGEMEN İRADE VE TERMİNAL FATURA",
-            "MADDE 7: EMSAL İÇTİHAT VE NORM TERFİ PROTOKOLÜ"
+            "ARTICLE 0: TELEOLOGICAL GROUNDING",
+            "ARTICLE 1: PRINCIPLE OF LEAST ACTION",
+            "ARTICLE 2: DEWDROP BOUNDARY ISOLATION",
+            "ARTICLE 3: BIOLOGICAL PRIMACY",
+            "ARTICLE 4: BI-DIRECTIONAL ZERO-TRUST GATEKEEPER",
+            "ARTICLE 5: ADVERSARIAL TWIN DYNAMICS",
+            "ARTICLE 6: SOVEREIGN OVERRIDE",
+            "ARTICLE 7: JURISPRUDENTIAL PRECEDENT",
+            "ARTICLE 8: CANONICAL LANGUAGE & INTERLINGUA PROTOCOL"
         ]
         for art in required_articles:
             if art not in const_text:
                 print(f"[FAIL] Missing constitutional article: {art}", file=sys.stderr)
                 return False
-        print("[+] Gate 3: Constitutional Parity:       [PASS] Articles 0 to 7 verified in CONSTITUTION.md.")
+        print("[+] Gate 3: Constitutional Parity:       [PASS] Articles 0 to 8 ratified in CONSTITUTION.md.")
     except Exception as e:
         print(f"[FAIL] Gate 3 check failed: {e}", file=sys.stderr)
         return False
@@ -145,14 +159,14 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
 
     # Gate 6: Adjective Density Gate (<= 0.02)
     try:
-        subjective_words = ['hızlı', 'mükemmel', 'harika', 'güçlü', 'kolay', 'kusursuz', 'süper', 'legendary', 'urgent', 'modern', 'hafif']
+        subjective_words = ['fast', 'perfect', 'wonderful', 'powerful', 'easy', 'flawless', 'super', 'legendary', 'urgent', 'modern', 'lightweight']
         total_words = 0
         subj_count = 0
         audit_paths = [Path("CONSTITUTION.md"), Path("README.md")] + list(Path("norms").rglob("*.md")) + list(Path("precedents").rglob("*.md"))
         for ap in audit_paths:
             if ap.is_file():
                 text = ap.read_text(encoding="utf-8").lower()
-                words = re.findall(r'\w+', text)
+                words = re.findall(r'\b[a-zA-Z]+\b', text)
                 total_words += len(words)
                 for w in subjective_words:
                     subj_count += len(re.findall(r'\b' + w + r'\b', text))
@@ -169,11 +183,11 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
     try:
         readme_text = Path("README.md").read_text(encoding="utf-8")
         if "v3.2.0" not in readme_text:
-            print("[FAIL] Sürüm v3.2.0 README.md dosyasında bulunamadı.", file=sys.stderr)
+            print("[FAIL] Version v3.2.0 missing in README.md.", file=sys.stderr)
             return False
         const_text = Path("CONSTITUTION.md").read_text(encoding="utf-8")
         if "v3.2.0" not in const_text:
-            print("[FAIL] Sürüm v3.2.0 CONSTITUTION.md dosyasında bulunamadı.", file=sys.stderr)
+            print("[FAIL] Version v3.2.0 missing in CONSTITUTION.md.", file=sys.stderr)
             return False
 
         try:

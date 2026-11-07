@@ -1,7 +1,7 @@
-# NORM-COR-003: MEKANİK SOYUT SÖZDİZİM AĞACI KALKANI (AST SHIELD)
-- **Kapsam:** Evrensel Çekirdek (Core / COR)
+# NORM-COR-003: MECHANICAL ABSTRACT SYNTAX TREE SHIELD (AST SHIELD)
+- **Scope:** Universal Core (Core / COR)
 - **DoF:** 0
-- **Kural:**
-  1. Ajanlar tarafından üretilen kodlar harici bağımlılık yasağını ihlal edemez.
-  2. İzin verilen standart kütüphaneler haricindeki harici 'import' bildirimleri AST statik analiziyle tespit edilip reddedilir (Exit 126).
-  3. Çalıştırılabilir kod içine gizlenmiş 'eval', 'exec' veya yetkisiz OS kabuk çağrıları derleme hatasıdır.
+- **Rule:**
+  1. Code artifacts synthesized by autonomous agents must not violate the zero-unjustified external dependency invariant.
+  2. External import declarations outside allowlisted standard libraries are detected via AST analysis and rejected with exit code 126.
+  3. Obfuscated dynamic execution calls (`eval`, `exec`, or unmonitored OS subprocess invocations) constitute critical compile errors.
