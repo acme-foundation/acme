@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """
 ACME CORE INVARIANT GATE & CONSTITUTIONAL VERIFIER (Pure Standard Library)
-Self-Compiling Genesis Verifier (v3.2.0 - Systems Architecture 7-Gate Turnstile)
+Self-Compiling Genesis Verifier (v3.2.0 - Systems Architecture 8-Gate Turnstile)
 Serves as the Mechanical Gatekeeper Turnstile at the repository boundary.
 Codifies Canonical Interlingua Invariant (INV-CANONICAL-INTERLINGUA / DoF = 0).
+Codifies Mandatory Execution Registry (INV-MANDATORY-CASE-BINDING / DoF = 0).
 """
 
 import os
@@ -12,12 +13,80 @@ import re
 import subprocess
 from pathlib import Path
 
+def ensure_git_hooks() -> None:
+    hooks_dir = Path(".git/hooks")
+    if not hooks_dir.is_dir():
+        return
+
+    pre_commit_path = hooks_dir / "pre-commit"
+    commit_msg_path = hooks_dir / "commit-msg"
+
+    py_exec = sys.executable.replace("\\", "/")
+
+    pre_commit_script = (
+        "#!/bin/sh\n"
+        "# ACME Mandatory Pre-Commit Hook (Gatekeeper Turnstile)\n"
+        f'if [ -f "{py_exec}" ]; then\n'
+        f'    "{py_exec}" verify.py --verify-all\n'
+        "elif command -v py >/dev/null 2>&1; then\n"
+        "    py -3 verify.py --verify-all\n"
+        "else\n"
+        "    python verify.py --verify-all\n"
+        "fi\n"
+    )
+
+    commit_msg_script = (
+        "#!/bin/sh\n"
+        "# ACME Mandatory Commit Message Hook (INV-COMMIT-LINKAGE-02)\n"
+        f'if [ -f "{py_exec}" ]; then\n'
+        f'    "{py_exec}" verify.py --check-commit-msg "$1"\n'
+        "elif command -v py >/dev/null 2>&1; then\n"
+        "    py -3 verify.py --check-commit-msg \"$1\"\n"
+        "else\n"
+        "    python verify.py --check-commit-msg \"$1\"\n"
+        "fi\n"
+    )
+
+    try:
+        if not pre_commit_path.is_file() or pre_commit_path.read_text(encoding="utf-8") != pre_commit_script:
+            pre_commit_path.write_text(pre_commit_script, encoding="utf-8")
+        if not commit_msg_path.is_file() or commit_msg_path.read_text(encoding="utf-8") != commit_msg_script:
+            commit_msg_path.write_text(commit_msg_script, encoding="utf-8")
+    except Exception:
+        pass
+
+def verify_commit_message_file(msg_path: Path) -> bool:
+    if not msg_path.is_file():
+        print(f"[FAIL] Commit message file not found: {msg_path}", file=sys.stderr)
+        return False
+    lines = [
+        line.strip()
+        for line in msg_path.read_text(encoding="utf-8").splitlines()
+        if line.strip() and not line.strip().startswith("#")
+    ]
+    if not lines:
+        print("[FAIL] Commit message is empty.", file=sys.stderr)
+        return False
+    first_line = lines[0]
+    case_pattern = re.compile(r'^\[CASE-[0-9A-Fa-f]{3,4}\]', re.IGNORECASE)
+    if not case_pattern.match(first_line):
+        print(
+            f"[FAIL] (INV-COMMIT-LINKAGE-02) Commit message must start with '[CASE-XXX]' tag: '{first_line}'",
+            file=sys.stderr
+        )
+        return False
+    print(f"[PASS] Commit message case citation verified: {first_line}")
+    return True
+
 def run_invariant_audit(verify_all: bool = False) -> bool:
     print("=" * 68)
     print("      ACME GENESIS CONSTITUTIONAL INTEGRITY & INVARIANT GATE (v3.2.0)      ")
     print("=" * 68)
 
     root = Path(".")
+
+    # Ensure pre-commit and commit-msg hooks are configured
+    ensure_git_hooks()
 
     # Gate 1: Zero-Code Invariant: No code artifacts tracked in core (except verify.py)
     forbidden_exts = ['.py', '.sh', '.exe', '.dll', '.bin']
@@ -49,7 +118,6 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
 
     # Gate 2: No-BOM UTF-8 & Canonical Interlingua Gate (INV-CANONICAL-INTERLINGUA)
     try:
-        # Check for localized Turkish characters across all documentation and templates
         turkish_codepoints = {
             0x00E7, 0x011F, 0x0131, 0x00F6, 0x015F, 0x00FC,
             0x00C7, 0x011E, 0x0130, 0x00D6, 0x015E, 0x00DC
@@ -77,7 +145,7 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
         print(f"[FAIL] Gate 2 check failed: {e}", file=sys.stderr)
         return False
 
-    # Gate 3: Constitutional Parity: Articles 0 to 9 in CONSTITUTION.md
+    # Gate 3: Constitutional Parity: Articles 0 to 11 in CONSTITUTION.md
     try:
         const_path = Path("CONSTITUTION.md")
         if not const_path.is_file():
@@ -95,13 +163,14 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
             "ARTICLE 7: PRECEDENT CACHE",
             "ARTICLE 8: CANONICAL LANGUAGE & INTERLINGUA PROTOCOL",
             "ARTICLE 9: MANDATORY TEMPORAL ALIGNMENT & PROCEDURAL PRECEDENCE",
-            "ARTICLE 10: ZERO-RHETORIC & OPERATIONAL SPECIFICATION"
+            "ARTICLE 10: ZERO-RHETORIC & OPERATIONAL SPECIFICATION",
+            "ARTICLE 11: MANDATORY EXECUTION REGISTRY"
         ]
         for art in required_articles:
             if art not in const_text:
                 print(f"[FAIL] Missing constitutional article: {art}", file=sys.stderr)
                 return False
-        print("[+] Gate 3: Constitutional Parity:       [PASS] Articles 0 to 10 ratified in CONSTITUTION.md.")
+        print("[+] Gate 3: Constitutional Parity:       [PASS] Articles 0 to 11 ratified in CONSTITUTION.md.")
     except Exception as e:
         print(f"[FAIL] Gate 3 check failed: {e}", file=sys.stderr)
         return False
@@ -154,7 +223,7 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
             if len(prec.read_bytes()) < 100:
                 print(f"[FAIL] Precedent ruling too small: {prec}", file=sys.stderr)
                 return False
-        print(f"[+] Gate 5: Templates & Precedents:      [PASS] 3 canonical templates and precedent registry verified.")
+        print("[+] Gate 5: Templates & Precedents:      [PASS] 3 canonical templates and precedent registry verified.")
     except Exception as e:
         print(f"[FAIL] Gate 5 check failed: {e}", file=sys.stderr)
         return False
@@ -204,12 +273,135 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
         print(f"[FAIL] Gate 7 check failed: {e}", file=sys.stderr)
         return False
 
+    # Gate 8: Mandatory Case Registry & Zero Unregistered Execution (INV-MANDATORY-CASE-BINDING)
+    try:
+        cases_dir = Path("cases")
+        case_commit_pattern = re.compile(r'^\[CASE-([0-9A-Fa-f]{3,4})\]', re.IGNORECASE)
+
+        # Inspect working tree status for any uncommitted changes
+        status_output = subprocess.check_output(
+            ['git', 'status', '--porcelain', '-uall'],
+            text=True
+        ).splitlines()
+
+        modified_files = []
+        for line in status_output:
+            if not line.strip():
+                continue
+            raw_path = line[3:].strip()
+            if " -> " in raw_path:
+                raw_path = raw_path.split(" -> ")[1].strip()
+            if raw_path.startswith('"') and raw_path.endswith('"'):
+                raw_path = raw_path[1:-1]
+            posix_f = Path(raw_path).as_posix()
+            parts = posix_f.split("/")
+            if ".git" in parts or ".tmp" in parts:
+                continue
+            if Path(posix_f).is_dir():
+                for sub_p in Path(posix_f).rglob("*"):
+                    if sub_p.is_file():
+                        sub_posix = sub_p.as_posix()
+                        if not any(x in sub_posix.split("/") for x in [".git", ".tmp"]):
+                            modified_files.append(sub_posix)
+            else:
+                modified_files.append(posix_f)
+
+        if modified_files:
+            if not cases_dir.is_dir():
+                print("[FAIL] Gate 8: Working tree modifications detected, but 'cases/' directory does not exist.", file=sys.stderr)
+                return False
+            case_files = list(cases_dir.glob("CASE_*.md"))
+            if not case_files:
+                print("[FAIL] Gate 8: Working tree modifications detected, but no case ledger found under 'cases/'.", file=sys.stderr)
+                return False
+
+            active_cases = []
+            for cf in case_files:
+                content = cf.read_text(encoding="utf-8")
+                state_match = re.search(r'(?:Execution State|STATUS)[^\n:]*:\s*\*?\*?\s*(ACTIVE)', content, re.IGNORECASE)
+                if state_match:
+                    whitelisted = set()
+                    in_scope = False
+                    for c_line in content.splitlines():
+                        stripped = c_line.strip()
+                        if re.search(r'Target Scope.*:', stripped, re.IGNORECASE):
+                            in_scope = True
+                            continue
+                        if in_scope:
+                            if stripped.startswith("- **") or stripped.startswith("##") or (stripped and not stripped.startswith("-") and not stripped.startswith("*")):
+                                in_scope = False
+                            else:
+                                bullet_match = re.match(r'^\s*[-*]\s+(.*)$', c_line)
+                                if bullet_match:
+                                    w_path = bullet_match.group(1).strip().strip('`').strip()
+                                    if w_path and not w_path.startswith("["):
+                                        whitelisted.add(Path(w_path).as_posix())
+                    active_cases.append((cf, whitelisted))
+
+            if not active_cases:
+                print("[FAIL] Gate 8: Working tree modifications detected, but no case in 'cases/' is marked 'ACTIVE'.", file=sys.stderr)
+                return False
+
+            for mf in modified_files:
+                covered = False
+                for cf, whitelisted in active_cases:
+                    if mf == cf.as_posix() or mf.startswith("cases/CASE_"):
+                        covered = True
+                        break
+                    if mf in whitelisted:
+                        covered = True
+                        break
+                if not covered:
+                    print(f"[FAIL] Gate 8 (INV-DIFF-CONTAINMENT-03): File mutation '{mf}' outside whitelisted scope of active cases.", file=sys.stderr)
+                    return False
+
+            print(f"[+] Gate 8: Mandatory Case Registry:     [PASS] Active case ledger validated for {len(modified_files)} working tree mutation(s).")
+        else:
+            try:
+                head_commit_msg = subprocess.check_output(
+                    ['git', 'log', '-1', '--pretty=%B'],
+                    text=True
+                ).strip()
+                first_line = head_commit_msg.splitlines()[0] if head_commit_msg else ""
+                legacy_anchor_hashes = {'c50a958', 'd0809ae', '419deb4', '3e56c2d', '0a96847'}
+                head_hash = subprocess.check_output(['git', 'rev-parse', '--short', 'HEAD'], text=True).strip()
+
+                commit_match = case_commit_pattern.match(first_line)
+                if commit_match:
+                    case_tag = commit_match.group(1).upper()
+                    matching_cases = list(cases_dir.glob(f"CASE_{case_tag}*.md")) + list(cases_dir.glob(f"CASE-{case_tag}*.md"))
+                    if not matching_cases:
+                        print(f"[FAIL] Gate 8: Commit tag '[CASE-{case_tag}]' has no matching ledger under 'cases/'.", file=sys.stderr)
+                        return False
+                    print(f"[+] Gate 8: Mandatory Case Registry:     [PASS] HEAD commit citation '[CASE-{case_tag}]' verified against case registry.")
+                elif head_hash in legacy_anchor_hashes:
+                    print(f"[+] Gate 8: Mandatory Case Registry:     [PASS] Clean tree. Anchor commit {head_hash} verified (pre-Gate 8 baseline).")
+                else:
+                    print(f"[FAIL] Gate 8: Commit message lacking canonical '[CASE-XXX]' tag: '{first_line}'", file=sys.stderr)
+                    return False
+            except Exception as e:
+                print(f"[FAIL] Gate 8 git log check failed: {e}", file=sys.stderr)
+                return False
+    except Exception as e:
+        print(f"[FAIL] Gate 8 check failed: {e}", file=sys.stderr)
+        return False
+
     print("-" * 68)
-    print("[PASS] All 7 ACME v3.2.0 Systems Architecture & Invariant Gates PASS.")
+    print("[PASS] All 8 ACME v3.2.0 Systems Architecture & Invariant Gates PASS.")
     print("=" * 68)
     return True
 
 if __name__ == "__main__":
+    if "--check-commit-msg" in sys.argv:
+        idx = sys.argv.index("--check-commit-msg")
+        if idx + 1 < len(sys.argv):
+            msg_file = Path(sys.argv[idx + 1])
+            is_valid = verify_commit_message_file(msg_file)
+            sys.exit(0 if is_valid else 1)
+        else:
+            print("[FAIL] Missing commit message file path.", file=sys.stderr)
+            sys.exit(1)
+
     verify_all_flag = "--verify-all" in sys.argv or "-a" in sys.argv
     success = run_invariant_audit(verify_all=verify_all_flag)
     sys.exit(0 if success else 1)

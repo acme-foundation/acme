@@ -1,5 +1,9 @@
 # CASE: CASE_{HEX3}_{SLUG}
-- **Case ID:** CASE_{HEX3}_{SLUG}
+- **Case ID:** CASE_{hex3}_{slug}
+- **Target Scope (Whitelisted Files):**
+  - [Mandatory: Explicit list of relative file paths permitted for modification]
+- **Execution State:** [ACTIVE | BLOCKED | RESOLVED]
+- **Bound Invariant:** [INV-* reference, e.g., INV-MANDATORY-CASE-BINDING]
 - **Timestamp:** YYYY-MM-DDTHH:MM:SS+03:00
 - **Target Module:** [Module path or bounded subsystem]
 - **Station / Node:** [Inception | Elaboration | Construction | Transition]

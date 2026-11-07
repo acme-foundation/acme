@@ -15,8 +15,11 @@ ACME transforms large language models (LLMs) from unanchored probabilistic token
 ```text
 acme/
 ├── README.md                      # Operational storefront, routing protocols, and downstream dispatch
-├── CONSTITUTION.md                # Root Invariants & System Protocols (Articles 0 - 10)
-├── verify.py                      # Mechanical CI/CD gatekeeper turnstile (7 Gates)
+├── CONSTITUTION.md                # Root Invariants & System Protocols (Articles 0 - 11)
+├── verify.py                      # Mechanical CI/CD gatekeeper turnstile (8 Gates)
+│
+├── cases/                         # Active execution ledgers and arbitration tickets
+│   └── CASE_{hex3}_{slug}.md      # Bounded mutation scope and invariant linkage
 │
 ├── templates/                     # Official Document Templates
 │   ├── CASE_TEMPLATE.md           # Anomaly triage and conflict analysis template
@@ -62,7 +65,7 @@ Downstream client workspaces bind ACME as their external supreme normative autho
 
 ### Downstream to Headquarter Adjudication Lifecycle
 
-1. **Workstation Adjudication:** Workspaces record friction and local proceedings in `cases/CASE_{hex3}_{slug}.md`. Opening any case or initiating an escalation strictly mandates binding to the latest canonical upstream ACME HEAD commit (`INV-MERKLE-PARITY-01`).
+1. **Workstation Adjudication:** Workspaces record friction and local proceedings in `cases/CASE_{hex3}_{slug}.md`. Opening any case or initiating an escalation strictly mandates binding to the latest canonical upstream ACME HEAD commit (`INV-MERKLE-PARITY-01`) and registered execution bounds (`INV-MANDATORY-CASE-BINDING`).
 2. **Case Escalation:** Systemic invariant gaps and unresolved disputes are sanitized and escalated via `cases/{project}/CASE_{hex3}_{slug}` branches.
 3. **Isolated Sandbox Verification (Adversarial Rig):** ACME Headquarters subjects candidate rules to adversarial stress testing inside an isolated `.tmp/lab_{hex3}/` sandbox.
 4. **Registration:** Certified invariants register as canonical ground truth under `precedents/` as authoritative records or under `norms/` as Statutory Norms.
