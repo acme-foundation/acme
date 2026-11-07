@@ -1,6 +1,8 @@
 # CASE: CASE_{HEX3}_{SLUG}
 - **Timestamp:** YYYY-MM-DDTHH:MM:SS+03:00
 - **Station / Node:** [Inception | Elaboration | Construction | Transition]
+- **Normative Anchor Commit:** [HEAD Commit SHA of upstream ACME at case creation]
+- **Statutory Status:** [ACTIVE_CANONICAL | REJECTED_STALE_DRIFT]
 - **Trigger / Claim:** [Operational friction, dispute, or incoming requirement]
 - **Constraints:** [Negative Invariants / DoF = 0]
 

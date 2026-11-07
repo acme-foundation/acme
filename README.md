@@ -63,7 +63,7 @@ Downstream client workspaces bind ACME as their external supreme normative autho
 
 ### Downstream to Headquarter Adjudication Lifecycle
 
-1. **Workstation Adjudication:** Workspaces record friction and local proceedings in `cases/CASE_{hex3}_{slug}.md`.
+1. **Workstation Adjudication:** Workspaces record friction and local proceedings in `cases/CASE_{hex3}_{slug}.md`. Opening any case or initiating an escalation strictly mandates binding to the latest canonical upstream ACME HEAD commit (`INV-IGNORANTIA-JURIS-01`).
 2. **Case Escalation:** Systemic invariant gaps and unresolved disputes are sanitized and escalated via `cases/{project}/CASE_{hex3}_{slug}` branches.
 3. **The Crucible Protocol:** ACME Headquarters subjects candidate rules to adversarial stress testing inside an isolated `.tmp/lab_{hex3}/` sandbox.
 4. **Ratification & Registration:** Certified invariants are permanently registered under `precedents/` as authoritative Rulings or under `norms/` as Statutory Norms.

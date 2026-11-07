@@ -93,13 +93,14 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
             "ARTICLE 5: ADVERSARIAL TWIN DYNAMICS",
             "ARTICLE 6: SOVEREIGN OVERRIDE",
             "ARTICLE 7: JURISPRUDENTIAL PRECEDENT",
-            "ARTICLE 8: CANONICAL LANGUAGE & INTERLINGUA PROTOCOL"
+            "ARTICLE 8: CANONICAL LANGUAGE & INTERLINGUA PROTOCOL",
+            "ARTICLE 9: MANDATORY TEMPORAL ALIGNMENT & PROCEDURAL PRECEDENCE"
         ]
         for art in required_articles:
             if art not in const_text:
                 print(f"[FAIL] Missing constitutional article: {art}", file=sys.stderr)
                 return False
-        print("[+] Gate 3: Constitutional Parity:       [PASS] Articles 0 to 8 ratified in CONSTITUTION.md.")
+        print("[+] Gate 3: Constitutional Parity:       [PASS] Articles 0 to 9 ratified in CONSTITUTION.md.")
     except Exception as e:
         print(f"[FAIL] Gate 3 check failed: {e}", file=sys.stderr)
         return False
