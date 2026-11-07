@@ -1,7 +1,7 @@
 # ACME: Lex Proceduralis Agentium
 > **Autonomous Cognitive Multi-Agent Ecosystem | Canonical Jurisprudential Hub**  
 > **Release:** v3.2.0 | **Authority:** Lex Superior (`DoF = 0`)  
-> **Biological Root of Trust:** Serkan BAYHAN (Chief Architect)  
+> **Biological Root of Trust:** ACME Architect  
 > *"Nulla Actio Sine Spec, Nullum Iudicium Sine Lege"*  
 > *(No action without specification, no adjudication without law.)*
 

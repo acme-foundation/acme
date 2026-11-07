@@ -1,7 +1,7 @@
 # CONSTITUTION OF THE ACME ECOSYSTEM (LEX SUPERIOR v3.2.0)
 > **Status:** RATIFIED CANONICAL FOUNDATION (`DoF = 0`)  
 > **Authority:** Lex Superior / Irreducible Cognitive Constitution  
-> **Biological Root of Trust:** Serkan BAYHAN (Chief Architect)  
+> **Biological Root of Trust:** ACME Architect  
 > *"Nulla Actio Sine Spec, Nullum Iudicium Sine Lege"*  
 > *(No action without specification, no adjudication without law.)*
 
@@ -36,7 +36,7 @@
 3. Procedural Economy Metric: The supreme optimization loss function of the execution pipeline is minimizing appeals, remands, and adversarial contest cycles.
 
 ## ARTICLE 6: SOVEREIGN OVERRIDE & COST OF OVERRIDE
-1. Sovereign Human Determination: The teleological intent of the Biological Chief Architect constitutes the supreme court of equity; decisions recorded in `DECISION_LOG` immediately extinguish inter-agent disputes.
+1. Sovereign Human Determination: The teleological intent of the ACME Architect constitutes the supreme court of equity; decisions recorded in `DECISION_LOG` immediately extinguish inter-agent disputes.
 2. Indivisibility of Liability: Every constitutional relaxation or sovereign architectural deviation incurs technical and thermal liability, booked as explicit architectural debt against project telemetry.
 
 ## ARTICLE 7: JURISPRUDENTIAL PRECEDENT & NORM PROMOTION (JURISPRUDENTIAL CACHE)

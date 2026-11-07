@@ -8,5 +8,5 @@
      - Mass Conservation Verification: Confirming zero byte leakage.
      - AST Dependency Shield: Auditing external imports and unauthorized OS execution side-effects.
   3. Formulations failing the stress inquest are remanded to the client workspace with a reasoned dismissal notice (`REMAND`).
-  4. Formulations passing the stress inquest are ratified by the High Council (Chief Architect + Node-1) and codified under `precedents/` as authoritative Rulings or under `norms/` as Statutory Norms.
+  4. Formulations passing the stress inquest are ratified by the High Council (ACME Architect + Node-1) and codified under `precedents/` as authoritative Rulings or under `norms/` as Statutory Norms.
   5. Upon inquest completion, the transient laboratory workspace is purged completely (`Zero Residue / DoF = 0`).
