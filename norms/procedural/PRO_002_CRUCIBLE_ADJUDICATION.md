@@ -2,7 +2,7 @@
 - **Scope:** Procedural Civil Code for Autonomous Systems (Procedural / PRO)
 - **DoF:** 0
 - **Rule:**
-  1. Candidate norms dispatched from downstream client repositories via `rfcs/{project}/RFC_{hex3}_{slug}` branches shall never be accepted prima facie.
+  1. Candidate norms dispatched from downstream client repositories via `cases/{project}/CASE_{hex3}_{slug}` branches shall never be accepted prima facie.
   2. The candidate norm is subjected to a 3-part adversarial stress inquest inside an isolated `.tmp/lab_{hex3}/` sandbox:
      - Adversarial Payload Attack: Stress testing OOM thresholds and cyclic deadlock vulnerabilities.
      - Mass Conservation Verification: Confirming zero byte leakage.

@@ -20,7 +20,7 @@ acme/
 ├── verify.py                      # Mechanical CI/CD gatekeeper turnstile (7 Gates)
 │
 ├── templates/                     # Official Statutory Document Templates
-│   ├── WORK_TEMPLATE.md           # Workstation execution and dialectic ledger template
+│   ├── CASE_TEMPLATE.md           # Workstation case ledger and inquest template
 │   ├── PRECEDENT_TEMPLATE.md      # Appellate ruling and precedential decree template
 │   └── NORM_TEMPLATE.md           # Statutory norm codification template
 │
@@ -55,7 +55,7 @@ Downstream client workspaces bind ACME as their external supreme normative autho
   ],
   "upstream_dispatch": {
     "remote": "origin",
-    "branch_template": "rfcs/{project_name}/RFC_{hex3}_{slug}",
+    "branch_template": "cases/{project_name}/CASE_{hex3}_{slug}",
     "auto_dispatch": true
   }
 }
@@ -63,8 +63,8 @@ Downstream client workspaces bind ACME as their external supreme normative autho
 
 ### Downstream to Headquarter Adjudication Lifecycle
 
-1. **Local Adjudication:** Workspaces record friction and local rulings in `works/WORK_{hex3}_{slug}.md`.
-2. **Upstream Referral:** Systemic invariant gaps are sanitized and dispatched via `rfcs/{project}/RFC_{hex3}_{slug}` branches.
+1. **Workstation Adjudication:** Workspaces record friction and local proceedings in `cases/CASE_{hex3}_{slug}.md`.
+2. **Case Escalation:** Systemic invariant gaps and unresolved disputes are sanitized and escalated via `cases/{project}/CASE_{hex3}_{slug}` branches.
 3. **The Crucible Protocol:** ACME Headquarters subjects candidate rules to adversarial stress testing inside an isolated `.tmp/lab_{hex3}/` sandbox.
 4. **Ratification & Registration:** Certified invariants are permanently registered under `precedents/` as authoritative Rulings or under `norms/` as Statutory Norms.
 

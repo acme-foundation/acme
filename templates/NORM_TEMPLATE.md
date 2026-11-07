@@ -1,6 +1,6 @@
 # NORM-{DOM}-{HEX3}: {TITLE}
 - **Scope:** [Core / Domain / Procedural]
-- **Authority:** [RFC-Ref / Precedent-Ref]
+- **Authority:** [Case-Ref / Precedent-Ref]
 - **DoF:** 0
 - **Rule:**
   1. [Negative Constraint / Via Negativa]

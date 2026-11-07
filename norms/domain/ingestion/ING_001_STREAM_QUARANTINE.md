@@ -1,6 +1,6 @@
 # NORM-ING-001: BYTE-PRECISE DUAL-QUARANTINE PROTOCOL (STREAM QUARANTINE)
 - **Scope:** Ingestion and Data Influx Pipelines (Domain / Ingestion / ING)
-- **Authority:** RFC-001 / Precedent-ING-001
+- **Authority:** Precedent-ING-001 (Stream Ingestion Case)
 - **DoF:** 0
 - **Rule:**
   1. Corrupt, truncated, or unparseable stream records must be isolated immediately into `quarantine.jsonl`.

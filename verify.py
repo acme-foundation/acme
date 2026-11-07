@@ -130,7 +130,7 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
     # Gate 5: Templates & Precedents Integrity
     try:
         required_templates = [
-            Path("templates/WORK_TEMPLATE.md"),
+            Path("templates/CASE_TEMPLATE.md"),
             Path("templates/PRECEDENT_TEMPLATE.md"),
             Path("templates/NORM_TEMPLATE.md")
         ]
