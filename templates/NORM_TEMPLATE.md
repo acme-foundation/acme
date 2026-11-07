@@ -1,4 +1,4 @@
-# NORM-{DOM}-{HEX3}: {TITLE}
+# NORM: {DOM}_{HEX3}_{SLUG}: {TITLE}
 - **Scope:** [Core / Domain / Procedural]
 - **Authority:** [Case-Ref / Precedent-Ref]
 - **DoF:** 0

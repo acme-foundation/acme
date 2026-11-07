@@ -1,9 +1,10 @@
-# CASE: CASE_{HEX3}_{SLUG}
-- **Case ID:** CASE_{hex3}_{slug}
+# CASE: CAS_{HEX3}_{SLUG}
+- **Case ID:** CAS_{hex3}_{slug}
+- **Commit Pattern:** [CAS-{HEX3}] <action>: <description>
 - **Target Scope (Whitelisted Files):**
   - [Mandatory: Explicit list of relative file paths permitted for modification]
 - **Execution State:** [ACTIVE | BLOCKED | RESOLVED]
-- **Bound Invariant:** [INV-* reference, e.g., INV-MANDATORY-CASE-BINDING]
+- **Bound Invariant:** [INV-* reference, e.g., INV-CANONICAL-IDENTIFIER]
 - **Timestamp:** YYYY-MM-DDTHH:MM:SS+03:00
 - **Target Module:** [Module path or bounded subsystem]
 - **Station / Node:** [Inception | Elaboration | Construction | Transition]
@@ -25,4 +26,4 @@
 
 ## 3. UPSTREAM SYNCHRONIZATION
 - **Synchronization State:** [RESOLVED_LOCAL | ESCALATED_UPSTREAM]
-- **Escalation Branch:** [cases/{project}/CASE_{hex3}_{slug} | NONE]
+- **Escalation Branch:** [cases/{project}/CAS_{hex3}_{slug} | NONE]

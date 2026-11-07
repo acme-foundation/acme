@@ -15,14 +15,14 @@ ACME transforms large language models (LLMs) from unanchored probabilistic token
 ```text
 acme/
 ├── README.md                      # Operational storefront, routing protocols, and downstream dispatch
-├── CONSTITUTION.md                # Root Invariants & System Protocols (Articles 0 - 11)
-├── verify.py                      # Mechanical CI/CD gatekeeper turnstile (8 Gates)
+├── CONSTITUTION.md                # Root Invariants & System Protocols (Articles 0 - 12)
+├── verify.py                      # Mechanical CI/CD gatekeeper turnstile (9 Gates)
 │
 ├── cases/                         # Active execution ledgers and arbitration tickets
-│   └── CASE_{hex3}_{slug}.md      # Bounded mutation scope and invariant linkage
+│   └── CAS_{hex3}_{slug}.md      # Bounded mutation scope and invariant linkage
 │
 ├── templates/                     # Official Document Templates
-│   ├── CASE_TEMPLATE.md           # Anomaly triage and conflict analysis template
+│   ├── CAS_TEMPLATE.md           # Anomaly triage and conflict analysis template
 │   ├── PRECEDENT_TEMPLATE.md      # Ground truth precedent record template
 │   └── NORM_TEMPLATE.md           # Statutory norm codification template
 │
@@ -57,7 +57,7 @@ Downstream client workspaces bind ACME as their external supreme normative autho
   ],
   "upstream_dispatch": {
     "remote": "origin",
-    "branch_template": "cases/{project_name}/CASE_{hex3}_{slug}",
+    "branch_template": "cases/{project_name}/CAS_{hex3}_{slug}",
     "auto_dispatch": true
   }
 }
@@ -65,8 +65,8 @@ Downstream client workspaces bind ACME as their external supreme normative autho
 
 ### Downstream to Headquarter Adjudication Lifecycle
 
-1. **Workstation Adjudication:** Workspaces record friction and local proceedings in `cases/CASE_{hex3}_{slug}.md`. Opening any case or initiating an escalation strictly mandates binding to the latest canonical upstream ACME HEAD commit (`INV-MERKLE-PARITY-01`) and registered execution bounds (`INV-MANDATORY-CASE-BINDING`).
-2. **Case Escalation:** Systemic invariant gaps and unresolved disputes are sanitized and escalated via `cases/{project}/CASE_{hex3}_{slug}` branches.
+1. **Workstation Adjudication:** Workspaces record friction and local proceedings in `cases/CAS_{hex3}_{slug}.md`. Opening any case or initiating an escalation strictly mandates binding to the latest canonical upstream ACME HEAD commit (`INV-MERKLE-PARITY-01`) and registered execution bounds (`INV-MANDATORY-CASE-BINDING`).
+2. **Case Escalation:** Systemic invariant gaps and unresolved disputes are sanitized and escalated via `cases/{project}/CAS_{hex3}_{slug}` branches.
 3. **Isolated Sandbox Verification (Adversarial Rig):** ACME Headquarters subjects candidate rules to adversarial stress testing inside an isolated `.tmp/lab_{hex3}/` sandbox.
 4. **Registration:** Certified invariants register as canonical ground truth under `precedents/` as authoritative records or under `norms/` as Statutory Norms.
 

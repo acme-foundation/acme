@@ -1,4 +1,4 @@
-# NORM-ING-001: BYTE-PRECISE DUAL-QUARANTINE PROTOCOL (STREAM QUARANTINE)
+# NORM: ING_001_STREAM_QUARANTINE: BYTE-PRECISE DUAL-QUARANTINE PROTOCOL (STREAM QUARANTINE)
 - **Scope:** Ingestion and Data Influx Pipelines (Domain / Ingestion / ING)
 - **Authority:** Precedent-ING-001 (Stream Ingestion Case)
 - **DoF:** 0

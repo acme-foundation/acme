@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """
 ACME CORE INVARIANT GATE & CONSTITUTIONAL VERIFIER (Pure Standard Library)
-Self-Compiling Genesis Verifier (v3.2.0 - Systems Architecture 8-Gate Turnstile)
+Self-Compiling Genesis Verifier (v3.2.0 - Systems Architecture 9-Gate Turnstile)
 Serves as the Mechanical Gatekeeper Turnstile at the repository boundary.
 Codifies Canonical Interlingua Invariant (INV-CANONICAL-INTERLINGUA / DoF = 0).
 Codifies Mandatory Execution Registry (INV-MANDATORY-CASE-BINDING / DoF = 0).
+Codifies Canonical Identifier Standard (INV-CANONICAL-IDENTIFIER / DoF = 0).
 """
 
 import os
@@ -68,10 +69,10 @@ def verify_commit_message_file(msg_path: Path) -> bool:
         print("[FAIL] Commit message is empty.", file=sys.stderr)
         return False
     first_line = lines[0]
-    case_pattern = re.compile(r'^\[CASE-[0-9A-Fa-f]{3,4}\]', re.IGNORECASE)
+    case_pattern = re.compile(r'^\[(?:CAS|CASE)-[0-9A-Fa-f]{3,4}\]', re.IGNORECASE)
     if not case_pattern.match(first_line):
         print(
-            f"[FAIL] (INV-COMMIT-LINKAGE-02) Commit message must start with '[CASE-XXX]' tag: '{first_line}'",
+            f"[FAIL] (INV-COMMIT-LINKAGE-02) Commit message must start with '[CAS-XXX]' tag: '{first_line}'",
             file=sys.stderr
         )
         return False
@@ -145,7 +146,7 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
         print(f"[FAIL] Gate 2 check failed: {e}", file=sys.stderr)
         return False
 
-    # Gate 3: Constitutional Parity: Articles 0 to 11 in CONSTITUTION.md
+    # Gate 3: Constitutional Parity: Articles 0 to 12 in CONSTITUTION.md
     try:
         const_path = Path("CONSTITUTION.md")
         if not const_path.is_file():
@@ -164,13 +165,14 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
             "ARTICLE 8: CANONICAL LANGUAGE & INTERLINGUA PROTOCOL",
             "ARTICLE 9: MANDATORY TEMPORAL ALIGNMENT & PROCEDURAL PRECEDENCE",
             "ARTICLE 10: ZERO-RHETORIC & OPERATIONAL SPECIFICATION",
-            "ARTICLE 11: MANDATORY EXECUTION REGISTRY"
+            "ARTICLE 11: MANDATORY EXECUTION REGISTRY",
+            "ARTICLE 12: CANONICAL NAMING & LEXICAL TRACEABILITY"
         ]
         for art in required_articles:
             if art not in const_text:
                 print(f"[FAIL] Missing constitutional article: {art}", file=sys.stderr)
                 return False
-        print("[+] Gate 3: Constitutional Parity:       [PASS] Articles 0 to 11 ratified in CONSTITUTION.md.")
+        print("[+] Gate 3: Constitutional Parity:       [PASS] Articles 0 to 12 ratified in CONSTITUTION.md.")
     except Exception as e:
         print(f"[FAIL] Gate 3 check failed: {e}", file=sys.stderr)
         return False
@@ -201,7 +203,7 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
     # Gate 5: Templates & Precedents Integrity
     try:
         required_templates = [
-            Path("templates/CASE_TEMPLATE.md"),
+            Path("templates/CAS_TEMPLATE.md"),
             Path("templates/PRECEDENT_TEMPLATE.md"),
             Path("templates/NORM_TEMPLATE.md")
         ]
@@ -276,7 +278,7 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
     # Gate 8: Mandatory Case Registry & Zero Unregistered Execution (INV-MANDATORY-CASE-BINDING)
     try:
         cases_dir = Path("cases")
-        case_commit_pattern = re.compile(r'^\[CASE-([0-9A-Fa-f]{3,4})\]', re.IGNORECASE)
+        case_commit_pattern = re.compile(r'^\[(?:CAS|CASE)-([0-9A-Fa-f]{3,4})\]', re.IGNORECASE)
 
         # Inspect working tree status for any uncommitted changes
         status_output = subprocess.check_output(
@@ -310,7 +312,7 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
             if not cases_dir.is_dir():
                 print("[FAIL] Gate 8: Working tree modifications detected, but 'cases/' directory does not exist.", file=sys.stderr)
                 return False
-            case_files = list(cases_dir.glob("CASE_*.md"))
+            case_files = list(cases_dir.glob("CAS_*.md")) + list(cases_dir.glob("CASE_*.md"))
             if not case_files:
                 print("[FAIL] Gate 8: Working tree modifications detected, but no case ledger found under 'cases/'.", file=sys.stderr)
                 return False
@@ -345,7 +347,7 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
             for mf in modified_files:
                 covered = False
                 for cf, whitelisted in active_cases:
-                    if mf == cf.as_posix() or mf.startswith("cases/CASE_"):
+                    if mf == cf.as_posix() or mf.startswith("cases/CAS_") or mf.startswith("cases/CASE_"):
                         covered = True
                         break
                     if mf in whitelisted:
@@ -369,15 +371,15 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
                 commit_match = case_commit_pattern.match(first_line)
                 if commit_match:
                     case_tag = commit_match.group(1).upper()
-                    matching_cases = list(cases_dir.glob(f"CASE_{case_tag}*.md")) + list(cases_dir.glob(f"CASE-{case_tag}*.md"))
+                    matching_cases = list(cases_dir.glob(f"CAS_{case_tag}*.md")) + list(cases_dir.glob(f"CASE_{case_tag}*.md"))
                     if not matching_cases:
-                        print(f"[FAIL] Gate 8: Commit tag '[CASE-{case_tag}]' has no matching ledger under 'cases/'.", file=sys.stderr)
+                        print(f"[FAIL] Gate 8: Commit tag '[CAS-{case_tag}]' has no matching ledger under 'cases/'.", file=sys.stderr)
                         return False
-                    print(f"[+] Gate 8: Mandatory Case Registry:     [PASS] HEAD commit citation '[CASE-{case_tag}]' verified against case registry.")
+                    print(f"[+] Gate 8: Mandatory Case Registry:     [PASS] HEAD commit citation '[CAS-{case_tag}]' verified against case registry.")
                 elif head_hash in legacy_anchor_hashes:
                     print(f"[+] Gate 8: Mandatory Case Registry:     [PASS] Clean tree. Anchor commit {head_hash} verified (pre-Gate 8 baseline).")
                 else:
-                    print(f"[FAIL] Gate 8: Commit message lacking canonical '[CASE-XXX]' tag: '{first_line}'", file=sys.stderr)
+                    print(f"[FAIL] Gate 8: Commit message lacking canonical '[CAS-XXX]' tag: '{first_line}'", file=sys.stderr)
                     return False
             except Exception as e:
                 print(f"[FAIL] Gate 8 git log check failed: {e}", file=sys.stderr)
@@ -386,8 +388,53 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
         print(f"[FAIL] Gate 8 check failed: {e}", file=sys.stderr)
         return False
 
+    # Gate 9: Lexical Parity & Naming Syntax (INV-CANONICAL-IDENTIFIER)
+    try:
+        registered_tags = {'CAS', 'INV', 'PRE', 'COR', 'ING', 'PRO'}
+        canonical_pattern = re.compile(r'^[A-Z]{3}_[0-9A-Fa-f]{3}_[a-zA-Z0-9_]+$')
+        syntax_prefix_pattern = re.compile(r'^[A-Z]{3}_[0-9A-Fa-f]{3}_')
+
+        audit_dirs = [Path("cases"), Path("norms"), Path("precedents")]
+        violations = []
+        total_audited = 0
+
+        for ad in audit_dirs:
+            if not ad.is_dir():
+                continue
+            for doc in ad.rglob("*.md"):
+                total_audited += 1
+                stem = doc.stem
+                if not syntax_prefix_pattern.match(doc.name) or not canonical_pattern.match(stem):
+                    violations.append(f"Invalid file name syntax: {doc}")
+                tag = stem[:3]
+                if tag not in registered_tags:
+                    violations.append(f"Unregistered namespace token '{tag}' in file: {doc}")
+
+                content = doc.read_text(encoding="utf-8")
+                lines = [l.strip() for l in content.splitlines() if l.strip()]
+                if not lines:
+                    violations.append(f"Empty document: {doc}")
+                    continue
+                header_line = lines[0]
+                if not header_line.startswith("#"):
+                    violations.append(f"Missing H1 heading in {doc}: '{header_line}'")
+                    continue
+                header_id = re.sub(r'^#+\s*(?:CASE|NORM|PRECEDENT)?\s*:?\s*', '', header_line).strip()
+                if not syntax_prefix_pattern.match(header_id):
+                    violations.append(f"Invalid ledger title in {doc}: '{header_line}' (resolved id: '{header_id}')")
+
+        if violations:
+            for v in violations:
+                print(f"[FAIL] Gate 9 (INV-CANONICAL-IDENTIFIER): {v}", file=sys.stderr)
+            return False
+
+        print(f"[+] Gate 9: Lexical Parity & Naming:     [PASS] All {total_audited} artifacts and ledger titles verified under ^[A-Z]{{3}}_[0-9A-F]{{3}}_.")
+    except Exception as e:
+        print(f"[FAIL] Gate 9 check failed: {e}", file=sys.stderr)
+        return False
+
     print("-" * 68)
-    print("[PASS] All 8 ACME v3.2.0 Systems Architecture & Invariant Gates PASS.")
+    print("[PASS] All 9 ACME v3.2.0 Systems Architecture & Invariant Gates PASS.")
     print("=" * 68)
     return True
 
