@@ -15,8 +15,8 @@ ACME transforms large language models (LLMs) from unanchored probabilistic token
 ```text
 acme/
 ├── README.md                      # Operational storefront, routing protocols, and downstream dispatch
-├── CONSTITUTION.md                # Root Invariants & System Protocols (Articles 0 - 14)
-├── verify.py                      # Mechanical CI/CD gatekeeper turnstile (12 Gates)
+├── CONSTITUTION.md                # Root Invariants & System Protocols (Articles 0 - 15)
+├── verify.py                      # Mechanical CI/CD gatekeeper turnstile (13 Gates)
 │
 ├── cases/                         # Active execution ledgers and arbitration tickets
 │   └── CAS_{hex3}_{slug}.md      # Bounded mutation scope and invariant linkage (Flat topology)
@@ -33,6 +33,9 @@ acme/
 │   ├── core/                      # COR_{hex3}_*.md (COR_001, COR_002, COR_003)
 │   ├── domain/ingestion/          # ING_{hex3}_*.md (ING_001)
 │   └── procedural/                # PRO_{hex3}_*.md (PRO_001, PRO_002)
+│
+├── pipelines/                     # Declarative modal pipeline contracts and I/O specifications
+│   └── README.md                  # Pipeline schema definition, ingress/egress boundaries, and keystone rules
 │
 ├── migrations/                    # Deterministic pipeline and schema migration registry
 │   └── README.md                  # Migration adapter protocol, execution lifecycle, and rollback rules

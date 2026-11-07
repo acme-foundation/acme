@@ -1,7 +1,8 @@
 # CASE: CAS_{HEX3}_{SLUG}
 - **Case ID:** CAS_{hex3}_{slug}
 - **File Path:** cases/CAS_{hex3}_{slug}.md
-- **Type:** [BUG | FEAT | REFACTOR | INQUEST]
+- **Type:** [BUG | FEAT | REFACTOR | INQUEST | ASSET]
+- **Depends On:** [CAS-XXX | NONE]
 - **Commit Pattern:** [CAS-{HEX3}] <action>: <description>
 - **Target Scope (Whitelisted Files):**
   - [Mandatory: Explicit list of relative file paths permitted for modification]

@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 """
 ACME CORE INVARIANT GATE & CONSTITUTIONAL VERIFIER (Pure Standard Library)
-Self-Compiling Genesis Verifier (v3.2.0 - Systems Architecture 12-Gate Turnstile)
+Self-Compiling Genesis Verifier (v3.2.0 - Systems Architecture 13-Gate Turnstile)
 Serves as the Mechanical Gatekeeper Turnstile at the repository boundary.
 Codifies Canonical Interlingua Invariant (INV-CANONICAL-INTERLINGUA / DoF = 0).
 Codifies Mandatory Execution Registry (INV-MANDATORY-CASE-BINDING / DoF = 0).
 Codifies Canonical Identifier Standard (INV-CANONICAL-IDENTIFIER / DoF = 0).
 Codifies Pipeline Topology & Migration Invariant (INV-PIPELINE-MIGRATION / DoF = 0).
 Codifies Flat Case Registry & Precedent Lineage (INV-FLAT-REGISTRY / INV-PRECEDENT-PROMOTION / DoF = 0).
+Codifies Pipeline Expansion & Keystone Precedence (INV-PIPELINE-EXPANSION / INV-KEYSTONE-PRECEDENCE / DoF = 0).
 """
 
 import os
@@ -152,7 +153,7 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
         print(f"[FAIL] Gate 2 check failed: {e}", file=sys.stderr)
         return False
 
-    # Gate 3: Constitutional Parity: Articles 0 to 14 in CONSTITUTION.md
+    # Gate 3: Constitutional Parity: Articles 0 to 15 in CONSTITUTION.md
     try:
         const_path = Path("CONSTITUTION.md")
         if not const_path.is_file():
@@ -174,13 +175,14 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
             "ARTICLE 11: MANDATORY EXECUTION REGISTRY",
             "ARTICLE 12: CANONICAL NAMING & LEXICAL TRACEABILITY",
             "ARTICLE 13: PIPELINE TOPOLOGY & AUTOMATED MIGRATION",
-            "ARTICLE 14: CASE TOPOLOGY, LOCAL SCOPING & PRECEDENT PROMOTION"
+            "ARTICLE 14: CASE TOPOLOGY, LOCAL SCOPING & PRECEDENT PROMOTION",
+            "ARTICLE 15: DYNAMIC PIPELINE EXPANSION & KEYSTONE PRECEDENCE"
         ]
         for art in required_articles:
             if art not in const_text:
                 print(f"[FAIL] Missing constitutional article: {art}", file=sys.stderr)
                 return False
-        print("[+] Gate 3: Constitutional Parity:       [PASS] Articles 0 to 14 ratified in CONSTITUTION.md.")
+        print("[+] Gate 3: Constitutional Parity:       [PASS] Articles 0 to 15 ratified in CONSTITUTION.md.")
     except Exception as e:
         print(f"[FAIL] Gate 3 check failed: {e}", file=sys.stderr)
         return False
@@ -243,7 +245,13 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
         subjective_words = ['fast', 'perfect', 'wonderful', 'powerful', 'easy', 'flawless', 'super', 'legendary', 'urgent', 'modern', 'lightweight']
         total_words = 0
         subj_count = 0
-        audit_paths = [Path("CONSTITUTION.md"), Path("README.md"), Path("migrations/README.md")] + list(Path("norms").rglob("*.md")) + list(Path("precedents").rglob("*.md"))
+        audit_paths = [
+            Path("CONSTITUTION.md"),
+            Path("README.md"),
+            Path("migrations/README.md"),
+            Path("pipelines/README.md")
+        ] + list(Path("norms").rglob("*.md")) + list(Path("precedents").rglob("*.md"))
+
         for ap in audit_paths:
             if ap.is_file():
                 text = ap.read_text(encoding="utf-8").lower()
@@ -443,9 +451,9 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
 
     # Gate 10: Pipeline Topology & Path Whitelist (INV-PIPELINE-TOPOLOGY-01)
     try:
-        whitelisted_root_dirs = {'.git', '.tmp', 'cases', 'norms', 'precedents', 'templates', 'migrations'}
+        whitelisted_root_dirs = {'.git', '.tmp', 'cases', 'norms', 'precedents', 'templates', 'migrations', 'pipelines'}
         whitelisted_root_files = {'.gitignore', 'README.md', 'CONSTITUTION.md', 'verify.py'}
-        required_topology_dirs = {'cases', 'norms', 'precedents', 'templates', 'migrations'}
+        required_topology_dirs = {'cases', 'norms', 'precedents', 'templates', 'migrations', 'pipelines'}
 
         for entry in root.iterdir():
             if entry.is_dir():
@@ -466,6 +474,11 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
         migrations_readme = Path("migrations/README.md")
         if not migrations_readme.is_file() or len(migrations_readme.read_bytes()) < 50:
             print("[FAIL] Gate 10 (INV-PIPELINE-TOPOLOGY-01): Missing or corrupted 'migrations/README.md'.", file=sys.stderr)
+            return False
+
+        pipelines_readme = Path("pipelines/README.md")
+        if not pipelines_readme.is_file() or len(pipelines_readme.read_bytes()) < 50:
+            print("[FAIL] Gate 10 (INV-PIPELINE-TOPOLOGY-01): Missing or corrupted 'pipelines/README.md'.", file=sys.stderr)
             return False
 
         print("[+] Gate 10: Pipeline Topology:          [PASS] Filesystem topology validated against canonical whitelist.")
@@ -539,8 +552,66 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
         print(f"[FAIL] Gate 12 check failed: {e}", file=sys.stderr)
         return False
 
+    # Gate 13: Unregistered Domain & Asset Protection (INV-PIPELINE-EXPANSION-01 / INV-KEYSTONE-PRECEDENCE-02)
+    try:
+        pipelines_dir = Path("pipelines")
+        asset_exts = {'.wav', '.mp3', '.ogg', '.flac', '.png', '.jpg', '.jpeg', '.gif', '.bmp', '.svg', '.bin', '.ttf', '.otf'}
+
+        # Gather whitelisted ingress/egress directories from registered pipeline definitions
+        registered_asset_dirs = set()
+        if pipelines_dir.is_dir():
+            for p_file in pipelines_dir.glob("*.yaml"):
+                content = p_file.read_text(encoding="utf-8")
+                dir_matches = re.findall(r'directory:\s*["\']?([^"\']+)["\']?', content)
+                for d in dir_matches:
+                    registered_asset_dirs.add(Path(d.strip()).as_posix())
+
+        # Scan repository for unmanaged modal assets
+        for p in root.rglob("*"):
+            if not p.is_file():
+                continue
+            posix_path = p.as_posix()
+            parts = posix_path.split("/")
+            if ".git" in parts or ".tmp" in parts:
+                continue
+            if p.suffix.lower() in asset_exts:
+                is_covered = any(posix_path.startswith(rad) for rad in registered_asset_dirs)
+                if not is_covered:
+                    print(f"[FAIL] Gate 13 (INV-PIPELINE-EXPANSION-01): Unregistered asset ingress detected: {p}", file=sys.stderr)
+                    return False
+
+        # Verify keystone precedence in case ledgers
+        cases_dir = Path("cases")
+        if cases_dir.is_dir():
+            for c_file in cases_dir.glob("CAS_*.md"):
+                c_content = c_file.read_text(encoding="utf-8")
+                is_secondary_asset_case = bool(
+                    re.search(r'Type:\s*ASSET', c_content, re.IGNORECASE) or
+                    re.search(r'Domain:\s*asset', c_content, re.IGNORECASE)
+                )
+                if is_secondary_asset_case:
+                    dep_match = re.search(r'Depends On:\s*\[?(CAS-[0-9A-Fa-f]{3,4})\]?', c_content, re.IGNORECASE)
+                    if not dep_match:
+                        print(f"[FAIL] Gate 13 (INV-KEYSTONE-PRECEDENCE-02): Asset case {c_file.name} lacks required keystone 'Depends On: [CAS-XXX]'.", file=sys.stderr)
+                        return False
+                    dep_case_tag = dep_match.group(1).upper().replace("CAS-", "")
+                    matching_dep = list(cases_dir.glob(f"CAS_{dep_case_tag}*.md"))
+                    if not matching_dep:
+                        print(f"[FAIL] Gate 13 (INV-KEYSTONE-PRECEDENCE-02): Keystone dependency 'CAS-{dep_case_tag}' in {c_file.name} not found.", file=sys.stderr)
+                        return False
+                    dep_content = matching_dep[0].read_text(encoding="utf-8")
+                    is_closed = bool(re.search(r'(?:Execution State|Status)\s*:\s*(?:RESOLVED|CLOSED)', dep_content, re.IGNORECASE))
+                    if not is_closed:
+                        print(f"[FAIL] Gate 13 (INV-KEYSTONE-PRECEDENCE-02): Keystone dependency 'CAS-{dep_case_tag}' is not CLOSED/RESOLVED.", file=sys.stderr)
+                        return False
+
+        print("[+] Gate 13: Asset Protection & Keystone: [PASS] Domain expansion circuit breaker and keystone precedence verified.")
+    except Exception as e:
+        print(f"[FAIL] Gate 13 check failed: {e}", file=sys.stderr)
+        return False
+
     print("-" * 68)
-    print("[PASS] All 12 ACME v3.2.0 Systems Architecture & Invariant Gates PASS.")
+    print("[PASS] All 13 ACME v3.2.0 Systems Architecture & Invariant Gates PASS.")
     print("=" * 68)
     return True
 
