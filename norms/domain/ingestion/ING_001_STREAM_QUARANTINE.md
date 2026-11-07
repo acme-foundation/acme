@@ -1,11 +1,11 @@
-# NORM-ING-001: BAYT-HASSAS İKİLİ KARANTİNA PROTOKOLÜ (STREAM QUARANTINE)
-- **Kapsam:** Veri Giriş Hatları (Domain / Ingestion / ING)
-- **Dayanak:** RFC-001 / Precedent-ING-001
+# NORM-ING-001: BYTE-PRECISE DUAL-QUARANTINE PROTOCOL (STREAM QUARANTINE)
+- **Scope:** Ingestion and Data Influx Pipelines (Domain / Ingestion / ING)
+- **Authority:** RFC-001 / Precedent-ING-001
 - **DoF:** 0
-- **Kural:**
-  1. Akış sırasında bozuk, eksik veya çözümlenemeyen her satır 'quarantine.jsonl' dosyasına tecrit edilir.
-  2. Asgari Denetim Metadata Şeması zorunludur:
-     - `byte_offset`: Dosya başından itibaren mutlak bayt ofseti.
-     - `byte_length`: Bozuk segmentin bayt uzunluğu.
-     - `reason`: Bozulmanın teknik sınıfı (DecodeError, ParseError, SchemaViolation).
-     - `raw_preview`: Bozuk kaydın ham metin/bayt önizlemesi.
+- **Rule:**
+  1. Corrupt, truncated, or unparseable stream records must be isolated immediately into `quarantine.jsonl`.
+  2. Mandatory Audit Metadata Schema:
+     - `byte_offset`: Exact byte offset from the start of the source stream.
+     - `byte_length`: Byte length of the isolated corrupt slice.
+     - `reason`: Classification of failure (e.g., DecodeError, ParseError, SchemaViolation).
+     - `raw_preview`: Lossless raw preview of the quarantined payload.

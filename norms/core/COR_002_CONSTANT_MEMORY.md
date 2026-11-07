@@ -1,7 +1,7 @@
-# NORM-COR-002: SABİT BELLEK AKIŞ VE EN AZ EYLEM PROTOKOLÜ (CONSTANT MEMORY)
-- **Kapsam:** Evrensel Çekirdek (Core / COR)
+# NORM-COR-002: CONSTANT MEMORY STREAMING AND LEAST ACTION PROTOCOL (CONSTANT MEMORY)
+- **Scope:** Universal Core (Core / COR)
 - **DoF:** 0
-- **Kural:**
-  1. Veri akışlarında tüm veri tek seferde belleğe yüklenemez (OOM Engeli).
-  2. Heap bellek kullanımı veri büyüklüğü N sonsuza gitse dahi O(1) akış mimarisinde kalmalıdır.
-  3. Görev için tanımlanan RAM tavanı (örn: 15 MB) mekanik profilleme ile doğrulanmalıdır.
+- **Rule:**
+  1. Unbounded datasets must never be loaded into heap memory in a single read call (OOM Prevention).
+  2. Memory utilization must remain strictly bounded ($O(1)$ space complexity) even as stream length $N \to \infty$.
+  3. Peak memory usage for streaming operations must not exceed the specified ceiling (e.g., 15.0 MB) verified by mechanical memory profiling.

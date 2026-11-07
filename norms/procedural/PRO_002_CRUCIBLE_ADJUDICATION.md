@@ -1,12 +1,12 @@
-# NORM-PRO-002: HEYET İNCELEMESİ VE AMPİRİK SINAMA POTASI (THE CRUCIBLE PROTOCOL)
-- **Kapsam:** Usul Hukuku (Procedural / PRO)
+# NORM-PRO-002: APPELLATE INQUEST AND EMPIRICAL CRUCIBLE PROTOCOL (THE CRUCIBLE PROTOCOL)
+- **Scope:** Procedural Civil Code for Autonomous Systems (Procedural / PRO)
 - **DoF:** 0
-- **Kural:**
-  1. Downstream projelerden 'rfcs/{project}/RFC_{hex3}_{slug}' dalıyla sevk edilen hiçbir kural doğrudan kabul edilemez.
-  2. İntikal eden kural '.tmp/lab_{hex3}/' izole alanında 3 hasımlı teste sokulur:
-     - Bozuk Yük Saldırısı (Adversarial Payload): OOM ve kilitlenme eşiği.
-     - Kütle Dengesi Denetimi (Mass Balance): Sıfır kayıp bayt teyidi.
-     - AST Bağımlılık Zırhı: Harici import ve yetkisiz OS çağrısı taraması.
-  3. Lab testini geçemeyen kurallar gerekçeli bozma kararıyla (REMAND) şantiyeye iade edilir.
-  4. Sınamayı geçen kurallar Yüksek Heyet (Mimar + Node-1) onayıyla 'precedents/' altına İlam veya 'norms/' altına Kanun olarak tescil edilir.
-  5. Sınama bittiğinde geçici lab dizini tamamen yok edilir (Zero Residue / DoF=0).
+- **Rule:**
+  1. Candidate norms dispatched from downstream client repositories via `rfcs/{project}/RFC_{hex3}_{slug}` branches shall never be accepted prima facie.
+  2. The candidate norm is subjected to a 3-part adversarial stress inquest inside an isolated `.tmp/lab_{hex3}/` sandbox:
+     - Adversarial Payload Attack: Stress testing OOM thresholds and cyclic deadlock vulnerabilities.
+     - Mass Conservation Verification: Confirming zero byte leakage.
+     - AST Dependency Shield: Auditing external imports and unauthorized OS execution side-effects.
+  3. Formulations failing the stress inquest are remanded to the client workspace with a reasoned dismissal notice (`REMAND`).
+  4. Formulations passing the stress inquest are ratified by the High Council (Chief Architect + Node-1) and codified under `precedents/` as authoritative Rulings or under `norms/` as Statutory Norms.
+  5. Upon inquest completion, the transient laboratory workspace is purged completely (`Zero Residue / DoF = 0`).

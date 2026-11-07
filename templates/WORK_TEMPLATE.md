@@ -1,18 +1,18 @@
 # WORK: WORK_{HEX3}_{SLUG}
-- **Tarih / Zaman Damgası:** YYYY-MM-DDTHH:MM:SS+03:00
-- **Düğüm / İstasyon:** [Inception | Elaboration | Construction | Transition]
-- **Tetikleyici (Trigger):** [Görevi başlatan pürüz veya talep]
-- **Hedef (Telos):** [Ulaşılmak istenen tekil, ölçülebilir sonuç]
+- **Timestamp:** YYYY-MM-DDTHH:MM:SS+03:00
+- **Station / Node:** [Inception | Elaboration | Construction | Transition]
+- **Trigger:** [Operational friction, incoming proposal, or boundary failure]
+- **Telos:** [Singular, quantifiable target outcome]
 
-## 1. DİYALEKTİK ÇATIŞMA (ACTION VS. REACTION)
-- **Savunulan Yol (Action):** [...]
-- **Hasmane İtiraz / Açık Tespiti (Reaction / Murphy):** [...]
+## 1. ADVERSARIAL DIALECTIC (ACTION VS. REACTION)
+- **Proposed Thesis (Action):** [...]
+- **Adversarial Inquest / Vulnerability Audit (Reaction / Murphy):** [...]
 
-## 2. HÜKÜM VE İCRA (ADJUDICATION)
-- **Karar:** [Kabul Edilen Yol ve Elenen Alternatifler]
-- **Gerekçe:** [Teknik/hukuki zorunluluk]
-- **Mekanik İspat:** [Test logu, Peak RAM, Merkle Commit SHA]
+## 2. ADJUDICATION AND EXECUTION
+- **Ruling:** [Adopted pathway and dismissed alternatives]
+- **Grounding Ratio:** [Technical, statutory, or mathematical rationale]
+- **Evidentiary Proof:** [Test telemetry, peak memory footprint, Merkle commit SHA]
 
-## 3. SEVKİYAT VE TERFİ DEĞERLENDİRMESİ
-- **Statü:** [LOCAL_ONLY | CANDIDATE_FOR_UPSTREAM_RFC]
-- **Sevk Dalı:** [rfcs/{project}/RFC_{hex3}_{slug} | NONE]
+## 3. PROMOTION AND DISPATCH EVALUATION
+- **Status:** [LOCAL_ONLY | CANDIDATE_FOR_UPSTREAM_RFC]
+- **Dispatch Branch:** [rfcs/{project}/RFC_{hex3}_{slug} | NONE]
