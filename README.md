@@ -15,7 +15,7 @@ ACME transforms large language models (LLMs) from unanchored probabilistic token
 ```text
 acme/
 ├── README.md                      # Operational storefront, routing protocols, and downstream dispatch
-├── CONSTITUTION.md                # Root Invariants & System Protocols (Articles 0 - 9)
+├── CONSTITUTION.md                # Root Invariants & System Protocols (Articles 0 - 10)
 ├── verify.py                      # Mechanical CI/CD gatekeeper turnstile (7 Gates)
 │
 ├── templates/                     # Official Document Templates

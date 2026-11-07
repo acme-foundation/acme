@@ -54,3 +54,8 @@
 ## ARTICLE 9: MANDATORY TEMPORAL ALIGNMENT & PROCEDURAL PRECEDENCE (INV-MERKLE-PARITY)
 1. Strict Upstream Merkle Parity (INV-MERKLE-PARITY-01): Unsynchronized execution against outdated specifications is void. All federated endpoints, arbitration agents, and downstream workspaces are strictly bound to the latest ratified upstream state (HEAD Lock). Executing against deprecated protocols, obsolete templates, or unverified cached norms triggers immediate invalidation (`REJECT_STALE_LAW`).
 2. Statutory Parity Check (INV-PREFLIGHT-PARITY-02): Prior to filing any anomaly case, dispute, or escalation, the operating agent must attest parity against the latest canonical Merkle root.
+
+## ARTICLE 10: ZERO-RHETORIC & OPERATIONAL SPECIFICATION (INV-ZERO-RHETORIC)
+1. Zero-Degree Technical Semantics (INV-ZERO-RHETORIC-01, DoF = 0): All specifications, norms, and operational cases across ACME and downstream repositories MUST be expressed in strictly operational, non-rhetorical systems engineering syntax. Metaphors, Latin maxims, theatrical personae (e.g., judges, prosecutors, courts), subjective adjectives, and unfalsifiable assertions are strictly prohibited.
+2. Operational Assertion Invariant (INV-BOOLEAN-REDUCIBILITY-02): Every requirement or invariant MUST evaluate to a deterministic binary assertion (TRUE/FALSE). Any statement that cannot be verified via mechanical gate, exit code, or state transition constraint is classified as semantic noise and MUST be expunged.
+3. Downstream Parity Filter (INV-RESONANCE-SCRUB-03): If an executive summary or downstream report contains rhetorical flourishes, the source specification MUST undergo iterative decontamination until the generated telemetry is 100% dry, descriptive, and mechanical.

@@ -1,20 +1,24 @@
 # CASE: CASE_{HEX3}_{SLUG}
+- **Case ID:** CASE_{HEX3}_{SLUG}
 - **Timestamp:** YYYY-MM-DDTHH:MM:SS+03:00
+- **Target Module:** [Module path or bounded subsystem]
 - **Station / Node:** [Inception | Elaboration | Construction | Transition]
 - **Normative Anchor Commit:** [HEAD Commit SHA of upstream ACME at case creation]
-- **Statutory Status:** [ACTIVE_CANONICAL | REJECTED_STALE_DRIFT]
-- **Anomaly / Divergence Context:** [Operational friction, constraint breach, or incoming requirement]
-- **Negative Constraints:** [Negative Invariants / DoF = 0]
+- **Parity Status:** [ACTIVE_CANONICAL | REJECTED_STALE_DRIFT]
+- **Divergence / Root Cause:** [Operational friction, constraint breach, or failure trace]
+- **Bound Invariants & Constraints:** [Deterministic assertions / DoF = 0]
 
 ## 1. SPECIFICATION CONFLICT ANALYSIS (PROPOSED SPEC VS. COUNTER-CONSTRAINT)
 - **Proposed Spec (Action):** [...]
 - **Counter-Constraint Audit (Reaction / Discriminator):** [...]
 
 ## 2. MECHANICAL VERIFICATION & RESOLUTION
-- **Resolution:** [Adopted pathway and eliminated alternatives]
-- **Grounding Ratio:** [Technical, statutory, or mathematical rationale]
-- **Execution & Evidentiary Proof:** [Mechanical test telemetry, commit SHA]
+- **Verification Command & Mechanical Log:**
+  - `Command:` [Command executed]
+  - `Telemetry:` [Exit code, memory metrics, test output]
+- **Resolution State:** [RESOLVED_LOCAL | ESCALATED_UPSTREAM]
+- **Grounding Ratio:** [Deterministic rationale and eliminated alternatives]
 
 ## 3. UPSTREAM SYNCHRONIZATION
-- **Escalation Status:** [LOCAL_RESOLVED | ESCALATED_FOR_PRECEDENT | BLOCKED_LEX_GAP]
+- **Synchronization State:** [RESOLVED_LOCAL | ESCALATED_UPSTREAM]
 - **Escalation Branch:** [cases/{project}/CASE_{hex3}_{slug} | NONE]
