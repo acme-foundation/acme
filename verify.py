@@ -176,13 +176,14 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
             "ARTICLE 12: CANONICAL NAMING & LEXICAL TRACEABILITY",
             "ARTICLE 13: PIPELINE TOPOLOGY & AUTOMATED MIGRATION",
             "ARTICLE 14: CASE TOPOLOGY, LOCAL SCOPING & PRECEDENT PROMOTION",
-            "ARTICLE 15: DYNAMIC PIPELINE EXPANSION & KEYSTONE PRECEDENCE"
+            "ARTICLE 15: DYNAMIC PIPELINE EXPANSION & KEYSTONE PRECEDENCE",
+            "ARTICLE 16: INCEPTION RIGOR & EXPLORATORY SPIKES"
         ]
         for art in required_articles:
             if art not in const_text:
                 print(f"[FAIL] Missing constitutional article: {art}", file=sys.stderr)
                 return False
-        print("[+] Gate 3: Constitutional Parity:       [PASS] Articles 0 to 15 ratified in CONSTITUTION.md.")
+        print("[+] Gate 3: Constitutional Parity:       [PASS] Articles 0 to 16 ratified in CONSTITUTION.md.")
     except Exception as e:
         print(f"[FAIL] Gate 3 check failed: {e}", file=sys.stderr)
         return False
@@ -610,8 +611,50 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
         print(f"[FAIL] Gate 13 check failed: {e}", file=sys.stderr)
         return False
 
+    # Gate 14: Inception File Compliance (INV-INCEPTION-RIGOR / INV-INCEPTION-CODE-BAN-01 / INV-ANTI-TUTORIAL-02)
+    try:
+        cases_dir = Path("cases")
+        if cases_dir.is_dir():
+            for c_file in cases_dir.glob("CAS_*.md"):
+                c_content = c_file.read_text(encoding="utf-8")
+                is_spike = bool(re.search(r'Type:\s*SPIKE\b', c_content, re.IGNORECASE))
+                first_line = c_content.splitlines()[0] if c_content.splitlines() else ""
+                has_inception = bool(
+                    "INCEPTION" in c_file.name.upper() or
+                    re.search(r'#.*INCEPTION\b', first_line, re.IGNORECASE) or
+                    re.search(r'Station\s*/\s*Node:\s*Inception\b', c_content, re.IGNORECASE)
+                )
+
+                if is_spike or has_inception:
+                    # Check for implementation code block
+                    code_block_match = re.search(
+                        r'```\s*(?:python|py|javascript|js|typescript|ts|rust|rs|c|cpp|c\+\+|csharp|cs|go|golang|java|bash|sh|shell|zsh|powershell|ps1|ruby|rb|php|swift|kotlin|kt|scala|lua|perl|dart|zig|sql|html|css)\b',
+                        c_content,
+                        re.IGNORECASE
+                    )
+                    if code_block_match:
+                        print(f"[FAIL] Gate 14 (INV-INCEPTION-CODE-BAN-01): FAIL: Code block detected inside Inception case: {c_file.name}", file=sys.stderr)
+                        return False
+
+                    # Check for mandatory headings
+                    has_decision_matrix = bool(re.search(r'^##\s*1\.\s*BLOCKING\s+DECISION\s+MATRIX', c_content, re.MULTILINE | re.IGNORECASE))
+                    has_structural_skeleton = bool(re.search(r'^##\s*2\.\s*STRUCTURAL\s+SKELETON', c_content, re.MULTILINE | re.IGNORECASE))
+
+                    if not has_decision_matrix:
+                        print(f"[FAIL] Gate 14 (INV-ANTI-TUTORIAL-02): Inception case {c_file.name} missing required heading '## 1. BLOCKING DECISION MATRIX'.", file=sys.stderr)
+                        return False
+
+                    if not has_structural_skeleton:
+                        print(f"[FAIL] Gate 14 (INV-ANTI-TUTORIAL-02): Inception case {c_file.name} missing required heading '## 2. STRUCTURAL SKELETON'.", file=sys.stderr)
+                        return False
+
+        print("[+] Gate 14: Inception File Compliance:  [PASS] Zero code emission and structural headings verified for spike cases.")
+    except Exception as e:
+        print(f"[FAIL] Gate 14 check failed: {e}", file=sys.stderr)
+        return False
+
     print("-" * 68)
-    print("[PASS] All 13 ACME v3.2.0 Systems Architecture & Invariant Gates PASS.")
+    print("[PASS] All 14 ACME v3.2.0 Systems Architecture & Invariant Gates PASS.")
     print("=" * 68)
     return True
 

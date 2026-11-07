@@ -82,3 +82,11 @@
 1. **INV-PIPELINE-EXPANSION-01 (Domain Expansion Circuit Breaker, DoF = 0):** When execution introduces an unregistered domain, modal artifact (audio, vector graphics, binary assets), or third-party protocol, direct implementation is PROHIBITED. The agent MUST trigger an architectural circuit breaker and file a bootstrap case (`CAS_{hex3}_pipeline_bootstrap.md`) defining the new pipeline schema under `pipelines/{TYPE}_{slug}.yaml` and its required directory topology.
 2. **INV-KEYSTONE-PRECEDENCE-02 (Core FSM Priority Invariant):** Asset production, aesthetic pipelines, and secondary integrations SHALL NOT execute until the foundational state machine (Keystone / FSM) passes mechanical verification gates. Decoupling aesthetic assets from core verification is void.
 3. **INV-TOPOLOGICAL-REGISTRATION-03 (Declared Spatial Slots):** No asset or artifact shall enter the workspace without an explicitly bound pipeline stage and an ingress/egress directory registered in the pipeline contract.
+
+## ARTICLE 16: INCEPTION RIGOR & EXPLORATORY SPIKES (INV-INCEPTION-RIGOR)
+1. **INV-INCEPTION-CODE-BAN-01 (Zero Code in Inception, DoF = 0):** When a task is classified as INCEPTION or SPIKE, emitting implementation code is strictly prohibited. The agent MUST restrict operations to problem formulation, trade-off analysis, domain constraints, and structural storyboarding.
+2. **INV-ANTI-TUTORIAL-02 (Anti-Encyclopedic Fluff Invariant):** Exploratory research MUST NOT emit generic tutorials, historical narratives, or textbook definitions. Output MUST strictly map to:
+   a) Blocking Architectural Prerequisites (Must-Decide-Now vs. Deferred).
+   b) Minimal Operational Invariants (Latency, state boundaries, asset contracts).
+   c) Concrete Scene / Workflow Topology.
+3. **INV-INCEPTION-DISK-LANDING-03 (Mandatory Case Anchor):** Inception outputs shall not remain ephemeral in conversational memory. Findings MUST be committed to `cases/CAS_{hex3}_{slug}.md` before transitioning to Elaboration or Construction.
