@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 ACME CORE INVARIANT GATE & CONSTITUTIONAL VERIFIER (Pure Standard Library)
-Self-Compiling Genesis Verifier (v3.2.0 - Jurisprudential 7-Gate Turnstile)
+Self-Compiling Genesis Verifier (v3.2.0 - Systems Architecture 7-Gate Turnstile)
 Serves as the Mechanical Gatekeeper Turnstile at the repository boundary.
 Codifies Canonical Interlingua Invariant (INV-CANONICAL-INTERLINGUA / DoF = 0).
 """
@@ -77,7 +77,7 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
         print(f"[FAIL] Gate 2 check failed: {e}", file=sys.stderr)
         return False
 
-    # Gate 3: Constitutional Parity: Articles 0 to 8 in CONSTITUTION.md
+    # Gate 3: Constitutional Parity: Articles 0 to 9 in CONSTITUTION.md
     try:
         const_path = Path("CONSTITUTION.md")
         if not const_path.is_file():
@@ -92,7 +92,7 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
             "ARTICLE 4: BI-DIRECTIONAL ZERO-TRUST GATEKEEPER",
             "ARTICLE 5: ADVERSARIAL TWIN DYNAMICS",
             "ARTICLE 6: SOVEREIGN OVERRIDE",
-            "ARTICLE 7: JURISPRUDENTIAL PRECEDENT",
+            "ARTICLE 7: PRECEDENT CACHE",
             "ARTICLE 8: CANONICAL LANGUAGE & INTERLINGUA PROTOCOL",
             "ARTICLE 9: MANDATORY TEMPORAL ALIGNMENT & PROCEDURAL PRECEDENCE"
         ]
@@ -204,7 +204,7 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
         return False
 
     print("-" * 68)
-    print("[PASS] All 7 ACME v3.2.0 Jurisprudential & Invariant Gates PASS.")
+    print("[PASS] All 7 ACME v3.2.0 Systems Architecture & Invariant Gates PASS.")
     print("=" * 68)
     return True
 

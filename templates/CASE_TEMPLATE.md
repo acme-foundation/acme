@@ -3,18 +3,18 @@
 - **Station / Node:** [Inception | Elaboration | Construction | Transition]
 - **Normative Anchor Commit:** [HEAD Commit SHA of upstream ACME at case creation]
 - **Statutory Status:** [ACTIVE_CANONICAL | REJECTED_STALE_DRIFT]
-- **Trigger / Claim:** [Operational friction, dispute, or incoming requirement]
-- **Constraints:** [Negative Invariants / DoF = 0]
+- **Anomaly / Divergence Context:** [Operational friction, constraint breach, or incoming requirement]
+- **Negative Constraints:** [Negative Invariants / DoF = 0]
 
-## 1. ADVERSARIAL INQUEST (ACTION VS. REACTION)
-- **Proposed Thesis (Action):** [...]
-- **Adversarial Inquest / Vulnerability Audit (Reaction / Murphy):** [...]
+## 1. SPECIFICATION CONFLICT ANALYSIS (PROPOSED SPEC VS. COUNTER-CONSTRAINT)
+- **Proposed Spec (Action):** [...]
+- **Counter-Constraint Audit (Reaction / Discriminator):** [...]
 
-## 2. ADJUDICATION AND VERDICT
-- **Ruling:** [Adopted pathway and dismissed alternatives]
+## 2. MECHANICAL VERIFICATION & RESOLUTION
+- **Resolution:** [Adopted pathway and eliminated alternatives]
 - **Grounding Ratio:** [Technical, statutory, or mathematical rationale]
-- **Execution & Evidentiary Proof:** [Mechanical test log, commit SHA]
+- **Execution & Evidentiary Proof:** [Mechanical test telemetry, commit SHA]
 
-## 3. CASE ESCALATION AND EVALUATION
+## 3. UPSTREAM SYNCHRONIZATION
 - **Escalation Status:** [LOCAL_RESOLVED | ESCALATED_FOR_PRECEDENT | BLOCKED_LEX_GAP]
 - **Escalation Branch:** [cases/{project}/CASE_{hex3}_{slug} | NONE]
