@@ -693,7 +693,8 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
             "INV-MONOLITHIC-DAG-ASM",
             "INV-TWO-TIER-DBC-ASSERTIONS",
             "INV-RUNTIME-ISOLATION",
-            "INV-CLEAN-ROOM-INTEROP"
+            "INV-CLEAN-ROOM-INTEROP",
+            "INV-BROWNFIELD-RETROFIT"
         ]
         for inv in required_ls_invariants:
             if inv not in const_text:
