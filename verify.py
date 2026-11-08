@@ -179,13 +179,14 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
             "ARTICLE 15: DYNAMIC PIPELINE EXPANSION & KEYSTONE PRECEDENCE",
             "ARTICLE 16: INCEPTION RIGOR & EXPLORATORY SPIKES",
             "ARTICLE 17: THREE-TIER EXECUTION GATEWAY",
-            "ARTICLE 18: DETERMINISTIC LIVING-SPEC & EXECUTION ARCHITECTURE"
+            "ARTICLE 18: DETERMINISTIC LIVING-SPEC & EXECUTION ARCHITECTURE",
+            "ARTICLE 19: ONTOLOGICAL PROJECTION"
         ]
         for art in required_articles:
             if art not in const_text:
                 print(f"[FAIL] Missing constitutional article: {art}", file=sys.stderr)
                 return False
-        print("[+] Gate 3: Constitutional Parity:       [PASS] Articles 0 to 18 ratified in CONSTITUTION.md.")
+        print("[+] Gate 3: Constitutional Parity:       [PASS] Articles 0 to 19 ratified in CONSTITUTION.md.")
     except Exception as e:
         print(f"[FAIL] Gate 3 check failed: {e}", file=sys.stderr)
         return False
@@ -736,8 +737,37 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
         print(f"[FAIL] Gate 16 check failed: {e}", file=sys.stderr)
         return False
 
+    # Gate 17: Ontological Projection & Canonical Anchor Verification (INV-ONTOLOGICAL-PROJECTION)
+    try:
+        const_path = Path("CONSTITUTION.md")
+        if not const_path.is_file():
+            print("[FAIL] Gate 17: Missing CONSTITUTION.md", file=sys.stderr)
+            return False
+        const_text = const_path.read_text(encoding="utf-8")
+        required_op_invariants = [
+            "INV-ONTOLOGICAL-PROJECTION",
+            "INV-UNANCHORED-DERIVATION-BAN",
+            "INV-PROJECTION-DETERMINISM",
+            "INV-SINGLE-SOURCE-INVARIANCE"
+        ]
+        for inv in required_op_invariants:
+            if inv not in const_text:
+                print(f"[FAIL] Gate 17 (INV-ONTOLOGICAL-PROJECTION): Invariant '{inv}' not defined in CONSTITUTION.md", file=sys.stderr)
+                return False
+
+        # Confirm UTF-8 No-BOM on CONSTITUTION.md
+        const_bytes = const_path.read_bytes()
+        if const_bytes.startswith(b'\xef\xbb\xbf'):
+            print("[FAIL] Gate 17: UTF-8 BOM detected in CONSTITUTION.md", file=sys.stderr)
+            return False
+
+        print("[+] Gate 17: Ontological Projection:     [PASS] Canonical anchor and projection determinism invariants verified.")
+    except Exception as e:
+        print(f"[FAIL] Gate 17 check failed: {e}", file=sys.stderr)
+        return False
+
     print("-" * 68)
-    print("[PASS] All 16 ACME v3.2.0 Systems Architecture & Invariant Gates PASS.")
+    print("[PASS] All 17 ACME v3.2.0 Systems Architecture & Invariant Gates PASS.")
     print("=" * 68)
     return True
 
