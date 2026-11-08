@@ -3,32 +3,32 @@
 - **File Path:** cases/CAS_000_mandatory_case_binding.md
 - **Type:** FEAT
 - **Depends On:** NONE
-- **Commit Pattern:** [CAS-000] feat(constitution): ratify monolithic DAG and execution gateway invariants
+- **Commit Pattern:** [CAS-000] feat(core): ratify living-spec topology, monolithic DAG-ASM, and two-tier DbC invariants
 - **Target Scope (Whitelisted Files):**
   - CONSTITUTION.md
   - README.md
   - verify.py
   - cases/CAS_000_mandatory_case_binding.md
 - **Execution State:** ACTIVE
-- **Bound Invariant:** INV-EXECUTION-GATEWAY
-- **Timestamp:** 2026-11-08T19:14:00+03:00
+- **Bound Invariant:** INV-LIVING-SPEC
+- **Timestamp:** 2026-11-08T19:30:00+03:00
 - **Target Module:** core/governance
 - **Station / Node:** Construction / Node-3
-- **Normative Anchor Commit:** 64359bc
+- **Normative Anchor Commit:** 658e405
 - **Parity Status:** ACTIVE_CANONICAL
-- **Divergence / Root Cause:** Unconstrained synthetic execution risks specification gaming, encyclopedic research noise, fragmented directive distribution, and unisolated runtime side-effects.
-- **Bound Invariants & Constraints:** INV-LOCAL-HARVEST, INV-ANTI-SPEC-GAMING, INV-COHERENCE-QUALITY-GATE, INV-RUNTIME-ISOLATION-SANDBOX, INV-MONOLITHIC-DAG-ASM
+- **Divergence / Root Cause:** Downstream operational drift caused by chat-history state dependency, arbitrary specification topologies, fragmented instruction distribution, and unisolated runtime execution side-effects.
+- **Bound Invariants & Constraints:** INV-CHAT-DECOUPLING, INV-LIVING-SPEC-TOPOLOGY, INV-MONOLITHIC-DAG-ASM, INV-TWO-TIER-DBC-ASSERTIONS, INV-RUNTIME-ISOLATION, INV-CLEAN-ROOM-INTEROP
 
 ## 1. SPECIFICATION CONFLICT ANALYSIS (PROPOSED SPEC VS. COUNTER-CONSTRAINT)
-- **Proposed Spec (Action):** Codify Article 17 in CONSTITUTION.md with 5 invariants (INV-LOCAL-HARVEST, INV-ANTI-SPEC-GAMING, INV-COHERENCE-QUALITY-GATE, INV-RUNTIME-ISOLATION-SANDBOX, INV-MONOLITHIC-DAG-ASM), update README.md to 15 gates and Articles 0-17, and enforce Gate 15 in verify.py under zero-bureaucracy single-spec doctrine.
+- **Proposed Spec (Action):** Codify Article 18 in CONSTITUTION.md incorporating 6 canonical living-spec invariants (INV-CHAT-DECOUPLING, INV-LIVING-SPEC-TOPOLOGY, INV-MONOLITHIC-DAG-ASM, INV-TWO-TIER-DBC-ASSERTIONS, INV-RUNTIME-ISOLATION, INV-CLEAN-ROOM-INTEROP), update README.md to 16 gates and Articles 0-18, and enforce Gate 16 in verify.py under zero-bureaucracy single-spec doctrine.
 - **Counter-Constraint Audit (Reaction / Discriminator):** Zero code artifacts in core, No-BOM UTF-8 interlingua compliance, Gate 10 topology whitelist integrity, and adjective density <= 0.02.
 
 ## 2. MECHANICAL VERIFICATION & RESOLUTION
 - **Verification Command & Mechanical Log:**
   - `Command:` python verify.py --verify-all
-  - `Telemetry:` All 15 gates PASS with exit code 0.
+  - `Telemetry:` All 16 gates PASS with exit code 0.
 - **Resolution State:** RESOLVED_LOCAL
-- **Grounding Ratio:** Strict mechanical assertion of execution gateway, monolithic DAG assembly, and runtime sandbox isolation.
+- **Grounding Ratio:** Strict mechanical assertion of canonical living-spec topology, monolithic DAG assembly, and two-tier DbC quality gates.
 
 ## 3. UPSTREAM SYNCHRONIZATION
 - **Synchronization State:** RESOLVED_LOCAL
