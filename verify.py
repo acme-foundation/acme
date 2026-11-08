@@ -177,13 +177,14 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
             "ARTICLE 13: PIPELINE TOPOLOGY & AUTOMATED MIGRATION",
             "ARTICLE 14: CASE TOPOLOGY, LOCAL SCOPING & PRECEDENT PROMOTION",
             "ARTICLE 15: DYNAMIC PIPELINE EXPANSION & KEYSTONE PRECEDENCE",
-            "ARTICLE 16: INCEPTION RIGOR & EXPLORATORY SPIKES"
+            "ARTICLE 16: INCEPTION RIGOR & EXPLORATORY SPIKES",
+            "ARTICLE 17: THREE-TIER EXECUTION GATEWAY"
         ]
         for art in required_articles:
             if art not in const_text:
                 print(f"[FAIL] Missing constitutional article: {art}", file=sys.stderr)
                 return False
-        print("[+] Gate 3: Constitutional Parity:       [PASS] Articles 0 to 16 ratified in CONSTITUTION.md.")
+        print("[+] Gate 3: Constitutional Parity:       [PASS] Articles 0 to 17 ratified in CONSTITUTION.md.")
     except Exception as e:
         print(f"[FAIL] Gate 3 check failed: {e}", file=sys.stderr)
         return False
@@ -653,8 +654,33 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
         print(f"[FAIL] Gate 14 check failed: {e}", file=sys.stderr)
         return False
 
+    # Gate 15: Execution Gateway & Monolithic DAG Invariants Integrity (INV-EXECUTION-GATEWAY)
+    try:
+        # Verify 5 invariants in CONSTITUTION.md
+        const_path = Path("CONSTITUTION.md")
+        if not const_path.is_file():
+            print("[FAIL] Gate 15: Missing CONSTITUTION.md", file=sys.stderr)
+            return False
+        const_text = const_path.read_text(encoding="utf-8")
+        required_gw_invariants = [
+            "INV-LOCAL-HARVEST",
+            "INV-ANTI-SPEC-GAMING",
+            "INV-COHERENCE-QUALITY-GATE",
+            "INV-RUNTIME-ISOLATION-SANDBOX",
+            "INV-MONOLITHIC-DAG-ASM"
+        ]
+        for inv in required_gw_invariants:
+            if inv not in const_text:
+                print(f"[FAIL] Gate 15: Invariant '{inv}' not defined in CONSTITUTION.md", file=sys.stderr)
+                return False
+
+        print("[+] Gate 15: Execution Gateway & Monolithic DAG: [PASS] All 5 execution gateway invariants verified in CONSTITUTION.md.")
+    except Exception as e:
+        print(f"[FAIL] Gate 15 check failed: {e}", file=sys.stderr)
+        return False
+
     print("-" * 68)
-    print("[PASS] All 14 ACME v3.2.0 Systems Architecture & Invariant Gates PASS.")
+    print("[PASS] All 15 ACME v3.2.0 Systems Architecture & Invariant Gates PASS.")
     print("=" * 68)
     return True
 
