@@ -228,6 +228,25 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
                 print(f"[FAIL] Template too small: {tmpl}", file=sys.stderr)
                 return False
 
+        # Verify templates/specs/ 8-tier living-spec scaffolding (9 files)
+        specs_templates_dir = Path("templates/specs")
+        if not specs_templates_dir.is_dir():
+            print("[FAIL] Missing 'templates/specs' directory.", file=sys.stderr)
+            return False
+
+        required_living_spec_files = [
+            "telos.md", "problem.md", "const.md", "requirements.md",
+            "solution.md", "specs.md", "asm.md", "dod.md", "state.json"
+        ]
+        for s_file in required_living_spec_files:
+            s_path = specs_templates_dir / s_file
+            if not s_path.is_file():
+                print(f"[FAIL] Missing living-spec template: {s_path}", file=sys.stderr)
+                return False
+            if len(s_path.read_bytes()) < 30:
+                print(f"[FAIL] Living-spec template too small: {s_path}", file=sys.stderr)
+                return False
+
         required_precedents = [
             Path("precedents/PRE_001_stream_quarantine.md")
         ]
@@ -238,7 +257,7 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
             if len(prec.read_bytes()) < 100:
                 print(f"[FAIL] Precedent ruling too small: {prec}", file=sys.stderr)
                 return False
-        print("[+] Gate 5: Templates & Precedents:      [PASS] 3 canonical templates and precedent registry verified.")
+        print("[+] Gate 5: Templates & Precedents:      [PASS] 3 canonical templates, 9 AUP living-spec templates, and precedents verified.")
     except Exception as e:
         print(f"[FAIL] Gate 5 check failed: {e}", file=sys.stderr)
         return False
@@ -482,6 +501,11 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
         pipelines_readme = Path("pipelines/README.md")
         if not pipelines_readme.is_file() or len(pipelines_readme.read_bytes()) < 50:
             print("[FAIL] Gate 10 (INV-PIPELINE-TOPOLOGY-01): Missing or corrupted 'pipelines/README.md'.", file=sys.stderr)
+            return False
+
+        aup_pipeline = Path("pipelines/PIP_001_aup_living_spec.yaml")
+        if not aup_pipeline.is_file() or len(aup_pipeline.read_bytes()) < 50:
+            print("[FAIL] Gate 10 (INV-PIPELINE-TOPOLOGY-01): Missing or corrupted 'pipelines/PIP_001_aup_living_spec.yaml'.", file=sys.stderr)
             return False
 
         print("[+] Gate 10: Pipeline Topology:          [PASS] Filesystem topology validated against canonical whitelist.")

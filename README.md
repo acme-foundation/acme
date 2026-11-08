@@ -24,7 +24,8 @@ acme/
 ├── templates/                     # Official Document Templates
 │   ├── CAS_TEMPLATE.md           # Anomaly triage and conflict analysis template
 │   ├── PRE_TEMPLATE.md           # Ground truth precedent record template
-│   └── NORM_TEMPLATE.md           # Statutory norm codification template
+│   ├── NORM_TEMPLATE.md           # Statutory norm codification template
+│   └── specs/                    # Canonical 8-tier living-spec & AUP lifecycle templates (9 files)
 │
 ├── precedents/                    # Ratified Precedent Registry (O(1) Precedent Cache)
 │   └── PRE_{hex3}_{slug}.md      # Canonical ecosystem rulings and evidentiary anchors
@@ -35,7 +36,8 @@ acme/
 │   └── procedural/                # PRO_{hex3}_*.md (PRO_001, PRO_002)
 │
 ├── pipelines/                     # Declarative modal pipeline contracts and I/O specifications
-│   └── README.md                  # Pipeline schema definition, ingress/egress boundaries, and keystone rules
+│   ├── README.md                  # Pipeline schema definition, ingress/egress boundaries, and keystone rules
+│   └── PIP_001_aup_living_spec.yaml # Agentic Unified Process living-spec pipeline definition
 │
 ├── migrations/                    # Deterministic pipeline and schema migration registry
 │   └── README.md                  # Migration adapter protocol, execution lifecycle, and rollback rules

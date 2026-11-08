@@ -1,0 +1,41 @@
+pipeline_id: "PIP_001_aup_living_spec"
+name: "Agentic Unified Process Living-Spec Pipeline"
+version: "1.0.0"
+governance: "ACME CONSTITUTION v3.2.0 (Articles 17 & 18)"
+dof: 0
+
+phases:
+  - phase: 1
+    name: "INCEPTION"
+    objective: "Problem formulation and teleological anchoring"
+    artifacts:
+      - "specs/telos.md"
+      - "specs/problem.md"
+    gate: "INV-INCEPTION-CODE-BAN-01 (Zero Code)"
+
+  - phase: 2
+    name: "ELABORATION"
+    objective: "Architectural synthesis, negative invariants, and formal contract"
+    artifacts:
+      - "specs/const.md"
+      - "specs/requirements.md"
+      - "specs/solution.md"
+      - "specs/specs.md"
+    gate: "DoF = 0 & Schema Validation"
+
+  - phase: 3
+    name: "CONSTRUCTION"
+    objective: "Monolithic DAG assembly compilation and isolated sandboxed execution"
+    artifacts:
+      - "specs/asm.md"
+      - ".tmp/ (Isolated sandbox runs)"
+    gate: "INV-RUNTIME-ISOLATION-05 & INV-MONOLITHIC-DAG-ASM-03"
+
+  - phase: 4
+    name: "TRANSITION"
+    objective: "Two-tier verification, craftsmanship sign-off, and build sealing"
+    artifacts:
+      - "specs/dod.md"
+      - "specs/state.json"
+      - "builds/ (Sealed release)"
+    gate: "INV-TWO-TIER-DBC-ASSERTIONS-04 (100% PASS)"

@@ -8,7 +8,7 @@
   - CONSTITUTION.md
   - verify.py
   - cases/CAS_000_mandatory_case_binding.md
-- **Execution State:** ACTIVE
+- **Execution State:** RESOLVED
 - **Bound Invariant:** INV-BROWNFIELD-RETROFIT
 - **Timestamp:** 2026-11-08T19:33:00+03:00
 - **Target Module:** core/governance
