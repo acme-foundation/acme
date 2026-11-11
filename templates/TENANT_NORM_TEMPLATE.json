@@ -9,6 +9,7 @@
   "corporate_invariants": {
     "dof": 0,
     "strict_isolation": true,
+    "data_plane_purity": true,
     "forbidden_dependencies": [],
     "circuit_breaker": {
       "unanchored_decision": "HALT_AND_RAISE_FLAG"
