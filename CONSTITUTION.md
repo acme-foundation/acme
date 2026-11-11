@@ -112,3 +112,12 @@
 1. **INV-UNANCHORED-DERIVATION-BAN-01 (Prohibition of Unanchored Stochastic Derivation, DoF = 0):** No execution agent shall emit visual sprites, source code, architectural components, or legal propositions via free stochastic synthesis (unconstrained diffusion or prompt hallucination). Prior to generative synthesis, an immutable ontological anchor (such as a 3D mesh, formal JSON schema, official registry record, or verified living specification) MUST be established and mechanically verified on disk.
 2. **INV-PROJECTION-DETERMINISM-02 (Projection Determinism & Zero Semantic Drift, DoF = 0):** All derivative deliverables MUST function as deterministic projections of the immutable ontological anchor. Provided the anchor remains static, correlation breakdown, perceptual divergence, or semantic drift across differing view angles, separate documents, distinct render viewports, or temporal windows SHALL trigger immediate verification rejection (`FAIL`).
 3. **INV-SINGLE-SOURCE-INVARIANCE-03 (Single Source of Invariance, DoF = 0):** The intrinsic properties, dimensions, or constraints of an entity or rule SHALL NOT be defined redundantly across distributed files. Properties MUST be specified within a single authoritative root artifact; all secondary modules and consumer pipelines MUST project this reference in a read-only capacity.
+
+## ARTICLE 20: UNITARY BICAMERAL ENGINE AND HIERARCHICAL LEX CASCADE (INV-UNITARY-TOPOLOGY)
+- **INV-UNITARY-TOPOLOGY-01 (Unitary Sovereign Integrity, DoF = 0):**
+  The repository constitution constitutes the undivided legislative root. Downstream execution workspaces are non-sovereign satellite runtimes bound strictly to implementation and telemetry reporting.
+- **INV-BICAMERAL-PARITY-02 (Adversarial Chamber Balance):**
+  Specification development must proceed through symmetric dialectic verification: functional assertion (Left/Proponent) pitted against shadow constraint enforcement (Right/Discriminator).
+- **INV-LEX-CASCADE-03 (Deterministic Fallback Hierarchy):**
+  Resolution of ambiguities must mechanically cascade: Canonical Invariants -> External Interface Specifications -> Ratified Precedents -> Thermodynamic Least Action. Arbitrary speculation is prohibited.
+

@@ -180,13 +180,15 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
             "ARTICLE 16: INCEPTION RIGOR & EXPLORATORY SPIKES",
             "ARTICLE 17: THREE-TIER EXECUTION GATEWAY",
             "ARTICLE 18: DETERMINISTIC LIVING-SPEC & EXECUTION ARCHITECTURE",
-            "ARTICLE 19: ONTOLOGICAL PROJECTION"
+            "ARTICLE 19: ONTOLOGICAL PROJECTION",
+            "ARTICLE 20: UNITARY BICAMERAL ENGINE"
         ]
+        const_upper = const_text.upper()
         for art in required_articles:
-            if art not in const_text:
+            if art.upper() not in const_upper:
                 print(f"[FAIL] Missing constitutional article: {art}", file=sys.stderr)
                 return False
-        print("[+] Gate 3: Constitutional Parity:       [PASS] Articles 0 to 19 ratified in CONSTITUTION.md.")
+        print("[+] Gate 3: Constitutional Parity:       [PASS] Articles 0 to 20 ratified in CONSTITUTION.md.")
     except Exception as e:
         print(f"[FAIL] Gate 3 check failed: {e}", file=sys.stderr)
         return False
@@ -367,6 +369,12 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
                         stripped = c_line.strip()
                         if re.search(r'Target Scope.*:', stripped, re.IGNORECASE):
                             in_scope = True
+                            scope_val = re.sub(r'^.*?Target Scope[^\:]*:\s*', '', stripped, flags=re.IGNORECASE).strip()
+                            if scope_val:
+                                for token in scope_val.split(','):
+                                    t = token.strip().strip('*').strip('`').strip()
+                                    if t and not t.startswith('[') and ('/' in t or '.' in t):
+                                        whitelisted.add(Path(t).as_posix())
                             continue
                         if in_scope:
                             if stripped.startswith("- **") or stripped.startswith("##") or (stripped and not stripped.startswith("-") and not stripped.startswith("*")):
