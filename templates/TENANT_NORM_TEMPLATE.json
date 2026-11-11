@@ -1,0 +1,17 @@
+{
+  "tenant_id": "ENTERPRISE_TENANT_ID",
+  "norm_version": "1.0.0",
+  "extends": "acme://core/v3.2.0",
+  "asset_registry": {
+    "workspaces_root": "./",
+    "projects": {}
+  },
+  "corporate_invariants": {
+    "dof": 0,
+    "strict_isolation": true,
+    "forbidden_dependencies": [],
+    "circuit_breaker": {
+      "unanchored_decision": "HALT_AND_RAISE_FLAG"
+    }
+  }
+}

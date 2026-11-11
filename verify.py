@@ -14,6 +14,7 @@ Codifies Pipeline Expansion & Keystone Precedence (INV-PIPELINE-EXPANSION / INV-
 import os
 import sys
 import re
+import json
 import subprocess
 from pathlib import Path
 
@@ -221,7 +222,8 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
         required_templates = [
             Path("templates/CAS_TEMPLATE.md"),
             Path("templates/PRE_TEMPLATE.md"),
-            Path("templates/NORM_TEMPLATE.md")
+            Path("templates/NORM_TEMPLATE.md"),
+            Path("templates/TENANT_NORM_TEMPLATE.json")
         ]
         for tmpl in required_templates:
             if not tmpl.is_file():
@@ -230,6 +232,18 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
             if len(tmpl.read_bytes()) < 50:
                 print(f"[FAIL] Template too small: {tmpl}", file=sys.stderr)
                 return False
+
+        # Validate TENANT_NORM_TEMPLATE.json schema
+        tenant_norm_file = Path("templates/TENANT_NORM_TEMPLATE.json")
+        try:
+            tenant_payload = json.loads(tenant_norm_file.read_text(encoding="utf-8"))
+            required_tenant_keys = {"tenant_id", "norm_version", "extends", "asset_registry", "corporate_invariants"}
+            if not required_tenant_keys.issubset(tenant_payload.keys()):
+                print(f"[FAIL] TENANT_NORM_TEMPLATE.json missing required keys: {required_tenant_keys - set(tenant_payload.keys())}", file=sys.stderr)
+                return False
+        except Exception as e:
+            print(f"[FAIL] TENANT_NORM_TEMPLATE.json JSON parsing failed: {e}", file=sys.stderr)
+            return False
 
         # Verify templates/specs/ 8-tier living-spec scaffolding (9 files)
         specs_templates_dir = Path("templates/specs")
@@ -260,7 +274,7 @@ def run_invariant_audit(verify_all: bool = False) -> bool:
             if len(prec.read_bytes()) < 100:
                 print(f"[FAIL] Precedent ruling too small: {prec}", file=sys.stderr)
                 return False
-        print("[+] Gate 5: Templates & Precedents:      [PASS] 3 canonical templates, 9 AUP living-spec templates, and precedents verified.")
+        print(f"[+] Gate 5: Templates & Precedents:      [PASS] {len(required_templates)} canonical templates, 9 AUP living-spec templates, and precedents verified.")
     except Exception as e:
         print(f"[FAIL] Gate 5 check failed: {e}", file=sys.stderr)
         return False
