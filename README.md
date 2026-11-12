@@ -87,8 +87,15 @@ During adversarial twin review (Spec A / Builder vs. Spec B / Discriminator), af
 
 The identified systemic blind spot MUST immediately be codified into the project living specification (`specs/const.md`) as a non-negotiable negative constraint (**Hard Guardrail / DoF = 0**).
 
-### 4.2. Industry Interlingua Mapping Standard
-Internal doctrinal purity is preserved within the ACME Core; however, all outward specifications, downstream deliverables, and technical reports translate canonical terminology into standard industry equivalents:
+### 4.2. Non-LLM Critic Grounding (Anti-Consensus-Illusion)
+Dual-LLM verification loops (Actor-Critic / Spec-A vs. Spec-B) risk producing an "illusion of consensus" through mutual linguistic plausibility. Sole reliance on LLM inference for dialectic sign-off is prohibited (`DoF = 0`). The Critic seat MUST anchor to at least one non-LLM deterministic source of ground truth:
+- Empirical error traces and execution telemetry (`.tmp/*.log`).
+- Mathematical limit proofs and boundary calculations.
+- Compiler, linter, or automated gatekeeper test turnstile results (`verify.py`, exit code 0).
+- Sovereign biological human architect sign-off (`DECISION_LOG`).
+
+### 4.3. Industry Interlingua Mapping Standard
+Internal doctrinal purity is preserved within the ACME Core; however, all outward outputs (including SPEC, README, API contracts, and technical reports) translate canonical terminology into standard industry equivalents:
 
 | Canonical ACME Doctrine | Industry Interlingua Standard |
 | :--- | :--- |
