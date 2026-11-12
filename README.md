@@ -15,7 +15,7 @@ ACME transforms large language models (LLMs) from unanchored probabilistic token
 ```text
 acme/
 ├── README.md                      # Operational storefront, routing protocols, and downstream dispatch
-├── CONSTITUTION.md                # Root Invariants & System Protocols (Articles 0 - 19)
+├── CONSTITUTION.md                # Root Invariants & System Protocols (Articles 0 - 20)
 ├── verify.py                      # Mechanical CI/CD gatekeeper turnstile (17 Gates)
 │
 ├── cases/                         # Active execution ledgers and arbitration tickets
@@ -25,6 +25,7 @@ acme/
 │   ├── CAS_TEMPLATE.md           # Anomaly triage and conflict analysis template
 │   ├── PRE_TEMPLATE.md           # Ground truth precedent record template
 │   ├── NORM_TEMPLATE.md           # Statutory norm codification template
+│   ├── TENANT_NORM_TEMPLATE.json # Declarative tenant baseline contract template
 │   └── specs/                    # Canonical 8-tier living-spec & AUP lifecycle templates (9 files)
 │
 ├── precedents/                    # Ratified Precedent Registry (O(1) Precedent Cache)
@@ -33,7 +34,7 @@ acme/
 ├── norms/                         # Statutory Positive Law Registry (3-Letter Hex Norms)
 │   ├── core/                      # COR_{hex3}_*.md (COR_001, COR_002, COR_003)
 │   ├── domain/ingestion/          # ING_{hex3}_*.md (ING_001)
-│   └── procedural/                # PRO_{hex3}_*.md (PRO_001, PRO_002)
+│   └── procedural/                # PRO_{hex3}_*.md (PRO_001, PRO_002, PRO_003, PRO_004)
 │
 ├── pipelines/                     # Declarative modal pipeline contracts and I/O specifications
 │   ├── README.md                  # Pipeline schema definition, ingress/egress boundaries, and keystone rules
@@ -78,7 +79,29 @@ Downstream client workspaces bind ACME as their external supreme normative autho
 
 ---
 
-## 4. MECHANICAL VERIFICATION COMMAND
+## 4. CANONICAL EXECUTION INVARIANTS
+
+### 4.1. Orthogonal Blind-Spot Gate (Adversarial Invariance)
+During adversarial twin review (Spec A / Builder vs. Spec B / Discriminator), after verifying reciprocal defect coverage, both nodes MUST collaboratively answer the mandatory orthogonal question:
+> *"What is the shared implicit premise that both parties accepted without verification (the unasked question)?"*
+
+The identified systemic blind spot MUST immediately be codified into the project living specification (`specs/const.md`) as a non-negotiable negative constraint (**Hard Guardrail / DoF = 0**).
+
+### 4.2. Industry Interlingua Mapping Standard
+Internal doctrinal purity is preserved within the ACME Core; however, all outward specifications, downstream deliverables, and technical reports translate canonical terminology into standard industry equivalents:
+
+| Canonical ACME Doctrine | Industry Interlingua Standard |
+| :--- | :--- |
+| **Constitution / Lex Superior** (`CONSTITUTION.md`) | Governance-as-Code & Agent Harness |
+| **Immutable Invariant (`DoF = 0`)** | Hard Guardrail & Contract-First Schema |
+| **Adversarial Twin / Red-Blue Dialectic** | Adversarial Evals & Actor-Critic Loop |
+| **Scar Tissue Ingestion** | Episodic Trajectory & Regression Dataset |
+| **Budget / Early Exit** | Inference Compute Budgeting & Circuit Breaker |
+| **Dewdrop Boundary Isolation** | Blast Radius Containment & Least-Privilege Sandboxing |
+
+---
+
+## 5. MECHANICAL VERIFICATION COMMAND
 
 ```bash
 python verify.py --verify-all

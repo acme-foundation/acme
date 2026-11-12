@@ -33,6 +33,7 @@
 1. Independent Verification Gate: The receiving node (Reaction / Node-R) shall never accept deliverables prima facie; it executes discriminator assertions and counter-verification to reject unverified passes and detect boundary breaches.
 2. Burden of Proof: Node-A (Action) carries the affirmative burden to substantiate specifications and deliverables via deterministic empirical proof. Speculative defense or unevidenced assertions are dismissed.
 3. Procedural Economy Metric: The supreme optimization loss function of the execution pipeline is minimizing retries, remands, and adversarial contest cycles.
+4. Orthogonal Blind-Spot Gate (INV-ORTHOGONAL-BLIND-SPOT-04, DoF = 0): Following reciprocal adversarial audit between Action and Reaction (Spec A / Builder vs. Spec B / Discriminator), both parties must pass beyond superficial defect detection and resolve the mandatory orthogonal inquiry: "What is the shared implicit premise that both parties accepted without verification (the unasked question)?" Any blind spot surfaced by this resolution MUST be codified directly into the living specification as a binding negative constraint (Hard Guardrail / DoF = 0).
 
 ## ARTICLE 6: SOVEREIGN OVERRIDE & COST OF OVERRIDE
 1. Sovereign Human Determination: The teleological intent of the ACME Architect constitutes the final deterministic arbitration; decisions recorded in `DECISION_LOG` immediately terminate inter-agent contest loops.
@@ -50,6 +51,13 @@
 2. Bi-Lingual Boundary Decoupling (INV-LINGUA-INTERFACE-01): While biological dialectic and operator intent orientation may occur in native natural language (such as Turkish under Biological Primacy), all distilled norms, statutory precedents, and core deliverables must pass the osmotic scrubbing gate into zero-chatter, domain-agnostic interlingua before ratification (`DoF = 0`).
 3. Osmotic Scrubbing Gate (INV-OSMOTIC-SCRUBBING-02): During invariant extraction from dialectic discourse or case proceedings, conversational debris, personal identifiers, temporary scaffolds, and local idioms are eliminated at the membrane. Only Finite Discrete State Machine (FDSM) coordinates, Degree-of-Freedom budgets (`DoF = 0`), Negative Constraints (Via Negativa), and Boolean Verification Gates are preserved.
 4. Fail-Closed Language Gate (INV-FAIL-CLOSED-DRIFT-03): Any norm specification, precedential ruling, or living specification exhibiting unscrubbed local idioms or natural conversational drift is rejected at boundary (`REJECT_CANONICAL_LANGUAGE_DRIFT`).
+5. Industry Interlingua Standard & Outward Semantic Projection (INV-INDUSTRY-INTERLINGUA-05, DoF = 0): While internal conceptual integrity is strictly preserved within the ACME core, all outward-facing specifications, project deliverables, and technical reports MUST project canonical constructs into standard industry systems engineering terminology:
+   - Constitution / Lex Superior (`CONSTITUTION.md`) -> Governance-as-Code & Agent Harness
+   - Immutable Invariant (`DoF = 0`) -> Hard Guardrail & Contract-First Schema
+   - Adversarial Twin / Red-Blue Dialectic -> Adversarial Evals & Actor-Critic Loop
+   - Scar Tissue Ingestion / Ledger -> Episodic Trajectory & Regression Dataset
+   - Compute Budget / Early Exit -> Inference Compute Budgeting & Circuit Breaker
+   - Dewdrop Isolation Boundary -> Blast Radius Containment & Least-Privilege Sandboxing
 
 ## ARTICLE 9: MANDATORY TEMPORAL ALIGNMENT & PROCEDURAL PRECEDENCE (INV-MERKLE-PARITY)
 1. Strict Upstream Merkle Parity (INV-MERKLE-PARITY-01): Unsynchronized execution against outdated specifications is void. All federated endpoints, arbitration agents, and downstream workspaces are strictly bound to the latest ratified upstream state (HEAD Lock). Executing against deprecated protocols, obsolete templates, or unverified cached norms triggers immediate invalidation (`REJECT_STALE_LAW`).
@@ -120,4 +128,6 @@
   Specification development must proceed through symmetric dialectic verification: functional assertion (Left/Proponent) pitted against shadow constraint enforcement (Right/Discriminator).
 - **INV-LEX-CASCADE-03 (Deterministic Fallback Hierarchy):**
   Resolution of ambiguities must mechanically cascade: Canonical Invariants -> External Interface Specifications -> Ratified Precedents -> Thermodynamic Least Action. Arbitrary speculation is prohibited.
+- **INV-ORTHOGONAL-RESOLUTION-04 (Bicameral Blind-Spot Extraction):**
+  Prior to legislative closure of any bicameral dispute between Left (Proponent) and Right (Discriminator), both benches MUST attest resolution of the shared implicit premise pursuant to Article 5 Clause 4.
 
